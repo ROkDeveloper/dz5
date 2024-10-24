@@ -1,0 +1,3358 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<AutoFillCheck>false</AutoFillCheck>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОжиданиеОплатыТарифа" id="1363">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидание оплаты тарифа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОжиданиеОплатыТарифаРасширеннаяПодсказка" id="1364"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОжиданиеОплатыТарифаФон" id="1365">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидание оплаты тарифа (фон)</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ЦветБаннераЗеленый</BackColor>
+					<ExtendedTooltip name="ГруппаОжиданиеОплатыТарифаФонРасширеннаяПодсказка" id="1366"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтступДекорацииОжиданияОплатыТарифа" id="1367">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отступ декорации ожидания оплаты тарифа</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтступДекорацииОжиданияОплатыТарифаРасширеннаяПодсказка" id="1368"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияОжиданиеОплатыТарифа" id="1369">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ожидание оплаты тарифа (декорация)</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияОжиданиеОплатыТарифаКонтекстноеМеню" id="1370"/>
+									<ExtendedTooltip name="ДекорацияОжиданиеОплатыТарифаРасширеннаяПодсказка" id="1371"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьОжиданиеОплатыТарифа" id="1372">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация о тарифе обновится после поступления оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОжиданиеОплатыТарифаКонтекстноеМеню" id="1373"/>
+							<ExtendedTooltip name="НадписьОжиданиеОплатыТарифаРасширеннаяПодсказка" id="1374"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыФормы" id="100">
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыФормыРасширеннаяПодсказка" id="101"/>
+			<ChildItems>
+				<Page name="СтраницаВидОрганизации" id="102">
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="СтраницаВидОрганизацииРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОрганизационноПравоваяФорма" id="150">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОрганизационноПравоваяФормаРасширеннаяПодсказка" id="151"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИндивидуальныйПредприниматель1" id="1526">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИндивидуальныйПредприниматель1РасширеннаяПодсказка" id="1527"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьФизическоеЛицоСамозанятый" id="1528">
+											<Width>20</Width>
+											<Height>3</Height>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Физическое лицо (самозанятый)</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+											<ContextMenu name="НадписьФизическоеЛицоСамозанятыйКонтекстноеМеню" id="1529"/>
+											<ExtendedTooltip name="НадписьФизическоеЛицоСамозанятыйРасширеннаяПодсказка" id="1530"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьИндивидуальныйПредпринимательОснованиеДеятельности1" id="1531">
+											<Width>20</Width>
+											<Height>5</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Деятельность ведется
+на основании регистрации
+в качестве самозанятого.</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ContextMenu name="НадписьИндивидуальныйПредпринимательОснованиеДеятельности1КонтекстноеМеню" id="1532"/>
+											<ExtendedTooltip name="НадписьИндивидуальныйПредпринимательОснованиеДеятельности1РасширеннаяПодсказка" id="1533"/>
+										</LabelDecoration>
+										<Button name="ВыбратьСамозанятого" id="1534">
+											<Type>UsualButton</Type>
+											<DefaultItem>true</DefaultItem>
+											<Width>20</Width>
+											<CommandName>Form.Command.ВыбратьСамозанятый</CommandName>
+											<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+											<ExtendedTooltip name="ВыбратьСамозанятогоРасширеннаяПодсказка" id="1535"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИндивидуальныйПредприниматель" id="152">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИндивидуальныйПредпринимательРасширеннаяПодсказка" id="153"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьИндивидуальныйПредприниматель" id="167">
+											<Width>20</Width>
+											<Height>3</Height>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Индивидуальный
+предприниматель (ИП)</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+											<ContextMenu name="НадписьИндивидуальныйПредпринимательКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="НадписьИндивидуальныйПредпринимательРасширеннаяПодсказка" id="169"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьИндивидуальныйПредпринимательОснованиеДеятельности" id="190">
+											<Width>20</Width>
+											<Height>5</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Деятельность ведется
+на основании
+регистрации
+в качестве ИП.</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ContextMenu name="НадписьИндивидуальныйПредпринимательОснованиеДеятельностиКонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="НадписьИндивидуальныйПредпринимательОснованиеДеятельностиРасширеннаяПодсказка" id="192"/>
+										</LabelDecoration>
+										<Button name="ВыбратьИП" id="184">
+											<Type>UsualButton</Type>
+											<DefaultItem>true</DefaultItem>
+											<Width>20</Width>
+											<CommandName>Form.Command.ВыбратьИП</CommandName>
+											<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+											<ExtendedTooltip name="ВыбратьИПРасширеннаяПодсказка" id="185"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЮридическоеЛицо" id="154">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЮридическоеЛицоРасширеннаяПодсказка" id="155"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьЮридическоеЛицо" id="170">
+											<Width>20</Width>
+											<Height>3</Height>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Юридическое лицо
+(ООО, АО, ПАО)</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+											<ContextMenu name="НадписьЮридическоеЛицоКонтекстноеМеню" id="171"/>
+											<ExtendedTooltip name="НадписьЮридическоеЛицоРасширеннаяПодсказка" id="172"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьЮридическоеЛицоОснованиеДеятельности" id="220">
+											<Width>20</Width>
+											<Height>5</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Деятельность ведется
+на основании устава
+юридического лица.</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ContextMenu name="НадписьЮридическоеЛицоОснованиеДеятельностиКонтекстноеМеню" id="221"/>
+											<ExtendedTooltip name="НадписьЮридическоеЛицоОснованиеДеятельностиРасширеннаяПодсказка" id="222"/>
+										</LabelDecoration>
+										<Button name="ВыбратьЮЛ" id="186">
+											<Type>UsualButton</Type>
+											<Width>20</Width>
+											<CommandName>Form.Command.ВыбратьЮЛ</CommandName>
+											<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+											<ExtendedTooltip name="ВыбратьЮЛРасширеннаяПодсказка" id="187"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОбособленноеПодразделение" id="156">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбособленноеПодразделениеРасширеннаяПодсказка" id="157"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьОбособленноеПодразделение" id="173">
+											<Width>20</Width>
+											<Height>3</Height>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обособленное
+подразделение</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+											<ContextMenu name="НадписьОбособленноеПодразделениеКонтекстноеМеню" id="174"/>
+											<ExtendedTooltip name="НадписьОбособленноеПодразделениеРасширеннаяПодсказка" id="175"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьОбособленноеПодразделениеОснованиеДеятельности" id="223">
+											<Width>20</Width>
+											<Height>5</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Деятельность ведется
+на основании положения
+о филиале (представительстве).
+</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ContextMenu name="НадписьОбособленноеПодразделениеОснованиеДеятельностиКонтекстноеМеню" id="224"/>
+											<ExtendedTooltip name="НадписьОбособленноеПодразделениеОснованиеДеятельностиРасширеннаяПодсказка" id="225"/>
+										</LabelDecoration>
+										<Button name="ВыбратьОП" id="188">
+											<Type>UsualButton</Type>
+											<Width>20</Width>
+											<CommandName>Form.Command.ВыбратьОП</CommandName>
+											<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+											<ExtendedTooltip name="ВыбратьОПРасширеннаяПодсказка" id="189"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияОтступ" id="1329">
+							<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="1330"/>
+							<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="1331"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОграниченияТарифаВидОрганизации" id="1324">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничения тарифа</v8:content>
+								</v8:item>
+							</Title>
+							<Width>62</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветБаннераСерый</BackColor>
+							<ExtendedTooltip name="ГруппаОграниченияТарифаВидОрганизацииРасширеннаяПодсказка" id="1325"/>
+							<ChildItems>
+								<LabelDecoration name="ПодсказкаОграниченияТарифаВидОрганизации" id="1326">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На текущем тарифе есть ограничения.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаОграниченияТарифаВидОрганизацииКонтекстноеМеню" id="1327"/>
+									<ExtendedTooltip name="ПодсказкаОграниченияТарифаВидОрганизацииРасширеннаяПодсказка" id="1328"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСистемаНалогообложенияИП" id="106">
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="СтраницаСистемаНалогообложенияИПРасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСистемаНалогообложенияИП" id="1188">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСистемаНалогообложенияИПРасширеннаяПодсказка" id="1189"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСистемаНалогообложенияИП" id="364">
+									<Width>13</Width>
+									<Height>2</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Система налогообложения:
+</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="НадписьСистемаНалогообложенияИПКонтекстноеМеню" id="365"/>
+									<ExtendedTooltip name="НадписьСистемаНалогообложенияИПРасширеннаяПодсказка" id="366"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПД" id="1266">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НПД</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьНПДКонтекстноеМеню" id="1267"/>
+									<ExtendedTooltip name="НадписьНПДРасширеннаяПодсказка" id="1268"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ИП" id="260">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УСН
+&lt;fontsize 10&gt;доходы&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьУпрощенка6ИПКонтекстноеМеню" id="261"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ИПРасширеннаяПодсказка" id="262"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ИП" id="284">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УСН
+&lt;fontsize 10&gt;доходы - расходы&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьУпрощенка15ИПКонтекстноеМеню" id="285"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ИПРасширеннаяПодсказка" id="286"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыИП" id="1381">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>АУСН
+&lt;fontsize 10&gt;доходы&lt;/&gt;
+&lt;fontsize 10&gt;
+&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыИПКонтекстноеМеню" id="1382"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыИПРасширеннаяПодсказка" id="1383"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыИП" id="1445">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>АУСН
+&lt;fontsize 10&gt;доходы - расходы&lt;/&gt;
+&lt;fontsize 10&gt;
+&lt;/&gt;&lt;fontsize 10&gt;
+&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыИПКонтекстноеМеню" id="1446"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыИПРасширеннаяПодсказка" id="1447"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатент" id="308">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Патент</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьПатентКонтекстноеМеню" id="309"/>
+									<ExtendedTooltip name="НадписьПатентРасширеннаяПодсказка" id="310"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВД" id="1205">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЕНВД</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьЕНВДКонтекстноеМеню" id="1206"/>
+									<ExtendedTooltip name="НадписьЕНВДРасширеннаяПодсказка" id="1207"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаИП" id="236">
+									<Width>14</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общая</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаИПКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаИПРасширеннаяПодсказка" id="238"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУплачиваетсяИП" id="1190">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУплачиваетсяИПРасширеннаяПодсказка" id="1191"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияУплачиваетсяИП" id="490">
+									<Width>13</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уплачивается:</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ДекорацияУплачиваетсяИПКонтекстноеМеню" id="491"/>
+									<ExtendedTooltip name="ДекорацияУплачиваетсяИПРасширеннаяПодсказка" id="492"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДПояснение" id="1269">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог на профессиональный доход ("самозанятые")</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьНПДПояснениеКонтекстноеМеню" id="1270"/>
+									<ExtendedTooltip name="НадписьНПДПояснениеРасширеннаяПодсказка" id="1271"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ПояснениеИП" id="266">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с суммы доходов</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьУпрощенка6ПояснениеИПКонтекстноеМеню" id="267"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ПояснениеИПРасширеннаяПодсказка" id="268"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ПосянениеИП" id="290">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с разницы между доходами и расходами</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьУпрощенка15ПосянениеИПКонтекстноеМеню" id="291"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ПосянениеИПРасширеннаяПодсказка" id="292"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыПояснениеИП" id="1384">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с суммы доходов</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьАУСНДоходыПояснениеИПКонтекстноеМеню" id="1385"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыПояснениеИПРасширеннаяПодсказка" id="1386"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыПояснениеИП" id="1448">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с разницы между доходами и расходами</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыПояснениеИПКонтекстноеМеню" id="1449"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыПояснениеИПРасширеннаяПодсказка" id="1450"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентПояснение" id="314">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стоимость патента</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьПатентПояснениеКонтекстноеМеню" id="315"/>
+									<ExtendedTooltip name="НадписьПатентПояснениеРасширеннаяПодсказка" id="316"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДПояснение" id="1208">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог на вмененный доход
+(до конца 2020 года)</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьЕНВДПояснениеКонтекстноеМеню" id="1209"/>
+									<ExtendedTooltip name="НадписьЕНВДПояснениеРасширеннаяПодсказка" id="1210"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаПояснениеИП" id="242">
+									<Width>14</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НДФЛ, НДС
+и другие налоги</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьОбщаяСистемаПояснениеИПКонтекстноеМеню" id="243"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаПояснениеИПРасширеннаяПодсказка" id="244"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНПД" id="1298">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНПДРасширеннаяПодсказка" id="1299"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНПДИП" id="1300">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НПД:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНПДИПКонтекстноеМеню" id="1301"/>
+									<ExtendedTooltip name="НадписьНПДИПРасширеннаяПодсказка" id="1302"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДНПД" id="1318">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьНПДНПДКонтекстноеМеню" id="1319"/>
+									<ExtendedTooltip name="НадписьНПДНПДРасширеннаяПодсказка" id="1320"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НПДИП" id="1303">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка6НПДИПКонтекстноеМеню" id="1304"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НПДИПРасширеннаяПодсказка" id="1305"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НПДИП" id="1306">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка15НПДИПКонтекстноеМеню" id="1307"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НПДИПРасширеннаяПодсказка" id="1308"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНПДИП" id="1393">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыНПДИПКонтекстноеМеню" id="1394"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНПДИПРасширеннаяПодсказка" id="1395"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНПДИП" id="1451">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНПДИПКонтекстноеМеню" id="1452"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНПДИПРасширеннаяПодсказка" id="1453"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентНПД" id="1309">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьПатентНПДКонтекстноеМеню" id="1310"/>
+									<ExtendedTooltip name="НадписьПатентНПДРасширеннаяПодсказка" id="1311"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДНПД" id="1312">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьЕНВДНПДКонтекстноеМеню" id="1313"/>
+									<ExtendedTooltip name="НадписьЕНВДНПДРасширеннаяПодсказка" id="1314"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНПДИП" id="1315">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаНПДИПКонтекстноеМеню" id="1316"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНПДИПРасширеннаяПодсказка" id="1317"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЕдиныйНалогУСНИП" id="1192">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕдиныйНалогУСНИПРасширеннаяПодсказка" id="1193"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьЕдиныйНалогУСНИП" id="397">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Единый налог:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЕдиныйНалогУСНИПКонтекстноеМеню" id="398"/>
+									<ExtendedTooltip name="НадписьЕдиныйНалогУСНИПРасширеннаяПодсказка" id="399"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДЕдиныйНалог" id="1272">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьНПДЕдиныйНалогКонтекстноеМеню" id="1273"/>
+									<ExtendedTooltip name="НадписьНПДЕдиныйНалогРасширеннаяПодсказка" id="1274"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ЕдиныйНалогИП" id="424">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьУпрощенка6ЕдиныйНалогИПКонтекстноеМеню" id="425"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ЕдиныйНалогИПРасширеннаяПодсказка" id="426"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ЕдиныйНалогИП" id="427">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьУпрощенка15ЕдиныйНалогИПКонтекстноеМеню" id="428"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ЕдиныйНалогИПРасширеннаяПодсказка" id="429"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыЕдиныйНалогИП" id="1390">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьАУСНДоходыЕдиныйНалогИПКонтекстноеМеню" id="1391"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыЕдиныйНалогИПРасширеннаяПодсказка" id="1392"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыЕдиныйНалогИП" id="1454">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыЕдиныйНалогИПКонтекстноеМеню" id="1455"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыЕдиныйНалогИПРасширеннаяПодсказка" id="1456"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентЕдиныйНалог" id="436">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьПатентЕдиныйНалогКонтекстноеМеню" id="437"/>
+									<ExtendedTooltip name="НадписьПатентЕдиныйНалогРасширеннаяПодсказка" id="438"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДЕдиныйНалог" id="1211">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьЕНВДЕдиныйНалогКонтекстноеМеню" id="1212"/>
+									<ExtendedTooltip name="НадписьЕНВДЕдиныйНалогРасширеннаяПодсказка" id="1213"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаЕдиныйНалогИП" id="469">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьОбщаяСистемаЕдиныйНалогИПКонтекстноеМеню" id="470"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаЕдиныйНалогИПРасширеннаяПодсказка" id="471"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСтоимостьПатентаИП" id="1194">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтоимостьПатентаИПРасширеннаяПодсказка" id="1195"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСтоимостьПатента" id="553">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стоимость патента:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСтоимостьПатентаКонтекстноеМеню" id="554"/>
+									<ExtendedTooltip name="НадписьСтоимостьПатентаРасширеннаяПодсказка" id="555"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДСтоимостьПатента" id="1275">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьНПДСтоимостьПатентаКонтекстноеМеню" id="1276"/>
+									<ExtendedTooltip name="НадписьНПДСтоимостьПатентаРасширеннаяПодсказка" id="1277"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6СтоимостьПатента" id="421">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка6СтоимостьПатентаКонтекстноеМеню" id="422"/>
+									<ExtendedTooltip name="НадписьУпрощенка6СтоимостьПатентаРасширеннаяПодсказка" id="423"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15СтоимостьПатента" id="430">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка15СтоимостьПатентаКонтекстноеМеню" id="431"/>
+									<ExtendedTooltip name="НадписьУпрощенка15СтоимостьПатентаРасширеннаяПодсказка" id="432"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыСтоимостьПатента" id="1413">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыСтоимостьПатентаКонтекстноеМеню" id="1414"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыСтоимостьПатентаРасширеннаяПодсказка" id="1415"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыСтоимостьПатента" id="1457">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыСтоимостьПатентаКонтекстноеМеню" id="1458"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыСтоимостьПатентаРасширеннаяПодсказка" id="1459"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентСтоимостьПатента" id="439">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьПатентСтоимостьПатентаКонтекстноеМеню" id="440"/>
+									<ExtendedTooltip name="НадписьПатентСтоимостьПатентаРасширеннаяПодсказка" id="441"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДСтоимостьПатента" id="1214">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьЕНВДСтоимостьПатентаКонтекстноеМеню" id="1215"/>
+									<ExtendedTooltip name="НадписьЕНВДСтоимостьПатентаРасширеннаяПодсказка" id="1216"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаСтоимостьПатента" id="824">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаСтоимостьПатентаКонтекстноеМеню" id="825"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаСтоимостьПатентаРасширеннаяПодсказка" id="826"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЕНВДИП" id="1234">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕНВДИПРасширеннаяПодсказка" id="1235"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьЕНВДСтрока" id="1236">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЕНВД:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЕНВДСтрокаКонтекстноеМеню" id="1237"/>
+									<ExtendedTooltip name="НадписьЕНВДСтрокаРасширеннаяПодсказка" id="1238"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДЕНВД" id="1278">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьНПДЕНВДКонтекстноеМеню" id="1279"/>
+									<ExtendedTooltip name="НадписьНПДЕНВДРасширеннаяПодсказка" id="1280"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ЕНВД" id="1239">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьУпрощенка6ЕНВДКонтекстноеМеню" id="1240"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ЕНВДРасширеннаяПодсказка" id="1241"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ЕНВД" id="1242">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьУпрощенка15ЕНВДКонтекстноеМеню" id="1243"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ЕНВДРасширеннаяПодсказка" id="1244"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыЕНВД" id="1396">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьАУСНДоходыЕНВДКонтекстноеМеню" id="1397"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыЕНВДРасширеннаяПодсказка" id="1398"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыЕНВД" id="1460">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыЕНВДКонтекстноеМеню" id="1461"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыЕНВДРасширеннаяПодсказка" id="1462"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентЕНВД" id="1248">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьПатентЕНВДКонтекстноеМеню" id="1249"/>
+									<ExtendedTooltip name="НадписьПатентЕНВДРасширеннаяПодсказка" id="1250"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДЕНВД" id="1254">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьЕНВДЕНВДКонтекстноеМеню" id="1255"/>
+									<ExtendedTooltip name="НадписьЕНВДЕНВДРасширеннаяПодсказка" id="1256"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаЕНВД" id="1251">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьОбщаяСистемаЕНВДКонтекстноеМеню" id="1252"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаЕНВДРасширеннаяПодсказка" id="1253"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНДСИП" id="1196">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНДСИПРасширеннаяПодсказка" id="1197"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНДСИП" id="388">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НДС:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНДСИПКонтекстноеМеню" id="389"/>
+									<ExtendedTooltip name="НадписьНДСИПРасширеннаяПодсказка" id="390"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДНДС" id="1281">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьНПДНДСКонтекстноеМеню" id="1282"/>
+									<ExtendedTooltip name="НадписьНПДНДСРасширеннаяПодсказка" id="1283"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НДСИП" id="409">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка6НДСИПКонтекстноеМеню" id="410"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НДСИПРасширеннаяПодсказка" id="411"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НДСИП" id="433">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка15НДСИПКонтекстноеМеню" id="434"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НДСИПРасширеннаяПодсказка" id="435"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНДСИП" id="1399">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыНДСИПКонтекстноеМеню" id="1400"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНДСИПРасширеннаяПодсказка" id="1401"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНДСИП" id="1463">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНДСИПКонтекстноеМеню" id="1464"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНДСИПРасширеннаяПодсказка" id="1465"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентНДС" id="460">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьПатентНДСКонтекстноеМеню" id="461"/>
+									<ExtendedTooltip name="НадписьПатентНДСРасширеннаяПодсказка" id="462"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДНДС" id="1217">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьЕНВДНДСКонтекстноеМеню" id="1218"/>
+									<ExtendedTooltip name="НадписьЕНВДНДСРасширеннаяПодсказка" id="1219"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНДСИП" id="1257">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаНДСИПКонтекстноеМеню" id="1258"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНДСИПРасширеннаяПодсказка" id="1259"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНДФЛИП" id="1198">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНДФЛИПРасширеннаяПодсказка" id="1199"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНДФЛ" id="391">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НДФЛ:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНДФЛКонтекстноеМеню" id="392"/>
+									<ExtendedTooltip name="НадписьНДФЛРасширеннаяПодсказка" id="393"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДНДФЛ" id="1284">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьНПДНДФЛКонтекстноеМеню" id="1285"/>
+									<ExtendedTooltip name="НадписьНПДНДФЛРасширеннаяПодсказка" id="1286"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НДФЛ" id="466">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьУпрощенка6НДФЛКонтекстноеМеню" id="467"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НДФЛРасширеннаяПодсказка" id="468"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НДФЛ" id="463">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьУпрощенка15НДФЛКонтекстноеМеню" id="464"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НДФЛРасширеннаяПодсказка" id="465"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНДФЛ" id="1402">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьАУСНДоходыНДФЛКонтекстноеМеню" id="1403"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНДФЛРасширеннаяПодсказка" id="1404"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНДФЛ" id="1466">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНДФЛКонтекстноеМеню" id="1467"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНДФЛРасширеннаяПодсказка" id="1468"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентНДФЛ" id="590">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьПатентНДФЛКонтекстноеМеню" id="591"/>
+									<ExtendedTooltip name="НадписьПатентНДФЛРасширеннаяПодсказка" id="592"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДНДФЛ" id="1220">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НадписьЕНВДНДФЛКонтекстноеМеню" id="1221"/>
+									<ExtendedTooltip name="НадписьЕНВДНДФЛРасширеннаяПодсказка" id="1222"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНДФЛ" id="1263">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьОбщаяСистемаНДФЛКонтекстноеМеню" id="1264"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНДФЛРасширеннаяПодсказка" id="1265"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИмуществоИП" id="1200">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИмуществоИПРасширеннаяПодсказка" id="1201"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНалогНаИмуществоИП" id="370">
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог на имущество:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНалогНаИмуществоИПКонтекстноеМеню" id="371"/>
+									<ExtendedTooltip name="НадписьНалогНаИмуществоИПРасширеннаяПодсказка" id="372"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНПДНалогНаИмущество" id="1287">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьНПДНалогНаИмуществоКонтекстноеМеню" id="1288"/>
+									<ExtendedTooltip name="НадписьНПДНалогНаИмуществоРасширеннаяПодсказка" id="1289"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НалогНаИмуществоИП" id="478">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка6НалогНаИмуществоИПКонтекстноеМеню" id="479"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НалогНаИмуществоИПРасширеннаяПодсказка" id="480"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НалогНаИмуществоИП" id="481">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка15НалогНаИмуществоИПКонтекстноеМеню" id="482"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НалогНаИмуществоИПРасширеннаяПодсказка" id="483"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНалогНаИмуществоИП" id="1405">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыНалогНаИмуществоИПКонтекстноеМеню" id="1406"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНалогНаИмуществоИПРасширеннаяПодсказка" id="1407"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНалогНаИмуществоИП" id="1469">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНалогНаИмуществоИПКонтекстноеМеню" id="1470"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНалогНаИмуществоИПРасширеннаяПодсказка" id="1471"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПатентНалогНаИмущество" id="587">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьПатентНалогНаИмуществоКонтекстноеМеню" id="588"/>
+									<ExtendedTooltip name="НадписьПатентНалогНаИмуществоРасширеннаяПодсказка" id="589"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьЕНВДНалогНаИмущество" id="1223">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьЕНВДНалогНаИмуществоКонтекстноеМеню" id="1224"/>
+									<ExtendedTooltip name="НадписьЕНВДНалогНаИмуществоРасширеннаяПодсказка" id="1225"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНалогНаИмуществоИП" id="1321">
+									<Width>14</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаНалогНаИмуществоИПКонтекстноеМеню" id="1322"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНалогНаИмуществоИПРасширеннаяПодсказка" id="1323"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграничениеИП" id="1172">
+							<Width>87</Width>
+							<Group>Horizontal</Group>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОграничениеИПРасширеннаяПодсказка" id="1173"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОграничениеИП" id="1177">
+									<Width>29</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничения</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияОграничениеИПКонтекстноеМеню" id="1178"/>
+									<ExtendedTooltip name="ДекорацияОграничениеИПРасширеннаяПодсказка" id="1179"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграниченияИП" id="1084">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОграниченияИПРасширеннаяПодсказка" id="1085"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОграниченияИПЛево" id="1119">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграниченияИПЛевоРасширеннаяПодсказка" id="1120"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДоходыИП" id="1086">
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДоходыИПРасширеннаяПодсказка" id="1087"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияНадписьДоходыИП" id="1088">
+													<Width>13</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Доходы:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияНадписьДоходыИПКонтекстноеМеню" id="1089"/>
+													<ExtendedTooltip name="ДекорацияНадписьДоходыИПРасширеннаяПодсказка" id="1090"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыНПДИП" id="1290">
+													<Width>14</Width>
+													<Height>1</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>2.4 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыНПДИПКонтекстноеМеню" id="1291"/>
+													<ExtendedTooltip name="НадписьДоходыНПДИПРасширеннаяПодсказка" id="1292"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыУСНИП" id="1091">
+													<Width>29</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>150 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыУСНИПКонтекстноеМеню" id="1092"/>
+													<ExtendedTooltip name="НадписьДоходыУСНИПРасширеннаяПодсказка" id="1093"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыАУСНИП" id="1472">
+													<Width>29</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>60 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыАУСНИПКонтекстноеМеню" id="1473"/>
+													<ExtendedTooltip name="НадписьДоходыАУСНИПРасширеннаяПодсказка" id="1474"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыПатентИП" id="1202">
+													<Width>14</Width>
+													<Height>1</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>60 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыПатентИПКонтекстноеМеню" id="1203"/>
+													<ExtendedTooltip name="НадписьДоходыПатентИПРасширеннаяПодсказка" id="1204"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыЕНВДИП" id="1226">
+													<Width>14</Width>
+													<Height>1</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Без ограничений</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыЕНВДИПКонтекстноеМеню" id="1227"/>
+													<ExtendedTooltip name="НадписьДоходыЕНВДИПРасширеннаяПодсказка" id="1228"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРаботникиИП" id="1105">
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРаботникиИПРасширеннаяПодсказка" id="1106"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьРаботникиИП" id="1107">
+													<Width>13</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Работники:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьРаботникиИПКонтекстноеМеню" id="1108"/>
+													<ExtendedTooltip name="НадписьРаботникиИПРасширеннаяПодсказка" id="1109"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиНПДИП" id="1293">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>14</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Не допускаются</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьРаботникиНПДИПКонтекстноеМеню" id="1294"/>
+													<ExtendedTooltip name="НадписьРаботникиНПДИПРасширеннаяПодсказка" id="1295"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиУСНИП" id="1110">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>29</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>100 человек</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ContextMenu name="НадписьРаботникиУСНИПКонтекстноеМеню" id="1111"/>
+													<ExtendedTooltip name="НадписьРаботникиУСНИПРасширеннаяПодсказка" id="1112"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиАУСНИП" id="1408">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>29</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>5 человек</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьРаботникиАУСНИПКонтекстноеМеню" id="1409"/>
+													<ExtendedTooltip name="НадписьРаботникиАУСНИПРасширеннаяПодсказка" id="1410"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиПатентИП" id="1229">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>14</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>15 человек</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьРаботникиПатентИПКонтекстноеМеню" id="1230"/>
+													<ExtendedTooltip name="НадписьРаботникиПатентИПРасширеннаяПодсказка" id="1231"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиЕНВДИП" id="1116">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>14</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>100 человек</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьРаботникиЕНВДИПКонтекстноеМеню" id="1117"/>
+													<ExtendedTooltip name="НадписьРаботникиЕНВДИПРасширеннаяПодсказка" id="1118"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОграниченияИППраво" id="1123">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграниченияИППравоРасширеннаяПодсказка" id="1124"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияБезОграниченияИП" id="1016">
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Без ограничений</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ContextMenu name="ДекорацияБезОграниченияИПКонтекстноеМеню" id="1017"/>
+											<ExtendedTooltip name="ДекорацияБезОграниченияИПРасширеннаяПодсказка" id="1018"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСистемаНалогообложенияНиз" id="1067">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСистемаНалогообложенияНизРасширеннаяПодсказка" id="1068"/>
+							<ChildItems>
+								<Button name="НазадИП" id="1082">
+									<Type>Hyperlink</Type>
+									<SkipOnInput>true</SkipOnInput>
+									<Width>13</Width>
+									<CommandName>Form.Command.Назад</CommandName>
+									<ExtendedTooltip name="НазадИПРасширеннаяПодсказка" id="1083"/>
+								</Button>
+								<Button name="СистемаНалогообложенияНалогНаПрофессиональныйДоходИП" id="1296">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияНалогНаПрофессиональныйДоход</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияНалогНаПрофессиональныйДоходИПРасширеннаяПодсказка" id="1297"/>
+								</Button>
+								<Button name="СистемаНалогообложенияУСНДоходыИП" id="274">
+									<Type>UsualButton</Type>
+									<DefaultItem>true</DefaultItem>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияУСНДоходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияУСНДоходыИПРасширеннаяПодсказка" id="275"/>
+								</Button>
+								<Button name="СистемаНалогообложенияУСНДоходыМинусРасходыИП" id="298">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияУСНДоходыМинусРасходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияУСНДоходыМинусРасходыИПРасширеннаяПодсказка" id="299"/>
+								</Button>
+								<Button name="СистемаНалогообложенияАУСНДоходыИП" id="1411">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияАУСНДоходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияАУСНДоходыИПРасширеннаяПодсказка" id="1412"/>
+								</Button>
+								<Button name="СистемаНалогообложенияАУСНДоходыМинусРасходыИП" id="1481">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияАУСНДоходыМинусРасходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияАУСНДоходыМинусРасходыИПРасширеннаяПодсказка" id="1482"/>
+								</Button>
+								<Button name="СистемаНалогообложенияПатентнаяИП" id="322">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияПатентная</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияПатентнаяИПРасширеннаяПодсказка" id="323"/>
+								</Button>
+								<Button name="СистемаНалогообложенияЕНВДИП" id="1232">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияЕНВД</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияЕНВДИПРасширеннаяПодсказка" id="1233"/>
+								</Button>
+								<Button name="СистемаНалогообложенияОбщаяИП" id="250">
+									<Type>UsualButton</Type>
+									<Width>14</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияОбщая</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияОбщаяИПРасширеннаяПодсказка" id="251"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСравенениеСистемНалогообложенияИП" id="580">
+							<Width>73</Width>
+							<Group>Horizontal</Group>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСравенениеСистемНалогообложенияИПРасширеннаяПодсказка" id="581"/>
+							<ChildItems>
+								<LabelDecoration name="ГиперссылкаСравнениеСистемНалогообложенияИП" id="356">
+									<Width>29</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сравнение систем налогообложения</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ГиперссылкаСравнениеСистемНалогообложенияИПКонтекстноеМеню" id="357"/>
+									<ExtendedTooltip name="ГиперссылкаСравнениеСистемНалогообложенияИПРасширеннаяПодсказка" id="358"/>
+									<Events>
+										<Event name="Click">ГиперссылкаСравнениеСистемНалогообложенияНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа1" id="1337">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="1338"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация1" id="1339">
+									<Width>13</Width>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="1340"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="1341"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграниченияТарифаИП" id="1332">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничения тарифа</v8:content>
+								</v8:item>
+							</Title>
+							<Width>74</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветБаннераСерый</BackColor>
+							<ExtendedTooltip name="ГруппаОграниченияТарифаИПРасширеннаяПодсказка" id="1333"/>
+							<ChildItems>
+								<LabelDecoration name="ПодсказкаОграниченияТарифаИП" id="1334">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На текущем тарифе есть ограничения.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаОграниченияТарифаИПКонтекстноеМеню" id="1335"/>
+									<ExtendedTooltip name="ПодсказкаОграниченияТарифаИПРасширеннаяПодсказка" id="1336"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСистемаНалогообложенияЮЛ" id="104">
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="СтраницаСистемаНалогообложенияЮЛРасширеннаяПодсказка" id="105"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСистемаНалогообложенияЮЛ" id="1125">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСистемаНалогообложенияЮЛРасширеннаяПодсказка" id="1126"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСистемаНалогообложенияЮЛ" id="834">
+									<Width>15</Width>
+									<Height>2</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Система налогообложения:
+</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="НадписьСистемаНалогообложенияЮЛКонтекстноеМеню" id="835"/>
+									<ExtendedTooltip name="НадписьСистемаНалогообложенияЮЛРасширеннаяПодсказка" id="836"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ЮЛ" id="862">
+									<Width>18</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УСН
+доходы</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьУпрощенка6ЮЛКонтекстноеМеню" id="863"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ЮЛРасширеннаяПодсказка" id="864"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ЮЛ" id="890">
+									<Width>18</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УСН
+доходы - расходы</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьУпрощенка15ЮЛКонтекстноеМеню" id="891"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ЮЛРасширеннаяПодсказка" id="892"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыЮЛ" id="1416">
+									<Width>18</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>АУСН
+&lt;fontsize 14&gt;доходы&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыЮЛКонтекстноеМеню" id="1417"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыЮЛРасширеннаяПодсказка" id="1418"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыЮЛ" id="1483">
+									<Width>18</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>АУСН
+&lt;fontsize 14&gt;доходы&lt;/&gt;&lt;fontsize 14&gt; &lt;/&gt;&lt;fontsize 14&gt;-&lt;/&gt;&lt;fontsize 14&gt; &lt;/&gt;&lt;fontsize 14&gt;расходы&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыЮЛКонтекстноеМеню" id="1484"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыЮЛРасширеннаяПодсказка" id="1485"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаЮЛ" id="946">
+									<Width>18</Width>
+									<Height>2</Height>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общая система</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаЮЛКонтекстноеМеню" id="947"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаЮЛРасширеннаяПодсказка" id="948"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУплачиваетсяЮЛ" id="1127">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУплачиваетсяЮЛРасширеннаяПодсказка" id="1128"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьУплачиваетсяЮЛ" id="837">
+									<Width>15</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уплачивается:</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьУплачиваетсяЮЛКонтекстноеМеню" id="838"/>
+									<ExtendedTooltip name="НадписьУплачиваетсяЮЛРасширеннаяПодсказка" id="839"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ПояснениеЮЛ" id="865">
+									<Width>18</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с суммы доходов</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьУпрощенка6ПояснениеЮЛКонтекстноеМеню" id="866"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ПояснениеЮЛРасширеннаяПодсказка" id="867"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ПояснениеЮЛ" id="893">
+									<Width>18</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с разницы между доходами и расходами</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьУпрощенка15ПояснениеЮЛКонтекстноеМеню" id="894"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ПояснениеЮЛРасширеннаяПодсказка" id="895"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыПояснениеЮЛ" id="1419">
+									<Width>18</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с суммы доходов</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьАУСНДоходыПояснениеЮЛКонтекстноеМеню" id="1420"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыПояснениеЮЛРасширеннаяПодсказка" id="1421"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыПояснениеЮЛ" id="1486">
+									<Width>18</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог с разницы между доходами и расходами</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыПояснениеЮЛКонтекстноеМеню" id="1487"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыПояснениеЮЛРасширеннаяПодсказка" id="1488"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаПояснениеЮЛ" id="949">
+									<Width>18</Width>
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог на прибыль, НДС
+и другие налоги</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="НадписьОбщаяСистемаПояснениеЮЛКонтекстноеМеню" id="950"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаПояснениеЮЛРасширеннаяПодсказка" id="951"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЕдиныйНалогЮЛ" id="1129">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕдиныйНалогЮЛРасширеннаяПодсказка" id="1130"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьЕдиныйНалогУСНЮЛ" id="840">
+									<Width>15</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Единый налог:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЕдиныйНалогУСНЮЛКонтекстноеМеню" id="841"/>
+									<ExtendedTooltip name="НадписьЕдиныйНалогУСНЮЛРасширеннаяПодсказка" id="842"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6ЕдиныйНалогЮЛ" id="868">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка6ЕдиныйНалогЮЛКонтекстноеМеню" id="869"/>
+									<ExtendedTooltip name="НадписьУпрощенка6ЕдиныйНалогЮЛРасширеннаяПодсказка" id="870"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15ЕдиныйНалогЮЛ" id="896">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка15ЕдиныйНалогЮЛКонтекстноеМеню" id="897"/>
+									<ExtendedTooltip name="НадписьУпрощенка15ЕдиныйНалогЮЛРасширеннаяПодсказка" id="898"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыЕдиныйНалогЮЛ" id="1422">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыЕдиныйНалогЮЛКонтекстноеМеню" id="1423"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыЕдиныйНалогЮЛРасширеннаяПодсказка" id="1424"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыЕдиныйНалогЮЛ" id="1489">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыЕдиныйНалогЮЛКонтекстноеМеню" id="1490"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыЕдиныйНалогЮЛРасширеннаяПодсказка" id="1491"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаЕдиныйНалогЮЛ" id="952">
+									<Width>18</Width>
+									<Height>1</Height>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаЕдиныйНалогЮЛКонтекстноеМеню" id="953"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаЕдиныйНалогЮЛРасширеннаяПодсказка" id="954"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНДСЮЛ" id="1131">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНДСЮЛРасширеннаяПодсказка" id="1132"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНДСЮЛ" id="846">
+									<Width>15</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НДС:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНДСЮЛКонтекстноеМеню" id="847"/>
+									<ExtendedTooltip name="НадписьНДСЮЛРасширеннаяПодсказка" id="848"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НДСЮЛ" id="874">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьУпрощенка6НДСЮЛКонтекстноеМеню" id="875"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НДСЮЛРасширеннаяПодсказка" id="876"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НДСЮЛ" id="902">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьУпрощенка15НДСЮЛКонтекстноеМеню" id="903"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НДСЮЛРасширеннаяПодсказка" id="904"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНДСЮЛ" id="1425">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьАУСНДоходыНДСЮЛКонтекстноеМеню" id="1426"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНДСЮЛРасширеннаяПодсказка" id="1427"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНДСЮЛ" id="1492">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНДСЮЛКонтекстноеМеню" id="1493"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНДСЮЛРасширеннаяПодсказка" id="1494"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНДСЮЛ" id="958">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьОбщаяСистемаНДСЮЛКонтекстноеМеню" id="959"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНДСЮЛРасширеннаяПодсказка" id="960"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНалогНаПрибыль" id="1506">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа налог на прибыль</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНалогНаПрибыльРасширеннаяПодсказка" id="1507"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНалогНаПрибыль" id="1508">
+									<Width>15</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог на прибыль:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНалогНаПрибыльКонтекстноеМеню" id="1509"/>
+									<ExtendedTooltip name="НадписьНалогНаПрибыльРасширеннаяПодсказка" id="1510"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НалогНаПрибыль" id="1511">
+									<Width>18</Width>
+									<Height>1</Height>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка6НалогНаПрибыльКонтекстноеМеню" id="1512"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НалогНаПрибыльРасширеннаяПодсказка" id="1513"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НалогНаПрибыль" id="1514">
+									<Width>18</Width>
+									<Height>1</Height>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьУпрощенка15НалогНаПрибыльКонтекстноеМеню" id="1515"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НалогНаПрибыльРасширеннаяПодсказка" id="1516"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНалогНаПрибыль" id="1517">
+									<Width>18</Width>
+									<Height>1</Height>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыНалогНаПрибыльКонтекстноеМеню" id="1518"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНалогНаПрибыльРасширеннаяПодсказка" id="1519"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНалогНаПрибыль" id="1520">
+									<Width>18</Width>
+									<Height>1</Height>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНалогНаПрибыльКонтекстноеМеню" id="1521"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНалогНаПрибыльРасширеннаяПодсказка" id="1522"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНалогНаПрибыль" id="1523">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="НадписьОбщаяСистемаНалогНаПрибыльКонтекстноеМеню" id="1524"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНалогНаПрибыльРасширеннаяПодсказка" id="1525"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНалогНаИмуществоЮЛ" id="1135">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНалогНаИмуществоЮЛРасширеннаяПодсказка" id="1136"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНалогНаИмуществоЮЛ" id="852">
+									<Width>15</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налог на имущество:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьНалогНаИмуществоЮЛКонтекстноеМеню" id="853"/>
+									<ExtendedTooltip name="НадписьНалогНаИмуществоЮЛРасширеннаяПодсказка" id="854"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка6НалогНаИмуществоЮЛ" id="880">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьУпрощенка6НалогНаИмуществоЮЛКонтекстноеМеню" id="881"/>
+									<ExtendedTooltip name="НадписьУпрощенка6НалогНаИмуществоЮЛРасширеннаяПодсказка" id="882"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьУпрощенка15НалогНаИмуществоЮЛ" id="908">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьУпрощенка15НалогНаИмуществоЮЛКонтекстноеМеню" id="909"/>
+									<ExtendedTooltip name="НадписьУпрощенка15НалогНаИмуществоЮЛРасширеннаяПодсказка" id="910"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыНалогНаИмуществоЮЛ" id="1431">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьАУСНДоходыНалогНаИмуществоЮЛКонтекстноеМеню" id="1432"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыНалогНаИмуществоЮЛРасширеннаяПодсказка" id="1433"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьАУСНДоходыМинусРасходыНалогНаИмуществоЮЛ" id="1498">
+									<Width>18</Width>
+									<Height>1</Height>
+									<ContextMenu name="НадписьАУСНДоходыМинусРасходыНалогНаИмуществоЮЛКонтекстноеМеню" id="1499"/>
+									<ExtendedTooltip name="НадписьАУСНДоходыМинусРасходыНалогНаИмуществоЮЛРасширеннаяПодсказка" id="1500"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОбщаяСистемаНалогНаИмуществоЮЛ" id="964">
+									<Width>18</Width>
+									<Height>1</Height>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;img 0:21ac47fa-12c2-43e2-9b57-afdf521d3485/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьОбщаяСистемаНалогНаИмуществоЮЛКонтекстноеМеню" id="965"/>
+									<ExtendedTooltip name="НадписьОбщаяСистемаНалогНаИмуществоЮЛРасширеннаяПодсказка" id="966"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграничениеЮЛ" id="1180">
+							<Width>65</Width>
+							<Group>Horizontal</Group>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОграничениеЮЛРасширеннаяПодсказка" id="1181"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьОграниченияЮЛ" id="1185">
+									<Width>25</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничения</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="НадписьОграниченияЮЛКонтекстноеМеню" id="1186"/>
+									<ExtendedTooltip name="НадписьОграниченияЮЛРасширеннаяПодсказка" id="1187"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграниченияЮЛ" id="1139">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОграниченияЮЛРасширеннаяПодсказка" id="1140"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОграниченияЮЛЛево" id="1165">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграниченияЮЛЛевоРасширеннаяПодсказка" id="1166"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДоходыЮЛ" id="1141">
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДоходыЮЛРасширеннаяПодсказка" id="1142"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьДоходыЮЛ" id="1143">
+													<Width>15</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Доходы:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьДоходыЮЛКонтекстноеМеню" id="1144"/>
+													<ExtendedTooltip name="НадписьДоходыЮЛРасширеннаяПодсказка" id="1145"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыУСНЮЛ" id="1156">
+													<Width>37</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>79.74 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыУСНЮЛКонтекстноеМеню" id="1157"/>
+													<ExtendedTooltip name="НадписьДоходыУСНЮЛРасширеннаяПодсказка" id="1158"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьДоходыАУСНЮЛ" id="1501">
+													<Width>37</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>60 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьДоходыАУСНЮЛКонтекстноеМеню" id="1502"/>
+													<ExtendedTooltip name="НадписьДоходыАУСНЮЛРасширеннаяПодсказка" id="1503"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОсновныеСредстваЮЛ" id="1146">
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОсновныеСредстваЮЛРасширеннаяПодсказка" id="1147"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьОсновныеСредстваЮЛ" id="1148">
+													<Width>15</Width>
+													<VerticalStretch>true</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Основные средства:</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьОсновныеСредстваЮЛКонтекстноеМеню" id="1149"/>
+													<ExtendedTooltip name="НадписьОсновныеСредстваЮЛРасширеннаяПодсказка" id="1150"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьОсновныеСредстваУСНЮЛ" id="1159">
+													<Width>37</Width>
+													<VerticalStretch>true</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>100 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ContextMenu name="НадписьОсновныеСредстваУСНЮЛКонтекстноеМеню" id="1160"/>
+													<ExtendedTooltip name="НадписьОсновныеСредстваУСНЮЛРасширеннаяПодсказка" id="1161"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьОсновныеСредстваАУСНЮЛ" id="1442">
+													<Width>37</Width>
+													<VerticalStretch>true</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>150 млн руб</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ContextMenu name="НадписьОсновныеСредстваАУСНЮЛКонтекстноеМеню" id="1443"/>
+													<ExtendedTooltip name="НадписьОсновныеСредстваАУСНЮЛРасширеннаяПодсказка" id="1444"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРаботникиЮЛ" id="1151">
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРаботникиЮЛРасширеннаяПодсказка" id="1152"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьРаботникиЮЛ" id="1153">
+													<Width>15</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Работники:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьРаботникиЮЛКонтекстноеМеню" id="1154"/>
+													<ExtendedTooltip name="НадписьРаботникиЮЛРасширеннаяПодсказка" id="1155"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиУСНЮЛ" id="1162">
+													<Width>37</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>100 человек</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьРаботникиУСНЮЛКонтекстноеМеню" id="1163"/>
+													<ExtendedTooltip name="НадписьРаботникиУСНЮЛРасширеннаяПодсказка" id="1164"/>
+												</LabelDecoration>
+												<LabelDecoration name="НадписьРаботникиАУСНЮЛ" id="1434">
+													<Width>37</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>5 человек</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="НадписьРаботникиАУСНЮЛКонтекстноеМеню" id="1435"/>
+													<ExtendedTooltip name="НадписьРаботникиАУСНЮЛРасширеннаяПодсказка" id="1436"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОграниченияЮЛПраво" id="1167">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграниченияЮЛПравоРасширеннаяПодсказка" id="1168"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияБезОграниченийЮЛ" id="1169">
+											<Width>18</Width>
+											<VerticalStretch>true</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Без ограничений</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ContextMenu name="ДекорацияБезОграниченийЮЛКонтекстноеМеню" id="1170"/>
+											<ExtendedTooltip name="ДекорацияБезОграниченийЮЛРасширеннаяПодсказка" id="1171"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВыбратьСистемуНалогообложенияЮЛ" id="1137">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыбратьСистемуНалогообложенияЮЛРасширеннаяПодсказка" id="1138"/>
+							<ChildItems>
+								<Button name="НазадЮЛ" id="858">
+									<Type>Hyperlink</Type>
+									<SkipOnInput>true</SkipOnInput>
+									<Width>15</Width>
+									<CommandName>Form.Command.Назад</CommandName>
+									<ExtendedTooltip name="НазадЮЛРасширеннаяПодсказка" id="859"/>
+								</Button>
+								<Button name="СистемаНалогообложенияУСНДоходыЮЛ" id="886">
+									<Type>UsualButton</Type>
+									<DefaultItem>true</DefaultItem>
+									<Width>18</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>18</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияУСНДоходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияУСНДоходыЮЛРасширеннаяПодсказка" id="887"/>
+								</Button>
+								<Button name="СистемаНалогообложенияУСНДоходыМинусРасходыЮЛ" id="914">
+									<Type>UsualButton</Type>
+									<Width>18</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>18</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияУСНДоходыМинусРасходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияУСНДоходыМинусРасходыЮЛРасширеннаяПодсказка" id="915"/>
+								</Button>
+								<Button name="СистемаНалогообложенияАУСНДоходыЮЛ" id="1437">
+									<Type>UsualButton</Type>
+									<Width>18</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>18</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияАУСНДоходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияАУСНДоходыЮЛРасширеннаяПодсказка" id="1438"/>
+								</Button>
+								<Button name="СистемаНалогообложенияАУСНДоходыМинусРасходыЮЛ" id="1504">
+									<Type>UsualButton</Type>
+									<Width>18</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>18</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияАУСНДоходыМинусРасходы</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияАУСНДоходыМинусРасходыЮЛРасширеннаяПодсказка" id="1505"/>
+								</Button>
+								<Button name="СистемаНалогообложенияОбщаяЮЛ" id="970">
+									<Type>UsualButton</Type>
+									<Width>18</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>18</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СистемаНалогообложенияОбщая</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<ExtendedTooltip name="СистемаНалогообложенияОбщаяЮЛРасширеннаяПодсказка" id="971"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСравнениеСистемНалогообложенияЮЛ" id="972">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сравнение систем налогообложения ЮЛ</v8:content>
+								</v8:item>
+							</Title>
+							<Width>75</Width>
+							<Group>Horizontal</Group>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСравнениеСистемНалогообложенияЮЛРасширеннаяПодсказка" id="973"/>
+							<ChildItems>
+								<LabelDecoration name="ГиперссылкаСравнениеСистемНалогообложенияЮЛ" id="977">
+									<Width>25</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сравнение систем налогообложения</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ГиперссылкаСравнениеСистемНалогообложенияЮЛКонтекстноеМеню" id="978"/>
+									<ExtendedTooltip name="ГиперссылкаСравнениеСистемНалогообложенияЮЛРасширеннаяПодсказка" id="979"/>
+									<Events>
+										<Event name="Click">ГиперссылкаСравнениеСистемНалогообложенияНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="1342">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="1343"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация2" id="1344">
+									<Width>15</Width>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="1345"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="1346"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаОграниченияТарифаЮЛ" id="1347">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничения тарифа</v8:content>
+										</v8:item>
+									</Title>
+									<Width>77</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ЦветБаннераСерый</BackColor>
+									<ExtendedTooltip name="ГруппаОграниченияТарифаЮЛРасширеннаяПодсказка" id="1348"/>
+									<ChildItems>
+										<LabelDecoration name="ПодсказкаОграниченияТарифаЮЛ" id="1349">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На текущем тарифе есть ограничения.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПодсказкаОграниченияТарифаЮЛКонтекстноеМеню" id="1350"/>
+											<ExtendedTooltip name="ПодсказкаОграниченияТарифаЮЛРасширеннаяПодсказка" id="1351"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСистемаНалогообложенияОП" id="142">
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="СтраницаСистемаНалогообложенияОПРасширеннаяПодсказка" id="143"/>
+					<ChildItems>
+						<InputField name="ГоловнаяОрганизация" id="147">
+							<DataPath>ГоловнаяОрганизация</DataPath>
+							<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+							<ChoiceParameters>
+								<app:item name="Отбор.ЮридическоеФизическоеЛицо">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ЮридическоеФизическоеЛицо.EnumValue.ЮридическоеЛицо</Value>
+									</app:value>
+								</app:item>
+								<app:item name="Отбор.ОбособленноеПодразделение">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:boolean">false</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ГоловнаяОрганизацияКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="ГоловнаяОрганизацияРасширеннаяПодсказка" id="149"/>
+						</InputField>
+						<UsualGroup name="ГруппаКоманды" id="985">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="986"/>
+							<ChildItems>
+								<Button name="Назад" id="987">
+									<Type>Hyperlink</Type>
+									<Width>13</Width>
+									<CommandName>Form.Command.Назад</CommandName>
+									<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="988"/>
+								</Button>
+								<Button name="СоздатьОрганизацию" id="983">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<DefaultItem>true</DefaultItem>
+									<CommandName>Form.Command.СоздатьОрганизацию</CommandName>
+									<ExtendedTooltip name="СоздатьОрганизациюРасширеннаяПодсказка" id="984"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВидОрганизации" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СистемаНалогообложения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Система налогообложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГоловнаяОрганизация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Головная организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЗаголовокФормы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыУчетнойПолитики" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры учетной политики</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РежимПовторногоВыбораВидаОрганизации" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим повторного выбора вида организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимПовторногоВыбораСистемыНалогообложения" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим повторного выбора системы налогообложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимПростогоИнтерфейса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим простого интерфейса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтервалПроверкиОплатыТарифа" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал проверки оплаты тарифа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресЗначенийТарифицируемыхОпций" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес значений тарифицируемых опций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьОрганизацию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СоздатьОрганизацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Назад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьИП" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьИП</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьЮЛ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьЮЛ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьОП" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьОП</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияУСНДоходы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияУСНДоходы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияУСНДоходыМинусРасходы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияУСНДоходыМинусРасходы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияПатентная" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияПатентная</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияОбщая" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияОбщая</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияЕНВД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияЕНВД</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияНалогНаПрофессиональныйДоход" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияНалогНаПрофессиональныйДоход</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияАУСНДоходы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияАУСНДоходы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СистемаНалогообложенияАУСНДоходыМинусРасходы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СистемаНалогообложенияАУСНДоходыМинусРасходы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьСамозанятый" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьСамозанятый</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗаголовокФормы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="РежимПовторногоВыбораВидаОрганизации">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="РежимПовторногоВыбораСистемыНалогообложения">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.БанковскиеСчета.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ДатыВводаНачальныхОстатков.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.МетодыОпределенияПрямыхРасходовПроизводстваВНУ.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.УдалитьМетодыРаспределенияКосвенныхРасходовОрганизаций.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.НастройкиОбменаСКлиентомБанка.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.НеактуальныеРегламентныеОперации.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.НомераЛистовКассовойКниги.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ОбъектыСтроительстваОрганизаций.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ОтветственныеЛицаОрганизаций.StandardCommand.OpenByValue.СтруктурнаяЕдиница</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ПодразделенияОрганизаций.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ПорядокЗакрытияПодразделенийОрганизаций.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.РегистрацииВНалоговомОргане.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.РегистрацияТранспортныхСредств.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.РеквизитыУплатыНалоговИПлатежейВБюджет.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СчетаУчетаРасчетовСКонтрагентами.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СчетаУчетаНоменклатуры.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.УдалитьУчетнаяПолитикаОрганизаций.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИсторияИзменений</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.РегистрацияЗемельныхУчастков.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СтавкиНалогаНаИмущество.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СтавкиНалогаНаИмуществоПоОтдельнымОсновнымСредствам.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.УдалитьЛицевыеСчетаСотрудниковПоЗарплатнымПроектам.StandardCommand.OpenByValue.ФизическоеЛицо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ОтражениеВРегламентированномУчетеНастройкиОрганизаций.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ВыполнениеОперацийИзмененияНалоговогоРежима.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ДокументыОперацийИзмененияНалоговогоРежима.StandardCommand.OpenByValue.Организация</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ДополнительныеСведенияКоманднаяПанель</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.Контрагенты.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

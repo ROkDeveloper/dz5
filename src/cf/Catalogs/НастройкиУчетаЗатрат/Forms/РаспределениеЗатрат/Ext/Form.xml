@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="НастройкиСчета" id="80">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НастройкиСчетаРасширеннаяПодсказка" id="81">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<MaxWidth>80</MaxWidth>
+			</ExtendedTooltip>
+			<ChildItems>
+				<RadioButtonField name="НаборПравил" id="18">
+					<DataPath>НаборПравил</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>База распределения</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ColumnsCount>2</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Как для первого счета</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Наследуемый</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Другая</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Уникальный</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="НаборПравилКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="НаборПравилРасширеннаяПодсказка" id="20"/>
+					<Events>
+						<Event name="OnChange">НаборПравилПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="ПравилаРаспределения" id="78">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила распределения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПравилаРаспределенияРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<UsualGroup name="ОсновноеПравилоРаспределения" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основное правило распределения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОсновноеПравилоРаспределенияРасширеннаяПодсказка" id="91">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>80</MaxWidth>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="ОсновнаяБазаРаспределения" id="21">
+									<DataPath>БазаРаспределения</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ОсновнаяБазаРаспределенияКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ОсновнаяБазаРаспределенияРасширеннаяПодсказка" id="23"/>
+									<Events>
+										<Event name="OnChange">ОсновнаяБазаРаспределенияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="ОсновнаяБазаРаспределенияМодификатор" id="92">
+									<DataPath>ПредставлениеМодификатораОсновногоПравила</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ОсновнаяБазаРаспределенияМодификаторКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ОсновнаяБазаРаспределенияМодификаторРасширеннаяПодсказка" id="94"/>
+									<Events>
+										<Event name="Click">ОсновнаяБазаРаспределенияМодификаторНажатие</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПравилаДляОтдельныхЗатрат" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Особые правила распределения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Особые правила распределения не установлены</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<Collapsed>true</Collapsed>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ПравилаДляОтдельныхЗатратРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<Table name="ПравилаДляОтдельныхЗатратЗаписи" id="32">
+									<AutoAddIncomplete>false</AutoAddIncomplete>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Настройки.Распределение</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для отдельных затрат может быть задана отличающаяся база распределения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ПравилаДляОтдельныхЗатратЗаписиКонтекстноеМеню" id="33"/>
+									<AutoCommandBar name="ПравилаДляОтдельныхЗатратЗаписиКоманднаяПанель" id="34"/>
+									<ExtendedTooltip name="ПравилаДляОтдельныхЗатратЗаписиРасширеннаяПодсказка" id="35">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>50</MaxWidth>
+									</ExtendedTooltip>
+									<SearchStringAddition name="ПравилаДляОтдельныхЗатратЗаписиСтрокаПоиска" id="36">
+										<AdditionSource>
+											<Item>ПравилаДляОтдельныхЗатратЗаписи</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПравилаДляОтдельныхЗатратЗаписиСтрокаПоискаКонтекстноеМеню" id="37"/>
+										<ExtendedTooltip name="ПравилаДляОтдельныхЗатратЗаписиСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПравилаДляОтдельныхЗатратЗаписиСостояниеПросмотра" id="39">
+										<AdditionSource>
+											<Item>ПравилаДляОтдельныхЗатратЗаписи</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПравилаДляОтдельныхЗатратЗаписиСостояниеПросмотраКонтекстноеМеню" id="40"/>
+										<ExtendedTooltip name="ПравилаДляОтдельныхЗатратЗаписиСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПравилаДляОтдельныхЗатратЗаписиУправлениеПоиском" id="42">
+										<AdditionSource>
+											<Item>ПравилаДляОтдельныхЗатратЗаписи</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПравилаДляОтдельныхЗатратЗаписиУправлениеПоискомКонтекстноеМеню" id="43"/>
+										<ExtendedTooltip name="ПравилаДляОтдельныхЗатратЗаписиУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ПравилаДляОтдельныхЗатратЗаписиПриОкончанииРедактирования</Event>
+										<Event name="Selection">ПравилаДляОтдельныхЗатратЗаписиВыбор</Event>
+										<Event name="BeforeAddRow">ПравилаДляОтдельныхЗатратЗаписиПередНачаломДобавления</Event>
+										<Event name="OnStartEdit">ПравилаДляОтдельныхЗатратЗаписиПриНачалеРедактирования</Event>
+										<Event name="AfterDeleteRow">ПравилаДляОтдельныхЗатратЗаписиПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="НомерСтроки" id="45">
+											<DataPath>Настройки.Распределение.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>3</MaxWidth>
+											<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="47"/>
+										</LabelField>
+										<InputField name="Филиал" id="69">
+											<DataPath>Настройки.Распределение.Филиал</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.ГоловнаяОрганизация</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Организация</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ФилиалКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="ФилиалРасширеннаяПодсказка" id="71"/>
+										</InputField>
+										<InputField name="Подразделение" id="51">
+											<DataPath>Настройки.Распределение.Подразделение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+											<ContextMenu name="ПодразделениеКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="53"/>
+										</InputField>
+										<InputField name="СтатьяЗатрат" id="54">
+											<DataPath>Настройки.Распределение.СтатьяЗатрат</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+											<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="56"/>
+										</InputField>
+										<ColumnGroup name="НастройкаИндивидуальнойБазыРаспределения" id="85">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>База распределения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="НастройкаИндивидуальнойБазыРаспределенияРасширеннаяПодсказка" id="86"/>
+											<ChildItems>
+												<InputField name="ИндивидуальнаяБазаРаспределения" id="82">
+													<DataPath>Настройки.Распределение.БазаРаспределения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<Width>30</Width>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ИндивидуальнаяБазаРаспределенияКонтекстноеМеню" id="83"/>
+													<ExtendedTooltip name="ИндивидуальнаяБазаРаспределенияРасширеннаяПодсказка" id="84"/>
+													<Events>
+														<Event name="OnChange">ИндивидуальнаяБазаРаспределенияПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ИндивидуальнаяБазаРаспределенияМодификатор" id="87">
+													<DataPath>Настройки.Распределение.ПредставлениеМодификатора</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<CellHyperlink>true</CellHyperlink>
+													<AutoCellHeight>true</AutoCellHeight>
+													<ShowInHeader>false</ShowInHeader>
+													<Width>30</Width>
+													<TextColor>style:ГиперссылкаЦвет</TextColor>
+													<HeightControlVariant>UseContentHeight</HeightControlVariant>
+													<ContextMenu name="ИндивидуальнаяБазаРаспределенияМодификаторКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="ИндивидуальнаяБазаРаспределенияМодификаторРасширеннаяПодсказка" id="89"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АдресРедактированиеНастроек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес редактирование настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Счет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Настройки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиУчетаЗатрат</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Настройки.Распределение">
+					<Column name="ПредставлениеМодификатора" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Представление модификатора базы распределения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="МодификаторТребуетНастройки" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Модификатор требует настройки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="БазаРаспределения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.БазыРаспределенияКосвенныхРасходов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИсточникНастроек" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборПравил" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор правил</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресОсновнойНаборПравилРаспределения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес основной набор правил распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресМодификаторыПравилРаспределения" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес модификаторы правил распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МодификаторОсновногоПравилаТребуетНастройки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модификатор основного правила требует настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеМодификатораОсновногоПравила" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление модификатора основного правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РольСчета" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.РолиСчетовЗатрат</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыпускПродукции" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выпуск продукции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаOK</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РедактированиеНастроек">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Счет">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="32">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<LabelField name="ОтборОрганизация" id="34">
+					<DataPath>ОтборОрганизация</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<TextColor>style:ТекстПредопределенногоЗначения</TextColor>
+					<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ОтборОрганизацияРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="38"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Button name="Выбрать" id="41">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<Width>9</Width>
+					<CommandName>Form.Command.Выбрать</CommandName>
+					<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="42"/>
+				</Button>
+				<Button name="ОбъектаНетВСписке" id="43">
+					<Type>UsualButton</Type>
+					<Width>20</Width>
+					<CommandName>Form.Command.ОбъектаНетВСписке</CommandName>
+					<ExtendedTooltip name="ОбъектаНетВСпискеРасширеннаяПодсказка" id="44"/>
+				</Button>
+				<Button name="СоздатьРегистрациюНедвижимости" id="45">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьРегистрациюНедвижимости</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СоздатьРегистрациюНедвижимостиРасширеннаяПодсказка" id="46"/>
+				</Button>
+				<Button name="СоздатьСнятиеСРегистрации" id="47">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьСнятиеСРегистрации</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снять с учета</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СоздатьСнятиеСРегистрацииРасширеннаяПодсказка" id="48"/>
+				</Button>
+				<UsualGroup name="ГруппаДополнительнаяКоманднаяПанель" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДополнительнаяКоманднаяПанельРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПоиск" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поиск</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоискРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<SearchStringAddition name="Поиск" id="53">
+									<AdditionSource>
+										<Item>Список</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поиск</v8:content>
+										</v8:item>
+									</Title>
+									<Width>15</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<ContextMenu name="ПоискКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПоискРасширеннаяПодсказка" id="55"/>
+								</SearchStringAddition>
+								<SearchControlAddition name="УправлениеПоиском" id="56">
+									<AdditionSource>
+										<Item>Список</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление поиском</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="УправлениеПоискомКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="УправлениеПоискомРасширеннаяПодсказка" id="58"/>
+								</SearchControlAddition>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="ГруппаВсеДействия" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все действия</v8:content>
+								</v8:item>
+							</Title>
+							<Width>7</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ExtendedTooltip name="ГруппаВсеДействияРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<ButtonGroup name="ГруппаСтандартныеКоманды" id="61">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стандартные команды</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSource>Form</CommandSource>
+									<ExtendedTooltip name="ГруппаСтандартныеКомандыРасширеннаяПодсказка" id="62"/>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="3"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="2">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ValueChoice">СписокВыборЗначения</Event>
+				<Event name="BeforeLoadUserSettingsAtServer">СписокПередЗагрузкойПользовательскихНастроекНаСервере</Event>
+				<Event name="OnChange">СписокПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="Наименование" id="17">
+					<DataPath>Список.Наименование</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="КадастровыйНомер" id="20">
+					<DataPath>Список.КадастровыйНомер</DataPath>
+					<ContextMenu name="КадастровыйНомерКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КадастровыйНомерРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДатаПостановкиНаУчет" id="23">
+					<DataPath>Список.ДатаПостановкиНаУчет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставлено на кадастр</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаПостановкиНаУчетКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДатаПостановкиНаУчетРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ДатаСнятияСУчета" id="26">
+					<DataPath>Список.ДатаСнятияСУчета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снято с кадастра</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаСнятияСУчетаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДатаСнятияСУчетаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="Ссылка" id="14">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ДатаПостановкиНаУчет</Field>
+				<Field>Список.ДатаСнятияСУчета</Field>
+				<Field>Список.КадастровыйНомер</Field>
+				<Field>Список.Наименование</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.ЭтоГруппа</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	МИНИМУМ(РегистрацияНедвижимости.Период) КАК ПериодПервойЗаписи,
+	МАКСИМУМ(РегистрацияНедвижимости.Период) КАК ПериодПоследнейЗаписи,
+	РегистрацияНедвижимости.ОсновноеСредство КАК ОсновноеСредство
+ПОМЕСТИТЬ ГраничныеЗаписиПоОбъекту
+ИЗ
+	РегистрСведений.СтавкиНалогаНаИмуществоПоОтдельнымОсновнымСредствам КАК РегистрацияНедвижимости
+ГДЕ
+	РегистрацияНедвижимости.НалоговаяБаза = ЗНАЧЕНИЕ(Перечисление.НалоговаяБазаПоНалогуНаИмущество.КадастроваяСтоимость)
+{ГДЕ
+	РегистрацияНедвижимости.Организация КАК Организация,
+	РегистрацияНедвижимости.ОсновноеСредство КАК Ссылка}
+
+СГРУППИРОВАТЬ ПО
+	РегистрацияНедвижимости.ОсновноеСредство
+
+ИНДЕКСИРОВАТЬ ПО
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РегистрацияНедвижимости.ОсновноеСредство КАК ОсновноеСредство,
+	МАКСИМУМ(ВЫБОР
+			КОГДА РегистрацияНедвижимости.КадастровыйНомер = ""
+				ТОГДА РегистрацияНедвижимости.КадастровыйНомерПомещения
+			ИНАЧЕ РегистрацияНедвижимости.КадастровыйНомер
+		КОНЕЦ) КАК КадастровыйНомер,
+	МИНИМУМ(РегистрацияНедвижимости.ДатаРегистрацииПраваСобственности) КАК ДатаПостановкиНаУчет
+ПОМЕСТИТЬ ПерваяРегистрацияНедвижимости
+ИЗ
+	РегистрСведений.СтавкиНалогаНаИмуществоПоОтдельнымОсновнымСредствам КАК РегистрацияНедвижимости
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ГраничныеЗаписиПоОбъекту КАК ГраничныеЗаписиПоОбъекту
+		ПО РегистрацияНедвижимости.ОсновноеСредство = ГраничныеЗаписиПоОбъекту.ОсновноеСредство
+			И РегистрацияНедвижимости.Период = ГраничныеЗаписиПоОбъекту.ПериодПервойЗаписи
+ГДЕ
+	РегистрацияНедвижимости.НалоговаяБаза = ЗНАЧЕНИЕ(Перечисление.НалоговаяБазаПоНалогуНаИмущество.КадастроваяСтоимость)
+{ГДЕ
+	РегистрацияНедвижимости.Организация КАК Организация,
+	РегистрацияНедвижимости.ОсновноеСредство КАК Ссылка}
+
+СГРУППИРОВАТЬ ПО
+	РегистрацияНедвижимости.ОсновноеСредство
+
+ИНДЕКСИРОВАТЬ ПО
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РегистрацияНедвижимости.ОсновноеСредство КАК ОсновноеСредство,
+	МАКСИМУМ(ВЫБОР
+			КОГДА РегистрацияНедвижимости.КадастровыйНомер = ""
+				ТОГДА РегистрацияНедвижимости.КадастровыйНомерПомещения
+			ИНАЧЕ РегистрацияНедвижимости.КадастровыйНомер
+		КОНЕЦ) КАК КадастровыйНомер,
+	МАКСИМУМ(РегистрацияНедвижимости.ДатаПрекращенияПраваСобственности) КАК ДатаСнятияСУчета
+ПОМЕСТИТЬ ПоследняяРегистрацияНедвижимости
+ИЗ
+	РегистрСведений.СтавкиНалогаНаИмуществоПоОтдельнымОсновнымСредствам КАК РегистрацияНедвижимости
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ГраничныеЗаписиПоОбъекту КАК ГраничныеЗаписиПоОбъекту
+		ПО РегистрацияНедвижимости.ОсновноеСредство = ГраничныеЗаписиПоОбъекту.ОсновноеСредство
+			И РегистрацияНедвижимости.Период = ГраничныеЗаписиПоОбъекту.ПериодПоследнейЗаписи
+ГДЕ
+	РегистрацияНедвижимости.НалоговаяБаза = ЗНАЧЕНИЕ(Перечисление.НалоговаяБазаПоНалогуНаИмущество.КадастроваяСтоимость)
+{ГДЕ
+	РегистрацияНедвижимости.Организация КАК Организация,
+	РегистрацияНедвижимости.ОсновноеСредство КАК Ссылка}
+
+СГРУППИРОВАТЬ ПО
+	РегистрацияНедвижимости.ОсновноеСредство
+
+ИНДЕКСИРОВАТЬ ПО
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РегистрацияНедвижимостиСрезПоследних.ОсновноеСредство КАК ОсновноеСредство,
+	РегистрацияНедвижимостиСрезПоследних.Период КАК ДатаСнятияСУчета
+ПОМЕСТИТЬ ПрекращениеНачисленияНалога
+ИЗ
+	РегистрСведений.СтавкиНалогаНаИмуществоПоОтдельнымОсновнымСредствам.СрезПоследних(, {(Организация) КАК Организация, (ОсновноеСредство) КАК Ссылка}) КАК РегистрацияНедвижимостиСрезПоследних
+ГДЕ
+	РегистрацияНедвижимостиСрезПоследних.НеПодлежитНалогообложению
+
+ИНДЕКСИРОВАТЬ ПО
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОсновныеСредства.Ссылка КАК Ссылка,
+	ОсновныеСредства.Наименование КАК Наименование,
+	ОсновныеСредства.ЭтоГруппа КАК ЭтоГруппа,
+	ЕСТЬNULL(ПоследняяРегистрацияНедвижимости.КадастровыйНомер, "") КАК КадастровыйНомер,
+	ЕСТЬNULL(ПерваяРегистрацияНедвижимости.ДатаПостановкиНаУчет, ДАТАВРЕМЯ(1, 1, 1)) КАК ДатаПостановкиНаУчет,
+	ВЫБОР
+		КОГДА ПоследняяРегистрацияНедвижимости.ДатаСнятияСУчета ЕСТЬ NULL
+				ИЛИ ПоследняяРегистрацияНедвижимости.ДатаСнятияСУчета = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЕСТЬNULL(ПрекращениеНачисленияНалога.ДатаСнятияСУчета, ДАТАВРЕМЯ(1, 1, 1))
+		КОГДА ПрекращениеНачисленияНалога.ДатаСнятияСУчета ЕСТЬ NULL
+			ТОГДА ПоследняяРегистрацияНедвижимости.ДатаСнятияСУчета
+		КОГДА ПоследняяРегистрацияНедвижимости.ДатаСнятияСУчета &lt; ПрекращениеНачисленияНалога.ДатаСнятияСУчета
+			ТОГДА ПоследняяРегистрацияНедвижимости.ДатаСнятияСУчета
+		ИНАЧЕ ПрекращениеНачисленияНалога.ДатаСнятияСУчета
+	КОНЕЦ КАК ДатаСнятияСУчета
+ИЗ
+	Справочник.ОсновныеСредства КАК ОсновныеСредства
+		ЛЕВОЕ СОЕДИНЕНИЕ ПерваяРегистрацияНедвижимости КАК ПерваяРегистрацияНедвижимости
+		ПО ОсновныеСредства.Ссылка = ПерваяРегистрацияНедвижимости.ОсновноеСредство
+		ЛЕВОЕ СОЕДИНЕНИЕ ПоследняяРегистрацияНедвижимости КАК ПоследняяРегистрацияНедвижимости
+		ПО ОсновныеСредства.Ссылка = ПоследняяРегистрацияНедвижимости.ОсновноеСредство
+		ЛЕВОЕ СОЕДИНЕНИЕ ПрекращениеНачисленияНалога КАК ПрекращениеНачисленияНалога
+		ПО ОсновныеСредства.Ссылка = ПрекращениеНачисленияНалога.ОсновноеСредство
+ГДЕ
+	ОсновныеСредства.НедвижимоеИмущество
+	И НЕ ОсновныеСредства.ГруппаОС В (ЗНАЧЕНИЕ(Перечисление.ГруппыОС.ЗемельныеУчастки), ЗНАЧЕНИЕ(Перечисление.ГруппыОС.ОбъектыПриродопользования))
+{ГДЕ
+	ОсновныеСредства.Ссылка КАК Ссылка}</QueryText>
+				<MainTable>Catalog.ОсновныеСредства</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборОрганизация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНесколькоОрганизацийБухгалтерскийУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ОтслеживатьПометкуУдаления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отслеживать пометку удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимСверки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим сверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+		</Command>
+		<Command name="ОбъектаНетВСписке" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Недвижимости нет в списке</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбъектаНетВСписке</Action>
+		</Command>
+		<Command name="СоздатьРегистрациюНедвижимости" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставить на учет</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СоздатьРегистрациюНедвижимости</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьСнятиеСРегистрации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снятие с учета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СоздатьСнятиеСРегистрации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

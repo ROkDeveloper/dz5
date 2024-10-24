@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalSpacing>Single</VerticalSpacing>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="4">
+			<DataPath>НастройкиУчетаСтраховыхВзносовИП.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ПрименяетсяС" id="36">
+			<DataPath>ПрименяетсяС</DataPath>
+			<SpinButton>true</SpinButton>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЧГ=</v8:content>
+				</v8:item>
+			</EditFormat>
+			<ContextMenu name="ПрименяетсяСКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ПрименяетсяСРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="OnChange">ПрименяетсяСПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="УплачиватьДобровольныеВзносыВФСС" id="25">
+			<DataPath>НастройкиУчетаСтраховыхВзносовИП.УплачиватьДобровольныеВзносыВФСС</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предприниматель добровольно вступил в правоотношения по обязательному социальному страхованию на случай временной нетрудоспособности и в связи с материнством. После установки флага необходимо указать регистрационный номер в карточке организации.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УплачиватьДобровольныеВзносыВФССКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="УплачиватьДобровольныеВзносыВФССРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="OnChange">УплачиватьДобровольныеВзносыВФССПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаРайонныйКоэффициент" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Районный коэффициент</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРайонныйКоэффициентРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<InputField name="РайонныйКоэффициент" id="39">
+					<DataPath>НастройкиУчетаСтраховыхВзносовИП.РайонныйКоэффициент</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ChoiceButton>false</ChoiceButton>
+					<ContextMenu name="РайонныйКоэффициентКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="РайонныйКоэффициентРасширеннаяПодсказка" id="41">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Применяется с 2021 года при определении размера страховых взносов в ФСС
+
+&lt;link https://its.1c.ru/db/newscomm/content/472620/hdoc&gt;Для каких ИП с 2021 года добровольный платеж по взносам на социальное страхование станет больше?&lt;/&gt;</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<LabelDecoration name="УзнатьРайонныйКоэффициент" id="42">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link https://its.1c.ru/bmk/region_coef&gt;Общий справочник районных коэффициентов&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УзнатьРайонныйКоэффициентКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="УзнатьРайонныйКоэффициентРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкиУчетаСтраховыхВзносовИП" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки учета страховых взносов ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиУчетаСтраховыхВзносовИП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрименяетсяС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

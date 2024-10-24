@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОстаткиПоСчетам</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</v8:Type>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументВыдачи</dataPath>
+			<field>ДокументВыдачи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ выдачи</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыдачи</dataPath>
+			<field>ДатаВыдачи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выдачи</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокИспользования</dataPath>
+			<field>СрокИспользования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок использования</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСписания</dataPath>
+			<field>ДатаСписания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата списания</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьДней</dataPath>
+			<field>ОсталосьДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось дней</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ХозрасчетныйОстатки.Субконто2 КАК Ссылка
+ПОМЕСТИТЬ ДокументыВыдачиПередачаМатериаловВЭксплуатацию
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ПередачаМатериаловВЭксплуатацию {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПередачаМатериаловВЭксплуатациюСпецодежда.Ссылка КАК Ссылка,
+	ПередачаМатериаловВЭксплуатацию.Дата КАК Дата,
+	ПередачаМатериаловВЭксплуатациюСпецодежда.Номенклатура КАК Номенклатура,
+	ПередачаМатериаловВЭксплуатациюСпецодежда.ФизЛицо КАК ФизЛицо,
+	ПередачаМатериаловВЭксплуатациюСпецодежда.Количество КАК Количество,
+	ПередачаМатериаловВЭксплуатациюСпецодежда.НазначениеИспользования КАК НазначениеИспользования
+ПОМЕСТИТЬ ПередачаМатериаловВЭксплуатациюСпецодежда
+ИЗ
+	Документ.ПередачаМатериаловВЭксплуатацию.Спецодежда КАК ПередачаМатериаловВЭксплуатациюСпецодежда
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДокументыВыдачиПередачаМатериаловВЭксплуатацию КАК ДокументыВыдачиПередачаМатериаловВЭксплуатацию
+		ПО ПередачаМатериаловВЭксплуатациюСпецодежда.Ссылка = ДокументыВыдачиПередачаМатериаловВЭксплуатацию.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПередачаМатериаловВЭксплуатацию КАК ПередачаМатериаловВЭксплуатацию
+		ПО ПередачаМатериаловВЭксплуатациюСпецодежда.Ссылка = ПередачаМатериаловВЭксплуатацию.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПередачаМатериаловВЭксплуатациюИнвентарь.Ссылка,
+	ПередачаМатериаловВЭксплуатацию.Дата,
+	ПередачаМатериаловВЭксплуатациюИнвентарь.Номенклатура,
+	ПередачаМатериаловВЭксплуатациюИнвентарь.ФизЛицо,
+	ПередачаМатериаловВЭксплуатациюИнвентарь.Количество,
+	NULL
+ИЗ
+	Документ.ПередачаМатериаловВЭксплуатацию.ИнвентарьИХозяйственныеПринадлежности КАК ПередачаМатериаловВЭксплуатациюИнвентарь
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДокументыВыдачиПередачаМатериаловВЭксплуатацию КАК ДокументыВыдачиПередачаМатериаловВЭксплуатацию
+		ПО ПередачаМатериаловВЭксплуатациюИнвентарь.Ссылка = ДокументыВыдачиПередачаМатериаловВЭксплуатацию.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПередачаМатериаловВЭксплуатацию КАК ПередачаМатериаловВЭксплуатацию
+		ПО ПередачаМатериаловВЭксплуатациюИнвентарь.Ссылка = ПередачаМатериаловВЭксплуатацию.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Ссылка,
+	ФизЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ХозрасчетныйОстатки.Субконто2 КАК Ссылка
+ПОМЕСТИТЬ ДокументыВыдачиПартияМатериаловВЭксплуатации
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ПартияМатериаловВЭксплуатации {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПартияМатериаловВЭксплуатации.Ссылка КАК Ссылка,
+	ПартияМатериаловВЭксплуатации.Дата КАК Дата,
+	ПартияМатериаловВЭксплуатации.Номенклатура КАК Номенклатура,
+	ПартияМатериаловВЭксплуатации.НазначениеИспользования КАК НазначениеИспользования
+ПОМЕСТИТЬ ПартияМатериаловВЭксплуатации
+ИЗ
+	Документ.ПартияМатериаловВЭксплуатации КАК ПартияМатериаловВЭксплуатации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДокументыВыдачиПартияМатериаловВЭксплуатации КАК ДокументыВыдачиПартияМатериаловВЭксплуатации
+		ПО ПартияМатериаловВЭксплуатации.Ссылка = ДокументыВыдачиПартияМатериаловВЭксплуатации.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ХозрасчетныйОстатки.Субконто2 КАК Ссылка,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто2 КАК Документ.ТребованиеНакладная).Дата КАК Дата
+ПОМЕСТИТЬ ТребованиеНакладная
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ТребованиеНакладная {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ХозрасчетныйОстатки.Субконто2 КАК Ссылка,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто2 КАК Документ.ПереводОСВМалоценноеОборудование).Дата КАК Дата
+ПОМЕСТИТЬ ПереводОСВМалоценноеОборудование
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ПереводОСВМалоценноеОборудование {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ХозрасчетныйОстатки.Субконто1 КАК Номенклатура,
+	ХозрасчетныйОстатки.Субконто2 КАК ДокументВыдачи,
+	ХозрасчетныйОстатки.Субконто3 КАК Сотрудник,
+	ВЫБОР
+		КОГДА ПередачаМатериаловВЭксплуатациюСпецодежда.Количество ЕСТЬ NULL
+			ТОГДА ХозрасчетныйОстатки.СуммаОстаток
+		КОГДА ПередачаМатериаловВЭксплуатациюСпецодежда.Количество &gt;= ХозрасчетныйОстатки.КоличествоОстаток
+			ТОГДА ХозрасчетныйОстатки.СуммаОстаток
+		КОГДА ХозрасчетныйОстатки.КоличествоОстаток &gt; 0
+			ТОГДА ХозрасчетныйОстатки.СуммаОстаток * ПередачаМатериаловВЭксплуатациюСпецодежда.Количество / ХозрасчетныйОстатки.КоличествоОстаток
+		ИНАЧЕ 0
+	КОНЕЦ КАК Сумма,
+	ВЫБОР
+		КОГДА ПередачаМатериаловВЭксплуатациюСпецодежда.Количество ЕСТЬ NULL
+			ТОГДА ХозрасчетныйОстатки.КоличествоОстаток
+		КОГДА ПередачаМатериаловВЭксплуатациюСпецодежда.Количество &gt;= ХозрасчетныйОстатки.КоличествоОстаток
+			ТОГДА ХозрасчетныйОстатки.КоличествоОстаток
+		ИНАЧЕ ПередачаМатериаловВЭксплуатациюСпецодежда.Количество
+	КОНЕЦ КАК Количество,
+	ПередачаМатериаловВЭксплуатациюСпецодежда.НазначениеИспользования КАК НазначениеИспользования,
+	ПередачаМатериаловВЭксплуатациюСпецодежда.Дата КАК ДатаВыдачи
+ПОМЕСТИТЬ ОстаткиСпецодежды
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ПередачаМатериаловВЭксплуатацию {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ПередачаМатериаловВЭксплуатациюСпецодежда КАК ПередачаМатериаловВЭксплуатациюСпецодежда
+		ПО ХозрасчетныйОстатки.Субконто1 = ПередачаМатериаловВЭксплуатациюСпецодежда.Номенклатура
+			И ХозрасчетныйОстатки.Субконто2 = ПередачаМатериаловВЭксплуатациюСпецодежда.Ссылка
+			И ХозрасчетныйОстатки.Субконто3 = ПередачаМатериаловВЭксплуатациюСпецодежда.ФизЛицо
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ХозрасчетныйОстатки.Субконто1,
+	ХозрасчетныйОстатки.Субконто2,
+	ХозрасчетныйОстатки.Субконто3,
+	ХозрасчетныйОстатки.СуммаОстаток,
+	ХозрасчетныйОстатки.КоличествоОстаток,
+	ПартияМатериаловВЭксплуатации.НазначениеИспользования,
+	ПартияМатериаловВЭксплуатации.Дата
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ПартияМатериаловВЭксплуатации {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ПартияМатериаловВЭксплуатации КАК ПартияМатериаловВЭксплуатации
+		ПО ХозрасчетныйОстатки.Субконто1 = ПартияМатериаловВЭксплуатации.Номенклатура
+			И ХозрасчетныйОстатки.Субконто2 = ПартияМатериаловВЭксплуатации.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ХозрасчетныйОстатки.Субконто1,
+	ХозрасчетныйОстатки.Субконто2,
+	ХозрасчетныйОстатки.Субконто3,
+	ХозрасчетныйОстатки.СуммаОстаток,
+	ХозрасчетныйОстатки.КоличествоОстаток,
+	NULL,
+	ТребованиеНакладная.Дата
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ТребованиеНакладная {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ТребованиеНакладная КАК ТребованиеНакладная
+		ПО ХозрасчетныйОстатки.Субконто2 = ТребованиеНакладная.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ХозрасчетныйОстатки.Субконто1,
+	ХозрасчетныйОстатки.Субконто2,
+	ХозрасчетныйОстатки.Субконто3,
+	ХозрасчетныйОстатки.СуммаОстаток,
+	ХозрасчетныйОстатки.КоличествоОстаток,
+	NULL,
+	ПереводОСВМалоценноеОборудование.Дата
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Период, Счет В (&amp;СчетаСпецодежды), , Субконто2 ССЫЛКА Документ.ПереводОСВМалоценноеОборудование {(Организация).*, (Подразделение).*, (Субконто1).* КАК Номенклатура, (Субконто2).* КАК ДокументВыдачи, (Субконто3).* КАК Сотрудник}) КАК ХозрасчетныйОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ПереводОСВМалоценноеОборудование КАК ПереводОСВМалоценноеОборудование
+		ПО ХозрасчетныйОстатки.Субконто2 = ПереводОСВМалоценноеОборудование.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОстаткиСпецодежды.Номенклатура КАК Номенклатура,
+	ОстаткиСпецодежды.ДокументВыдачи КАК ДокументВыдачи,
+	ОстаткиСпецодежды.Сотрудник КАК Сотрудник,
+	ОстаткиСпецодежды.Сумма КАК Сумма,
+	ОстаткиСпецодежды.Количество КАК Количество,
+	ОстаткиСпецодежды.ДатаВыдачи КАК ДатаВыдачи,
+	ЕСТЬNULL(НазначенияИспользования.СрокПолезногоИспользования, СрокиИспользованияНоменклатуры.СрокИспользования) КАК СрокИспользования,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(НазначенияИспользования.СрокПолезногоИспользования, ЕСТЬNULL(СрокиИспользованияНоменклатуры.СрокИспользования, 0)) &gt; 0
+			ТОГДА ДОБАВИТЬКДАТЕ(ОстаткиСпецодежды.ДатаВыдачи, МЕСЯЦ, ЕСТЬNULL(НазначенияИспользования.СрокПолезногоИспользования, СрокиИспользованияНоменклатуры.СрокИспользования))
+		ИНАЧЕ ""
+	КОНЕЦ КАК ДатаСписания,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(НазначенияИспользования.СрокПолезногоИспользования, ЕСТЬNULL(СрокиИспользованияНоменклатуры.СрокИспользования, 0)) &gt; 0
+			ТОГДА РАЗНОСТЬДАТ(&amp;Период, ДОБАВИТЬКДАТЕ(ОстаткиСпецодежды.ДатаВыдачи, МЕСЯЦ, ЕСТЬNULL(НазначенияИспользования.СрокПолезногоИспользования, СрокиИспользованияНоменклатуры.СрокИспользования)), ДЕНЬ)
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОсталосьДней
+ИЗ
+	ОстаткиСпецодежды КАК ОстаткиСпецодежды
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.НазначенияИспользования КАК НазначенияИспользования
+		ПО ОстаткиСпецодежды.НазначениеИспользования = НазначенияИспользования.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СрокиИспользованияНоменклатуры КАК СрокиИспользованияНоменклатуры
+		ПО ОстаткиСпецодежды.Номенклатура = СрокиИспользованияНоменклатуры.Номенклатура</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ДатаВыдачи</dataPath>
+		<expression>Максимум(ДатаВыдачи)</expression>
+		<group>ДокументВыдачи</group>
+		<group>ДокументВыдачи Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>СрокИспользования</dataPath>
+		<expression>Максимум(СрокИспользования)</expression>
+		<group>ДокументВыдачи</group>
+		<group>ДокументВыдачи Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаСписания</dataPath>
+		<expression>Максимум(ДатаСписания)</expression>
+		<group>ДокументВыдачи</group>
+		<group>ДокументВыдачи Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОсталосьДней</dataPath>
+		<expression>Максимум(ОсталосьДней)</expression>
+		<group>ДокументВыдачи</group>
+		<group>ДокументВыдачи Иерархия</group>
+	</totalField>
+	<parameter>
+		<name>СчетаСпецодежды</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счета спецодежды</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.СпецодеждаВЭксплуатацииВспомогательный</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.ИнвентарьИХозяйственныеПринадлежностиВЭксплуатации</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>МатериалыВыданныеСотрудникам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Материалы, выданные сотрудникам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВыдачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокИспользования</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаСписания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьДней</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаВыдачи</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОсталосьДней</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаСписания</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОсталосьДней</dcsset:left>
+							<dcsset:comparisonType>Less</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделять просроченые</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>e7b5998e-5ee1-40cb-93b2-eca9b7cc146f</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделять просроченые</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Группировка</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Сотрудник</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Группировка</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>Группировка</dcsset:name>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ДокументВыдачи</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

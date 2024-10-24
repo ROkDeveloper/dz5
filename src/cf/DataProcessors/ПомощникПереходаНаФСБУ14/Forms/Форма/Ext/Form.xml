@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="72">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="73"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="74">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="75"/>
+			</Button>
+			<Button name="ФормаПечать" id="197">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Печать</CommandName>
+				<ExtendedTooltip name="ФормаПечатьРасширеннаяПодсказка" id="198"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Организация" id="1">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<TextColor>style:ТекстПредопределенногоЗначения</TextColor>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+		</LabelField>
+		<UsualGroup name="ГруппаСтоимостьАктивов" id="192">
+			<EnableContentChange>true</EnableContentChange>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>PopUp</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтоимостьАктивовРасширеннаяПодсказка" id="193"/>
+			<ChildItems>
+				<InputField name="СтоимостьАктивовОпределяетсяПоДаннымУчета" id="32">
+					<DataPath>СтоимостьАктивовОпределяетсяПоДаннымУчета</DataPath>
+					<Width>20</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<QuickChoice>true</QuickChoice>
+					<ContextMenu name="СтоимостьАктивовОпределяетсяПоДаннымУчетаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СтоимостьАктивовОпределяетсяПоДаннымУчетаРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">СтоимостьАктивовОпределяетсяПоДаннымУчетаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<PictureDecoration name="ДекорацияОтступ" id="194">
+					<Width>5</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="195"/>
+					<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="196"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаПояснения" id="210">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пояснения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пояснения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПоясненияРасширеннаяПодсказка" id="211"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПодсказка" id="205">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Как заполнить данные для перехода на ФСБУ 14?</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+							<Behavior>PopUp</Behavior>
+							<ExtendedTooltip name="ГруппаПодсказкаРасширеннаяПодсказка" id="206"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПодсказка" id="207">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;fontsize 10&gt;При&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;переходе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;новый&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;link https://its.1c.ru/db/garant/content/404802297/hdoc&gt;&lt;fontsize 10&gt;Стандарт&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;нужно&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;провести&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;инвентаризацию&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;всех&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;нематериальных&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;активов&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;начало&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;года&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;и&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;указать&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;их&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;списке:&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -44&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -44&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;Проверьте&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;и&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;при&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;необходимости&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;измените&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;элементы&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;амортизации&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;активов,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;которые&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;должны&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;быть&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;признаны&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;как&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;НМА&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;и&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;которые&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ранее&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учитывались&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;составе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;НМА.&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;Для&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;редактирования&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;элементов&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;амортизации,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;которые&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;будут&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;установлены&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;после&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;перехода&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;новый&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;Стандарт,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;установите&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;статус&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"Пересмотрено".&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -44&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -44&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;Установите&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;статус&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"К&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;списанию"&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;для&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;тех&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;объектов,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;которые&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ранее&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учитывались&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;составе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;НМА,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;но&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;соответствии&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;с&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ФСБУ&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;14&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;таковыми&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;не&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;являются.&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;Стоимость&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;этих&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;объектов&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;бухгалтерском&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учете&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;будет&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;списана&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;нераспределенную&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;прибыль.&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -44&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -44&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;Добавьте&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;список&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;те&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;объекты,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;которые&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ранее&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учитывались&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;составе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;других&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;активов,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;но&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;соответствии&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;с&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ФСБУ&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;14&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;должны&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;быть&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;признаны&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;бухгалтерском&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учете&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;как&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;НМА.&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;В&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;поле&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"Порядок&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учета&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;до&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;перехода&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ФСБУ&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;14"&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;укажите&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;аналитику&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;актива,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;составе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;которого&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ранее&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учитывался&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;НМА.&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -1&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -1&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;Если&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;соответствии&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;с&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;рекомендациями&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;БМЦ&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;link http://bmcenter.ru/Files/R-KpR_Perehod_na_FSBU-14&gt;&lt;fontsize 10&gt;Р-155/2023-КпР&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;«Переход&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ФСБУ&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;14/2022&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"Нематериальные&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;активы"»&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;и&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;link http://bmcenter.ru/Files/R-KpR_Izpolzovanie_dannih_MSFO_pri_perehode_na_FSBU&gt;&lt;fontsize 10&gt;Р-145/2022-КпР&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;«Использование&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;данных&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;МСФО&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;при&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;переходе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ФСБУ»&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;необходимо&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;сделать&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;единовременную&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;корректировку&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;элементов&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;балансовой&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;стоимости,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;укажите,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;что&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;стоимость&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;активов&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;определяется&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"По&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;иным&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;данным"&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;и&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;введите&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;суммы&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;с&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;учетом&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;корректировок.&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -1&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -1&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;Изменение&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;параметров&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;амортизации,&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;а&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;также&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;единовременные&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;корректировки&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;стоимости&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;активов&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;будут&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;сделаны&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;межотчетном&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;периоде&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;регламентной&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;операцией&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"Переход&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;на&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ФСБУ&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;14"&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;ходе&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;"Закрытия&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;месяца".&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -1&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -1&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;Подробнее&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;о&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;новом&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;Стандарте&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;link https://its.1c.ru/video/lector20230504-1&gt;&lt;fontsize 10&gt;смотрите&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;fontsize 10&gt;видео&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;, о переходе на него -&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;/&gt;&lt;link https://buh.ru/articles/kak-pereyti-na-fsbu-14-2022-v-1s-bukhgalterii-8.html&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;ч&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;и&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;т&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;а&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;й&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;т&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;е&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;в&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt; &lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;с&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;т&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;а&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;т&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;ь&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;е&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;.&lt;/&gt;&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="209"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокНМА" id="177">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нематериальные активы на 1 января 2024 года</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСписокНМАРасширеннаяПодсказка" id="178"/>
+			<ChildItems>
+				<Table name="СписокНМА" id="35">
+					<Representation>List</Representation>
+					<DataPath>Объект.СписокНМА</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список нематериальных активов</v8:content>
+						</v8:item>
+					</Title>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокНМАКонтекстноеМеню" id="37"/>
+					<AutoCommandBar name="СписокНМАКоманднаяПанель" id="36">
+						<ChildItems>
+							<ButtonGroup name="ГруппаКнопокЗаполнить" id="87">
+								<ExtendedTooltip name="ГруппаКнопокЗаполнитьРасширеннаяПодсказка" id="88"/>
+								<ChildItems>
+									<Button name="СписокНМАЗаполнитьПоДаннымУчета" id="89">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПоДаннымУчета</CommandName>
+										<ExtendedTooltip name="СписокНМАЗаполнитьПоДаннымУчетаРасширеннаяПодсказка" id="90"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Popup name="ПодменюИзменить" id="182">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Изменить</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПодменюИзменитьРасширеннаяПодсказка" id="183"/>
+								<ChildItems>
+									<Button name="СписокНМАИзменитьВидНМА" id="184">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВидНМА</CommandName>
+										<ExtendedTooltip name="СписокНМАИзменитьВидНМАРасширеннаяПодсказка" id="185"/>
+									</Button>
+									<Button name="СписокНМАИзменитьСтатус" id="199">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьСтатус</CommandName>
+										<ExtendedTooltip name="СписокНМАИзменитьСтатусРасширеннаяПодсказка" id="200"/>
+									</Button>
+									<Button name="СписокНМАИзменитьЭлементыАмортизации" id="201">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьЭлементыАмортизации</CommandName>
+										<ExtendedTooltip name="СписокНМАИзменитьЭлементыАмортизацииРасширеннаяПодсказка" id="202"/>
+									</Button>
+									<Button name="СписокНМАИзменитьПараметрыНачисленияАмортизации" id="215">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьПараметрыНачисленияАмортизации</CommandName>
+										<ExtendedTooltip name="СписокНМАИзменитьПараметрыНачисленияАмортизацииРасширеннаяПодсказка" id="216"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокНМАРасширеннаяПодсказка" id="38"/>
+					<SearchStringAddition name="СписокНМАСтрокаПоиска" id="39">
+						<AdditionSource>
+							<Item>СписокНМА</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокНМАСтрокаПоискаКонтекстноеМеню" id="40"/>
+						<ExtendedTooltip name="СписокНМАСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокНМАСостояниеПросмотра" id="45">
+						<AdditionSource>
+							<Item>СписокНМА</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокНМАСостояниеПросмотраКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="СписокНМАСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокНМАУправлениеПоиском" id="42">
+						<AdditionSource>
+							<Item>СписокНМА</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокНМАУправлениеПоискомКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="СписокНМАУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnEditEnd">СписокНМАПриОкончанииРедактирования</Event>
+						<Event name="Selection">СписокНМАВыбор</Event>
+						<Event name="BeforeDeleteRow">СписокНМАПередУдалением</Event>
+						<Event name="OnStartEdit">СписокНМАПриНачалеРедактирования</Event>
+						<Event name="OnChange">СписокНМАПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="ГруппаСтатус" id="82">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус</v8:content>
+								</v8:item>
+							</Title>
+							<Group>InCell</Group>
+							<ShowInHeader>true</ShowInHeader>
+							<FixingInTable>Left</FixingInTable>
+							<ExtendedTooltip name="ГруппаСтатусРасширеннаяПодсказка" id="83"/>
+							<ChildItems>
+								<PictureField name="СписокНМАКартинкаСтатус" id="84">
+									<DataPath>Объект.СписокНМА.КартинкаСтатус</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.КоллекцияСтатусАктива</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="СписокНМАКартинкаСтатусКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="СписокНМАКартинкаСтатусРасширеннаяПодсказка" id="86"/>
+								</PictureField>
+								<InputField name="СписокНМАДействиеПриПереходе" id="76">
+									<DataPath>Объект.СписокНМА.ДействиеПриПереходе</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус</v8:content>
+										</v8:item>
+									</Title>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СписокНМАДействиеПриПереходеКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="СписокНМАДействиеПриПереходеРасширеннаяПодсказка" id="78"/>
+									<Events>
+										<Event name="OnChange">СписокНМАДействиеПриПереходеПриИзменении</Event>
+										<Event name="StartChoice">СписокНМАДействиеПриПереходеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="СписокНМАСчетУчета" id="54">
+							<DataPath>Объект.СписокНМА.СчетУчета</DataPath>
+							<FixingInTable>Left</FixingInTable>
+							<Width>10</Width>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="СписокНМАСчетУчетаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="СписокНМАСчетУчетаРасширеннаяПодсказка" id="56"/>
+							<Events>
+								<Event name="OnChange">СписокНМАСчетУчетаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СписокНМАНематериальныйАктив" id="57">
+							<DataPath>Объект.СписокНМА.НематериальныйАктив</DataPath>
+							<FixingInTable>Left</FixingInTable>
+							<ContextMenu name="СписокНМАНематериальныйАктивКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="СписокНМАНематериальныйАктивРасширеннаяПодсказка" id="59"/>
+							<Events>
+								<Event name="OnChange">СписокНМАНематериальныйАктивПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СписокНМАНематериальныйАктивКод" id="60">
+							<DataPath>Объект.СписокНМА.НематериальныйАктив.Code</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инв. №</v8:content>
+								</v8:item>
+							</Title>
+							<FixingInTable>Left</FixingInTable>
+							<ContextMenu name="СписокНМАНематериальныйАктивКодКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СписокНМАНематериальныйАктивКодРасширеннаяПодсказка" id="62"/>
+						</InputField>
+						<InputField name="СписокНМАДатаПринятияКУчету" id="63">
+							<DataPath>Объект.СписокНМА.ДатаПринятияКУчету</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="СписокНМАДатаПринятияКУчетуКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="СписокНМАДатаПринятияКУчетуРасширеннаяПодсказка" id="65"/>
+						</InputField>
+						<InputField name="СписокНМАВидНМА" id="69">
+							<DataPath>Объект.СписокНМА.ВидНМА</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="СписокНМАВидНМАКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="СписокНМАВидНМАРасширеннаяПодсказка" id="71"/>
+						</InputField>
+						<ColumnGroup name="ГруппаПорядокУчета" id="97">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Порядок учета до перехода на ФСБУ 14</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="ГруппаПорядокУчетаРасширеннаяПодсказка" id="98"/>
+							<ChildItems>
+								<InputField name="СписокНМАПорядокУчетаДоПерехода" id="94">
+									<DataPath>Объект.СписокНМА.ПорядокУчетаДоПерехода</DataPath>
+									<Enabled>false</Enabled>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="СписокНМАПорядокУчетаДоПереходаКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="СписокНМАПорядокУчетаДоПереходаРасширеннаяПодсказка" id="96"/>
+								</InputField>
+								<InputField name="СписокНМАПредставлениеАналитикиСписания" id="79">
+									<DataPath>Объект.СписокНМА.ПредставлениеАналитикиСписания</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<CellHyperlink>true</CellHyperlink>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>17</Width>
+									<TextColor>style:ГиперссылкаЦвет</TextColor>
+									<ContextMenu name="СписокНМАПредставлениеАналитикиСписанияКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="СписокНМАПредставлениеАналитикиСписанияРасширеннаяПодсказка" id="81"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="СписокНМАПараметрыНачисленияАмортизации" id="221">
+							<DataPath>Объект.СписокНМА.ПредставлениеПараметрыНачисленияАмортизации</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>16</Width>
+							<ContextMenu name="СписокНМАПараметрыНачисленияАмортизацииКонтекстноеМеню" id="222"/>
+							<ExtendedTooltip name="СписокНМАПараметрыНачисленияАмортизацииРасширеннаяПодсказка" id="212"/>
+						</InputField>
+						<ColumnGroup name="ГруппаНадписи" id="160">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа надписи</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаНадписиРасширеннаяПодсказка" id="161"/>
+							<ChildItems>
+								<InputField name="СписокНМАНадписьДоПерехода" id="162">
+									<DataPath>Объект.СписокНМА.НадписьДоИзменения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ShowInHeader>false</ShowInHeader>
+									<TextColor>style:ЗаголовкиСтрокЦветТекста</TextColor>
+									<Font ref="style:ЗаголовкиСтрокШрифт" kind="StyleItem"/>
+									<ContextMenu name="СписокНМАНадписьДоПереходаКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="СписокНМАНадписьДоПереходаРасширеннаяПодсказка" id="164"/>
+								</InputField>
+								<InputField name="СписокНМАНадписьПослеПерехода" id="168">
+									<DataPath>Объект.СписокНМА.НадписьДоИзменения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ShowInHeader>false</ShowInHeader>
+									<TextColor>style:ЗаголовкиСтрокЦветТекста</TextColor>
+									<Font ref="style:ЗаголовкиСтрокШрифт" kind="StyleItem"/>
+									<ContextMenu name="СписокНМАНадписьПослеПереходаКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="СписокНМАНадписьПослеПереходаРасширеннаяПодсказка" id="170"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ЭлементыАмортизации" id="158">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Элементы амортизации</v8:content>
+								</v8:item>
+							</Title>
+							<Width>20</Width>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="ЭлементыАмортизацииРасширеннаяПодсказка" id="159"/>
+							<ChildItems>
+								<InputField name="СписокНМАПредставлениеЭлементыАмортизацииДоПерехода" id="171">
+									<DataPath>Объект.СписокНМА.ПредставлениеЭлементыАмортизацииДоПерехода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Элементы амортизации до перехода</v8:content>
+										</v8:item>
+									</Title>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>20</Width>
+									<ContextMenu name="СписокНМАПредставлениеЭлементыАмортизацииДоПереходаКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="СписокНМАПредставлениеЭлементыАмортизацииДоПереходаРасширеннаяПодсказка" id="173"/>
+								</InputField>
+								<InputField name="СписокНМАПредставлениеЭлементыАмортизацииПослеПерехода" id="174">
+									<DataPath>Объект.СписокНМА.ПредставлениеЭлементыАмортизацииПослеПерехода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Элементы амортизации после перехода</v8:content>
+										</v8:item>
+									</Title>
+									<CellHyperlink>true</CellHyperlink>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>20</Width>
+									<TextColor>style:ГиперссылкаЦвет</TextColor>
+									<ContextMenu name="СписокНМАПредставлениеЭлементыАмортизацииПослеПереходаКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="СписокНМАПредставлениеЭлементыАмортизацииПослеПереходаРасширеннаяПодсказка" id="176"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ПервоначальнаяСтоимость" id="99">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Первоначальная стоимость</v8:content>
+								</v8:item>
+							</Title>
+							<Width>17</Width>
+							<ShowInHeader>true</ShowInHeader>
+							<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+							<ExtendedTooltip name="ПервоначальнаяСтоимостьРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<InputField name="СписокНМАПервоначальнаяСтоимостьДоПерехода" id="101">
+									<DataPath>Объект.СписокНМА.ПервоначальнаяСтоимостьДоПерехода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>17</Width>
+									<ContextMenu name="СписокНМАПервоначальнаяСтоимостьДоПереходаКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="СписокНМАПервоначальнаяСтоимостьДоПереходаРасширеннаяПодсказка" id="103"/>
+								</InputField>
+								<InputField name="СписокНМАПервоначальнаяСтоимостьПослеПерехода" id="104">
+									<DataPath>Объект.СписокНМА.ПервоначальнаяСтоимость</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>17</Width>
+									<ContextMenu name="СписокНМАПервоначальнаяСтоимостьПослеПереходаКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="СписокНМАПервоначальнаяСтоимостьПослеПереходаРасширеннаяПодсказка" id="106"/>
+									<Events>
+										<Event name="OnChange">СписокНМАПервоначальнаяСтоимостьПослеПереходаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="НакопленнаяАмортизация" id="107">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Накопленная амортизация</v8:content>
+								</v8:item>
+							</Title>
+							<Width>17</Width>
+							<ShowInHeader>true</ShowInHeader>
+							<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+							<ExtendedTooltip name="НакопленнаяАмортизацияРасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<InputField name="СписокНМААмортизацияДоПерехода" id="109">
+									<DataPath>Объект.СписокНМА.АмортизацияДоПерехода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>17</Width>
+									<ContextMenu name="СписокНМААмортизацияДоПереходаКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="СписокНМААмортизацияДоПереходаРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="СписокНМААмортизацияПослеПерехода" id="112">
+									<DataPath>Объект.СписокНМА.Амортизация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>17</Width>
+									<ContextMenu name="СписокНМААмортизацияПослеПереходаКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="СписокНМААмортизацияПослеПереходаРасширеннаяПодсказка" id="114"/>
+									<Events>
+										<Event name="OnChange">СписокНМААмортизацияПослеПереходаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="СписокНМАОбесценение" id="115">
+							<DataPath>Объект.СписокНМА.Обесценение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+							<Width>12</Width>
+							<ContextMenu name="СписокНМАОбесценениеКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="СписокНМАОбесценениеРасширеннаяПодсказка" id="117"/>
+							<Events>
+								<Event name="OnChange">СписокНМАОбесценениеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СписокНМАОбесценениеДоступноеДляВосстановления" id="118">
+							<DataPath>Объект.СписокНМА.ОбесценениеДоступноеДляВосстановления</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+							<ContextMenu name="СписокНМАОбесценениеДоступноеДляВосстановленияКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="СписокНМАОбесценениеДоступноеДляВосстановленияРасширеннаяПодсказка" id="120"/>
+						</InputField>
+						<InputField name="СписокНМАИзменениеНераспределеннойПрибыли" id="155">
+							<DataPath>Объект.СписокНМА.ИзменениеНераспределеннойПрибыли</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменение НРП</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменение нераспределенной прибыли</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+							<ContextMenu name="СписокНМАИзменениеНераспределеннойПрибылиКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="СписокНМАИзменениеНераспределеннойПрибылиРасширеннаяПодсказка" id="157"/>
+						</InputField>
+						<InputField name="СписокНМАОтступ" id="66">
+							<DataPath>Объект.СписокНМА.Отступ</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ShowInHeader>false</ShowInHeader>
+							<ContextMenu name="СписокНМАОтступКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="СписокНМАОтступРасширеннаяПодсказка" id="68"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИтогиВсегоСФоном" id="132">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги сумма</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ИтогиФонГруппы</BackColor>
+			<ExtendedTooltip name="ГруппаИтогиВсегоСФономРасширеннаяПодсказка" id="133"/>
+			<ChildItems>
+				<InputField name="ИтогиПервоначальнаяСтоимость" id="126">
+					<DataPath>Объект.СписокНМА.TotalПервоначальнаяСтоимость</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Первоначальная стоимость</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ИтогиПервоначальнаяСтоимостьКонтекстноеМеню" id="127"/>
+					<ExtendedTooltip name="ИтогиПервоначальнаяСтоимостьРасширеннаяПодсказка" id="128"/>
+				</InputField>
+				<InputField name="ИтогиАмортизация" id="129">
+					<DataPath>Объект.СписокНМА.TotalАмортизация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Амортизация</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогиАмортизацияКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ИтогиАмортизацияРасширеннаяПодсказка" id="131"/>
+				</InputField>
+				<InputField name="ИтогиОбесценение" id="146">
+					<DataPath>Объект.СписокНМА.TotalОбесценение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обесценение</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогиОбесценениеКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="ИтогиОбесценениеРасширеннаяПодсказка" id="148"/>
+				</InputField>
+				<InputField name="ИтогиИзменениеНераспределеннойПрибыли" id="152">
+					<DataPath>Объект.СписокНМА.TotalИзменениеНераспределеннойПрибыли</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменение нераспределенной прибыли</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогиИзменениеНераспределеннойПрибылиКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="ИтогиИзменениеНераспределеннойПрибылиРасширеннаяПодсказка" id="154"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПереходаНаФСБУ14</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.СписокНМА">
+					<Column name="Отступ" id="4">
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>1</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПредставлениеАналитикиСписания" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Порядок учета до перехода на ФСБУ 14</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="КартинкаСтатус" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Картинка статус</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПорядокУчетаДоПерехода" id="10">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Порядок учета до перехода</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="НадписьДоИзменения" id="17">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Надпись до изменения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="НадписьПослеИзменения" id="18">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Надпись после изменения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПредставлениеЭлементыАмортизацииДоПерехода" id="19">
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПредставлениеЭлементыАмортизацииПослеПерехода" id="20">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Представление элементы амортизации после перехода</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПредставлениеПараметрыНачисленияАмортизации" id="22">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Счета амортизации</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтоимостьАктивовОпределяетсяПоДаннымУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость активов определяется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокВыбораСуществующиеНМА" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список выбора существующие НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокВыбораНовыеНМА" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список выбора существующие НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ИтогиПервоначальнаяСтоимость" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги первоначальная стоимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогиАмортизация" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги амортизация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогиОбесценение" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги обесценение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогиИзменениеБаланса" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги изменение баланса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыНМА" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.ВидыНМАПоПБУ14</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="СчетаВложенийВоВнеоборотныеАктивы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета вложений во внеоборотные активы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="Записать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="ЗаполнитьПоДаннымУчета" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по данным учета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьПоДаннымУчета</Action>
+		</Command>
+		<Command name="ИзменитьВидНМА" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьВидНМА</Action>
+		</Command>
+		<Command name="Печать" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Печать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьСтатус" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатус</Action>
+		</Command>
+		<Command name="ИзменитьЭлементыАмортизации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьЭлементыАмортизации</Action>
+		</Command>
+		<Command name="ИзменитьПараметрыНачисленияАмортизации" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры начисления амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьПараметрыНачисленияАмортизации</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

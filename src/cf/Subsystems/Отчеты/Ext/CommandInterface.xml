@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandsVisibility>
+		<Command name="CommonCommand.ДокументыНеВходящиеВТариф">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.СверкаСФНСПоИмущественнымНалогам.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.УведомлениеОВвозеПрослеживаемыхТоваров.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПомощникПолученияРНПТ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.СверкаНалоговСФНС.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПомощникЗаполнения3НДФЛ.Command.ПомощникУплатыАвансовыхПлатежейПоНДФЛ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ЗачетАвансовПоЕНС">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.БанковскиеОперацииАУСН.Command.БанковскиеОперацииАУСНПоОрганизации">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаСервисах">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ПредложениеОформитьЗаявлениеНаПодключение">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КнигаПокупок.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КнигаПродаж.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.КонсолидацияОтчетностиПоНДС.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ПанельОтчетовСправкиРасчеты">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовИРасходов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовИРасходовПредпринимателя.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовПатент.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ДоходыНПД.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПомощникПодготовкиУведомленияОКонтролируемыхСделках.Command.ПомощникПодготовкиУведомленияОКонтролируемыхСделках">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаСервисах">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.ПредложениеОформитьЗаявлениеНаПодключение">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.КнигаПокупок.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.КнигаПродаж.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.КонсолидацияОтчетностиПоНДС.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.ПанельОтчетовСправкиРасчеты">
+			<CommandGroup>CommandGroup.ОтчетыПоНалогуНаПрибыль</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовИРасходов.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоУСН</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовИРасходовПредпринимателя.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовПатент.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.ДоходыНПД.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.ПомощникПодготовкиУведомленияОКонтролируемыхСделках.Command.ПомощникПодготовкиУведомленияОКонтролируемыхСделках">
+			<CommandGroup>CommandGroup.КонтролируемыеСделки</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.РасчетыПоЕНС">
+			<CommandGroup>CommandGroup.ЕдиныйНалоговыйСчет</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.РасчетыПоНалогамНаЕНС">
+			<CommandGroup>CommandGroup.ЕдиныйНалоговыйСчет</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЗачетАвансовПоЕНС">
+			<CommandGroup>CommandGroup.ЕдиныйНалоговыйСчет</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПомощникПолученияРНПТ.Command.ПомощникПолученияРНПТ">
+			<CommandGroup>CommandGroup.Прослеживаемость</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.УведомлениеОбОстаткахПрослеживаемыхТоваров">
+			<CommandGroup>CommandGroup.Прослеживаемость</CommandGroup>
+		</Command>
+		<Command name="Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.Command.УведомлениеОПеремещенииПрослеживаемыхТоваров">
+			<CommandGroup>CommandGroup.Прослеживаемость</CommandGroup>
+		</Command>
+		<Command name="Report.АнализРНПТДокументов.Command.АнализРНПТДокументов">
+			<CommandGroup>CommandGroup.Прослеживаемость</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.СверкаНалоговСФНС.Command.СверкаНалоговСФНС_ПолныйИнтерфейс">
+			<CommandGroup>CommandGroup.СверкиСФНС</CommandGroup>
+		</Command>
+		<Command name="Document.СверкаСФНСПоИмущественнымНалогам.Command.СверкаРасчетаНалогаНаИмущество">
+			<CommandGroup>CommandGroup.СверкиСФНС</CommandGroup>
+		</Command>
+		<Command name="Document.СверкаСФНСПоИмущественнымНалогам.Command.СверкаРасчетаЗемельногоНалога">
+			<CommandGroup>CommandGroup.СверкиСФНС</CommandGroup>
+		</Command>
+		<Command name="Document.СверкаСФНСПоИмущественнымНалогам.Command.СверкаРасчетаТранспортногоНалога">
+			<CommandGroup>CommandGroup.СверкиСФНС</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.КалендарьОтчетности">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаОтчетах">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаУведомлениях">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаПисьмах">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаСверках">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаСервисах">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФорму1СОтчетностьНаЕГРЮЛ">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ПредложениеОформитьЗаявлениеНаПодключение">
+			<CommandGroup>CommandGroup.РегламентированнаяОтчетность</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПомощникРасчетаНДС.Command.ОтчетностьПоНДС">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+		</Command>
+		<Command name="Report.КнигаПокупок.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+		</Command>
+		<Command name="Report.КнигаПродаж.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+		</Command>
+		<Command name="Report.ЖурналУчетаСчетовФактур.Command.ЖурналУчетаСчетовФактур">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+		</Command>
+		<Command name="Report.РеестрДокументовПодтверждающихНалоговуюЛьготуПоНДС.Command.РеестрКРазделу7Декларации">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.КонсолидацияОтчетностиПоНДС.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоНДС</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ПанельОтчетовРегистрыНалоговогоУчета">
+			<CommandGroup>CommandGroup.ОтчетыПоНалогуНаПрибыль</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ПанельОтчетовСправкиРасчеты">
+			<CommandGroup>CommandGroup.ОтчетыПоНалогуНаПрибыль</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПомощникРасчетаНалогаУСН.Command.ОтчетностьПоУСН">
+			<CommandGroup>CommandGroup.ОтчетыПоУСН</CommandGroup>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовИРасходов.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоУСН</CommandGroup>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовИРасходовПредпринимателя.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+		</Command>
+		<Command name="Report.КнигаУчетаДоходовПатент.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПомощникЗаполнения3НДФЛ.Command.ПомощникЗаполнения3НДФЛ">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.СправкиПоНалогуНаПрофессиональныйДоход">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+		</Command>
+		<Command name="Report.ДоходыНПД.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ОтчетыПоИП</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПомощникПодготовкиУведомленияОКонтролируемыхСделках.Command.ПомощникПодготовкиУведомленияОКонтролируемыхСделках">
+			<CommandGroup>CommandGroup.КонтролируемыеСделки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.УведомленияОКонтролируемыхСделках">
+			<CommandGroup>CommandGroup.КонтролируемыеСделки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Новости_Отчеты">
+			<CommandGroup>CommandGroup.Информация</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Отчеты.Subsystem.СтандартныеОтчеты</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.АнализУчета</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.НалогНаПрибыль</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.ОтчетыДляРуководителя</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.РегистрыБУСубъектовМалогоПредпринимательства</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.СправкиРасчеты</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.Сотрудники</Subsystem>
+		<Subsystem>Subsystem.Отчеты.Subsystem.ОтчетностьВБанки</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>CommandGroup.ЕдиныйНалоговыйСчет</Group>
+		<Group>CommandGroup.Прослеживаемость</Group>
+		<Group>CommandGroup.СверкиСФНС</Group>
+		<Group>CommandGroup.РегламентированнаяОтчетность</Group>
+		<Group>CommandGroup.ОтчетыПоНДС</Group>
+		<Group>CommandGroup.ОтчетыПоНалогуНаПрибыль</Group>
+		<Group>CommandGroup.ОтчетыПоУСН</Group>
+		<Group>CommandGroup.ОтчетыПоИП</Group>
+		<Group>CommandGroup.КонтролируемыеСделки</Group>
+		<Group>CommandGroup.Информация</Group>
+	</GroupsOrder>
+</CommandInterface>

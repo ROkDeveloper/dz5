@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Обмен с сервисом АУСН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="86">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="87"/>
+			<ChildItems>
+				<InputField name="Организация" id="1">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="ОрганизацияСсылка" id="12">
+					<DataPath>Объект.Организация</DataPath>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ОрганизацияСсылкаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОрганизацияСсылкаРасширеннаяПодсказка" id="14"/>
+				</LabelField>
+				<InputField name="Банк" id="7">
+					<DataPath>Объект.Банк</DataPath>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="БанкКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="БанкРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">БанкПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="БанкСсылка" id="83">
+					<DataPath>Объект.Банк</DataPath>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="БанкСсылкаКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="БанкСсылкаРасширеннаяПодсказка" id="85"/>
+				</LabelField>
+				<LabelDecoration name="ОбратитесьКАдминистратору" id="170">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ЦветШрифтаОшибки</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для настройки подключения обратитесь к Администратору</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбратитесьКАдминистраторуКонтекстноеМеню" id="171"/>
+					<ExtendedTooltip name="ОбратитесьКАдминистраторуРасширеннаяПодсказка" id="172"/>
+				</LabelDecoration>
+				<Button name="ВыполнитьОбмен" id="208">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+					<ExtendedTooltip name="ВыполнитьОбменРасширеннаяПодсказка" id="209"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<Page name="СтраницаПустая" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пусто</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПустаяРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПустая" id="38">
+							<ContextMenu name="ДекорацияПустаяКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ДекорацияПустаяРасширеннаяПодсказка" id="40"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="НекорректныеРеквизиты" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Некорректные реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НекорректныеРеквизитыРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<LabelField name="ОписаниеНезаполненногоРеквизита" id="60">
+							<DataPath>ОписаниеНезаполненногоРеквизита</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<TextColor>style:ЦветШрифтаОшибки</TextColor>
+							<ContextMenu name="ОписаниеНезаполненногоРеквизитаКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ОписаниеНезаполненногоРеквизитаРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+						<LabelField name="ПрименяемаяСистемаНалогообложения" id="46">
+							<DataPath>ПрименяемаяСистемаНалогообложения</DataPath>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ПрименяемаяСистемаНалогообложенияКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ПрименяемаяСистемаНалогообложенияРасширеннаяПодсказка" id="48"/>
+							<Events>
+								<Event name="Click">ПрименяемаяСистемаНалогообложенияНажатие</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОшибка" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОшибкаРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОшибкаСтатус" id="22">
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОшибкаСтатусРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<PictureDecoration name="ОшибкаКартинка" id="24">
+									<Picture>
+										<xr:Ref>CommonPicture.ИнтеграцияАУСНОшибка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ОшибкаКартинкаКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ОшибкаКартинкаРасширеннаяПодсказка" id="26"/>
+								</PictureDecoration>
+								<LabelDecoration name="ОшибкаЗаголовок" id="27">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При подключении к сервису произошла ошибка</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОшибкаЗаголовокКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ОшибкаЗаголовокРасширеннаяПодсказка" id="29"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ПредставлениеОшибки" id="30">
+							<DataPath>ПредставлениеОшибки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>1000</MaxWidth>
+							<TextColor>style:ЦветШрифтаОшибки</TextColor>
+							<ContextMenu name="ПредставлениеОшибкиКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПредставлениеОшибкиРасширеннаяПодсказка" id="32"/>
+						</LabelField>
+						<LabelDecoration name="ОшибкаЖурналРегистрации" id="33">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Детальную информацию об ошибке можно найти в &lt;link ОткрытьЖурналРегистрации&gt;Журнале&lt;/&gt;&lt;link e1cib/app/Обработка.ЖурналРегистрации&gt; &lt;/&gt;&lt;link ОткрытьЖурналРегистрации&gt;регистрации&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОшибкаЖурналРегистрацииКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ОшибкаЖурналРегистрацииРасширеннаяПодсказка" id="35"/>
+						</LabelDecoration>
+						<Button name="ОшибкаПовторить" id="160">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Повторить</CommandName>
+							<ExtendedTooltip name="ОшибкаПовторитьРасширеннаяПодсказка" id="161"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОжидание" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<VerticalAlign>Center</VerticalAlign>
+					<ExtendedTooltip name="СтраницаОжиданиеРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<PictureDecoration name="ОжиданиеКартинка" id="54">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ожидание картинка</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ОжиданиеКартинкаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ОжиданиеКартинкаРасширеннаяПодсказка" id="56"/>
+						</PictureDecoration>
+						<LabelDecoration name="ОжиданиеЗаголовок" id="57">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получение ответа от сервиса. Пожалуйста, подождите...</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОжиданиеЗаголовокКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ОжиданиеЗаголовокРасширеннаяПодсказка" id="59"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПодключение" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПодключениеРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКодЗаявки" id="168">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код заявки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКодЗаявкиРасширеннаяПодсказка" id="169"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКодЗаявкиСКомандой" id="290">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код заявки с командой</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКодЗаявкиСКомандойРасширеннаяПодсказка" id="291"/>
+									<ChildItems>
+										<InputField name="КодЗаявки" id="4">
+											<DataPath>Объект.КодЗаявки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<EditTextUpdate>OnValueChange</EditTextUpdate>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Например, 00112233-4455-6677-8899-aabbccddeeff</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="КодЗаявкиКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="КодЗаявкиРасширеннаяПодсказка" id="6"/>
+											<Events>
+												<Event name="OnChange">КодЗаявкиПриИзменении</Event>
+												<Event name="EditTextChange">КодЗаявкиИзменениеТекстаРедактирования</Event>
+											</Events>
+										</InputField>
+										<Button name="Отклонить" id="103">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Отклонить</CommandName>
+											<ExtendedTooltip name="ОтклонитьРасширеннаяПодсказка" id="104"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="КакПолучитьКодЗаявки" id="15">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для подключения сервиса АУСН оформите заявку в &lt;link ЛичныйКабинетБанка&gt;Личном&lt;/&gt;&lt;link ЛичныйКабинетБанка&gt; &lt;/&gt;&lt;link ЛичныйКабинетБанка&gt;кабинете&lt;/&gt;&lt;link ЛичныйКабинетБанка&gt; &lt;/&gt;&lt;link ЛичныйКабинетБанка&gt;банка&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КакПолучитьКодЗаявкиКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="КакПолучитьКодЗаявкиРасширеннаяПодсказка" id="17"/>
+									<Events>
+										<Event name="URLProcessing">КакПолучитьКодЗаявкиОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelField name="КодЗаявкиПодсказка" id="165">
+									<DataPath>КодЗаявкиПодсказка</DataPath>
+									<TitleTextColor>style:FormBackColor</TitleTextColor>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="КодЗаявкиПодсказкаКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="КодЗаявкиПодсказкаРасширеннаяПодсказка" id="167"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоманды" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<Button name="Подтвердить" id="10">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.Подтвердить</CommandName>
+									<ExtendedTooltip name="ПодтвердитьРасширеннаяПодсказка" id="11"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗаявкаПодтверждена" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка принята</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЗаявкаПодтвержденаРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗаявкаПодтвержденаСтатус" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заявка подтверждена - статус</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаявкаПодтвержденаСтатусРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<PictureDecoration name="ЗаявкаПодтвержденаКартинка" id="67">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заявка подтверждена - картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнтеграцияАУСНПодключен</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ЗаявкаПодтвержденаКартинкаКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ЗаявкаПодтвержденаКартинкаРасширеннаяПодсказка" id="69"/>
+								</PictureDecoration>
+								<LabelDecoration name="ЗаявкаПодтвержденаЗаголовок" id="70">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Cервис АУСН подключен</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаявкаПодтвержденаЗаголовокКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ЗаявкаПодтвержденаЗаголовокРасширеннаяПодсказка" id="72"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ЗаявкаПодтвержденаДекорация" id="73">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Теперь вы можете уточнять банковские операции АУСН и получать от налоговой инспекции сумму начисленного налога</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаявкаПодтвержденаДекорацияКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ЗаявкаПодтвержденаДекорацияРасширеннаяПодсказка" id="75"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗаявкаОтклонена" id="143">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка отклонена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЗаявкаОтклоненаРасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗаявкаОтклоненаСтатус" id="145">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заявка отклонена - статус</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаявкаОтклоненаСтатусРасширеннаяПодсказка" id="146"/>
+							<ChildItems>
+								<PictureDecoration name="ЗаявкаОтклоненаКартинка" id="147">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заявка отклонена - картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнтеграцияАУСНОшибка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ЗаявкаОтклоненаКартинкаКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ЗаявкаОтклоненаКартинкаРасширеннаяПодсказка" id="149"/>
+								</PictureDecoration>
+								<LabelDecoration name="ЗаявкаОтклоненаЗаголовок" id="150">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заявка на подключение отклонена</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаявкаОтклоненаЗаголовокКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ЗаявкаОтклоненаЗаголовокРасширеннаяПодсказка" id="152"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ЗаявкаОтклоненаДекорация" id="153">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для того, чтобы уточнять банковские операции АУСН и получать от налоговой инспекции сумму начисленного налога, нужно подключить сервис АУСН</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаявкаОтклоненаДекорацияКонтекстноеМеню" id="154"/>
+							<ExtendedTooltip name="ЗаявкаОтклоненаДекорацияРасширеннаяПодсказка" id="155"/>
+						</LabelDecoration>
+						<Button name="Повторить" id="158">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Повторить</CommandName>
+							<ExtendedTooltip name="ПовторитьРасширеннаяПодсказка" id="159"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСервисОтключен" id="107">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис отключен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСервисОтключенРасширеннаяПодсказка" id="108"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСервисОтключенСтатус" id="109">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис отключен - статус</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСервисОтключенСтатусРасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<PictureDecoration name="СервисОтключенКартинка" id="111">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервис отключен - картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнтеграцияАУСНОшибка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="СервисОтключенКартинкаКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="СервисОтключенКартинкаРасширеннаяПодсказка" id="113"/>
+								</PictureDecoration>
+								<LabelDecoration name="СервисОтключенЗаголовок" id="114">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Cервис АУСН отключен</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СервисОтключенЗаголовокКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="СервисОтключенЗаголовокРасширеннаяПодсказка" id="116"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="СервисОтключенДекорация" id="123">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вы больше не можете уточнять банковские операции АУСН и получать от налоговой инспекции сумму начисленного налога</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СервисОтключенДекорацияКонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="СервисОтключенДекорацияРасширеннаяПодсказка" id="125"/>
+						</LabelDecoration>
+						<Button name="Подключить" id="126">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Подключить</CommandName>
+							<ExtendedTooltip name="ПодключитьРасширеннаяПодсказка" id="127"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтключение" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отключение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОтключениеРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтключениеСтатус" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключение - статус</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтключениеСтатусРасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<PictureDecoration name="ОтключениеКартинка" id="92">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключение - картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнтеграцияАУСНПодключен</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ОтключениеКартинкаКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ОтключениеКартинкаРасширеннаяПодсказка" id="94"/>
+								</PictureDecoration>
+								<LabelDecoration name="ОтключениеЗаголовок" id="95">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Cервис АУСН подключен</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОтключениеЗаголовокКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ОтключениеЗаголовокРасширеннаяПодсказка" id="97"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ОтключениеДекорация" id="98">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уточнение банковских операций АУСН и получение от налоговой инспекции суммы начисленного налога возможны только когда сервис подключен</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОтключениеДекорацияКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ОтключениеДекорацияРасширеннаяПодсказка" id="100"/>
+						</LabelDecoration>
+						<Button name="Отключить" id="101">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Отключить</CommandName>
+							<ExtendedTooltip name="ОтключитьРасширеннаяПодсказка" id="102"/>
+						</Button>
+						<UsualGroup name="ГруппаОповещения" id="173">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОповещенияРасширеннаяПодсказка" id="174"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПодключитьОповещения" id="178">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оповещения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодключитьОповещенияРасширеннаяПодсказка" id="179"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПодключениеОповещений" id="183">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение оповещений</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПодключениеОповещенийРасширеннаяПодсказка" id="184"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОповещенияОтключены" id="180">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оповещения отключены (картинка)</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Center</GroupVerticalAlign>
+													<Picture>
+														<xr:Ref>CommonPicture.ИнтеграцияАУСНОповещенияОтключены</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="КартинкаОповещенияОтключеныКонтекстноеМеню" id="181"/>
+													<ExtendedTooltip name="КартинкаОповещенияОтключеныРасширеннаяПодсказка" id="182"/>
+												</PictureDecoration>
+												<LabelDecoration name="ЗаголовокОповещенияОтключены" id="185">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обсуждения отключены</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЗаголовокОповещенияОтключеныКонтекстноеМеню" id="186"/>
+													<ExtendedTooltip name="ЗаголовокОповещенияОтключеныРасширеннаяПодсказка" id="187"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияПодключитьОповещения" id="202">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получение сообщений о важных событиях от ФНС России в 1С</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПодключитьОповещенияКонтекстноеМеню" id="203"/>
+											<ExtendedTooltip name="ДекорацияПодключитьОповещенияРасширеннаяПодсказка" id="204"/>
+										</LabelDecoration>
+										<Button name="ПодключитьОбсуждения" id="188">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПодключитьОбсуждения</CommandName>
+											<ExtendedTooltip name="ПодключитьОбсужденияРасширеннаяПодсказка" id="189"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтключитьОповещения" id="190">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оповещения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтключитьОповещенияРасширеннаяПодсказка" id="191"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОтключениеОповещений" id="195">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отключение оповещений</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтключениеОповещенийРасширеннаяПодсказка" id="196"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОповещенияПодключены" id="192">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оповещения подключены (картинка)</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Center</GroupVerticalAlign>
+													<Picture>
+														<xr:Ref>CommonPicture.ИнтеграцияАУСНОповещенияПодключены</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="КартинкаОповещенияПодключеныКонтекстноеМеню" id="193"/>
+													<ExtendedTooltip name="КартинкаОповещенияПодключеныРасширеннаяПодсказка" id="194"/>
+												</PictureDecoration>
+												<LabelDecoration name="ЗаголовокОповещенияПодключены" id="197">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обсуждения подключены</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЗаголовокОповещенияПодключеныКонтекстноеМеню" id="198"/>
+													<ExtendedTooltip name="ЗаголовокОповещенияПодключеныРасширеннаяПодсказка" id="199"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияОтключитьОповещения" id="205">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получение сообщений о важных событиях от ФНС России в 1С</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОтключитьОповещенияКонтекстноеМеню" id="206"/>
+											<ExtendedTooltip name="ДекорацияОтключитьОповещенияРасширеннаяПодсказка" id="207"/>
+										</LabelDecoration>
+										<Button name="ОтключитьОбсуждения" id="200">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтключитьОбсуждения</CommandName>
+											<ExtendedTooltip name="ОтключитьОбсужденияРасширеннаяПодсказка" id="201"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelDecoration name="ОписаниеСервиса" id="162">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>50</MaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис АУСН – сервис обмена с Банком, позволяющий определять, какие из операций относятся к налоговой базе и на какую сумму</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОписаниеСервисаКонтекстноеМеню" id="163"/>
+			<ExtendedTooltip name="ОписаниеСервисаРасширеннаяПодсказка" id="164"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПодключениеАУСН</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетБанка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет банка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеОшибки" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеФормы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрименяемаяСистемаНалогообложения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяемая система налогообложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрименяетсяАУСН" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеНезаполненногоРеквизита" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание незаполненного реквизита</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеИнтеграции" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние интеграции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияИнтеграцииАУСН</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСпискаБанков" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес списка банков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодЗаявкиПодсказка" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПравоИзменятьСостояниеИнтеграции" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть право изменять состояние интеграции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаОбсужденийДоступна" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка обсуждений доступна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторБанка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор банка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Fixed</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодЗаявкиПроверен" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код заявки проверен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подтвердить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Подтвердить</Action>
+		</Command>
+		<Command name="Отключить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить (не рекомендуется)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтключитьСервис</Action>
+		</Command>
+		<Command name="Отклонить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отклонить</Action>
+		</Command>
+		<Command name="Подключить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Подключить</Action>
+		</Command>
+		<Command name="Повторить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Повторить</Action>
+		</Command>
+		<Command name="ОтключитьОбсуждения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить (не рекомендуется)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить обсуждения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьОбсуждения</Action>
+		</Command>
+		<Command name="ПодключитьОбсуждения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить обсуждения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьОбсуждения</Action>
+		</Command>
+		<Command name="ВыполнитьОбмен" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьОбмен</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Банк">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КлассификаторБанков</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>DataProcessor.ПодключениеАУСН.Command.ЖурналОбменаССервисомАУСН</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

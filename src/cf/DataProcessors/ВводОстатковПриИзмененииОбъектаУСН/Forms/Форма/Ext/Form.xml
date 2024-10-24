@@ -1,0 +1,1428 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ввод остатков при изменении объекта УСН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шпка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="Состояния" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояния</v8:content>
+						</v8:item>
+					</Title>
+					<Width>77</Width>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СостоянияРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<InputField name="Организация" id="198">
+							<DataPath>Объект.Организация</DataPath>
+							<MaxWidth>65</MaxWidth>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="199"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="200"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ОрганизацияПредставление" id="195">
+							<DataPath>ОрганизацияПредставление</DataPath>
+							<MaxWidth>25</MaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ОрганизацияПредставлениеКонтекстноеМеню" id="196"/>
+							<ExtendedTooltip name="ОрганизацияПредставлениеРасширеннаяПодсказка" id="197"/>
+						</LabelField>
+						<UsualGroup name="ГруппаНадписиСостояния" id="162">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНадписиСостоянияРасширеннаяПодсказка" id="163"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСостояние" id="11">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСостояниеКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="НадписьСостояниеРасширеннаяПодсказка" id="13"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьРезультат" id="14">
+									<TextColor>#999999</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не выполнено</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="НадписьРезультатКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="НадписьРезультатРасширеннаяПодсказка" id="16"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="НадписьПериод" id="187">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период смены объекта УСН:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В случае неоднократного изменения объекта, доступен выбор периода.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="НадписьПериодКонтекстноеМеню" id="188"/>
+					<ExtendedTooltip name="НадписьПериодРасширеннаяПодсказка" id="189"/>
+					<Events>
+						<Event name="Click">НадписьПериодНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьПодсказка" id="19">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>77</MaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект налогообложения был изменен на УСН (доходы минус расходы), поэтому нужно сформировать остатки по налоговому учету.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьПодсказкаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НадписьПодсказкаРасширеннаяПодсказка" id="21"/>
+				</LabelDecoration>
+				<UsualGroup name="Актуализация" id="201">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Актуализация</v8:content>
+						</v8:item>
+					</Title>
+					<Width>77</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="АктуализацияРасширеннаяПодсказка" id="202"/>
+					<ChildItems>
+						<UsualGroup name="ИдетПроверкаАктуальности" id="203">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идет проверка актуальности</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИдетПроверкаАктуальностиРасширеннаяПодсказка" id="204"/>
+							<ChildItems>
+								<PictureDecoration name="РисПриПроверкеАктуальности" id="205">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет проверка актуальности</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РисПриПроверкеАктуальностиКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="РисПриПроверкеАктуальностиРасширеннаяПодсказка" id="207"/>
+								</PictureDecoration>
+								<LabelDecoration name="ТекстПриПроверкеАктуальности" id="208">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет проверка актуальности</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ТекстПриПроверкеАктуальностиКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="ТекстПриПроверкеАктуальностиРасширеннаяПодсказка" id="210">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПроверкаАктуализацииСкрыть" id="211">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа проверка актуализации скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаАктуализацииСкрытьРасширеннаяПодсказка" id="212"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриПроверкеАктуальности" id="213">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриПроверкеАктуальностиКонтекстноеМеню" id="214"/>
+											<ExtendedTooltip name="СкрытьПриПроверкеАктуальностиРасширеннаяПодсказка" id="215"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ИдетАктуализация" id="216">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идет актуализация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИдетАктуализацияРасширеннаяПодсказка" id="217"/>
+							<ChildItems>
+								<PictureDecoration name="РисПриАктуализации" id="218">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет актуализация данных</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РисПриАктуализацииКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="РисПриАктуализацииРасширеннаяПодсказка" id="220"/>
+								</PictureDecoration>
+								<LabelField name="ПрогрессорАктуализации" id="221">
+									<DataPath>ПрогрессорАктуализации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет актуализация данных</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПрогрессорАктуализацииКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="ПрогрессорАктуализацииРасширеннаяПодсказка" id="223"/>
+								</LabelField>
+								<LabelDecoration name="ТекстПриАктуализации" id="224">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные могут измениться.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ТекстПриАктуализацииКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="ТекстПриАктуализацииРасширеннаяПодсказка" id="226"/>
+								</LabelDecoration>
+								<Button name="ОтменитьАктуализацию" id="227">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтменитьАктуализацию</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="ОтменитьАктуализациюРасширеннаяПодсказка" id="228">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<UsualGroup name="ГруппаИдетАктуализацияСкрыть" id="229">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа идет актуализация скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИдетАктуализацияСкрытьРасширеннаяПодсказка" id="230"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриАктуализации" id="231">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриАктуализацииКонтекстноеМеню" id="232"/>
+											<ExtendedTooltip name="СкрытьПриАктуализацииРасширеннаяПодсказка" id="233"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ДанныеАктуализированы" id="234">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные актуализированы</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#CCFFCC</BackColor>
+							<ExtendedTooltip name="ДанныеАктуализированыРасширеннаяПодсказка" id="235"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстПриАктуальныхДанных" id="236">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные учета актуализированы.</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="ТекстПриАктуальныхДанныхКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="ТекстПриАктуальныхДанныхРасширеннаяПодсказка" id="238"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаДанныеАктуализированыСкрыть" id="239">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа данные актуализированы скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДанныеАктуализированыСкрытьРасширеннаяПодсказка" id="240"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриАктуальныхДанных" id="241">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриАктуальныхДанныхКонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="СкрытьПриАктуальныхДанныхРасширеннаяПодсказка" id="243"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ТребуетсяАктуализация" id="244">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требуется актуализация</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветФонаНекорректногоКонтрагента</BackColor>
+							<ExtendedTooltip name="ТребуетсяАктуализацияРасширеннаяПодсказка" id="245"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстПриНеобходимостиАктуализации" id="246">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные учета актуальны на &lt;b&gt;ДД.ММ.ГГГГ&lt;/&gt;. Рекомендуется актуализировать данные.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ТекстПриНеобходимостиАктуализацииКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="ТекстПриНеобходимостиАктуализацииРасширеннаяПодсказка" id="248">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<Button name="Актуализировать" id="249">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Актуализировать</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="АктуализироватьРасширеннаяПодсказка" id="250">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<UsualGroup name="ГруппаТребуетсяАктуализацияСкрыть" id="251">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа требуется актуализация скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТребуетсяАктуализацияСкрытьРасширеннаяПодсказка" id="252"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриНеобходимостиАктуализации" id="253">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриНеобходимостиАктуализацииКонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="СкрытьПриНеобходимостиАктуализацииРасширеннаяПодсказка" id="255"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="РазделительШапка" id="175">
+			<DataPath>Разделитель</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Width>28</Width>
+			<Format>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Л=ru; ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+				</v8:item>
+			</Format>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="РазделительШапкаКонтекстноеМеню" id="176"/>
+			<ExtendedTooltip name="РазделительШапкаРасширеннаяПодсказка" id="177"/>
+		</LabelField>
+		<UsualGroup name="ГруппаТовары" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа товары</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКартинкаСтатусТовары" id="33">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКартинкаСтатусТоварыРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<PictureDecoration name="СтатусТовары" id="39">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.СерыйШар</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СтатусТоварыКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="СтатусТоварыРасширеннаяПодсказка" id="41"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТекстТовары" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа товары текст</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекстТоварыРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстТоварыЗаголовок" id="42">
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Приобретенные товары</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстТоварыЗаголовокКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ТекстТоварыЗаголовокРасширеннаяПодсказка" id="44">
+								<Width>20</Width>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Товары, приобретенные до перехода, а оплаченные после перехода на УСН "доходы минус расходы", можно учесть
+как расходы. Признаются такие расходы в обычном порядке - на момент реализации товаров (или оплаты от покупателя)
+(пп. 2 п. 2 ст. 346.17 НК РФ). Одновременно учитывается в расходах "входной" ("ввозной") НДС по ним.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<LabelDecoration name="ТекстТоварыПодсказка" id="45">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Товары, которые были куплены для перепродажи. Расходы на покупку уменьшат налоги в новом периоде после продажи покупателю (или после оплаты от покупателя).</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекстТоварыПодсказкаКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ТекстТоварыПодсказкаРасширеннаяПодсказка" id="47">
+								<MaxWidth>20</MaxWidth>
+							</ExtendedTooltip>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСуммаТовары" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа товары сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммаТоварыРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<LabelDecoration name="СуммаТовары" id="48">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>25 863,75 руб.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СуммаТоварыКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="СуммаТоварыРасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="Click">СуммаТоварыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="РазделительТовары" id="178">
+			<Width>77</Width>
+			<PictureSize>Stretch</PictureSize>
+			<Zoomable>true</Zoomable>
+			<Picture>
+				<xr:Ref>CommonPicture.ГоризонтальныйРазделитель</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="РазделительТоварыКонтекстноеМеню" id="179"/>
+			<ExtendedTooltip name="РазделительТоварыРасширеннаяПодсказка" id="180"/>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаМатериалы" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа материалы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМатериалыРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКартинкаСтатусМатериалы" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа статус картинка метериалы</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКартинкаСтатусМатериалыРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<PictureDecoration name="СтатусМатериалы" id="55">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.СерыйШар</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СтатусМатериалыКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="СтатусМатериалыРасширеннаяПодсказка" id="57"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТекстМатериалы" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа материалы текст</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекстМатериалыРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстМатериалыЗаголовок" id="60">
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Материалы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстМатериалыЗаголовокКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ТекстМатериалыЗаголовокРасширеннаяПодсказка" id="62">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Материалы, приобретенные на УСН "доходы", а оплаченные после смены объекта, можно признавать в обычном
+порядке - на дату оплаты. При этом оплаченные сырье и материалы должны быть оприходованы на складе
+(пп. 1 п. 2 ст. 346.17 НК РФ, Письмо Минфина России от 26.05.2014 N 03-11-06/2/24949).
+Одновременно нужно учесть в расходах "входной" ("ввозной") НДС по этим материальным расходам.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<LabelDecoration name="ТекстМатериалыПодсказка" id="63">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Материалы, купленные для изготовления продукции. Расходы на покупку уменьшат налоги в новом периоде после оплаты поставщику (или списания в производство).</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстМатериалыПодсказкаКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="ТекстМатериалыПодсказкаРасширеннаяПодсказка" id="65"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСуммаМатериалы" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа материалы сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммаМатериалыРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<LabelDecoration name="СуммаМатериалы" id="68">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>18 123,00 руб.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СуммаМатериалыКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="СуммаМатериалыРасширеннаяПодсказка" id="70"/>
+							<Events>
+								<Event name="Click">СуммаМатериалыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="РазделительМатериалы" id="181">
+			<Width>77</Width>
+			<PictureSize>Stretch</PictureSize>
+			<Zoomable>true</Zoomable>
+			<Picture>
+				<xr:Ref>CommonPicture.ГоризонтальныйРазделитель</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="РазделительМатериалыКонтекстноеМеню" id="182"/>
+			<ExtendedTooltip name="РазделительМатериалыРасширеннаяПодсказка" id="183"/>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаЗарплата" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗарплатаРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКартинкаСтатусЗарплата" id="73">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа зарплата статус картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКартинкаСтатусЗарплатаРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<PictureDecoration name="СтатусЗарплата" id="75">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус зарплата</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.СерыйШар</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СтатусЗарплатаКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="СтатусЗарплатаРасширеннаяПодсказка" id="77"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТекстЗарплата" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа зарплата текст</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекстЗарплатаРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстЗарплатаЗаголовок" id="80">
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заработная плата и НДФЛ</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстЗарплатаЗаголовокКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ТекстЗарплатаЗаголовокРасширеннаяПодсказка" id="82">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>После смены объекта нельзя учитывать зарплату и взносы за период применения УСН "доходы", даже если
+оплата была произведена при применении УСН "доходы минус расходы". Нельзя признать в расходах ЗП и
+взносы за декабрь, которые были перечислены в январе после перехода на новый объект. Эти выплаты
+относятся ко времени применения УСН "доходы" (п. 4 ст. 346.17 НК РФ, Письма Минфина России от 26.05.2014
+N 03-11-06/2/24949, от 07.09.2010 N 03-11-06/2/142).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<LabelDecoration name="ТекстЗарплатаПодсказка" id="83">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уменьшать налог на зарплату и НДФЛ можно только за текщуий период. Остатки по расходам прошлого периода будут исключены.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстЗарплатаПодсказкаКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ТекстЗарплатаПодсказкаРасширеннаяПодсказка" id="85"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСуммаЗарплата" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа зарплата сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<ChildrenAlign>ItemsRightTitlesRight</ChildrenAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаСуммаЗарплатаРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<LabelDecoration name="СуммаЗарплата" id="88">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>315,03 руб.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СуммаЗарплатаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="СуммаЗарплатаРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="Click">СуммаЗарплатаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="РазделительЗарплата" id="184">
+			<Width>77</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделитель зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<PictureSize>Stretch</PictureSize>
+			<Zoomable>true</Zoomable>
+			<Picture>
+				<xr:Ref>CommonPicture.ГоризонтальныйРазделитель</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="РазделительЗарплатаКонтекстноеМеню" id="185"/>
+			<ExtendedTooltip name="РазделительЗарплатаРасширеннаяПодсказка" id="186"/>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаВзносы" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа взносы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВзносыРасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКартинкаСтатусВзносы" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа взносы статус картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКартинкаСтатусВзносыРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<PictureDecoration name="СтатусВзносы" id="95">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.СерыйШар</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СтатусВзносыКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="СтатусВзносыРасширеннаяПодсказка" id="97"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТекстВзносы" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа взносы текст</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекстВзносыРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстВзносыЗаголовок" id="100">
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Взносы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстВзносыЗаголовокКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ТекстВзносыЗаголовокРасширеннаяПодсказка" id="102">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>После смены объекта нельзя учитывать зарплату и взносы за период применения УСН "доходы", даже если
+оплата была произведена при применении УСН "доходы минус расходы". Нельзя признать в расходах ЗП и
+взносы за декабрь, которые были перечислены в январе после перехода на новый объект. Эти выплаты
+относятся ко времени применения УСН "доходы" (п. 4 ст. 346.17 НК РФ, Письма Минфина России от 26.05.2014
+N 03-11-06/2/24949, от 07.09.2010 N 03-11-06/2/142).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<LabelDecoration name="ТекстВзносыПодсказка" id="103">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Включать в расходы взносы (ПФР, ФОМС, ФСС и т.д.) можно только если они начисленны за текущий период. Остатки за предыдущий период по этому разделу будут исключены из расходов.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТекстВзносыПодсказкаКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ТекстВзносыПодсказкаРасширеннаяПодсказка" id="105"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСуммаВзносы" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа взносы сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммаВзносыРасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<LabelDecoration name="СуммаВзносы" id="108">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>58,17 руб.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СуммаВзносыКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="СуммаВзносыРасширеннаяПодсказка" id="110"/>
+							<Events>
+								<Event name="Click">СуммаВзносыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРасходы" id="129">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРасходыРасширеннаяПодсказка" id="130"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКартинкаСтатусРасходы" id="131">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расходы статус картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКартинкаСтатусРасходыРасширеннаяПодсказка" id="132"/>
+					<ChildItems>
+						<PictureDecoration name="СтатусРасходы" id="133">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.СерыйШар</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СтатусРасходыКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="СтатусРасходыРасширеннаяПодсказка" id="135"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТекстРасходы" id="136">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расходы текст</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекстРасходыРасширеннаяПодсказка" id="137"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстВзносыРасходы" id="138">
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы прошлого периода</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекстВзносыРасходыКонтекстноеМеню" id="139"/>
+							<ExtendedTooltip name="ТекстВзносыРасходыРасширеннаяПодсказка" id="140"/>
+						</LabelDecoration>
+						<LabelDecoration name="ТекстРасходыПодсказка" id="141">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остатки будут исключены из расходов.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекстРасходыПодсказкаКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ТекстРасходыПодсказкаРасширеннаяПодсказка" id="143"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСуммаРасходы" id="144">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расходы сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммаРасходыРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<LabelDecoration name="СуммаРасходы" id="146">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>58,17 руб.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СуммаРасходыКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="СуммаРасходыРасширеннаяПодсказка" id="148"/>
+							<Events>
+								<Event name="Click">СуммаРасходыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="РазделительВыполенение" id="172">
+			<DataPath>Разделитель</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Width>28</Width>
+			<Format>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Л=ru; ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+				</v8:item>
+			</Format>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="РазделительВыполенениеКонтекстноеМеню" id="173"/>
+			<ExtendedTooltip name="РазделительВыполенениеРасширеннаяПодсказка" id="174"/>
+		</LabelField>
+		<UsualGroup name="Выполнение" id="149">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выполнение</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ВыполнениеРасширеннаяПодсказка" id="150"/>
+			<ChildItems>
+				<Button name="СформироватьОстатки" id="113">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ВвестиОстатки</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СформироватьОстаткиРасширеннаяПодсказка" id="114"/>
+				</Button>
+				<LabelDecoration name="РезультатыВыполнения" id="151">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы, созданные при изменении объекта УСН</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="РезультатыВыполненияКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="РезультатыВыполненияРасширеннаяПодсказка" id="153"/>
+					<Events>
+						<Event name="Click">РезультатыВыполненияНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВводОстатковПриИзмененииОбъектаУСН</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Разделитель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусФоновогоЗадания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус фонового задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияПредставление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.НеИспользоватьНесколькоОрганизацийБухгалтерскийУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкаФормы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НужноИсправитьСуммуТовары" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно исправить сумму товары</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НужноИсправитьСуммуМатериалы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно исправить сумму материалы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НужноИсправитьСуммуЗарплата" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно исправить сумму зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НужноИсправитьСуммуВзносы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно исправить сумму взносы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НужноИсправитьСуммуРасходы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно исправить сумму расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗаданияАктуализации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания актуализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаАктуальности" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные учета актуальны на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогрессорАктуализации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогрессор актуализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилищаАктуализации" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища актуализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВвестиОстатки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести остатки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести остатки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВвестиОстатки</Action>
+		</Command>
+		<Command name="Актуализировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуализировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуализировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Актуализировать</Action>
+		</Command>
+		<Command name="ОтменитьАктуализацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтменитьАктуализацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

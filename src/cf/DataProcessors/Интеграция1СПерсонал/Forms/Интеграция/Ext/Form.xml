@@ -1,0 +1,1026 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>1С:Персонал</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<Page name="СтраницаПодключение" id="83">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПодключениеРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИнформацияОПриложении" id="4">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация о приложении</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнформацияОПриложенииРасширеннаяПодсказка" id="5"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПерсонал" id="6">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация персонал</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Приложение1СПерсонал</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПерсоналКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ДекорацияПерсоналРасширеннаяПодсказка" id="8"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияКраткаяИнформацияОСервисе" id="1">
+									<Width>65</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>"1С:Персонал" это Веб-ориентированное приложение для HR-службы, позволяющее закрыть все задачи от публикации вакансий до анализа причин увольнения сотрудников.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияКраткаяИнформацияОСервисеКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ДекорацияКраткаяИнформацияОСервисеРасширеннаяПодсказка" id="3"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодключение" id="9">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подключение</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодключениеРасширеннаяПодсказка" id="10"/>
+							<ChildItems>
+								<UsualGroup name="Этап1" id="58">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Этап 1</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Этап1РасширеннаяПодсказка" id="59"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЭтап1" id="60">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация этап 1</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Этап1КабинетСотрудника</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияЭтап1КонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ДекорацияЭтап1РасширеннаяПодсказка" id="62"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаЭтап1" id="63">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки подключения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ExtendedTooltip name="ГруппаЭтап1РасширеннаяПодсказка" id="64"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЗагрузкаНастроек" id="65">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Загрузка настроек</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗагрузкаНастроекРасширеннаяПодсказка" id="66"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияПояснениеЗагрузкиНастроек" id="67">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>47</MaxWidth>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Если администратор приложения 1С:Персонал передал файл с настройками подключения, вы можете загрузить их, иначе укажите настройки вручную.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияПояснениеЗагрузкиНастроекКонтекстноеМеню" id="68"/>
+															<ExtendedTooltip name="ДекорацияПояснениеЗагрузкиНастроекРасширеннаяПодсказка" id="69"/>
+														</LabelDecoration>
+														<Button name="ЗагрузитьНастройкиИзФайла" id="70">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
+															<ExtendedTooltip name="ЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="71"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="АдресПриложения" id="72">
+													<DataPath>Объект.АдресПриложения</DataPath>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="АдресПриложенияКонтекстноеМеню" id="73"/>
+													<ExtendedTooltip name="АдресПриложенияРасширеннаяПодсказка" id="74"/>
+												</InputField>
+												<InputField name="КлючИдентификаторКлиента" id="75">
+													<DataPath>КлючИдентификаторКлиента</DataPath>
+													<ContextMenu name="КлючИдентификаторКлиентаКонтекстноеМеню" id="76"/>
+													<ExtendedTooltip name="КлючИдентификаторКлиентаРасширеннаяПодсказка" id="77"/>
+												</InputField>
+												<InputField name="КлючСекретКлиента" id="78">
+													<DataPath>КлючСекретКлиента</DataPath>
+													<ContextMenu name="КлючСекретКлиентаКонтекстноеМеню" id="79"/>
+													<ExtendedTooltip name="КлючСекретКлиентаРасширеннаяПодсказка" id="80"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Этап2" id="11">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Этап 2</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Этап2РасширеннаяПодсказка" id="12"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЭтап2" id="13">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация этап 2</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Этап2КабинетСотрудника</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияЭтап2КонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ДекорацияЭтап2РасширеннаяПодсказка" id="15"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаПодключениеВыполнить" id="41">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключите</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ExtendedTooltip name="ГруппаПодключениеВыполнитьРасширеннаяПодсказка" id="42"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияПодключениеПояснение" id="43">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>65</MaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подключение займет некоторое время, после его завершения вы сможете продолжить.
+Если при подключении возникли проблемы – свяжитесь с нами: support@1c-personal.ru</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПодключениеПояснениеКонтекстноеМеню" id="44"/>
+													<ExtendedTooltip name="ДекорацияПодключениеПояснениеРасширеннаяПодсказка" id="45"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаКомандаПодключитьЛокально" id="46">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команда подключить</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКомандаПодключитьЛокальноРасширеннаяПодсказка" id="47"/>
+													<ChildItems>
+														<Button name="ПодключитьПриложение" id="48">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ПодключитьПриложение</CommandName>
+															<ExtendedTooltip name="ПодключитьПриложениеРасширеннаяПодсказка" id="49"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПриложениеПодключено" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница приложение подключено</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПриложениеПодключеноРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИнформация" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаПерсонал" id="131">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка персонал</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Приложение1СПерсонал</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияКартинкаПерсоналКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ДекорацияКартинкаПерсоналРасширеннаяПодсказка" id="133"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияИнформацияПерсонал" id="136">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>75</MaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>"1С:Персонал" это Веб-ориентированное приложение для HR-службы, позволяющее закрыть все задачи от публикации вакансий до анализа причин увольнения сотрудников.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияИнформацияПерсоналКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ДекорацияИнформацияПерсоналРасширеннаяПодсказка" id="138"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиПравил" id="150">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки правил</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиПравилРасширеннаяПодсказка" id="151"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияАдресПриложения" id="147">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация адрес приложения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияАдресПриложенияКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ДекорацияАдресПриложенияРасширеннаяПодсказка" id="149"/>
+								</LabelDecoration>
+								<Button name="НастройкаПубликации" id="93">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НастройкаПравилВыгрузки</CommandName>
+									<ExtendedTooltip name="НастройкаПубликацииРасширеннаяПодсказка" id="94"/>
+								</Button>
+								<Button name="ОшибкиЗаполненияОбъектов" id="112">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОшибкиЗаполненияОбъектов</CommandName>
+									<ExtendedTooltip name="ОшибкиЗаполненияОбъектовРасширеннаяПодсказка" id="113"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиИнтеграции" id="173">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаНастройкиИнтеграцииРасширеннаяПодсказка" id="174"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВидыКонтактнойИнформации" id="175">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Виды контактной информация сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаВидыКонтактнойИнформацииРасширеннаяПодсказка" id="176"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияВидыКонтактнойИнформации" id="177">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>75</MaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В приложение 1С:Персонал выгружаются мобильные телефоны и адреса электронной почты сотрудников.
+По умолчанию используются предопределенные виды контактной информации. Вы можете создать собственные виды контактной информации и использовать их для выгрузки в приложение.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияВидыКонтактнойИнформацииКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="ДекорацияВидыКонтактнойИнформацииРасширеннаяПодсказка" id="179"/>
+										</LabelDecoration>
+										<InputField name="ВидКИМобильныйТелефон" id="180">
+											<DataPath>ВидКИМобильныйТелефон</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Мобильный телефон</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>20</MaxWidth>
+											<OpenButton>false</OpenButton>
+											<ContextMenu name="ВидКИМобильныйТелефонКонтекстноеМеню" id="181"/>
+											<ExtendedTooltip name="ВидКИМобильныйТелефонРасширеннаяПодсказка" id="182"/>
+										</InputField>
+										<InputField name="ВидКИАдресЭлектроннойПочты" id="183">
+											<DataPath>ВидКИАдресЭлектроннойПочты</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Электронная почта</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>20</MaxWidth>
+											<OpenButton>false</OpenButton>
+											<ContextMenu name="ВидКИАдресЭлектроннойПочтыКонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="ВидКИАдресЭлектроннойПочтыРасширеннаяПодсказка" id="185"/>
+										</InputField>
+										<Button name="ИзменитьВидыКонтактнойИнформации" id="186">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьВидыКонтактнойИнформации</CommandName>
+											<ExtendedTooltip name="ИзменитьВидыКонтактнойИнформацииРасширеннаяПодсказка" id="187"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПубликуемаяСтруктура" id="188">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Структура компании</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаПубликуемаяСтруктураРасширеннаяПодсказка" id="189"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОписаниеПубликуемойСтруктуры" id="190">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация описание публикуемой структуры</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОписаниеПубликуемойСтруктурыКонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="ДекорацияОписаниеПубликуемойСтруктурыРасширеннаяПодсказка" id="192"/>
+										</LabelDecoration>
+										<Button name="ИзменитьПубликуемуюСтруктураКомпании" id="193">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьПубликуемуюСтруктураКомпании</CommandName>
+											<ExtendedTooltip name="ИзменитьПубликуемуюСтруктураКомпанииРасширеннаяПодсказка" id="194"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СостояниеОбмена" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояние обмена с приложением</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="СостояниеОбменаРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСостояниеОбмена" id="123">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа состояние обмена</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСостояниеОбменаРасширеннаяПодсказка" id="124"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияРезультатОбмена" id="120">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>35</MaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обмен еще не выполнялся</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияРезультатОбменаКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="ДекорацияРезультатОбменаРасширеннаяПодсказка" id="122"/>
+										</LabelDecoration>
+										<Button name="ОбновитьСообщениеРезультатОбмена" id="125">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОбновитьСообщениеРезультатОбмена</CommandName>
+											<ExtendedTooltip name="ОбновитьСообщениеРезультатОбменаРасширеннаяПодсказка" id="126"/>
+										</Button>
+										<Button name="ПоказатьСобытияОбмена" id="127">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ПоказатьСобытияОбмена</CommandName>
+											<ExtendedTooltip name="ПоказатьСобытияОбменаРасширеннаяПодсказка" id="128"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОбменСостав" id="197">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа обмен состав</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбменСоставРасширеннаяПодсказка" id="198"/>
+									<ChildItems>
+										<Button name="ВыполнитьОбмен" id="114">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+											<ExtendedTooltip name="ВыполнитьОбменРасширеннаяПодсказка" id="115"/>
+										</Button>
+										<Button name="СоставОтправляемыхДанных" id="195">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СоставОтправляемыхДанных</CommandName>
+											<ExtendedTooltip name="СоставОтправляемыхДанныхРасширеннаяПодсказка" id="196"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПодготовкаДанныхДляТехническойПоддержки" id="152">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подготовка данных для службы технической поддержки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ПодготовкаДанныхДляТехническойПоддержкиРасширеннаяПодсказка" id="153"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПоказатьОшибкиВЖурналеРегистрации" id="154">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Просмотр сообщений об ошибках в журнале регистрации за последние 7 дней.
+В форме журнала вы можете изменить период, выгрузить журнал в файл.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПоказатьОшибкиВЖурналеРегистрацииКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ДекорацияПоказатьОшибкиВЖурналеРегистрацииРасширеннаяПодсказка" id="156"/>
+								</LabelDecoration>
+								<Button name="ОткрытьЖурналРегистрацииОшибки" id="157">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьЖурналРегистрацииОшибки</CommandName>
+									<ExtendedTooltip name="ОткрытьЖурналРегистрацииОшибкиРасширеннаяПодсказка" id="158"/>
+								</Button>
+								<UsualGroup name="ГруппаПодготовкаДанных" id="159">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подготовка данных</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодготовкаДанныхРасширеннаяПодсказка" id="160"/>
+									<ChildItems>
+										<LabelDecoration name="ИнформацияЖурнал" id="161">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>70</MaxWidth>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При расследовании ошибок обмена с приложением 1С:Персонал, по запросу службы технической поддержки может потребоваться выполнить обмен с подробной записью событий в журнал регистрации и отправкой этих данных в службу технической поддержки.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ИнформацияЖурналКонтекстноеМеню" id="162"/>
+											<ExtendedTooltip name="ИнформацияЖурналРасширеннаяПодсказка" id="163"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаПодготовкаДанныхОсновная" id="164">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа подготовка данных основная</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПодготовкаДанныхОсновнаяРасширеннаяПодсказка" id="165"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияОтступКомандПодготовкиДанных" id="166">
+													<Width>1</Width>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация отступ команд подготовки данных</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияОтступКомандПодготовкиДанныхКонтекстноеМеню" id="167"/>
+													<ExtendedTooltip name="ДекорацияОтступКомандПодготовкиДанныхРасширеннаяПодсказка" id="168"/>
+												</PictureDecoration>
+												<UsualGroup name="ГруппаКомандыПодготовкиДанных" id="169">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команды подготовки данных</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКомандыПодготовкиДанныхРасширеннаяПодсказка" id="170"/>
+													<ChildItems>
+														<Button name="ВыполнитьОбменВыгрузитьЖурнал" id="171">
+															<Type>UsualButton</Type>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<CommandName>Form.Command.ВыполнитьОбменВыгрузитьЖурнал</CommandName>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<ExtendedTooltip name="ВыполнитьОбменВыгрузитьЖурналРасширеннаяПодсказка" id="172">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<MaxWidth>65</MaxWidth>
+															</ExtendedTooltip>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ОтключениеИзменениеНастроек" id="199">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключение приложения, изменение настроек подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ОтключениеИзменениеНастроекРасширеннаяПодсказка" id="200"/>
+							<ChildItems>
+								<Button name="ИзменитьНастройкиПодключения" id="201">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ИзменитьНастройкиПодключения</CommandName>
+									<ExtendedTooltip name="ИзменитьНастройкиПодключенияРасширеннаяПодсказка" id="202"/>
+								</Button>
+								<UsualGroup name="ОтключениеПриложения" id="203">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключение приложения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ОтключениеПриложенияРасширеннаяПодсказка" id="204"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтключениеПриложения" id="208">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>75</MaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При отключении будут удалены настройки интеграции с приложением 1С:Персонал.
+Обмен с приложением больше не будет выполняться.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОтключениеПриложенияКонтекстноеМеню" id="209"/>
+											<ExtendedTooltip name="ДекорацияОтключениеПриложенияРасширеннаяПодсказка" id="210"/>
+										</LabelDecoration>
+										<CheckBoxField name="ФлагОтключитьПриложение" id="205">
+											<DataPath>ФлагОтключитьПриложение</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ФлагОтключитьПриложениеКонтекстноеМеню" id="206"/>
+											<ExtendedTooltip name="ФлагОтключитьПриложениеРасширеннаяПодсказка" id="207"/>
+											<Events>
+												<Event name="OnChange">ФлагОтключитьПриложениеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаОтключить" id="213">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа отключить</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтключитьРасширеннаяПодсказка" id="214"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияОтключитьОтступ" id="215">
+													<Width>1</Width>
+													<Height>1</Height>
+													<ContextMenu name="ДекорацияОтключитьОтступКонтекстноеМеню" id="216"/>
+													<ExtendedTooltip name="ДекорацияОтключитьОтступРасширеннаяПодсказка" id="217"/>
+												</LabelDecoration>
+												<Button name="ОтключитьПриложение" id="211">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтключитьПриложение</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отключить</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ОтключитьПриложениеРасширеннаяПодсказка" id="212"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Интеграция1СПерсонал</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КлючИдентификаторКлиента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>clientID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КлючСекретКлиента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>clientSecret</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЦветСтиляИнформационнойНадписи" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет стиля информационной надписи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветСтиляПоясняющийОшибкуТекст" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет стиля поясняющий ошибку текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПраваНаПросмотрЖурналаРегистрации" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть права на просмотр журнала регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Приложение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приложение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПриложенияДляИнтеграции</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидКИАдресЭлектроннойПочты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес электронной почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидКИМобильныйТелефон" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильный телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПубликоватьСтруктуруЮридическихЛиц" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Публиковать структуру юридических лиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтруктураПредприятияСоответствуетСтруктуреЮридическихЛиц" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура предприятия соответствует структуре юридических лиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФлагОтключитьПриложение" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить приложение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьНастройкиИзФайла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки подключения к приложению из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьНастройкиИзФайла</Action>
+		</Command>
+		<Command name="ПодключитьПриложение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодключитьПриложение</Action>
+		</Command>
+		<Command name="НастройкаПравилВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка правил выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкаПравилВыгрузки</Action>
+		</Command>
+		<Command name="ОшибкиЗаполненияОбъектов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки заполнения объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОшибкиЗаполненияОбъектов</Action>
+		</Command>
+		<Command name="ВыполнитьОбмен" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьОбмен</Action>
+		</Command>
+		<Command name="ОбновитьСообщениеРезультатОбмена" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить сообщение результат обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить сведения о последнем обмене</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСообщениеРезультатОбмена</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПоказатьСобытияОбмена" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать события обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказатьСобытияОбмена</Action>
+		</Command>
+		<Command name="ОткрытьЖурналРегистрацииОшибки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать ошибки в журнале регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьЖурналРегистрацииОшибки</Action>
+		</Command>
+		<Command name="ВыполнитьОбменВыгрузитьЖурнал" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение обмена с записью событий в журнал регистрации, выгрузка журнала в файл для отправки в службу технической поддержки.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбменВыгрузитьЖурнал</Action>
+		</Command>
+		<Command name="ИзменитьВидыКонтактнойИнформации" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить эти данные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьВидыКонтактнойИнформации</Action>
+		</Command>
+		<Command name="ИзменитьПубликуемуюСтруктураКомпании" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить эти данные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьПубликуемуюСтруктураКомпании</Action>
+		</Command>
+		<Command name="СоставОтправляемыхДанных" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав отправляемых данных</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СоставОтправляемыхДанных</Action>
+		</Command>
+		<Command name="ИзменитьНастройкиПодключения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить настройки подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьНастройкиПодключения</Action>
+		</Command>
+		<Command name="ОтключитьПриложение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить приложение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтключитьПриложение</Action>
+		</Command>
+	</Commands>
+</Form>

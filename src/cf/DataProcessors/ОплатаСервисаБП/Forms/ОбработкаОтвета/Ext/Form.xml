@@ -1,0 +1,985 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>55</Width>
+	<Height>20</Height>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СтраницаОшибка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница ошибка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаОшибкаРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОшибка" id="15">
+					<Width>6</Width>
+					<Height>2</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияОшибкаКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДекорацияОшибкаРасширеннаяПодсказка" id="17"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаОписаниеОшибки" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОписаниеОшибкиРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<LabelDecoration name="Ошибка" id="88">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;fontsize 12&gt;При обращении к серверу произошла ошибка.&lt;/&gt;
+Для ускорения исправления ошибки рекомендуется сделать снимок экрана и сообщить в службу поддержки.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОшибкаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ОшибкаРасширеннаяПодсказка" id="90"/>
+						</LabelDecoration>
+						<LabelField name="ОписаниеОшибки" id="18">
+							<DataPath>ОписаниеОшибки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<VerticalAlign>Top</VerticalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Font ref="sys:ANSIFixedFont" kind="WindowsFont"/>
+							<ContextMenu name="ОписаниеОшибкиКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ОписаниеОшибкиРасширеннаяПодсказка" id="20"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СтраницаОжидание" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница ожидание</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаОжиданиеРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОжидание" id="4">
+					<Width>6</Width>
+					<Height>3</Height>
+					<MaxHeight>3</MaxHeight>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация ожидание</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Top</GroupVerticalAlign>
+					<PictureSize>AutoSize</PictureSize>
+					<Picture>
+						<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияОжиданиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДекорацияОжиданиеРасширеннаяПодсказка" id="6"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияОжиданиеНадпись" id="21">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение данных...</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОжиданиеНадписьКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ДекорацияОжиданиеНадписьРасширеннаяПодсказка" id="23"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СтраницаРезультат" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница результат</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаРезультатРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОплата" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОплатаРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<LabelField name="Сообщение" id="32">
+							<DataPath>Сообщение</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="СообщениеКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СообщениеРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+						<UsualGroup name="ГруппаСпособОплаты" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Способ оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСпособОплатыРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<InputField name="СпособОплаты" id="37">
+									<DataPath>СпособОплаты</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Платежной картой</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ОплатаПлатежнойКартой</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>С расчетного счета</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ОплатаСРасчетногоСчета</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>С личного счета через онлайн-банк</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ОплатаСЛичногоСчета</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Наличными в отделении банка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ОплатаНаличными</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СпособОплатыКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="СпособОплатыРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="OnChange">СпособОплатыПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ОформитьПодписку" id="40">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОформитьПодписку</CommandName>
+							<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ExtendedTooltip name="ОформитьПодпискуРасширеннаяПодсказка" id="41"/>
+						</Button>
+						<LabelField name="РеквизитыПодписки" id="93">
+							<DataPath>РеквизитыПодписки</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="РеквизитыПодпискиКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="РеквизитыПодпискиРасширеннаяПодсказка" id="95"/>
+						</LabelField>
+						<LabelDecoration name="РекомендацияПоОплатеСчета" id="42">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распечатайте счет на оплату выбранного тарифа и оплатите его.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РекомендацияПоОплатеСчетаКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="РекомендацияПоОплатеСчетаРасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+						<LabelDecoration name="РекомендацияПоОплатеНаличными" id="45">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распечатайте счет на оплату выбранного тарифа и оплатите его в отделении банка. 
+Проследите, чтобы кассир правильно указал номер счета в назначении платежа. </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РекомендацияПоОплатеНаличнымиКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="РекомендацияПоОплатеНаличнымиРасширеннаяПодсказка" id="47"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПечатьСчета" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печать счета</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПечатьСчетаРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<Button name="РаспечататьСчет" id="50">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.РаспечататьСчет</CommandName>
+									<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ExtendedTooltip name="РаспечататьСчетРасширеннаяПодсказка" id="51"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="РекомендацияПоОплатеСРасчетногоСчета" id="52">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рекомендуем распечатать готовое платежное поручение или сразу отправить его в банк.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Bottom</VerticalAlign>
+							<ContextMenu name="РекомендацияПоОплатеСРасчетногоСчетаКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="РекомендацияПоОплатеСРасчетногоСчетаРасширеннаяПодсказка" id="54"/>
+						</LabelDecoration>
+						<LabelDecoration name="РекомендацияПоУказаниюБанковскогоСчета" id="55">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для этого укажите ваш банковский счет.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РекомендацияПоУказаниюБанковскогоСчетаКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="РекомендацияПоУказаниюБанковскогоСчетаРасширеннаяПодсказка" id="57"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаДокументыДляБанка" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документы для банка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДокументыДляБанкаРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<Button name="УказатьБанковскийСчет" id="60">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УказатьБанковскийСчет</CommandName>
+									<ExtendedTooltip name="УказатьБанковскийСчетРасширеннаяПодсказка" id="61"/>
+								</Button>
+								<Button name="РаспечататьПлатежноеПоручение" id="62">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.РаспечататьПлатежноеПоручение</CommandName>
+									<ExtendedTooltip name="РаспечататьПлатежноеПоручениеРасширеннаяПодсказка" id="63"/>
+								</Button>
+								<Button name="ОтправитьПлатежноеПоручениеВБанк" id="64">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтправитьПлатежноеПоручениеВБанк</CommandName>
+									<ExtendedTooltip name="ОтправитьПлатежноеПоручениеВБанкРасширеннаяПодсказка" id="65"/>
+								</Button>
+								<Button name="СоздатьПлатежноеПоручение" id="91">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СоздатьПлатежноеПоручение</CommandName>
+									<ExtendedTooltip name="СоздатьПлатежноеПоручениеРасширеннаяПодсказка" id="92"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРеквизитыДляОплаты" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизиты для оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРеквизитыДляОплатыРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<InputField name="РеквизитыДляОплаты" id="68">
+									<DataPath>РеквизитыДляОплаты</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизиты можно скопировать в буфер обмена:
+Ctrl+C на компьютере с Windows, Command+C на Mac</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>5</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<Font ref="sys:ANSIFixedFont" height="0" kind="WindowsFont"/>
+									<ContextMenu name="РеквизитыДляОплатыКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="РеквизитыДляОплатыРасширеннаяПодсказка" id="70"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ИнформацияПоОплатеКартойТестовыйТариф" id="71">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сразу после оплаты вам станут доступны все возможности выбранного тарифа,
+а тестовый период будет прекращен. Вы получите уведомление на электронную почту.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияПоОплатеКартойТестовыйТарифКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ИнформацияПоОплатеКартойТестовыйТарифРасширеннаяПодсказка" id="73"/>
+						</LabelDecoration>
+						<LabelDecoration name="ИнформацияПоОплатеКартой" id="74">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тариф будет активирован сразу после поступления оплаты.
+Вы получите уведомление на электронную почту.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияПоОплатеКартойКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ИнформацияПоОплатеКартойРасширеннаяПодсказка" id="76"/>
+						</LabelDecoration>
+						<LabelDecoration name="ИнформацияПоОплате" id="77">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тариф будет активирован в течение рабочего дня после поступления оплаты.
+Вы получите уведомление на электронную почту.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияПоОплатеКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ИнформацияПоОплатеРасширеннаяПодсказка" id="79"/>
+						</LabelDecoration>
+						<LabelDecoration name="ИнформацияПоПродлениюКартой" id="80">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продление будет активировано сразу после поступления оплаты.
+Вы получите уведомление на электронную почту.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияПоПродлениюКартойКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ИнформацияПоПродлениюКартойРасширеннаяПодсказка" id="82"/>
+						</LabelDecoration>
+						<LabelDecoration name="ИнформацияПоПродлению" id="83">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продление будет активировано в течение рабочего дня после поступления оплаты.
+Вы получите уведомление на электронную почту.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияПоПродлениюКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ИнформацияПоПродлениюРасширеннаяПодсказка" id="85"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СтраницаОжиданиеОплаты" id="153">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница ожидание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница ожидание оплаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаОжиданиеОплатыРасширеннаяПодсказка" id="154"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОжиданиеОплаты" id="155">
+					<Width>6</Width>
+					<Height>3</Height>
+					<MaxHeight>3</MaxHeight>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация ожидание</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Top</GroupVerticalAlign>
+					<PictureSize>AutoSize</PictureSize>
+					<Picture>
+						<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияОжиданиеОплатыКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ДекорацияОжиданиеОплатыРасширеннаяПодсказка" id="157"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияОжиданиеОплатыНдапись" id="158">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидание поступления оплаты...</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОжиданиеОплатыНдаписьКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="ДекорацияОжиданиеОплатыНдаписьРасширеннаяПодсказка" id="160"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СтраницаОплачено" id="139">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница оплачено</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Double</VerticalSpacing>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаОплаченоРасширеннаяПодсказка" id="140"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСпасибо" id="149">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа спасибо</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСпасибоРасширеннаяПодсказка" id="150"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияСпасибо" id="141">
+							<Width>6</Width>
+							<Height>2</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Спасибо</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ЗеленаяГалка</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияСпасибоКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ДекорацияСпасибоРасширеннаяПодсказка" id="143"/>
+						</PictureDecoration>
+						<LabelDecoration name="Спасибо" id="146">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Спасибо за оплату сервиса!</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СпасибоКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="СпасибоРасширеннаяПодсказка" id="148"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="Закрыть" id="151">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<BackColor>style:ImportantColor</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="152"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИдентификаторОбъекта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторПравила" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеОшибки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сообщение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитыДляОплаты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделайте платеж по следующим реквизитам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособОплаты" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоОжидания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало ожидания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСсылка" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежная ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПродление" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это продление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДокумента" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеСчета" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СчетПоставщика" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет поставщика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.СчетНаОплатуПоставщика</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БанковскийСчет" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковский счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БанковскиеСчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПечатнаяФормаСчета" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатная форма счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Организация" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеВалютыОплаты" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление валюты оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитыПодписки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписка будет оформлена на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ожидание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИННАбонента" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИННАбонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеОрганизацииАбонента" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование организации абонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоТестовыйТариф" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это тестовый тариф</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КлючДанных" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Оплачено" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОжиданиеОплаты" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидание оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РаспечататьСчет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать счет</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РаспечататьСчет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РаспечататьПлатежноеПоручение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать платежное поручение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РаспечататьПлатежноеПоручение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьПлатежноеПоручениеВБанк" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить платежное поручение в банк</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтправитьПлатежноеПоручениеВБанк</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОформитьПодписку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить подписку</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОформитьПодписку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УказатьБанковскийСчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указать банковский счет</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УказатьБанковскийСчет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьПлатежноеПоручение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать платежное поручение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СоздатьПлатежноеПоручение</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИдентификаторОбъекта">
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИдентификаторПравила">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

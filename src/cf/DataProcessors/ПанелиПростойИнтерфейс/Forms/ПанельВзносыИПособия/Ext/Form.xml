@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Взносы и пособия</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>HorizontalIfPossible</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛеваяКолонка" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Левая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<Width>28</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСтраховыеВзносы" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страховые взносы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаСтраховыеВзносыРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<Button name="ОперацииУчетаВзносов" id="17">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОперацииУчетаВзносов</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОперацииУчетаВзносовРасширеннаяПодсказка" id="18"/>
+						</Button>
+						<Button name="ДокументыПерсучета" id="13">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДокументыПерсучета</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ДокументыПерсучетаРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<Button name="ПерсонифицированныйУчет" id="19">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПерсонифицированныйУчет</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПерсонифицированныйУчетРасширеннаяПодсказка" id="20"/>
+						</Button>
+						<Button name="ДобровольноеПенсионноеСтрахование" id="15">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДобровольноеПенсионноеСтрахование</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ДобровольноеПенсионноеСтрахованиеРасширеннаяПодсказка" id="16"/>
+						</Button>
+						<Button name="СправкиДляРасчетаПособий" id="25">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СправкиДляРасчетаПособий</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СправкиДляРасчетаПособийРасширеннаяПодсказка" id="26"/>
+						</Button>
+						<Button name="ПерерасчетыСтраховыхВзносов" id="27">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПерерасчетыСтраховыхВзносов</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПерерасчетыСтраховыхВзносовРасширеннаяПодсказка" id="28"/>
+						</Button>
+						<Button name="АктыПроверокСтраховыхВзносов" id="29">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.АктыПроверокСтраховыхВзносов</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="АктыПроверокСтраховыхВзносовРасширеннаяПодсказка" id="30"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПраваяКолонка" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПособия" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособия</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПособияРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<Button name="СведенияОбЭЛН" id="41">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СведенияОбЭЛН</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СведенияОбЭЛНРасширеннаяПодсказка" id="42"/>
+						</Button>
+						<Button name="БольничныеЛисты" id="43">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.БольничныеЛисты</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="БольничныеЛистыРасширеннаяПодсказка" id="44"/>
+						</Button>
+						<Button name="ВходящиеЗапросыФССДляРасчетаПособий" id="33">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВходящиеЗапросыФССДляРасчетаПособий</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ВходящиеЗапросыФССДляРасчетаПособийРасширеннаяПодсказка" id="34"/>
+						</Button>
+						<Button name="ОтветыНаЗапросыФССДляРасчетаПособий" id="35">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтветыНаЗапросыФССДляРасчетаПособий</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОтветыНаЗапросыФССДляРасчетаПособийРасширеннаяПодсказка" id="36"/>
+						</Button>
+						<Button name="ИзвещенияФСС" id="37">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ИзвещенияФСС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ИзвещенияФССРасширеннаяПодсказка" id="38"/>
+						</Button>
+						<Button name="ИсходящиеСообщенияОСтраховыхСлучаяхФСС" id="47">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ИсходящиеСообщенияОСтраховыхСлучаяхФСС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ИсходящиеСообщенияОСтраховыхСлучаяхФССРасширеннаяПодсказка" id="48"/>
+						</Button>
+						<Button name="ЗапросыСреднегоЗаработкаСЭДО" id="52">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗапросыСреднегоЗаработкаСЭДО</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗапросыСреднегоЗаработкаСЭДОРасширеннаяПодсказка" id="53"/>
+						</Button>
+						<Button name="СреднийЗаработокСЭДО" id="54">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СреднийЗаработокСЭДО</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СреднийЗаработокСЭДОРасширеннаяПодсказка" id="55"/>
+						</Button>
+						<Button name="ПередачаВФСССведенийОПособиях" id="39">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПередачаВФСССведенийОПособиях</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПередачаВФСССведенийОПособияхРасширеннаяПодсказка" id="40"/>
+						</Button>
+						<Button name="ПособияЗаСчетФСС" id="45">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПособияЗаСчетФСС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПособияЗаСчетФССРасширеннаяПодсказка" id="46"/>
+						</Button>
+						<Button name="ЗастрахованныеЛицаСЭДО" id="56">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗастрахованныеЛицаСЭДО</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗастрахованныеЛицаСЭДОРасширеннаяПодсказка" id="57"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДокументыПерсучета" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы персучета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДокументыПерсучета</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ДобровольноеПенсионноеСтрахование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добровольное пенсионное страхование</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДобровольноеПенсионноеСтрахование</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОперацииУчетаВзносов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операции учета взносов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОперацииУчетаВзносов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПерсонифицированныйУчет" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СФР: Пачки, реестры, описи</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерсонифицированныйУчет</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СправкиДляРасчетаПособий" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справки для расчета пособий (исх.)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СправкиДляРасчетаПособий</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПерерасчетыСтраховыхВзносов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перерасчеты страховых взносов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерерасчетыСтраховыхВзносов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="АктыПроверокСтраховыхВзносов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акты проверок страховых взносов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>АктыПроверокСтраховыхВзносов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ВходящиеЗапросыФССДляРасчетаПособий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие запросы СФР для расчета пособий</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВходящиеЗапросыФССДляРасчетаПособий</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОтветыНаЗапросыФССДляРасчетаПособий" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответы на запросы СФР для расчета пособий</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтветыНаЗапросыФССДляРасчетаПособий</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИзвещенияФСС" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Извещения СЭДО СФР</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзвещенияФСС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПередачаВФСССведенийОПособиях" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача в ФСС сведений о пособиях</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПередачаВФСССведенийОПособиях</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СведенияОбЭЛН" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения об ЭЛН</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СведенияОбЭЛН</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="БольничныеЛисты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больничные листы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>БольничныеЛисты</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПособияЗаСчетФСС" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пособия за счет ФСС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПособияЗаСчетФСС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИсходящиеСообщенияОСтраховыхСлучаяхФСС" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходящие сообщения о страховых случаях СФР</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИсходящиеСообщенияОСтраховыхСлучаяхФСС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗапросыСреднегоЗаработкаСЭДО" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросы данных СФР о среднем заработке</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗапросыСреднегоЗаработкаСЭДО</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СреднийЗаработокСЭДО" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средний заработок по данным СФР (СЭДО)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СреднийЗаработокСЭДО</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗастрахованныеЛицаСЭДО" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Застрахованные лица (СЭДО СФР)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗастрахованныеЛицаСЭДО</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

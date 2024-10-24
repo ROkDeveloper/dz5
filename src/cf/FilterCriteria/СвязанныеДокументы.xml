@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<FilterCriterion uuid="18bf6916-83cc-41e5-a35b-1489450ae632">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.СвязанныеДокументы" category="Manager">
+				<xr:TypeId>f3419e42-7083-4e23-8233-2155ef776262</xr:TypeId>
+				<xr:ValueId>f672e9f7-cdcc-4293-b1f2-e4c26f912c00</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.СвязанныеДокументы" category="List">
+				<xr:TypeId>9e16ad15-d167-4333-93b1-dd05dfe4196d</xr:TypeId>
+				<xr:ValueId>13494fee-f044-4f98-94ee-527ae8a7d2bb</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СвязанныеДокументы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связанные документы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ОтчетПроизводстваЗаСмену</v8:Type>
+				<v8:Type>cfg:DocumentRef.ФормированиеЗаписейКнигиПокупок</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеСРасчетногоСчета</v8:Type>
+				<v8:Type>cfg:DocumentRef.УведомлениеОбОстаткахПрослеживаемыхТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОбесценениеОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтчетОбИмпортеЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктОРасхожденияхПолученный</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.СправкиНДФЛДляПередачиВНалоговыйОрган</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПроизводственнаяОперацияСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктОРасхождениях</v8:Type>
+				<v8:Type>cfg:DocumentRef.РаспределениеНДС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИсходящаяТранспортнаяОперацияВЕТИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвансовыйОтчет</v8:Type>
+				<v8:Type>cfg:DocumentRef.УведомлениеОбИсчисленныхСуммахНалогов</v8:Type>
+				<v8:Type>cfg:DocumentRef.ГТДИмпорт</v8:Type>
+				<v8:Type>cfg:DocumentRef.УведомлениеОВвозеПрослеживаемыхТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.РеестрДСВ_3</v8:Type>
+				<v8:Type>cfg:DocumentRef.КорректировкаПоступления</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыкупПредметовЛизинга</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтчетОператораСистемыПлатон</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовАДВ_2</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПриемкаТоваровИСМП</v8:Type>
+				<v8:Type>cfg:DocumentRef.СчетФактураВыданный</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОприходованиеТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеМатериаловИзЭксплуатации</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыдачаДенежныхДокументов</v8:Type>
+				<v8:Type>cfg:DocumentRef.РегистрацияОплатыОсновныхСредствДляУСН</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПроизводственнаяОперацияВЕТИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПлатежноеПоручение</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВозвратНДФЛ</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаМатериаловВЭксплуатацию</v8:Type>
+				<v8:Type>cfg:DocumentRef.ТаможеннаяДекларацияЭкспорт</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыплатыСамозанятым</v8:Type>
+				<v8:Type>cfg:DocumentRef.ДокументРасчетовСКонтрагентом</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПланПримененияСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.УдалитьПроизвольныйЭД</v8:Type>
+				<v8:Type>cfg:DocumentRef.Доверенность</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПринятиеКУчетуОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеСпециальногоКоэффициентаНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПоступлениеНаРасчетныйСчет</v8:Type>
+				<v8:Type>cfg:DocumentRef.КорректировкаРеализации</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеПеней</v8:Type>
+				<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОформлениеСДИЗЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.РасходныйКассовыйОрдер</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктСверкиВзаиморасчетов</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОперацияБух</v8:Type>
+				<v8:Type>cfg:DocumentRef.УстановкаЦенНоменклатуры</v8:Type>
+				<v8:Type>cfg:DocumentRef.СчетНаОплатуПоставщика</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПеремаркировкаТоваровИСМП</v8:Type>
+				<v8:Type>cfg:DocumentRef.ТТНИсходящаяЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктИнвентаризацииСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовАДВ_3</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаЗадолженностиНаФакторинг</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовСЗВ_К</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктПостановкиНаБалансЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПоступлениеДенежныхДокументов</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктОбОказанииПроизводственныхУслуг</v8:Type>
+				<v8:Type>cfg:DocumentRef.ФормированиеПартийИзДругихПартийЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.УстановкаПорядкаЗакрытияПодразделений</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоМПЗВходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.ФормированиеПартийЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПоступлениеНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОперацияНалоговогоУчетаПоНДФЛ</v8:Type>
+				<v8:Type>cfg:DocumentRef.КорректировкаДолга</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПоступлениеТоваровУслуг</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОказаниеУслуг</v8:Type>
+				<v8:Type>cfg:DocumentRef.МодернизацияОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПереоценкаТоваровВРознице</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВозвратТоваровОтПокупателя</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовСЗВ_6_1</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоОСИсходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоМПЗИсходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.СчетНаОплатуПокупателю</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыработкаМатериалов</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗапросОстатковПартийСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОперацияУчетаПоСтраховымВзносам</v8:Type>
+				<v8:Type>cfg:DocumentRef.Отпуск</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеСпособовОтраженияРасходовПоАмортизацииНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОплатаПлатежнойКартой</v8:Type>
+				<v8:Type>cfg:DocumentRef.ТребованиеНакладная</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвентаризацияРасчетовСКонтрагентами</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвентаризацияПродукцииВЕТИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтчетОПроизводствеЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВедомостьНаВыплатуЗарплаты</v8:Type>
+				<v8:Type>cfg:DocumentRef.БольничныйЛист</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктСписанияЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтчетКомиссионераОПродажах</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеНДС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтчетКомитентуОПродажах</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПодготовкаКПередачеОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИмпортПродукцииСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.КоммерческоеПредложение</v8:Type>
+				<v8:Type>cfg:DocumentRef.СчетФактураПолученный</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеОтраженияРасходовПоАренднымПлатежамОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыработкаОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоПрочееВходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаОборудованияВМонтаж</v8:Type>
+				<v8:Type>cfg:DocumentRef.УведомлениеОПланируемомИмпортеЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтчетОРозничныхПродажах</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеДивидендов</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПерерасчетНДФЛ</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПодтверждениеЗачисленияЗарплаты</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовАДВ_1</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПоступлениеИзПереработки</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеЗарплаты</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗапросОстатковПартийЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтгрузкаТоваровИСМП</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВосстановлениеНДС</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеПартийЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПодтверждениеНулевойСтавкиНДС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыработкаНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗаписьКнигиУчетаДоходовИРасходовИП</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗаявлениеОВвозеТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоРасчетыВходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.РегистрацияОплатыОсновныхСредствДляИП</v8:Type>
+				<v8:Type>cfg:DocumentRef.РозничнаяПродажа</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеСостоянияОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.АктПримененияСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВедомостьНаВыплатуЗарплатыВБанк</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовСПВ_1</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеГрафиковАмортизацииОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвентаризацияКассы</v8:Type>
+				<v8:Type>cfg:DocumentRef.РеализацияУслугПоПереработке</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПодтверждениеОплатыНДСВБюджет</v8:Type>
+				<v8:Type>cfg:DocumentRef.ФормированиеЗаписейКнигиПродаж</v8:Type>
+				<v8:Type>cfg:DocumentRef.КомплектацияНоменклатуры</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаВРегистр2ЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.РеализацияТоваровУслуг</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВозвратТоваровПоставщику</v8:Type>
+				<v8:Type>cfg:DocumentRef.СведенияОбУдержанномНДФЛ</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвентаризацияНЗП</v8:Type>
+				<v8:Type>cfg:DocumentRef.МаркировкаТоваровИСМП</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтражениеНачисленияНДС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПартияМатериаловВЭксплуатации</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовСЗВ_6_3</v8:Type>
+				<v8:Type>cfg:DocumentRef.ФормированиеПартийПриПроизводствеЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОтражениеНДСКВычету</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвентаризацияОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвентаризацияТоваровНаСкладе</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВнесениеСведенийОСобранномУрожаеЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.УсловияОплатыПоступления</v8:Type>
+				<v8:Type>cfg:DocumentRef.РеализацияОтгруженныхТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗаписьКУДиР</v8:Type>
+				<v8:Type>cfg:DocumentRef.ОперацияПоЕдиномуНалоговомуСчету</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПлатежноеТребование</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоОСВходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеСпециальногоКоэффициентаОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПогашениеСДИЗЗЕРНО</v8:Type>
+				<v8:Type>cfg:DocumentRef.УведомлениеОПеремещенииПрослеживаемыхТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВозвратМатериаловИзЭксплуатации</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПачкаДокументовДСВ_1</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеНДСпоСМРхозспособом</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВосстановлениеНДСПоОбъектамНедвижимости</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеСпособовОтраженияРасходовПоАмортизацииОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПеремещениеОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВозвратИзРегистра2ЕГАИС</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоПрочееИсходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.РеестрСЗВ_6_2</v8:Type>
+				<v8:Type>cfg:DocumentRef.АвизоРасчетыИсходящее</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИзменениеПараметровНачисленияАмортизацииОС</v8:Type>
+				<v8:Type>cfg:DocumentRef.Партия</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПоступлениеДопРасходов</v8:Type>
+				<v8:Type>cfg:DocumentRef.НакладнаяСАТУРН</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВыводИзОборотаИСМП</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПринятиеКУчетуНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВедомостьНаВыплатуЗарплатыВКассу</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеНМА</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВедомостьУплатыАДВ_11</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПеремещениеТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.УведомлениеОПравеНаИмущественныйВычетДляНДФЛ</v8:Type>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвансовыйОтчет.TabularSection.ВыданныеАвансы.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвансовыйОтчет.TabularSection.ВозвратнаяТара.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвансовыйОтчет.TabularSection.ОплатаПоставщикам.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвансовыйОтчет.TabularSection.ОплатаПоставщикам.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоМПЗВходящее.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоМПЗВходящее.TabularSection.ДанныеПоПартиям.Attribute.ДокументПартии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоМПЗВходящее.TabularSection.ДанныеПоСФ.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоМПЗИсходящее.TabularSection.ДанныеПоПартиям.Attribute.ДокументПартии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоМПЗИсходящее.TabularSection.ДанныеПоСФ.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоОСВходящее.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоОСВходящее.TabularSection.ОС.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоОСИсходящее.TabularSection.ОС.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоПрочееВходящее.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоРасчетыВходящее.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоРасчетыВходящее.TabularSection.СуммыДолга.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоРасчетыВходящее.TabularSection.СуммыДолга.Attribute.ДокументРасчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоРасчетыИсходящее.TabularSection.СуммыДолга.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвизоРасчетыИсходящее.TabularSection.СуммыДолга.Attribute.ДокументРасчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОбОказанииПроизводственныхУслуг.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОбОказанииПроизводственныхУслуг.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОРасхождениях.Attribute.ДокументПоступления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОРасхождениях.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОРасхождениях.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОРасхожденияхПолученный.Attribute.ДокументРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОРасхожденияхПолученный.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОРасхожденияхПолученный.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктПостановкиНаБалансЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов.TabularSection.ПоДаннымОрганизации.Attribute.Договор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов.TabularSection.ПоДаннымОрганизации.Attribute.Документ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов.TabularSection.ПоДаннымКонтрагента.Attribute.Договор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов.TabularSection.ПоДаннымКонтрагента.Attribute.Документ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСписанияЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВедомостьНаВыплатуЗарплатыВБанк.TabularSection.Зарплата.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВедомостьНаВыплатуЗарплатыВКассу.TabularSection.Зарплата.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратИзРегистра2ЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратОСОтАрендатора.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровОтПокупателя.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровОтПокупателя.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику.TabularSection.Товары.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику.TabularSection.Товары.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику.TabularSection.Товары.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВосстановлениеНДС.TabularSection.Состав.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВосстановлениеНДС.TabularSection.Состав.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВосстановлениеНДС.TabularSection.Состав.Attribute.ИсправленныйСчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВосстановлениеНДСПоОбъектамНедвижимости.TabularSection.СчетаФактуры.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыводИзОборотаИСМП.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыдачаДенежныхДокументов.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыдачаДенежныхДокументов.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыкупПредметовЛизинга.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыкупПредметовЛизинга.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГТДИмпорт.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГТДИмпорт.Attribute.ДоговорКонтрагентаРегл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГТДИмпорт.TabularSection.Товары.Attribute.ДокументПартии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДепонированиеЗарплаты.Attribute.Ведомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доверенность.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доверенность.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокументРасчетовСКонтрагентом.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявлениеОВвозеТоваров.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявлениеОВвозеТоваров.TabularSection.Товары.Attribute.ДокументПартии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИзменениеУсловийАренды.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияПродукцииВЕТИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИсходящаяТранспортнаяОперацияВЕТИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомплектацияНоменклатуры.TabularSection.Комплектующие.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаДолга.TabularSection.ДебиторскаяЗадолженность.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаДолга.TabularSection.ДебиторскаяЗадолженность.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаДолга.TabularSection.КредиторскаяЗадолженность.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаДолга.TabularSection.КредиторскаяЗадолженность.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаПоступления.Attribute.ДокументПоступления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаПоступления.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаПоступления.TabularSection.Товары.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаПоступления.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРеализации.Attribute.ДокументРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРеализации.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРеализации.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МаркировкаТоваровИСМП.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПеней.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПеней.TabularSection.Задолженность.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОказаниеУслуг.TabularSection.Контрагенты.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОперацияБух.Attribute.СторнируемыйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОперацияПоЕдиномуНалоговомуСчету.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОперацияПоЕдиномуНалоговомуСчету.TabularSection.Налоги.Attribute.ПлатежныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОперацияПоЕдиномуНалоговомуСчету.TabularSection.Санкции.Attribute.ПлатежныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОперацияПоЕдиномуНалоговомуСчету.TabularSection.ЕдиныйСчет.Attribute.ПлатежныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПлатежнойКартой.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПлатежнойКартой.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПлатежнойКартой.TabularSection.РасшифровкаПлатежа.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПлатежнойКартой.TabularSection.РасшифровкаПлатежа.Attribute.СчетНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОприходованиеТоваров.Attribute.ИнвентаризацияТоваровНаСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтгрузкаТоваровИСМП.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеНачисленияНДС.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеНачисленияНДС.Attribute.РасчетныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеНачисленияНДС.TabularSection.ДокументыОплаты.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеНДСКВычету.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеНДСКВычету.Attribute.РасчетныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеНДСКВычету.TabularSection.ДокументыОплаты.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомиссионераОПродажах.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомиссионераОПродажах.TabularSection.Товары.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомиссионераОПродажах.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомиссионераОПродажах.TabularSection.Покупатели.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомитентуОПродажах.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОператораСистемыПлатон.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОператораСистемыПлатон.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОРозничныхПродажах.Attribute.ИнвентаризацияТоваровНаСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОРозничныхПродажах.TabularSection.Товары.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОРозничныхПродажах.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетПроизводстваЗаСмену.TabularSection.Материалы.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Партия.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаЗадолженностиНаФакторинг.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаЗадолженностиНаФакторинг.Attribute.ДоговорФакторинга</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаЗадолженностиНаФакторинг.TabularSection.ДебиторскаяЗадолженность.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНМА.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНМА.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаОС.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаОС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаОС.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаОСВАренду.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаТоваров.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремаркировкаТоваровИСМП.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеТоваров.TabularSection.Товары.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПереоценкаТоваровВРознице.Attribute.ДокументУстановкиЦен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежноеПоручение.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежноеПоручение.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежноеПоручение.Attribute.НачислениеДивидендов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежноеПоручение.Attribute.РеестрВыплатСамозанятым</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПодтверждениеНулевойСтавкиНДС.TabularSection.Состав.Attribute.ДокументОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПодтверждениеОплатыНДСВБюджет.TabularSection.Состав.Attribute.УдалитьДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеВАренду.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДенежныхДокументов.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДенежныхДокументов.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДопРасходов.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДопРасходов.TabularSection.Товары.Attribute.ДокументПартии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДопРасходов.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеИзПереработки.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеИзПереработки.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНаРасчетныйСчет.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНаРасчетныйСчет.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНаРасчетныйСчет.TabularSection.РасшифровкаПлатежа.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНаРасчетныйСчет.TabularSection.РасшифровкаПлатежа.Attribute.СчетНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНМА.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНМА.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг.Attribute.СчетНаОплатуПоставщика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг.TabularSection.Товары.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемкаТоваровИСМП.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПринятиеКУчетуОС.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходныйКассовыйОрдер.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.СчетНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПроизводственнаяОперацияВЕТИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РаспределениеНДС.TabularSection.СоставКосвенныхРасходов.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.Attribute.ПлатежнаяВедомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.Attribute.НачислениеДивидендов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.СчетНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.TabularSection.ВыплатаЗаработнойПлаты.Attribute.Ведомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.TabularSection.ВыплатаДепонентов.Attribute.Ведомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияОтгруженныхТоваров.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияОтгруженныхТоваров.Attribute.ДокументОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияОтгруженныхТоваров.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.Attribute.СчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.TabularSection.Товары.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.TabularSection.Товары.Attribute.СчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.TabularSection.Услуги.Attribute.СчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.TabularSection.АгентскиеУслуги.Attribute.СчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияУслугПоПереработке.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияУслугПоПереработке.TabularSection.ЗачетАвансов.Attribute.ДокументАванса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РозничнаяПродажа.Attribute.ОтчетОРозничныхПродажах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РозничнаяПродажа.Attribute.Основание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РозничнаяПродажа.Attribute.СчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РозничнаяПродажа.TabularSection.АгентскиеУслуги.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеДепонированнойЗарплаты.TabularSection.Депоненты.Attribute.Ведомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеНДС.TabularSection.Состав.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеНДС.TabularSection.Состав.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.Attribute.ПлатежнаяВедомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.Attribute.НачислениеДивидендов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.Attribute.РеестрВыплатСамозанятым</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.TabularSection.РасшифровкаПлатежа.Attribute.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.TabularSection.РасшифровкаПлатежа.Attribute.СчетНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.TabularSection.ПеречислениеЗаработнойПлаты.Attribute.Ведомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСРасчетногоСчета.TabularSection.ПеречислениеДепонентов.Attribute.Ведомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеТоваров.Attribute.ИнвентаризацияТоваровНаСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеТоваров.TabularSection.Товары.Attribute.ДокументОприходования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетНаОплатуПокупателю.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетНаОплатуПоставщика.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураВыданный.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураВыданный.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураВыданный.Attribute.СчетНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураВыданный.TabularSection.ДокументыОснования.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураВыданный.TabularSection.Авансы.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураПолученный.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураПолученный.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураПолученный.Attribute.СчетФактураВыданныйПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураПолученный.TabularSection.ДокументыОснования.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетФактураПолученный.TabularSection.СчетаФактурыВыданныеПокупателям.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТаможеннаяДекларацияЭкспорт.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТаможеннаяДекларацияЭкспорт.TabularSection.ДокументыОснования.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТТНВходящаяЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТТНИсходящаяЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОбИсчисленныхСуммахНалогов.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОбОстаткахПрослеживаемыхТоваров.Attribute.ПервичныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОбОстаткахПрослеживаемыхТоваров.Attribute.ДокументУведомлениеОбОстатках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОВвозеПрослеживаемыхТоваров.Attribute.ПервичныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОВвозеПрослеживаемыхТоваров.Attribute.ДокументУведомлениеОВвозе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОВвозеПрослеживаемыхТоваров.Attribute.ОснованиеКорректировки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.Attribute.ДокументУведомлениеОПеремещении</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.TabularSection.Товары.Attribute.СопроводительныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.TabularSection.КорректировочныеДокументы.Attribute.Документ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УдалитьПроизвольныйЭД.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УсловияОплатыПоступления.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УсловияОплатыПоступления.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетПоПриобретеннымЦенностям.Attribute.ДокументОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетПоПриобретеннымЦенностям.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетПоПриобретеннымЦенностям.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетПоПриобретеннымЦенностям.Attribute.ИсправленныйСчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.НДСсАвансов.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.НДСсАвансов.Attribute.ДокументОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.НДСсАвансов.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.НДСсАвансов.Attribute.ИсправленныйСчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.НДСсАвансовВыданных.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.НДСсАвансовВыданных.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетНДСПоНалоговомуАгенту.Attribute.ДокументОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетНДСПоНалоговомуАгенту.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетНДСПоНалоговомуАгенту.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетНДСПоНалоговомуАгенту.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетНДСПоНалоговомуАгенту.Attribute.ИсправленныйСчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетПриИзмененииСтоимостиВСторонуУменьшения.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПокупок.TabularSection.ВычетПриИзмененииСтоимостиВСторонуУменьшения.Attribute.ИсправленныйСчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.Реализация.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.Реализация.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.Реализация.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.Авансы.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.Авансы.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.НачисленКУплате.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.НачисленКУплате.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.НачисленКУплате.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.ВосстановленПоАвансам.Attribute.ДоговорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.ВосстановленПоАвансам.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.ВосстановленПоАвансам.Attribute.ИсправленныйСчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.Восстановлен.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.НеОтражаетсяВКниге.Attribute.СчетФактура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейКнигиПродаж.TabularSection.НеОтражаетсяВКниге.Attribute.ДокументОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеЗаписейРаздела7ДекларацииНДС.TabularSection.НеоблагаемыеНДСОперации.Attribute.ДокументРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетНаОплатуПокупателю.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеПартийЗЕРНО.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОформлениеСДИЗЗЕРНО.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОбИмпортеЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОПроизводствеЕГАИС.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФормированиеПартийПриПроизводствеЗЕРНО.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПогашениеСДИЗЗЕРНО.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеПартийЗЕРНО.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВнесениеСведенийОСобранномУрожаеЗЕРНО.Attribute.ДокументОснование</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

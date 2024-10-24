@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Электронная транспортная накладная</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаДа" id="12">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Yes</CommandName>
+				<ExtendedTooltip name="ФормаДаРасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="ФормаНет" id="10">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.No</CommandName>
+				<ExtendedTooltip name="ФормаНетРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="ФормаНеСпрашивать" id="8">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НеСпрашивать</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаНеСпрашиватьРасширеннаяПодсказка" id="9"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияВопрос" id="1">
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С 1 сентября 2022 года появилась возможность оформлять &lt;link ЭТрН&gt;электронные транспортные накладные&lt;/&gt;. 
+
+&lt;b&gt;Оформить электронную транспортную накладную вместо бумажной?&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияВопросКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДекорацияВопросРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияВопросОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="НеСпрашивать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет и больше не спрашивать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не спрашивать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеСпрашивать</Action>
+		</Command>
+	</Commands>
+</Form>

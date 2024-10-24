@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="content-type" content="text/html;charset=utf-8"></meta><title>pageLoading</title><style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	body {
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		min-height: 100vh;
+	}
+	
+	.loader h2 {
+		text-transform: uppercase;
+		animation: typing 1s steps(15) infinite;
+		overflow: hidden;
+		font-size: 1em;
+		font-family: monospace;
+		font-weight: lighter;
+	}
+	
+	@keyframes typing {
+		from {
+			width: 75%;
+		} 
+		to {
+			width: 100%;
+		}
+	}
+</style></head><body>
+	<div class="loader">
+		<h2><span class="loader_text">загрузка...</span></h2>
+	</div>
+</body></html>

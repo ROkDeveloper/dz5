@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<Page name="СтраницаРезервОтпусков" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Резерв отпусков</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница резерв отпусков</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРезервОтпусковРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<Table name="СписокРезервОтпусков" id="1">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокРезервОтпусков</DataPath>
+							<RowPictureDataPath>СписокРезервОтпусков.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокРезервОтпусковКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="СписокРезервОтпусковКоманднаяПанель" id="3"/>
+							<ExtendedTooltip name="СписокРезервОтпусковРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="СписокРезервОтпусковСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>СписокРезервОтпусков</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРезервОтпусковСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="СписокРезервОтпусковСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокРезервОтпусковСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>СписокРезервОтпусков</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРезервОтпусковСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="СписокРезервОтпусковСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокРезервОтпусковУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>СписокРезервОтпусков</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРезервОтпусковУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="СписокРезервОтпусковУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<PictureField name="СписокРезервОтпусковЕстьФайлы" id="50">
+									<DataPath>СписокРезервОтпусков.ЕстьФайлы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Есть файлы</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>2</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="СписокРезервОтпусковЕстьФайлыКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="СписокРезервОтпусковЕстьФайлыРасширеннаяПодсказка" id="52"/>
+								</PictureField>
+								<LabelField name="СписокРезервОтпусковМесяцНачисления" id="23">
+									<DataPath>СписокРезервОтпусков.ПериодРегистрации</DataPath>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокРезервОтпусковМесяцНачисленияКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="СписокРезервОтпусковМесяцНачисленияРасширеннаяПодсказка" id="25"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковДата" id="17">
+									<DataPath>СписокРезервОтпусков.Дата</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="СписокРезервОтпусковДатаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СписокРезервОтпусковДатаРасширеннаяПодсказка" id="19"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковНомер" id="26">
+									<DataPath>СписокРезервОтпусков.Номер</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СписокРезервОтпусковНомерКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="СписокРезервОтпусковНомерРасширеннаяПодсказка" id="28"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковКраткийСоставДокумента" id="44">
+									<DataPath>СписокРезервОтпусков.КраткийСоставДокумента</DataPath>
+									<ContextMenu name="СписокРезервОтпусковКраткийСоставДокументаКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="СписокРезервОтпусковКраткийСоставДокументаРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковОтветственный" id="32">
+									<DataPath>СписокРезервОтпусков.Ответственный</DataPath>
+									<ContextMenu name="СписокРезервОтпусковОтветственныйКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СписокРезервОтпусковОтветственныйРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковБухгалтер" id="47">
+									<DataPath>СписокРезервОтпусков.Бухгалтер</DataPath>
+									<ContextMenu name="СписокРезервОтпусковБухгалтерКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="СписокРезервОтпусковБухгалтерРасширеннаяПодсказка" id="49"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковКомментарий" id="20">
+									<DataPath>СписокРезервОтпусков.Комментарий</DataPath>
+									<ContextMenu name="СписокРезервОтпусковКомментарийКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СписокРезервОтпусковКомментарийРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<LabelField name="СписокРезервОтпусковСсылка" id="38">
+									<DataPath>СписокРезервОтпусков.Ссылка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СписокРезервОтпусковСсылкаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СписокРезервОтпусковСсылкаРасширеннаяПодсказка" id="40"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРезервПремий" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Резерв премий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница резерв премий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРезервПремийРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<Table name="СписокРезервПремий" id="59">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокРезервПремий</DataPath>
+							<RowPictureDataPath>СписокРезервПремий.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокРезервПремийКонтекстноеМеню" id="60"/>
+							<AutoCommandBar name="СписокРезервПремийКоманднаяПанель" id="61"/>
+							<ExtendedTooltip name="СписокРезервПремийРасширеннаяПодсказка" id="62"/>
+							<SearchStringAddition name="СписокРезервПремийСтрокаПоиска" id="63">
+								<AdditionSource>
+									<Item>СписокРезервПремий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРезервПремийСтрокаПоискаКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СписокРезервПремийСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокРезервПремийСостояниеПросмотра" id="66">
+								<AdditionSource>
+									<Item>СписокРезервПремий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРезервПремийСостояниеПросмотраКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="СписокРезервПремийСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокРезервПремийУправлениеПоиском" id="69">
+								<AdditionSource>
+									<Item>СписокРезервПремий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРезервПремийУправлениеПоискомКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="СписокРезервПремийУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<PictureField name="СписокРезервПремийЕстьФайлы" id="81">
+									<DataPath>СписокРезервПремий.ЕстьФайлы</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="СписокРезервПремийЕстьФайлыКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="СписокРезервПремийЕстьФайлыРасширеннаяПодсказка" id="83"/>
+								</PictureField>
+								<LabelField name="СписокРезервПремийМесяцНачисления" id="90">
+									<DataPath>СписокРезервПремий.МесяцНачисления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Месяц</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокРезервПремийМесяцНачисленияКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СписокРезервПремийМесяцНачисленияРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийДата" id="78">
+									<DataPath>СписокРезервПремий.Дата</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="СписокРезервПремийДатаКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="СписокРезервПремийДатаРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийНомер" id="93">
+									<DataPath>СписокРезервПремий.Номер</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СписокРезервПремийНомерКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СписокРезервПремийНомерРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийКраткийСоставДокумента" id="87">
+									<DataPath>СписокРезервПремий.КраткийСоставДокумента</DataPath>
+									<ContextMenu name="СписокРезервПремийКраткийСоставДокументаКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="СписокРезервПремийКраткийСоставДокументаРасширеннаяПодсказка" id="89"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийОтветственный" id="99">
+									<DataPath>СписокРезервПремий.Ответственный</DataPath>
+									<ContextMenu name="СписокРезервПремийОтветственныйКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СписокРезервПремийОтветственныйРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийБухгалтер" id="72">
+									<DataPath>СписокРезервПремий.Бухгалтер</DataPath>
+									<ContextMenu name="СписокРезервПремийБухгалтерКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="СписокРезервПремийБухгалтерРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийКомментарий" id="84">
+									<DataPath>СписокРезервПремий.Комментарий</DataPath>
+									<ContextMenu name="СписокРезервПремийКомментарийКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="СписокРезервПремийКомментарийРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<LabelField name="СписокРезервПремийСсылка" id="105">
+									<DataPath>СписокРезервПремий.Ссылка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СписокРезервПремийСсылкаКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="СписокРезервПремийСсылкаРасширеннаяПодсказка" id="107"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникНачисленияРезервовПоОплатеТруда</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокРезервОтпусков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список резерв отпусков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокРезервОтпусков.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	НачислениеОценочныхОбязательствПоОтпускам.Дата КАК Дата,
+	НачислениеОценочныхОбязательствПоОтпускам.Номер КАК Номер,
+	НачислениеОценочныхОбязательствПоОтпускам.Ссылка КАК Ссылка,
+	НачислениеОценочныхОбязательствПоОтпускам.Организация КАК Организация,
+	НачислениеОценочныхОбязательствПоОтпускам.Ответственный КАК Ответственный,
+	НачислениеОценочныхОбязательствПоОтпускам.Комментарий КАК Комментарий,
+	НачислениеОценочныхОбязательствПоОтпускам.ПериодРегистрации КАК ПериодРегистрации,
+	НачислениеОценочныхОбязательствПоОтпускам.КраткийСоставДокумента КАК КраткийСоставДокумента,
+	НачислениеОценочныхОбязательствПоОтпускам.Бухгалтер КАК Бухгалтер,
+	ВЫБОР
+		КОГДА НаличиеФайлов.ЕстьФайлы ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА НаличиеФайлов.ЕстьФайлы
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЕстьФайлы
+ИЗ
+	Документ.НачислениеОценочныхОбязательствПоОтпускам КАК НачислениеОценочныхОбязательствПоОтпускам
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеФайлов
+		ПО НачислениеОценочныхОбязательствПоОтпускам.Ссылка = НаличиеФайлов.ОбъектСФайлами}</QueryText>
+				<MainTable>Document.НачислениеОценочныхОбязательствПоОтпускам</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокРезервПремий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокРезервПремий.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РезервыПоОплатеТруда.Дата КАК Дата,
+	РезервыПоОплатеТруда.Номер КАК Номер,
+	РезервыПоОплатеТруда.Ссылка КАК Ссылка,
+	РезервыПоОплатеТруда.Организация КАК Организация,
+	РезервыПоОплатеТруда.Ответственный КАК Ответственный,
+	РезервыПоОплатеТруда.Комментарий КАК Комментарий,
+	РезервыПоОплатеТруда.МесяцНачисления КАК МесяцНачисления,
+	РезервыПоОплатеТруда.ВидОперации КАК ВидОперации,
+	РезервыПоОплатеТруда.КраткийСоставДокумента КАК КраткийСоставДокумента,
+	РезервыПоОплатеТруда.Бухгалтер КАК Бухгалтер,
+	ВЫБОР
+		КОГДА НаличиеФайлов.ЕстьФайлы ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА НаличиеФайлов.ЕстьФайлы
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЕстьФайлы
+ИЗ
+	Документ.РезервыПоОплатеТруда КАК РезервыПоОплатеТруда
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеФайлов
+		ПО РезервыПоОплатеТруда.Ссылка = НаличиеФайлов.ОбъектСФайлами}
+</QueryText>
+				<MainTable>Document.РезервыПоОплатеТруда</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="РезервыОтпусковАрхивные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервы отпусков архивные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВедетсяУчетРезервовОтпусков" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется учет резервов отпусков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВедетсяУчетРезервовПремий" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется учет резервов премий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="МесяцНачисления">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

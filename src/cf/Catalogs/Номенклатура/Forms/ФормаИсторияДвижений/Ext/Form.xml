@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>История движений</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыExtendedTooltip" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПериод" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПериодExtendedTooltip" id="4"/>
+					<ChildItems>
+						<InputField name="НачалоПериода" id="5">
+							<DataPath>НачалоПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НачалоПериодаExtendedTooltip" id="7"/>
+							<Events>
+								<Event name="OnChange">НачалоПериодаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияТире" id="8">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>–</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияТиреКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДекорацияТиреExtendedTooltip" id="10"/>
+						</LabelDecoration>
+						<InputField name="КонецПериода" id="11">
+							<DataPath>КонецПериода</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="КонецПериодаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="КонецПериодаExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">КонецПериодаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="ВыбратьПериод" id="14">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВыбратьПериод</CommandName>
+							<ExtendedTooltip name="ВыбратьПериодРасширеннаяПодсказка" id="15"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<RadioButtonField name="СоставСписка" id="19">
+					<DataPath>СоставСписка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Показать все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Поступление</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Реализация</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СоставСпискаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СоставСпискаРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">СоставСпискаПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<CommandBar name="ГруппаКоманднаяПанель" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<SearchStringAddition name="ПоискСписокДвижений" id="73">
+							<AdditionSource>
+								<Item>СписокДвижений</Item>
+								<Type>SearchStringRepresentation</Type>
+							</AdditionSource>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поиск список движений</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<GroupVerticalAlign>Top</GroupVerticalAlign>
+							<ContextMenu name="ПоискСписокДвиженийКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ПоискСписокДвиженийРасширеннаяПодсказка" id="75"/>
+						</SearchStringAddition>
+						<SearchControlAddition name="УправлениеПоискомСписокДвижений" id="76">
+							<AdditionSource>
+								<Item>СписокДвижений</Item>
+								<Type>SearchControl</Type>
+							</AdditionSource>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Управление поиском список движений</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УправлениеПоискомСписокДвиженийКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="УправлениеПоискомСписокДвиженийРасширеннаяПодсказка" id="78"/>
+						</SearchControlAddition>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДлительнаяОперация" id="82">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа длительная операция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДлительнаяОперацияРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОжидание" id="79">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация ожидание</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияОжиданиеКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ДекорацияОжиданиеРасширеннаяПодсказка" id="81"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокДвижений" id="22">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>СписокДвижений</DataPath>
+			<RowPictureDataPath>~СписокДвижений.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокДвиженийКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="СписокДвиженийКоманднаяПанель" id="24">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокДвиженийРасширеннаяПодсказка" id="25"/>
+			<SearchStringAddition name="СписокДвиженийСтрокаПоиска" id="26">
+				<AdditionSource>
+					<Item>СписокДвижений</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДвиженийСтрокаПоискаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="СписокДвиженийСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокДвиженийСостояниеПросмотра" id="29">
+				<AdditionSource>
+					<Item>СписокДвижений</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДвиженийСостояниеПросмотраКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СписокДвиженийСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокДвиженийУправлениеПоиском" id="32">
+				<AdditionSource>
+					<Item>СписокДвижений</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДвиженийУправлениеПоискомКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СписокДвиженийУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокДвиженийВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Дата" id="38">
+					<DataPath>СписокДвижений.Дата</DataPath>
+					<Width>6</Width>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Документ" id="41">
+					<DataPath>СписокДвижений.Документ</DataPath>
+					<Width>40</Width>
+					<ContextMenu name="ДокументКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="50">
+					<DataPath>СписокДвижений.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Width>25</Width>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Количество" id="47">
+					<DataPath>СписокДвижений.Количество</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3; ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="Цена" id="68">
+					<DataPath>СписокДвижений.Цена</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ЦенаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ЦенаРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+				<LabelField name="Сумма" id="65">
+					<DataPath>СписокДвижений.Сумма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СоставСписка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав списка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПериода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДвижений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список движений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	МАКСИМУМ(ХозрасчетныйСубконто.Период) КАК Дата,
+	ХозрасчетныйСубконто.Регистратор КАК Регистратор,
+	ХозрасчетныйСубконто.Значение КАК Значение
+ПОМЕСТИТЬ ДокументыЗаПериод
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Субконто КАК ХозрасчетныйСубконто
+ГДЕ
+	ХозрасчетныйСубконто.Период &gt; &amp;НачалоПериода
+	И (&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1)
+			ИЛИ ХозрасчетныйСубконто.Период &lt; &amp;КонецПериода)
+	И ХозрасчетныйСубконто.Вид = &amp;СубконтоНоменклатура
+	И ХозрасчетныйСубконто.Значение = &amp;Номенклатура
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйСубконто.Регистратор,
+	ХозрасчетныйСубконто.Значение
+
+ИНДЕКСИРОВАТЬ ПО
+	Регистратор,
+	Значение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата КАК Дата,
+	ДокументыЗаПериод.Регистратор КАК Документ,
+	РеализацияТоваровУслуг.Контрагент КАК Контрагент,
+	РеализацияТоваровУслугТовары.Количество КАК Количество,
+	ВЫБОР
+		КОГДА НЕ РеализацияТоваровУслуг.СуммаВключаетНДС
+			ТОГДА РеализацияТоваровУслугТовары.Цена + (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.СуммаНДС / РеализацияТоваровУслугТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ РеализацияТоваровУслугТовары.Цена
+	КОНЕЦ КАК Цена,
+	ВЫБОР
+		КОГДА НЕ РеализацияТоваровУслуг.СуммаВключаетНДС
+			ТОГДА РеализацияТоваровУслугТовары.Сумма + РеализацияТоваровУслугТовары.СуммаНДС
+		ИНАЧЕ РеализацияТоваровУслугТовары.Сумма
+	КОНЕЦ КАК Сумма
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+		ПО ДокументыЗаПериод.Регистратор = РеализацияТоваровУслугТовары.Ссылка
+			И ДокументыЗаПериод.Значение = РеализацияТоваровУслугТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+		ПО ДокументыЗаПериод.Регистратор = РеализацияТоваровУслуг.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата,
+	ДокументыЗаПериод.Регистратор,
+	"Розничный покупатель",
+	ОтчетОРозничныхПродажахТовары.Количество,
+	ВЫБОР
+		КОГДА НЕ ОтчетОРозничныхПродажах.СуммаВключаетНДС
+			ТОГДА ОтчетОРозничныхПродажахТовары.Цена + (ВЫРАЗИТЬ(ОтчетОРозничныхПродажахТовары.СуммаНДС / ОтчетОРозничныхПродажахТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ ОтчетОРозничныхПродажахТовары.Цена
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА НЕ ОтчетОРозничныхПродажах.СуммаВключаетНДС
+			ТОГДА ОтчетОРозничныхПродажахТовары.Сумма + ОтчетОРозничныхПродажахТовары.СуммаНДС
+		ИНАЧЕ ОтчетОРозничныхПродажахТовары.Сумма
+	КОНЕЦ
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ОтчетОРозничныхПродажах.Товары КАК ОтчетОРозничныхПродажахТовары
+		ПО ДокументыЗаПериод.Регистратор = ОтчетОРозничныхПродажахТовары.Ссылка
+			И ДокументыЗаПериод.Значение = ОтчетОРозничныхПродажахТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ОтчетОРозничныхПродажах КАК ОтчетОРозничныхПродажах
+		ПО ДокументыЗаПериод.Регистратор = ОтчетОРозничныхПродажах.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата,
+	ДокументыЗаПериод.Регистратор,
+	ПоступлениеТоваровУслуг.Контрагент,
+	ПоступлениеТоваровУслугТовары.Количество,
+	ВЫБОР
+		КОГДА НЕ ПоступлениеТоваровУслуг.СуммаВключаетНДС
+			ТОГДА ПоступлениеТоваровУслугТовары.Цена + (ВЫРАЗИТЬ(ПоступлениеТоваровУслугТовары.СуммаНДС / ПоступлениеТоваровУслугТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ ПоступлениеТоваровУслугТовары.Цена
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА НЕ ПоступлениеТоваровУслуг.СуммаВключаетНДС
+			ТОГДА ПоступлениеТоваровУслугТовары.Сумма + ПоступлениеТоваровУслугТовары.СуммаНДС
+		ИНАЧЕ ПоступлениеТоваровУслугТовары.Сумма
+	КОНЕЦ
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
+		ПО ДокументыЗаПериод.Регистратор = ПоступлениеТоваровУслугТовары.Ссылка
+			И ДокументыЗаПериод.Значение = ПоступлениеТоваровУслугТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Покупка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслуг
+		ПО ДокументыЗаПериод.Регистратор = ПоступлениеТоваровУслуг.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Покупка)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата,
+	ДокументыЗаПериод.Регистратор,
+	КорректировкаРеализации.Контрагент,
+	КорректировкаРеализацииТовары.Количество,
+	ВЫБОР
+		КОГДА НЕ КорректировкаРеализации.СуммаВключаетНДС
+			ТОГДА КорректировкаРеализацииТовары.Цена + (ВЫРАЗИТЬ(КорректировкаРеализацииТовары.СуммаНДС / КорректировкаРеализацииТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ КорректировкаРеализацииТовары.Цена
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА НЕ КорректировкаРеализации.СуммаВключаетНДС
+			ТОГДА КорректировкаРеализацииТовары.Сумма + КорректировкаРеализацииТовары.СуммаНДС
+		ИНАЧЕ КорректировкаРеализацииТовары.Сумма
+	КОНЕЦ
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.КорректировкаРеализации.Товары КАК КорректировкаРеализацииТовары
+		ПО ДокументыЗаПериод.Регистратор = КорректировкаРеализацииТовары.Ссылка
+			И ДокументыЗаПериод.Значение = КорректировкаРеализацииТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.КорректировкаРеализации КАК КорректировкаРеализации
+		ПО ДокументыЗаПериод.Регистратор = КорректировкаРеализации.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата,
+	ДокументыЗаПериод.Регистратор,
+	КорректировкаПоступления.Контрагент,
+	КорректировкаПоступленияТовары.Количество,
+	ВЫБОР
+		КОГДА НЕ КорректировкаПоступления.СуммаВключаетНДС
+			ТОГДА КорректировкаПоступленияТовары.Цена + (ВЫРАЗИТЬ(КорректировкаПоступленияТовары.СуммаНДС / КорректировкаПоступленияТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ КорректировкаПоступленияТовары.Цена
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА НЕ КорректировкаПоступления.СуммаВключаетНДС
+			ТОГДА КорректировкаПоступленияТовары.Сумма + КорректировкаПоступленияТовары.СуммаНДС
+		ИНАЧЕ КорректировкаПоступленияТовары.Сумма
+	КОНЕЦ
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.КорректировкаПоступления.Товары КАК КорректировкаПоступленияТовары
+		ПО ДокументыЗаПериод.Регистратор = КорректировкаПоступленияТовары.Ссылка
+			И ДокументыЗаПериод.Значение = КорректировкаПоступленияТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Покупка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.КорректировкаПоступления КАК КорректировкаПоступления
+		ПО ДокументыЗаПериод.Регистратор = КорректировкаПоступления.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Покупка)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата,
+	ДокументыЗаПериод.Регистратор,
+	ВозвратТоваровОтПокупателя.Контрагент,
+	ВозвратТоваровОтПокупателяТовары.Количество,
+	ВЫБОР
+		КОГДА НЕ ВозвратТоваровОтПокупателя.СуммаВключаетНДС
+			ТОГДА ВозвратТоваровОтПокупателяТовары.Цена + (ВЫРАЗИТЬ(ВозвратТоваровОтПокупателяТовары.СуммаНДС / ВозвратТоваровОтПокупателяТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ ВозвратТоваровОтПокупателяТовары.Цена
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА НЕ ВозвратТоваровОтПокупателя.СуммаВключаетНДС
+			ТОГДА ВозвратТоваровОтПокупателяТовары.Сумма + ВозвратТоваровОтПокупателяТовары.СуммаНДС
+		ИНАЧЕ ВозвратТоваровОтПокупателяТовары.Сумма
+	КОНЕЦ
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ВозвратТоваровОтПокупателя.Товары КАК ВозвратТоваровОтПокупателяТовары
+		ПО ДокументыЗаПериод.Регистратор = ВозвратТоваровОтПокупателяТовары.Ссылка
+			И ДокументыЗаПериод.Значение = ВозвратТоваровОтПокупателяТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ВозвратТоваровОтПокупателя КАК ВозвратТоваровОтПокупателя
+		ПО ДокументыЗаПериод.Регистратор = ВозвратТоваровОтПокупателя.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Продажа)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДокументыЗаПериод.Дата,
+	ДокументыЗаПериод.Регистратор,
+	ВозвратТоваровПоставщику.Контрагент,
+	ВозвратТоваровПоставщикуТовары.Количество,
+	ВЫБОР
+		КОГДА НЕ ВозвратТоваровПоставщику.СуммаВключаетНДС
+			ТОГДА ВозвратТоваровПоставщикуТовары.Цена + (ВЫРАЗИТЬ(ВозвратТоваровПоставщикуТовары.СуммаНДС / ВозвратТоваровПоставщикуТовары.Количество КАК ЧИСЛО(15, 2)))
+		ИНАЧЕ ВозвратТоваровПоставщикуТовары.Цена
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА НЕ ВозвратТоваровПоставщику.СуммаВключаетНДС
+			ТОГДА ВозвратТоваровПоставщикуТовары.Сумма + ВозвратТоваровПоставщикуТовары.СуммаНДС
+		ИНАЧЕ ВозвратТоваровПоставщикуТовары.Сумма
+	КОНЕЦ
+ИЗ
+	ДокументыЗаПериод КАК ДокументыЗаПериод
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ВозвратТоваровПоставщику.Товары КАК ВозвратТоваровПоставщикуТовары
+		ПО ДокументыЗаПериод.Регистратор = ВозвратТоваровПоставщикуТовары.Ссылка
+			И ДокументыЗаПериод.Значение = ВозвратТоваровПоставщикуТовары.Номенклатура
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Покупка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ВозвратТоваровПоставщику КАК ВозвратТоваровПоставщику
+		ПО ДокументыЗаПериод.Регистратор = ВозвратТоваровПоставщику.Ссылка
+			И (&amp;ПоказатьВсе
+				ИЛИ &amp;Покупка)
+
+УПОРЯДОЧИТЬ ПО
+	Дата УБЫВ</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Л=ru; ДФ=dd.MM.yyyy</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьПериод" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьПериод</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Номенклатура">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

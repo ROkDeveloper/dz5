@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="2f673038-f9ca-446c-b47a-51052da22422">
+		<Properties>
+			<Name>ЗарплатаКадрыПриложенияРасширенная</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата кадры приложения расширенная</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыЗарплатаКадрыРасширенный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БазовыеПраваЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.НастройкаКадровыхДанныхРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаписатьВерсиюДокументаЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаполнитьЗначениеРеквизитаОрганизацияПриОФУРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.КонтрольНеразделенныхОбъектовПриЗаписиЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьДЗИПередЗаписьюДокументаЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьДЗИПередЗаписьюНабораЗаписейЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьДЗИПередУдалениемЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьНомерДокументаПоДатеИОрганизацииЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьРежимыРаботыФормыСотрудникаРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьПометкуУдаленияПрисоединенныхФайловДокументовЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьПрефиксИБИОрганизацииНомеруДокументаЗарплатаКадрыРасширенная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьРежимыРаботыФормыСотрудникаРасширенная</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

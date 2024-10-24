@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title>advertisement</title><meta http-equiv="content-type" content="text/html;charset=utf-8"></meta><style type="text/css">
+	html {
+		display: block;
+		scrollbar-width: none; /* Mozila */
+		-ms-overflow-style: none; /* IE */
+	}
+	
+	::-webkit-scrollbar {
+		width: 0; /* Chrome */
+	}
+	
+	.pic_img {
+		max-width: 100%;
+		box-shadow: 4px 0px 5px #e0e0e0;
+	}
+	
+	.advertisement {
+		border: 1px solid #e0e0e0;
+		border-bottom: none;
+		box-shadow: 5px 0px 5px #e0e0e0;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		width: 48px;
+		font-family: Roboto;
+		font-size: 10px;
+		text-transform: uppercase;
+		padding: 3px;
+	}
+	
+	.advertiser {
+		border: 1px solid #e0e0e0;
+		border-top: none;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		box-shadow: 5px 5px 5px #e0e0e0;
+		margin-top: -4px;
+		font-family: Roboto;
+		font-size: 10px;
+		padding: 3px;
+	}
+	
+	</style></head><body>
+	<div id="scroller">
+		
+	</div>
+	
+	<script>
+		
+		document.addEventListener("DOMContentLoaded", function() {
+			
+			// Скрипт делает автоскролл при наведении на рекламу
+			let pics = document.querySelectorAll(".pic");
+			pics[0].addEventListener("mouseenter", function() {
+				document.body.scrollTop = 0;
+			});
+			pics[1].addEventListener("mouseenter", function() {
+				document.body.scrollTop = document.body.scrollHeight;
+			});
+			
+		});
+		
+	</script></body></html>

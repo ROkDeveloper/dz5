@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="9c02e668-f7a2-4292-9f56-2660c9b2ef11">
+		<Properties>
+			<Name>ИнтеграцияАУСН</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция Автоматизированная УСН</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПодключениеАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияИнтеграцииАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияАУСНОшибка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияАУСНПодключен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветБаннераАУСНЗеленый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветБаннераАУСНКрасный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияАУСНБаннерПодключение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияАУСНБаннерОшибка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияИнтеграцииАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.НекорректнаяЗаявкаАУСНЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.НоваяЗаявкаАУСНЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БанкиАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыДокументовАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыДокументовАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДокументыАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БанковскиеДокументыАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НалоговыеНачисленияАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыНалоговыхНачисленийАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТипыУведомленийАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОповещенийАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УведомленияАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УведомленияАУСНПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УведомленияОтФНСАУСНКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УведомленияОтФНСАУСНГлобальный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УведомленияОтФНСАУСНВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УведомленияОтФНСАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РасчетНалогаАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НачисленияАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникУплатыНалогаАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПризнакиНалоговойБазыАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.КатегорииОперацийАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ИдентификаторНачисленияАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ПрименяетсяАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользуетсяАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОбменССервисомАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПодготовитьНачислениеАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНБП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНВызовСервераПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияАУСНОповещенияПодключены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияАУСНОповещенияОтключены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ОшибкиОтправкиАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияАУСНПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОбменаАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветНеПодключенногоСервисаАУСН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ШрифтКнопкиПодключенияАУСН</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

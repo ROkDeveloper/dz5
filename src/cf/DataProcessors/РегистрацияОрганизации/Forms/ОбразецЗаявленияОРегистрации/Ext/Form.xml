@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Заявление о регистрации ИП (Лист Б)</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ОбразецЗаявленияОРегистрацииИПЛистБ" id="1">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец заявления о регистрации ИП (Лист Б)</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<Picture>
+				<xr:Ref>CommonPicture.ОбразецЗаявленияОРегистрацииИПЛистБ</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ОбразецЗаявленияОРегистрацииИПЛистБКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОбразецЗаявленияОРегистрацииИПЛистБРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="Click">ОбразецЗаявленияОРегистрацииИПЛистБНажатие</Event>
+			</Events>
+		</PictureDecoration>
+		<PictureDecoration name="ОбразецЗаявленияОРегистрацииИПEMail" id="4">
+			<Visible>false</Visible>
+			<Width>70</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец заявления о регистрации ИП (e-mail)</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<Picture>
+				<xr:Ref>CommonPicture.ОбразецЗаявленияОРегистрацииИПEMail</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ОбразецЗаявленияОРегистрацииИПEMailКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОбразецЗаявленияОРегистрацииИПEMailРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="Click">ОбразецЗаявленияОРегистрацииИПEMailНажатие</Event>
+			</Events>
+		</PictureDecoration>
+		<PictureDecoration name="ОбразецЗаявленияОРегистрацииОрганизацииEMail" id="7">
+			<Visible>false</Visible>
+			<Width>70</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец заявления о регистрации организации (e-mail)</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<Picture>
+				<xr:Ref>CommonPicture.ОбразецЗаявленияОРегистрацииОрганизацииEMail</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ОбразецЗаявленияОРегистрацииОрганизацииEMailКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОбразецЗаявленияОРегистрацииОрганизацииEMailРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="Click">ОбразецЗаявленияОРегистрацииОрганизацииEMailНажатие</Event>
+			</Events>
+		</PictureDecoration>
+		<PictureDecoration name="ОбразецЗаявленияОРегистрацииОрганизацииЛистИ" id="10">
+			<Visible>false</Visible>
+			<Width>70</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец заявления о регистрации организации (Лист И)</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<Picture>
+				<xr:Ref>CommonPicture.ОбразецЗаявленияОРегистрацииОрганизацииЛистИ</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ОбразецЗаявленияОРегистрацииОрганизацииЛистИКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОбразецЗаявленияОРегистрацииОрганизацииЛистИРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="Click">ОбразецЗаявленияОРегистрацииОрганизацииЛистИНажатие</Event>
+			</Events>
+		</PictureDecoration>
+	</ChildItems>
+	<Attributes/>
+	<Parameters>
+		<Parameter name="Макет">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

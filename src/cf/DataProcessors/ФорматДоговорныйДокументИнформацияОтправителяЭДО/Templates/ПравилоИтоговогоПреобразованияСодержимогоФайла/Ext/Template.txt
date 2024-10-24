@@ -1,0 +1,21 @@
+﻿<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:param name="sortOrder" select="'ИННЮЛСт1,ИННФЛСт1,ИННЮЛСт2,ИННФЛСт2,ФрагТиповой,ФрагПроизв,ПодписантИнфОСод'" />
+  <xsl:template match="node() | @*">
+    <xsl:copy>
+      <xsl:apply-templates select="node() | @*" />
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="Содержание">
+    <xsl:copy>
+      <xsl:apply-templates select="@*" />
+      <xsl:apply-templates select="*">
+        <xsl:sort select="string-length(substring-before(concat($sortOrder, ',', name()), name()))" />
+      </xsl:apply-templates>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="ФрагТиповой/@ЦифКЭлПер">
+    <xsl:attribute name="ЦифКЭлПер">
+        <xsl:value-of select="concat(substring('0000000000', string-length() + 1), .)"/>
+    </xsl:attribute>
+  </xsl:template>
+</xsl:stylesheet>

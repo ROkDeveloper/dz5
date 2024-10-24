@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="НазначенияСчета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначения счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначения счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НазначенияСчетаРасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<LabelDecoration name="НазначениеСчетаЗаголовок" id="62">
+					<ContextMenu name="НазначениеСчетаЗаголовокКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="НазначениеСчетаЗаголовокРасширеннаяПодсказка" id="64"/>
+				</LabelDecoration>
+				<UsualGroup name="КосвенныеЗатратыОформление" id="13">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КосвенныеЗатратыОформлениеРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<RadioButtonField name="КосвенныеЗатраты" id="10">
+							<DataPath>Роль</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Косвенные затраты</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.РолиСчетовЗатрат.EnumValue.КосвенныеЗатраты</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="КосвенныеЗатратыКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КосвенныеЗатратыРасширеннаяПодсказка" id="12">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пункты 24, 25 ФСБУ 5</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</RadioButtonField>
+						<UsualGroup name="КосвенныеЗатратыОформлениеОтступ" id="15">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="КосвенныеЗатратыОформлениеОтступРасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<LabelDecoration name="КосвенныеЗатратыОтступ" id="17">
+									<Width>1</Width>
+									<Height>1</Height>
+									<ContextMenu name="КосвенныеЗатратыОтступКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="КосвенныеЗатратыОтступРасширеннаяПодсказка" id="19"/>
+								</LabelDecoration>
+								<LabelDecoration name="КосвенныеЗатратыПодсказка" id="20">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="КосвенныеЗатратыПодсказкаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="КосвенныеЗатратыПодсказкаРасширеннаяПодсказка" id="22"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВедениеОсновнойДеятельностиОформление" id="49">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВедениеОсновнойДеятельностиОформлениеРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<RadioButtonField name="ВедениеОсновнойДеятельности" id="51">
+							<DataPath>Роль</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Расходы на ведение основной деятельности</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.РолиСчетовЗатрат.EnumValue.СебестоимостьПродаж</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВедениеОсновнойДеятельностиКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ВедениеОсновнойДеятельностиРасширеннаяПодсказка" id="53"/>
+						</RadioButtonField>
+						<UsualGroup name="ВедениеОсновнойДеятельностиОформлениеОтступ" id="54">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ВедениеОсновнойДеятельностиОформлениеОтступРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<LabelDecoration name="ВедениеОсновнойДеятельностиОтступ" id="56">
+									<Width>1</Width>
+									<Height>1</Height>
+									<ContextMenu name="ВедениеОсновнойДеятельностиОтступКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ВедениеОсновнойДеятельностиОтступРасширеннаяПодсказка" id="58"/>
+								</LabelDecoration>
+								<LabelDecoration name="ВедениеОсновнойДеятельностиПодсказка" id="59">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="ВедениеОсновнойДеятельностиПодсказкаКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ВедениеОсновнойДеятельностиПодсказкаРасширеннаяПодсказка" id="61"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="УправленческиеРасходыОформление" id="23">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="УправленческиеРасходыОформлениеРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<RadioButtonField name="УправленческиеРасходы" id="25">
+							<DataPath>Роль</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Управленческие расходы</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.РолиСчетовЗатрат.EnumValue.УправленческиеРасходы</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="УправленческиеРасходыКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="УправленческиеРасходыРасширеннаяПодсказка" id="27">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пункт 26 ФСБУ 5, подпункт (г); Пункт 23 ПБУ 4</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</RadioButtonField>
+						<UsualGroup name="УправленческиеРасходыОформлениеОтступ" id="28">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="УправленческиеРасходыОформлениеОтступРасширеннаяПодсказка" id="29"/>
+							<ChildItems>
+								<LabelDecoration name="УправленческиеРасходыОтступ" id="30">
+									<Width>1</Width>
+									<Height>1</Height>
+									<ContextMenu name="УправленческиеРасходыОтступКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="УправленческиеРасходыОтступРасширеннаяПодсказка" id="32"/>
+								</LabelDecoration>
+								<LabelDecoration name="УправленческиеРасходыПодсказка" id="33">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="УправленческиеРасходыПодсказкаКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="УправленческиеРасходыПодсказкаРасширеннаяПодсказка" id="35"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ИныеРасходыОформление" id="36">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ИныеРасходыОформлениеРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<RadioButtonField name="ИныеРасходы" id="38">
+							<DataPath>Роль</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Иные расходы</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.РолиСчетовЗатрат.EnumValue.СебестоимостьПродаж</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ИныеРасходыКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ИныеРасходыРасширеннаяПодсказка" id="40">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пункт 26 ФСБУ 5, подпункты (а), (б), (д), (ж)</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</RadioButtonField>
+						<UsualGroup name="ИныеРасходыОформлениеОтступ" id="41">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИныеРасходыОформлениеОтступРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<LabelDecoration name="ИныеРасходыОтступ" id="43">
+									<Width>1</Width>
+									<Height>1</Height>
+									<ContextMenu name="ИныеРасходыОтступКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ИныеРасходыОтступРасширеннаяПодсказка" id="45"/>
+								</LabelDecoration>
+								<LabelDecoration name="ИныеРасходыПодсказка" id="46">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="ИныеРасходыПодсказкаКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ИныеРасходыПодсказкаРасширеннаяПодсказка" id="48"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АдресРедактированиеНастроек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес редактирование настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Счет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Роль" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.РолиСчетовЗатрат</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаOK</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РедактированиеНастроек">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Счет">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

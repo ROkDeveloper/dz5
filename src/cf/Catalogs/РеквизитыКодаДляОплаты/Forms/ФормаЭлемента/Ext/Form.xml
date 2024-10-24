@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Идентификатор" id="7">
+			<DataPath>Объект.Code</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<CheckBoxField name="ВыбиратьИзСписка" id="10">
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыбиратьИзСпискаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВыбиратьИзСпискаРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<Table name="ДопустимыеЗначения" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДопустимыеЗначения</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДопустимыеЗначенияКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ДопустимыеЗначенияКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ДопустимыеЗначенияРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="ДопустимыеЗначенияСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>ДопустимыеЗначения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДопустимыеЗначенияСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДопустимыеЗначенияСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДопустимыеЗначенияСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>ДопустимыеЗначения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДопустимыеЗначенияСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ДопустимыеЗначенияСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДопустимыеЗначенияУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>ДопустимыеЗначения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДопустимыеЗначенияУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ДопустимыеЗначенияУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ДопустимыеЗначенияЗначение" id="26">
+					<DataPath>Объект.ДопустимыеЗначения.Значение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопустимыеЗначенияЗначениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДопустимыеЗначенияЗначениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ДопустимыеЗначенияПредставление" id="29">
+					<DataPath>Объект.ДопустимыеЗначения.Представление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопустимыеЗначенияПредставлениеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДопустимыеЗначенияПредставлениеРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.РеквизитыКодаДляОплаты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

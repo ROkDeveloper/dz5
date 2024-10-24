@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ФизическоеЛицо" id="1">
+			<DataPath>Запись.ФизическоеЛицо</DataPath>
+			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Сотрудник" id="4">
+			<DataPath>Запись.Сотрудник</DataPath>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ГоловнаяОрганизация" id="7">
+			<DataPath>Запись.ГоловнаяОрганизация</DataPath>
+			<ContextMenu name="ГоловнаяОрганизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГоловнаяОрганизацияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТекущаяОрганизация" id="10">
+			<DataPath>Запись.ТекущаяОрганизация</DataPath>
+			<ContextMenu name="ТекущаяОрганизацияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТекущаяОрганизацияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ТекущееПодразделение" id="13">
+			<DataPath>Запись.ТекущееПодразделение</DataPath>
+			<ContextMenu name="ТекущееПодразделениеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТекущееПодразделениеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ТекущаяДолжность" id="16">
+			<DataPath>Запись.ТекущаяДолжность</DataPath>
+			<ContextMenu name="ТекущаяДолжностьКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТекущаяДолжностьРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ДатаУвольнения" id="19">
+			<DataPath>Запись.ДатаУвольнения</DataPath>
+			<ContextMenu name="ДатаУвольненияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДатаУвольненияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<CheckBoxField name="ОсновноеРабочееМестоВОрганизации" id="22">
+			<DataPath>Запись.ОсновноеРабочееМестоВОрганизации</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОсновноеРабочееМестоВОрганизацииКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ОсновноеРабочееМестоВОрганизацииРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+		<InputField name="ДатаПриема" id="25">
+			<DataPath>Запись.ДатаПриема</DataPath>
+			<ContextMenu name="ДатаПриемаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДатаПриемаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ТекущийВидЗанятости" id="28">
+			<DataPath>Запись.ТекущийВидЗанятости</DataPath>
+			<ContextMenu name="ТекущийВидЗанятостиКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ТекущийВидЗанятостиРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<CheckBoxField name="ОформленПоТрудовомуДоговору" id="31">
+			<DataPath>Запись.ОформленПоТрудовомуДоговору</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОформленПоТрудовомуДоговоруКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ОформленПоТрудовомуДоговоруРасширеннаяПодсказка" id="33"/>
+		</CheckBoxField>
+		<InputField name="КоличествоСтавок" id="34">
+			<DataPath>Запись.КоличествоСтавок</DataPath>
+			<ContextMenu name="КоличествоСтавокКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="КоличествоСтавокРасширеннаяПодсказка" id="36"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ТекущиеКадровыеДанныеСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

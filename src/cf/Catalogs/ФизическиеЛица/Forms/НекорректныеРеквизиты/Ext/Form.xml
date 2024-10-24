@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="27">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="28"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="25">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОсновнаяГруппа" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная группа</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОсновнаяГруппаРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИНН" id="15">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИННРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="ИНН" id="1">
+							<DataPath>Объект.ИНН</DataPath>
+							<Width>12</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="ИННКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">ИННПриИзменении</Event>
+								<Event name="EditTextChange">ИННИзменениеТекстаРедактирования</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияИНН" id="17">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияИННКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияИННРасширеннаяПодсказка" id="19"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДатаРождения" id="79">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата рождения (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДатаРожденияРасширеннаяПодсказка" id="80"/>
+					<ChildItems>
+						<InputField name="ДатаРождения" id="81">
+							<DataPath>Объект.ДатаРождения</DataPath>
+							<Width>12</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="83"/>
+							<Events>
+								<Event name="OnChange">ДатаРожденияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияДатаРождения" id="84">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Надпись ошибки заполнения дата рождения</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОшибкиЗаполненияДатаРожденияКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияДатаРожденияРасширеннаяПодсказка" id="86"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПол" id="98">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пол (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПолРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<InputField name="Пол" id="100">
+							<DataPath>Объект.Пол</DataPath>
+							<Width>12</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="ПолКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="102"/>
+							<Events>
+								<Event name="OnChange">ПолПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияПол" id="103">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияПолКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияПолРасширеннаяПодсказка" id="105"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСНИЛС" id="20">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СНИЛС (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСНИЛСРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<InputField name="СтраховойНомерПФР" id="4">
+							<DataPath>Объект.СтраховойНомерПФР</DataPath>
+							<Width>12</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="СтраховойНомерПФРКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="СтраховойНомерПФРРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">СтраховойНомерПФРПриИзменении</Event>
+								<Event name="EditTextChange">СтраховойНомерПФРИзменениеТекстаРедактирования</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияСНИЛС" id="22">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияСНИЛСКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияСНИЛСРасширеннаяПодсказка" id="24"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФамилия" id="29">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фамилия (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФамилияРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<InputField name="Фамилия" id="31">
+							<DataPath>Объект.Фамилия</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="ФамилияКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="33"/>
+							<Events>
+								<Event name="OnChange">ФамилияПриИзменении</Event>
+								<Event name="EditTextChange">ФамилияИзменениеТекстаРедактирования</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияФамилия" id="34">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияФамилияКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияФамилияРасширеннаяПодсказка" id="36"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИмя" id="37">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИмяРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<InputField name="Имя" id="39">
+							<DataPath>Объект.Имя</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="ИмяКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="41"/>
+							<Events>
+								<Event name="OnChange">ИмяПриИзменении</Event>
+								<Event name="EditTextChange">ИмяИзменениеТекстаРедактирования</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияИмя" id="42">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияИмяКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияИмяРасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтчество" id="71">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчество (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтчествоРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<InputField name="Отчество" id="73">
+							<DataPath>Объект.Отчество</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ContextMenu name="ОтчествоКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="75"/>
+							<Events>
+								<Event name="OnChange">ОтчествоПриИзменении</Event>
+								<Event name="EditTextChange">ОтчествоИзменениеТекстаРедактирования</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияОтчество" id="76">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияОтчествоКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияОтчествоРасширеннаяПодсказка" id="78"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСтрана" id="87">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтранаРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<InputField name="Страна" id="95">
+							<DataPath>ГражданствоФизическихЛиц.Страна</DataPath>
+							<ContextMenu name="СтранаКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="97"/>
+							<Events>
+								<Event name="OnChange">ГражданствоФизическихЛиц_СтранаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьОшибкиЗаполненияСтрана" id="92">
+							<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+							<ContextMenu name="НадписьОшибкиЗаполненияСтранаКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="НадписьОшибкиЗаполненияСтранаРасширеннаяПодсказка" id="94"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСведенияДокумента" id="61">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, удостоверяющий личность</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаСведенияДокументаРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСведенияДокумента_ВидДокумента" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид документа (группа)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСведенияДокумента_ВидДокументаРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<InputField name="СведенияДокумента_ВидДокумента" id="47">
+									<DataPath>ДокументыФизическогоЛица.ВидДокумента</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СведенияДокумента_ВидДокументаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="СведенияДокумента_ВидДокументаРасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">ДокументыВидДокументаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьОшибкиЗаполненияСведенияДокумента_ВидДокумента" id="50">
+									<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+									<ContextMenu name="НадписьОшибкиЗаполненияСведенияДокумента_ВидДокументаКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="НадписьОшибкиЗаполненияСведенияДокумента_ВидДокументаРасширеннаяПодсказка" id="52"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСведенияДокумента_Серия" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Серия (Группа)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСведенияДокумента_СерияРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<InputField name="СведенияДокумента_Серия" id="55">
+									<DataPath>ДокументыФизическогоЛица.Серия</DataPath>
+									<Width>10</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ContextMenu name="СведенияДокумента_СерияКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="СведенияДокумента_СерияРасширеннаяПодсказка" id="57"/>
+									<Events>
+										<Event name="OnChange">СерияПриИзменении</Event>
+										<Event name="EditTextChange">СведенияДокумента_СерияИзменениеТекстаРедактирования</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьОшибкиЗаполненияСведенияДокумента_Серия" id="58">
+									<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+									<ContextMenu name="НадписьОшибкиЗаполненияСведенияДокумента_СерияКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="НадписьОшибкиЗаполненияСведенияДокумента_СерияРасширеннаяПодсказка" id="60"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСведенияДокумента_Номер" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер (группа)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСведенияДокумента_НомерРасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<InputField name="СведенияДокумента_Номер" id="65">
+									<DataPath>ДокументыФизическогоЛица.Номер</DataPath>
+									<Width>10</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ContextMenu name="СведенияДокумента_НомерКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="СведенияДокумента_НомерРасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">НомерПриИзменении</Event>
+										<Event name="EditTextChange">СведенияДокумента_НомерИзменениеТекстаРедактирования</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьОшибкиЗаполненияСведенияДокумента_Номер" id="68">
+									<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+									<ContextMenu name="НадписьОшибкиЗаполненияСведенияДокумента_НомерКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="НадписьОшибкиЗаполненияСведенияДокумента_НомерРасширеннаяПодсказка" id="70"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФизическиеЛица</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПроверкаЗаполненияВыполненаУспешно" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка заполнения выполнена успешно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПереданныеРеквизиты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переданные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяРеквизита" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя реквизита</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>254</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстОшибки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДокументыФизическогоЛица" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы физического лица</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ДокументыФизическихЛиц</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИзменилосьНаименование" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменилось наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилисьДанныеДокумента" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменились данные документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГражданствоФизическихЛиц" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гражданство физических лиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ГражданствоФизическихЛиц</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилосьГражданство" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменилось гражданство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="НекорректныеРеквизиты">
+			<Type/>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.УдалитьЛицевыеСчетаСотрудниковПоЗарплатнымПроектам.StandardCommand.OpenByValue.ФизическоеЛицо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.БанковскиеКартыКонтрагентов.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ФизическиеЛица.Command.БанковскиеСчета</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.БанковскиеСчета.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ФизическиеЛица.Command.ЛицевыеСчета</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ДокументыФизическихЛиц.Command.ДокументыФизическогоЛица</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ОсновныеВариантыПеречисленияСотруднику.StandardCommand.OpenByValue.ФизическоеЛицо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ФизическиеЛица.Command.ЭлектронныеТрудовыеКнижки_ОсновныеСотрудникиФизическихЛиц</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ОтложенноеОткрытиеЛицевыхСчетовСотрудников.StandardCommand.OpenByValue.ФизическоеЛицо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ФизическиеЛица.Command.ОсновныеСотрудникиФизическихЛиц</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ДополнительныеСведенияКоманднаяПанель</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИсторияИзменений</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПрисоединенныеФайлыБЗК</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:6c66ff27-19af-4728-95a8-463fd1c4dcd3</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

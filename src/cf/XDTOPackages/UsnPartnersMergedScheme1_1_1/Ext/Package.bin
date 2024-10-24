@@ -1,0 +1,1572 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" elementFormQualified="true" attributeFormQualified="false">
+	<property name="GetBalanceAccountRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="GetBalanceAccountResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="AccrualsAndDebts" type="d4p1:AccrualAndDebt" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetBalanceAccountV2Request">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="GetBalanceAccountV2Response">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxReports" type="d4p1:TaxReports" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetCancelRegistrationStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetCancelRegistrationStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Decision">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>COMPLETED</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetCancelUnregistrationStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetCancelUnregistrationStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Decision">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>COMPLETED</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetCancelUpdateTaxRegimeStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetCancelUpdateTaxRegimeStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Decision">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>COMPLETED</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetENSBalanceRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="GetENSBalanceResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="ENSBalance" type="d4p1:ENSBalance" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetENSRequisitesRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="1000"/>
+		</typeDef>
+	</property>
+	<property name="GetENSRequisitesResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="ENSRequisite" type="d4p1:ENSRequisite" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetEventStreamRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="CreatedAt" type="xs:dateTime"/>
+		</typeDef>
+	</property>
+	<property name="GetEventStreamResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="ConfirmationToken" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventStream" type="d4p1:EventStream" lowerBound="0" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="GetFdProcessingStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="RequestId" type="xs:long"/>
+		</typeDef>
+	</property>
+	<property name="GetFdProcessingStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="DocumentsCount" type="xs:long"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Document" type="d4p1:FiscalDocument" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetGrantedPermissionsRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetGrantedPermissionsResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="PermissionGroupsList" type="xs:string" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetGrantedPermissionsStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string" upperBound="50"/>
+		</typeDef>
+	</property>
+	<property name="GetGrantedPermissionsStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="GrantedPermissionsStatuses" type="d4p1:GrantedPermissionsStatus" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetIncomeRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="Year" type="xs:short"/>
+			<property name="Month" type="xs:short"/>
+		</typeDef>
+	</property>
+	<property name="GetIncomeResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="IncomeSums" type="d4p1:SumsByDate" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetNDFLPaymentDetailsRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="GetNDFLPaymentDetailsResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PaymentDetailsList" type="d4p1:PaymentDetailsListNDFL" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetNotificationsRequest">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="NotificationsRequest" type="d4p1:NotificationsRequest" upperBound="1000"/>
+		</typeDef>
+	</property>
+	<property name="GetNotificationsResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="NotificationsResponse" type="d4p1:NotificationsResponse" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetOSSPaymentDetailsRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+			<property name="Month" type="xs:int"/>
+			<property name="Year" type="xs:int"/>
+		</typeDef>
+	</property>
+	<property name="GetOSSPaymentDetailsResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PaymentDetailsList" type="d4p1:PaymentDetailsListOSS" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetPaymentOrdersRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="GetPaymentOrdersResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PaymentOrderDocumentList" type="d4p1:PaymentOrderDocumentList" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetPossibilityStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetPossibilityStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Decision">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>APPROVED</enumeration>
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property name="ExpectedRegistrationDate" type="xs:date" lowerBound="0"/>
+			<property name="TaxpayerFnsRegistrationDate" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Violations" type="d4p1:Violation" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetPossibilityTaxpayersRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="UlInformation" type="d4p1:UlInformation" lowerBound="0"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="IPInformation" type="d4p1:IPInformation" lowerBound="0"/>
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetPossibilityTaxpayersResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetRegistrationStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetRegistrationStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Decision">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>COMPLETED</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Violations" type="d4p1:Violation" lowerBound="0" upperBound="-1"/>
+			<property name="ExpectedRegistrationDate" type="xs:date" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxCalculationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="YearFrom" type="xs:int"/>
+			<property name="MonthFrom" type="xs:int"/>
+			<property name="YearTo" type="xs:int"/>
+			<property name="MonthTo" type="xs:int"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxCalculationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EstimationList" type="d4p1:Estimations" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxChargeHistoryRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+			<property name="Year" type="xs:int" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxChargeHistoryResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxCharges" type="d4p1:TaxChargeWithInn" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxChargeHistoryV2Request">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="100"/>
+			<property name="Year" type="xs:int" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxChargeHistoryV2Response">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxReports" type="d4p1:TaxReports" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxpayerRegistryRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="ReportDate" type="xs:date" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxpayerRegistryResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Total" type="xs:long"/>
+			<property name="Id" type="xs:string"/>
+			<property name="CreatedAt" type="xs:dateTime"/>
+			<property name="ReportData" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxpayerStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string" upperBound="50"/>
+		</typeDef>
+	</property>
+	<property name="GetTaxpayerStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxpayerStatusInfo" type="d4p1:TaxpayerStatus" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetUnregistrationStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetUnregistrationStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>COMPLETED</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="GetUpdateTaxRegimeStatusRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="GetUpdateTaxRegimeStatusResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Decision">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>IN_PROGRESS</enumeration>
+					<enumeration>COMPLETED</enumeration>
+					<enumeration>FAILED</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d4p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostAccountOperationCancelRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="DocumentIds" type="xs:string" upperBound="100"/>
+		</typeDef>
+	</property>
+	<property name="PostAccountOperationCancelResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="OperationCancelStatuses" type="d4p1:OperationCancelStatus" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostAccountOperationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="AccountOperations" type="d4p1:AccountOperation" upperBound="50"/>
+		</typeDef>
+	</property>
+	<property name="PostAccountOperationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="OperationStatuses" type="d4p1:PostAccountOperationStatuses" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostBindPartnerWithInnRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostBindPartnerWithInnResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostCancelRegistrationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="CancelRequestDate" type="xs:dateTime"/>
+			<property name="Id" type="xs:string"/>
+			<property name="DocumentId" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostCancelRegistrationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostCancelUnregistrationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="CancelRequestDate" type="xs:dateTime"/>
+			<property name="Id" type="xs:string"/>
+			<property name="DocumentId" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostCancelUnregistrationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostCancelUpdateTaxRegimeRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="CancelRequestDate" type="xs:dateTime"/>
+			<property name="Id" type="xs:string"/>
+			<property name="DocumentId" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostCancelUpdateTaxRegimeResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostEmployeeInfoRequest">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EmployeeInfos" type="d4p1:EmployeeInfo" upperBound="50"/>
+		</typeDef>
+	</property>
+	<property name="PostEmployeeInfoResponse">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EmployeeInfoResponse" type="d4p1:EmployeeInfoResponse" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostEventStreamConfirmationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="ConfirmationToken" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostEventStreamConfirmationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostExtendedStatementRequest">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Statement" type="d4p1:Statement"/>
+		</typeDef>
+	</property>
+	<property name="PostExtendedStatementResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="OperationStatuses" type="d4p1:PostAccountOperationStatuses" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostFdRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="DateFrom" type="xs:date"/>
+			<property name="DateTo" type="xs:date"/>
+			<property name="KktRegId" type="xs:string" lowerBound="0"/>
+			<property name="OperationTaxbaseCode" type="xs:short" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="PostFdResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="RequestId" type="xs:long"/>
+		</typeDef>
+	</property>
+	<property name="PostGrantedPermissionsRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="PermissionGroupsList" type="xs:string" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostGrantedPermissionsResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="RequestId" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostNotificationsAckRequest">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="NotificationList" type="d4p1:NotificationsActionRequest" upperBound="1000"/>
+		</typeDef>
+	</property>
+	<property name="PostNotificationsAckResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>OK</enumeration>
+					<enumeration>NOK</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="PostNotificationsArchRequest">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="NotificationList" type="d4p1:NotificationsActionRequest" upperBound="1000"/>
+		</typeDef>
+	</property>
+	<property name="PostNotificationsArchResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>OK</enumeration>
+					<enumeration>NOK</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="PostNotificationsDeliveredRequest">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="NotificationList" type="d4p1:NotificationsActionRequest" upperBound="1000"/>
+		</typeDef>
+	</property>
+	<property name="PostNotificationsDeliveredResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>OK</enumeration>
+					<enumeration>NOK</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="PostPlatformRegistrationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="PartnerName" type="xs:string"/>
+			<property name="BIK" type="xs:string"/>
+			<property name="RegNum" type="xs:string"/>
+			<property name="PartnerDescription" type="xs:string"/>
+			<property name="TransitionLink" type="xs:string"/>
+			<property name="PartnersText" type="xs:string"/>
+			<property name="PartnerImage" type="xs:base64Binary"/>
+			<property name="Inn" type="xs:string"/>
+			<property name="Phone" type="xs:string"/>
+			<property name="EnableEventStream" type="xs:boolean"/>
+		</typeDef>
+	</property>
+	<property name="PostPlatformRegistrationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="PartnerID" type="xs:string"/>
+			<property name="RegistrationDate" type="xs:dateTime"/>
+		</typeDef>
+	</property>
+	<property name="PostRegistrationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="UlInformation" type="d4p1:UlInformation" lowerBound="0"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="IPInformation" type="d4p1:IPInformation" lowerBound="0"/>
+			<property name="ContactPersonLastName" type="xs:string" lowerBound="0"/>
+			<property name="ContactPersonFirstName" type="xs:string" lowerBound="0"/>
+			<property name="ContactPersonPatronymic" type="xs:string" lowerBound="0"/>
+			<property name="ContactPersonPhone" type="xs:string" lowerBound="0"/>
+			<property name="ContactPersonEmail" type="xs:string" lowerBound="0"/>
+			<property name="Id" type="xs:string"/>
+			<property name="ExpectedRegisterDate" type="xs:int"/>
+			<property name="RegistrationRequestDate" type="xs:dateTime"/>
+			<property name="TaxObject" type="xs:int"/>
+			<property name="RefuseOtherTaxRegime" type="xs:int" lowerBound="0"/>
+			<property name="RejectOtherTaxRegime" type="xs:int" lowerBound="0"/>
+			<property name="PermissionGroupsList" type="xs:string" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PostRegistrationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostTaxpayerContactPersonInfoRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property name="LastName" type="xs:string" lowerBound="0"/>
+			<property name="FirstName" type="xs:string" lowerBound="0"/>
+			<property name="Patronymic" type="xs:string" lowerBound="0"/>
+			<property name="Phone" type="xs:string" lowerBound="0"/>
+			<property name="Email" type="xs:string" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="PostTaxpayerContactPersonInfoResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Status">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>OK</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="PostUnbindPartnerRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostUnbindPartnerResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="UnregistrationTime" type="xs:dateTime"/>
+		</typeDef>
+	</property>
+	<property name="PostUnregistrationRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="UlInformation" type="d4p1:UlInformation" lowerBound="0"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="IPInformation" type="d4p1:IPInformation" lowerBound="0"/>
+			<property name="Reason" type="xs:string"/>
+			<property name="ViolationUnregistrationDate" type="xs:date" lowerBound="0"/>
+			<property name="ViolationCodes" type="xs:string" lowerBound="0" upperBound="-1"/>
+			<property name="UsnRegister" type="xs:int"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="UsnRequisites" type="d4p1:UsnRequisites" lowerBound="0"/>
+			<property name="EshnRegister" type="xs:int"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EshnRequisites" type="d4p1:EshnRequisites" lowerBound="0"/>
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostUnregistrationResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="PostUpdateTaxRegimeRequest">
+		<typeDef xsi:type="ObjectType">
+			<property name="Inn" type="xs:string"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="UlInformation" type="d4p1:UlInformation" lowerBound="0"/>
+			<property xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="IPInformation" type="d4p1:IPInformation" lowerBound="0"/>
+			<property name="UpdateRequestDate" type="xs:date"/>
+			<property name="Id" type="xs:string"/>
+			<property name="TaxObject" type="xs:int"/>
+			<property name="DateUpdate" type="xs:int"/>
+		</typeDef>
+	</property>
+	<property name="PostUpdateTaxRegimeResponse">
+		<typeDef xsi:type="ObjectType">
+			<property name="Id" type="xs:string"/>
+		</typeDef>
+	</property>
+	<property name="UsnPlatformError">
+		<typeDef xsi:type="ObjectType">
+			<property name="Code" type="xs:string"/>
+			<property name="Message" type="xs:string"/>
+			<property name="Args" lowerBound="0" upperBound="-1">
+				<typeDef xsi:type="ObjectType">
+					<property name="Key" type="xs:string"/>
+					<property name="Value" type="xs:string"/>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<valueType name="AccNumType" base="xs:string" variety="Atomic" minLength="1" maxLength="20"/>
+	<valueType name="DateString" base="xs:string" variety="Atomic"/>
+	<valueType name="DocKindType" base="xs:string" variety="Atomic" length="2"/>
+	<valueType name="FormatVersionType" base="xs:string" variety="Atomic" maxLength="12"/>
+	<valueType name="IDCustomerType" base="xs:string" variety="Atomic" minLength="1" maxLength="50"/>
+	<valueType name="IDType" base="xs:string" variety="Atomic"/>
+	<valueType name="StatementKindType" base="xs:string" variety="Atomic" length="1">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+	</valueType>
+	<valueType name="SumType" base="xs:decimal" variety="Atomic" totalDigits="18" fractionDigits="2"/>
+	<valueType name="UserAgentType" base="xs:string" variety="Atomic" maxLength="100"/>
+	<objectType name="AccountOperation">
+		<property name="Id" type="xs:string"/>
+		<property name="LastModifiedDate" type="xs:dateTime"/>
+		<property name="Uin" type="xs:string" lowerBound="0"/>
+		<property name="AccountNumber" type="xs:string"/>
+		<property name="DocNo" type="xs:string" lowerBound="0"/>
+		<property name="DrawDate" type="xs:date" lowerBound="0"/>
+		<property name="ChargeDate" type="xs:date" lowerBound="0"/>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="PaymentPurpose" type="xs:string"/>
+		<property name="CreatorStatus" type="xs:string" lowerBound="0"/>
+		<property name="Kbk" type="xs:string" lowerBound="0"/>
+		<property name="Oktmo" type="xs:string" lowerBound="0"/>
+		<property name="PayerName" type="xs:string"/>
+		<property name="PayerInn" type="xs:string" lowerBound="0"/>
+		<property name="PayerAccount" type="xs:string"/>
+		<property name="PayerCorrAccount" type="xs:string" lowerBound="0"/>
+		<property name="PayerBic" type="xs:string"/>
+		<property name="PayerBank" type="xs:string"/>
+		<property name="PayerKpp" type="xs:string" lowerBound="0"/>
+		<property name="Recipient" type="xs:string"/>
+		<property name="RecipientInn" type="xs:string" lowerBound="0"/>
+		<property name="RecipientAccount" type="xs:string"/>
+		<property name="RecipientCorrAccount" type="xs:string" lowerBound="0"/>
+		<property name="RecipientBic" type="xs:string"/>
+		<property name="RecipientBank" type="xs:string"/>
+		<property name="OperationType" type="xs:string"/>
+		<property name="RecipientKpp" type="xs:string" lowerBound="0"/>
+		<property name="TaxEvidence" type="xs:string" lowerBound="0"/>
+		<property name="TaxPeriod" type="xs:string" lowerBound="0"/>
+		<property name="TaxDocNumber" type="xs:string" lowerBound="0"/>
+		<property name="TaxDocDate" type="xs:string" lowerBound="0"/>
+		<property name="CurrencyCode" type="xs:string" lowerBound="0" fixed="false" default="RUB"/>
+		<property name="ExchangeRate" type="xs:decimal" lowerBound="0"/>
+		<property name="ForeignCurrencyAmount" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Specifics" type="d3p1:SpecificItem" upperBound="-1"/>
+	</objectType>
+	<objectType name="AccrualAndDebt">
+		<property name="Inn" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxCharges" type="d3p1:TaxCharge" upperBound="-1"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Krsb" type="d3p1:Krsb" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="AttachmentsMeta">
+		<property name="Id" type="xs:string"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType name="AusnDetails">
+		<property name="CurrencyCode" type="xs:string" lowerBound="0" fixed="false" default="RUB"/>
+		<property name="ExchangeRate" type="xs:decimal" lowerBound="0"/>
+		<property name="ForeignCurrencyAmount" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Specifics" type="d3p1:SpecificItem" upperBound="-1"/>
+		<property name="LastModifiedDate" type="xs:dateTime"/>
+	</objectType>
+	<objectType name="AusnTaxReport">
+		<property name="TaxChargeId" type="xs:long"/>
+		<property name="GroupTypeCode">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>ACCRUED</enumeration>
+				<enumeration>ACCRUED_CORRECTION</enumeration>
+				<enumeration>REDUCED_CORRECTION</enumeration>
+			</typeDef>
+		</property>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="DueDate" type="xs:date"/>
+		<property name="TaxPeriodYear" type="xs:int"/>
+		<property name="TaxPeriodMonth" type="xs:int"/>
+		<property name="CreationDate" type="xs:dateTime"/>
+		<property name="PaidSum" type="xs:decimal" lowerBound="0"/>
+		<property name="BalanceSum" type="xs:decimal" lowerBound="0"/>
+		<property name="ActionIsBuf" type="xs:int"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Estimation" type="d3p1:Estimations"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="BankOrderApp" base="d2p1:PaymentDataType"/>
+	<objectType name="BankPartyType">
+		<property name="bic" lowerBound="1" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="9"/>
+		</property>
+		<property name="name" lowerBound="0" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="160"/>
+		</property>
+	</objectType>
+	<objectType name="BankSums">
+		<property name="BankCode" type="xs:string"/>
+		<property name="BankName" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxBaseSums" type="d3p1:TaxBaseSums" upperBound="-1"/>
+	</objectType>
+	<objectType name="BankType">
+		<property name="BIC">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="9">
+				<pattern>[0-9]{9}</pattern>
+			</typeDef>
+		</property>
+		<property name="Name" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="160"/>
+		</property>
+		<property name="City" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="30"/>
+		</property>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="CorrespAcc" type="d3p1:AccNumType" lowerBound="0"/>
+	</objectType>
+	<objectType name="BudgetPaymentInfoType">
+		<property name="DrawerStatus" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2"/>
+		</property>
+		<property name="CBC" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="OKTMO" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="11"/>
+		</property>
+		<property name="Reason" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2"/>
+		</property>
+		<property name="TaxPeriod" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="10"/>
+		</property>
+		<property name="DocNo" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="15"/>
+		</property>
+		<property name="DocDate" lowerBound="0">
+			<typeDef xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" xsi:type="ValueType" base="d4p1:DateString" variety="Atomic" minLength="1" maxLength="10"/>
+		</property>
+		<property name="PayType" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2"/>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="CashContributionType" base="d2p1:OtherPaymentDataType">
+		<property name="Person" lowerBound="0">
+			<typeDef xsi:type="ObjectType">
+				<property name="FullName" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+				<property name="IdentityDocument" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Symbol" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+		</property>
+		<property name="Source" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="CheckType" base="d2p1:OtherPaymentDataType">
+		<property name="Person" lowerBound="0">
+			<typeDef xsi:type="ObjectType">
+				<property name="FullName" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+				<property name="IdentityDocument" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="DataPrinting" lowerBound="0">
+			<typeDef xsi:type="ObjectType">
+				<property name="CheckSeries" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+				<property name="CheckNumber" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Details" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Symbol">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+				</property>
+				<property name="Purpose" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+				<property name="Sum" type="d2p1:SumType"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="CollectionOrderApp" base="d2p1:PaymentDataType">
+		<property name="BudgetPaymentInfo" type="d2p1:BudgetPaymentInfoType" lowerBound="0"/>
+	</objectType>
+	<objectType name="CustomerDetailsType">
+		<property name="Name" type="xs:string"/>
+		<property name="INN" type="xs:string" lowerBound="0"/>
+		<property name="KPP" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="9"/>
+		</property>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Account" type="d3p1:AccNumType" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Bank" type="d3p1:BankType"/>
+	</objectType>
+	<objectType name="CustomerPartyType">
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="id" type="d3p1:IDCustomerType" lowerBound="1" form="Attribute"/>
+		<property name="name" lowerBound="0" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="160"/>
+		</property>
+		<property name="inn" lowerBound="0" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="10" maxLength="12"/>
+		</property>
+		<property name="kpp" lowerBound="0" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="9"/>
+		</property>
+	</objectType>
+	<objectType name="DeductionsInfo">
+		<property name="Code" type="xs:string"/>
+		<property name="Amount" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DigestType">
+		<property name="Data">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="algorithmVersion" type="d5p1:FormatVersionType" lowerBound="1" form="Attribute"/>
+				<property name="__content" type="xs:base64Binary" form="Text"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="ENSBalance">
+		<property name="Inn" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="LkEns" type="d3p1:LkEns" lowerBound="0"/>
+	</objectType>
+	<objectType name="ENSRequisite">
+		<property name="Inn" type="xs:string"/>
+		<property name="Field8" type="xs:string"/>
+		<property name="Field101" type="xs:string"/>
+		<property name="Field102" type="xs:string"/>
+		<property name="Field61" type="xs:string"/>
+		<property name="Field103" type="xs:string"/>
+		<property name="Field13" type="xs:string"/>
+		<property name="Field14" type="xs:string"/>
+		<property name="Field15" type="xs:string"/>
+		<property name="Field16" type="xs:string"/>
+		<property name="Field17" type="xs:string"/>
+		<property name="Field22" type="xs:string"/>
+		<property name="Field24" type="xs:string"/>
+		<property name="Field104" type="xs:string"/>
+		<property name="Field105" type="xs:string"/>
+		<property name="Field106" type="xs:string"/>
+		<property name="Field107" type="xs:string"/>
+		<property name="Field108" type="xs:string"/>
+		<property name="Field109" type="xs:string"/>
+	</objectType>
+	<objectType name="EmployeeIncomeInfo">
+		<property name="PaymentCalculationMonth" type="xs:short"/>
+		<property name="PaymentCalculationYear" type="xs:short"/>
+		<property name="PaymentCode" type="xs:string"/>
+		<property name="PaymentAmount" type="xs:decimal"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="DeductionsInfo" type="d3p1:DeductionsInfo" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="UninsuredPaymentInfo" type="d3p1:UninsuredPaymentInfo" lowerBound="0" upperBound="-1"/>
+		<property name="CalculatedTaxAmount" type="xs:decimal"/>
+		<property name="WithholdTaxAmount" type="xs:decimal"/>
+		<property name="PaidTaxAmount" type="xs:decimal"/>
+	</objectType>
+	<objectType name="EmployeeInfo">
+		<property name="Id" type="xs:string"/>
+		<property name="Inn" type="xs:string"/>
+		<property name="BankOperationId" type="xs:string" lowerBound="0"/>
+		<property name="LastModifiedDate" type="xs:dateTime"/>
+		<property name="PaymentDate" type="xs:date"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="ReorganizationInfo" type="d3p1:ReorganizationInfo" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Employees" type="d3p1:Employees" upperBound="-1"/>
+	</objectType>
+	<objectType name="EmployeeInfoResponse">
+		<property name="Inn" type="xs:string"/>
+		<property name="Id" type="xs:string"/>
+		<property name="StatusCode" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d3p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Employees">
+		<property name="EmployeeInn" type="xs:string" lowerBound="0"/>
+		<property name="Snils" type="xs:string"/>
+		<property name="FirstName" type="xs:string"/>
+		<property name="LastName" type="xs:string"/>
+		<property name="Patronymic" type="xs:string" lowerBound="0"/>
+		<property name="Gender" type="xs:int"/>
+		<property name="Birthdate" type="xs:date"/>
+		<property name="DocumentTypeCode" type="xs:string"/>
+		<property name="DocumentNumber" type="xs:string"/>
+		<property name="Citizenship" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EmployeeIncomeInfo" type="d3p1:EmployeeIncomeInfo" upperBound="-1"/>
+	</objectType>
+	<objectType name="ErrorType">
+		<property name="Code">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="4"/>
+		</property>
+		<property name="Description">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="MoreInfo" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Errors">
+		<property name="Code">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>FSS_ERROR</enumeration>
+				<enumeration>PFR_ERROR</enumeration>
+				<enumeration>PPFL_ERROR</enumeration>
+				<enumeration>OTHER_ERROR</enumeration>
+			</typeDef>
+		</property>
+		<property name="Description" type="xs:string"/>
+	</objectType>
+	<objectType name="EshnRequisites">
+		<property name="DateEshn" type="xs:int"/>
+	</objectType>
+	<objectType name="Estimations">
+		<property name="Month" type="xs:short"/>
+		<property name="Year" type="xs:short"/>
+		<property name="EffectiveTaxType" type="xs:short"/>
+		<property name="IncomeTaxBaseAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="TaxRateIncomeValue" type="xs:decimal" lowerBound="0"/>
+		<property name="BankTransactionsAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="KktAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="IncomeTaxAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="IncomeMinusExpenseTaxBaseAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="TaxRateIncomeMinusExpenseValue" type="xs:decimal" lowerBound="0"/>
+		<property name="IncomeMinusExpenseBankTransactionsAmount" type="xs:decimal"/>
+		<property name="KktExpenseAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="CurrentLosses" type="xs:decimal" lowerBound="0"/>
+		<property name="PreviousPeriodLosses" type="xs:decimal" lowerBound="0"/>
+		<property name="TotalExpense" type="xs:decimal" lowerBound="0"/>
+		<property name="IncomeMinusExpenseTaxAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="MinimumTaxUsed" type="xs:boolean" lowerBound="0"/>
+		<property name="MinimumTaxRateAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="MinimumTaxRateValue" type="xs:decimal" lowerBound="0"/>
+		<property name="TaxAmount" type="xs:decimal"/>
+		<property name="InformDocumentAmount" type="xs:decimal"/>
+		<property name="RsbStatus" type="xs:short"/>
+		<property name="RemainderTradeFee" type="xs:decimal"/>
+		<property name="CurrentTradeFee" type="xs:decimal"/>
+		<property name="DeductedTradeFee" type="xs:decimal"/>
+	</objectType>
+	<objectType name="EventBound">
+		<property name="Inn" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime"/>
+		<property name="Reason">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>REGISTRATION</enumeration>
+				<enumeration>BANK_ACCOUNT_NUMBER_FOUND</enumeration>
+				<enumeration>MANUAL_BOUND</enumeration>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="EventEmployeeInfoErrors">
+		<property name="Id" type="xs:string"/>
+		<property name="LastModifiedDate" type="xs:dateTime"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Errors" type="d3p1:Errors" lowerBound="0" upperBound="-1"/>
+		<property name="Inn" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="EventEmployeeInfoSuccess">
+		<property name="Id" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime"/>
+		<property name="LastModifiedDate" type="xs:dateTime"/>
+		<property name="Inn" type="xs:string"/>
+	</objectType>
+	<objectType name="EventGrantedPermissionsStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime"/>
+		<property name="Result">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>COMPLETED</enumeration>
+				<enumeration>FAILED</enumeration>
+				<enumeration>DUPLICATED</enumeration>
+			</typeDef>
+		</property>
+		<property name="Inn" type="xs:string"/>
+		<property name="Permissions" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="ProcessingTime" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="EventRegistrationStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="Inn" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime"/>
+		<property name="Decision">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>COMPLETED</enumeration>
+				<enumeration>FAILED</enumeration>
+			</typeDef>
+		</property>
+		<property name="ReasonCode" type="xs:string" lowerBound="0"/>
+		<property name="ReasonDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="EventStream">
+		<property name="Id" type="xs:string"/>
+		<property name="Type" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventUnbound" type="d3p1:EventUnbound" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventBound" type="d3p1:EventBound" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventRegistrationStatus" type="d3p1:EventRegistrationStatus" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventUnregistrationStatus" type="d3p1:EventUnregistrationStatus" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventGrantedPermissionsStatus" type="d3p1:EventGrantedPermissionsStatus" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventEmployeeInfoErrors" type="d3p1:EventEmployeeInfoErrors" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="EventEmployeeInfoSuccess" type="d3p1:EventEmployeeInfoSuccess" lowerBound="0"/>
+	</objectType>
+	<objectType name="EventUnbound">
+		<property name="Inn" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime"/>
+		<property name="Reason">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>UNREGISTRATION</enumeration>
+				<enumeration>NO_BANK_ACCOUNT_NUMBER</enumeration>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="EventUnregistrationStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="CreatedAt" type="xs:dateTime"/>
+		<property name="Inn" type="xs:string"/>
+		<property name="Status">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>COMPLETED</enumeration>
+				<enumeration>FAILED</enumeration>
+			</typeDef>
+		</property>
+		<property name="ReasonCode" type="xs:string" lowerBound="0"/>
+		<property name="ReasonDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="FiscalDocument">
+		<property name="Date" type="xs:dateTime"/>
+		<property name="FdNum" type="xs:string"/>
+		<property name="FnNum" type="xs:string"/>
+		<property name="KktRegId" type="xs:string"/>
+		<property name="TaxBaseAmount" type="xs:decimal"/>
+		<property name="Sum" type="xs:decimal"/>
+	</objectType>
+	<objectType name="GrantedPermissionsStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="Result">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>COMPLETED</enumeration>
+				<enumeration>FAILED</enumeration>
+				<enumeration>DUPLICATED</enumeration>
+				<enumeration>IN_PROGRESS</enumeration>
+			</typeDef>
+		</property>
+		<property name="Inn" type="xs:string"/>
+		<property name="Permissions" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="ProcessingTime" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="IPInformation">
+		<property name="IPLastName" type="xs:string"/>
+		<property name="IPFirstName" type="xs:string"/>
+		<property name="IPPatronymic" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="KKTSums">
+		<property name="KKTRegID" type="xs:string"/>
+		<property name="FiscalDriveNum" type="xs:string"/>
+		<property name="KKTLocation" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxBaseSums" type="d3p1:TaxBaseSums" upperBound="-1"/>
+	</objectType>
+	<objectType name="Krsb">
+		<property name="DebtAmount" type="xs:decimal"/>
+		<property name="PenaltyAmount" type="xs:decimal"/>
+		<property name="OverpaymentAmount" type="xs:decimal"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="Kbk" type="xs:string"/>
+		<property name="TaxCode" type="xs:string" lowerBound="0"/>
+		<property name="UpdateInfoDate" type="xs:dateTime"/>
+		<property name="Id" type="xs:long"/>
+	</objectType>
+	<objectType name="LKSums">
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxBaseSums" type="d3p1:TaxBaseSums" upperBound="-1"/>
+	</objectType>
+	<objectType name="LastCheck">
+		<property name="KktRegId" type="xs:string"/>
+		<property name="Num" type="xs:long"/>
+		<property name="Date" type="xs:date"/>
+	</objectType>
+	<objectType name="LkEns">
+		<property name="SaldoEns" type="xs:decimal" lowerBound="0"/>
+		<property name="DateChange" type="xs:dateTime"/>
+	</objectType>
+	<objectType name="MemOrderApp">
+		<property name="DocNo" type="xs:string"/>
+		<property name="DocDate" type="xs:date"/>
+		<property name="SpareField5" type="xs:string" lowerBound="0"/>
+		<property name="Author" lowerBound="0">
+			<typeDef xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" xsi:type="ObjectType" base="d4p1:BankType">
+				<property name="Branch" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="AccountNameDebit" type="xs:string" lowerBound="0"/>
+		<property name="AccountDebit" lowerBound="0">
+			<typeDef xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" xsi:type="ValueType" base="d4p1:AccNumType" variety="Atomic" minLength="1" maxLength="20"/>
+		</property>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Sum" type="d3p1:SumType"/>
+		<property name="SpareField9a" type="xs:string" lowerBound="0"/>
+		<property name="AccountNameCredit" type="xs:string" lowerBound="0"/>
+		<property name="AccountCredit" lowerBound="0">
+			<typeDef xmlns:d4p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" xsi:type="ValueType" base="d4p1:AccNumType" variety="Atomic" minLength="1" maxLength="20"/>
+		</property>
+		<property name="PartialTransitionKind" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="2"/>
+		</property>
+		<property name="SpareField14" type="xs:string" lowerBound="0"/>
+		<property name="SpareField15" type="xs:string" lowerBound="0"/>
+		<property name="TransitionContent" type="xs:string" lowerBound="0"/>
+		<property name="SpareField20" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Notifications">
+		<property name="MessageId" type="xs:string"/>
+		<property name="Header" type="xs:string"/>
+		<property name="Message" type="xs:string"/>
+		<property name="ShortMessage" type="xs:string" lowerBound="0"/>
+		<property name="NotificationType">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>REGISTRATION</enumeration>
+				<enumeration>PRE_TAX_CHARGE</enumeration>
+				<enumeration>FINAL_TAX_CHARGE</enumeration>
+				<enumeration>PARTNER_GRANT_REQUEST_ACCESS</enumeration>
+				<enumeration>PARTNER_GRANT_APPROVE</enumeration>
+				<enumeration>PARTNER_UNBOUND</enumeration>
+				<enumeration>UNREGISTRATION</enumeration>
+				<enumeration>CSN_VIOLATION</enumeration>
+				<enumeration>INSPECTOR_MESSAGE</enumeration>
+			</typeDef>
+		</property>
+		<property name="NotificationStatus">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>UNACKNOWLEDGED</enumeration>
+				<enumeration>ACKNOWLEDGED</enumeration>
+				<enumeration>ARCHIVED</enumeration>
+			</typeDef>
+		</property>
+		<property name="CreationDateTime" type="xs:dateTime"/>
+		<property name="LastUpdateDateTime" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="AttachmentsMeta" type="d3p1:AttachmentsMeta" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="NotificationsActionRequest">
+		<property name="Inn" type="xs:string"/>
+		<property name="MessageIdList" type="xs:string" upperBound="-1"/>
+	</objectType>
+	<objectType name="NotificationsRequest">
+		<property name="Inn" type="xs:string"/>
+		<property name="GetAcknowleged" type="xs:boolean" lowerBound="0" fixed="false" default="false"/>
+		<property name="GetArchived" type="xs:boolean" lowerBound="0" fixed="false" default="false"/>
+		<property name="Offset" type="xs:long" lowerBound="0"/>
+		<property name="Limit" type="xs:long" lowerBound="0"/>
+		<property name="CreatedDateFrom" type="xs:dateTime" lowerBound="0"/>
+		<property name="CreatedDateTo" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="NotificationsResponse">
+		<property name="Inn" type="xs:string"/>
+		<property name="HasMore" type="xs:boolean"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Notifications" type="d3p1:Notifications" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="OperationCancelStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="StatusCode" type="xs:string"/>
+		<property name="StatusMessage" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="OperationStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="StatusCode" type="xs:string"/>
+		<property name="StatusMessage" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="OtherCustomerDetailsType">
+		<property name="Name" type="xs:string"/>
+		<property name="INN" type="xs:string" lowerBound="0"/>
+		<property name="KPP" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="9"/>
+		</property>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Account" type="d3p1:AccNumType" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Bank" type="d3p1:BankType" lowerBound="0"/>
+	</objectType>
+	<objectType name="OtherPaymentDataType">
+		<property name="DocNo" type="xs:string" lowerBound="0"/>
+		<property name="DocDate" type="xs:date" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Sum" type="d3p1:SumType"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Payer" type="d3p1:OtherCustomerDetailsType" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Payee" type="d3p1:OtherCustomerDetailsType" lowerBound="0"/>
+		<property name="TransitionKind" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="2"/>
+		</property>
+		<property name="Code" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="25"/>
+		</property>
+		<property name="Purpose" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="ParticipantType" ordered="false" sequenced="true">
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Customer" type="d3p1:CustomerPartyType" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Bank" type="d3p1:BankPartyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="PatentInfo">
+		<property name="KvpdpCode" type="xs:string"/>
+		<property name="KvpdpName" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PayDocRuApp" base="d2p1:PaymentDataType">
+		<property name="BudgetPaymentInfo" type="d2p1:BudgetPaymentInfoType" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PayRequestApp" base="d2p1:PaymentDataType">
+		<property name="PaymentCondition">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="1"/>
+		</property>
+		<property name="AcceptTerm" type="xs:byte" lowerBound="0"/>
+		<property name="DocDispatchDate" type="d2p1:DateString" lowerBound="0"/>
+	</objectType>
+	<objectType name="PaymentDataType">
+		<property name="DocNo" type="xs:string"/>
+		<property name="DocDate" type="xs:date"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Sum" type="d3p1:SumType"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Payer" type="d3p1:CustomerDetailsType"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Payee" type="d3p1:CustomerDetailsType"/>
+		<property name="PaymentKind" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="15"/>
+		</property>
+		<property name="TransitionKind" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="2"/>
+		</property>
+		<property name="Priority" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="1"/>
+		</property>
+		<property name="Code" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="25"/>
+		</property>
+		<property name="IncomeTypeCode" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="1"/>
+		</property>
+		<property name="Purpose">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="210"/>
+		</property>
+	</objectType>
+	<objectType name="PaymentDetailsListNDFL">
+		<property name="Inn" type="xs:string"/>
+		<property name="Field5PaymentType" type="xs:string" lowerBound="0"/>
+		<property name="PayerInn" type="xs:string"/>
+		<property name="PayerKpp" type="xs:string" lowerBound="0"/>
+		<property name="PayerName" type="xs:string"/>
+		<property name="RecipientInn" type="xs:string"/>
+		<property name="RecipientKpp" type="xs:string"/>
+		<property name="Recipient" type="xs:string"/>
+		<property name="RecipientAccount" type="xs:string"/>
+		<property name="RecipientBankBik" type="xs:string"/>
+		<property name="RecipientBankAccount" type="xs:string"/>
+		<property name="RecipientBank" type="xs:string"/>
+		<property name="OperationType" type="xs:string"/>
+		<property name="PaymentOrder" type="xs:string"/>
+		<property name="PaymentPurpose" type="xs:string"/>
+		<property name="PayerStatus" type="xs:string"/>
+		<property name="Kbk" type="xs:string"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="Field106PaymentReason" type="xs:string"/>
+		<property name="Field107PaymentReason" type="xs:string"/>
+		<property name="Field110PaymentType" type="xs:string" lowerBound="0"/>
+		<property name="Field108DocumentNumber" type="xs:string"/>
+		<property name="Field109DocumentDate" type="xs:string"/>
+	</objectType>
+	<objectType name="PaymentDetailsListOSS">
+		<property name="Inn" type="xs:string"/>
+		<property name="Field5PaymentType" type="xs:string" lowerBound="0"/>
+		<property name="PayerInn" type="xs:string"/>
+		<property name="PayerKpp" type="xs:string" lowerBound="0"/>
+		<property name="PayerName" type="xs:string"/>
+		<property name="RecipientInn" type="xs:string"/>
+		<property name="RecipientKpp" type="xs:string"/>
+		<property name="Recipient" type="xs:string"/>
+		<property name="RecipientAccount" type="xs:string"/>
+		<property name="RecipientBankBik" type="xs:string"/>
+		<property name="RecipientBankAccount" type="xs:string"/>
+		<property name="RecipientBank" type="xs:string"/>
+		<property name="OperationType" type="xs:string"/>
+		<property name="PaymentOrder" type="xs:string"/>
+		<property name="PaymentPurpose" type="xs:string"/>
+		<property name="PayerStatus" type="xs:string"/>
+		<property name="Kbk" type="xs:string"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="Field106PaymentReason" type="xs:string"/>
+		<property name="Field107PaymentReason" type="xs:string"/>
+		<property name="Field110PaymentType" type="xs:string" lowerBound="0"/>
+		<property name="Field108DocumentNumber" type="xs:string"/>
+		<property name="Field109DocumentDate" type="xs:string"/>
+		<property name="Amount" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PaymentOrderApp" base="d2p1:PaymentDataType">
+		<property name="TransitionContent" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="16"/>
+		</property>
+		<property name="PartialPaymentNo" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="3"/>
+		</property>
+		<property name="PartialTransitionKind" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="2"/>
+		</property>
+		<property name="SumResidualPayment" type="d2p1:SumType" lowerBound="0"/>
+		<property name="PartialDocNo" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="6"/>
+		</property>
+		<property name="PartialDocDate" type="d2p1:DateString" lowerBound="0"/>
+		<property name="BudgetPaymentInfo" type="d2p1:BudgetPaymentInfoType" lowerBound="0"/>
+	</objectType>
+	<objectType name="PaymentOrderDocument">
+		<property name="Type">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>TAX</enumeration>
+				<enumeration>DEBT</enumeration>
+				<enumeration>PENALTY</enumeration>
+			</typeDef>
+		</property>
+		<property name="SourceId" type="xs:long"/>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="Field5PaymentType" type="xs:string" lowerBound="0"/>
+		<property name="PayerInn" type="xs:string"/>
+		<property name="PayerKpp" type="xs:string" lowerBound="0"/>
+		<property name="PayerName" type="xs:string"/>
+		<property name="RecipientInn" type="xs:string"/>
+		<property name="RecipientKpp" type="xs:string"/>
+		<property name="Recipient" type="xs:string"/>
+		<property name="RecipientAccount" type="xs:string"/>
+		<property name="RecipientBankBik" type="xs:string"/>
+		<property name="RecipientBankAccount" type="xs:string"/>
+		<property name="RecipientBank" type="xs:string"/>
+		<property name="OperationType" type="xs:string"/>
+		<property name="PaymentOrder" type="xs:string"/>
+		<property name="PaymentPurpose" type="xs:string"/>
+		<property name="PayerStatus" type="xs:string"/>
+		<property name="Kbk" type="xs:string"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="Field106PaymentReason" type="xs:string"/>
+		<property name="Field107PaymentReason" type="xs:string"/>
+		<property name="Field108DocumentNumber" type="xs:string"/>
+		<property name="Field109DocumentDate" type="xs:string"/>
+		<property name="Field110PaymentType" type="xs:string" lowerBound="0"/>
+		<property name="Field22Uip" type="xs:string"/>
+	</objectType>
+	<objectType name="PaymentOrderDocumentList">
+		<property name="Inn" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PaymentOrderDocument" type="d3p1:PaymentOrderDocument" upperBound="-1"/>
+	</objectType>
+	<objectType name="PostAccountOperationStatuses">
+		<property name="Id" type="xs:string"/>
+		<property name="StatusCode" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="RefusalToAccept" type="d3p1:RefusalToAccept" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="RefusalToAccept">
+		<property name="ReasonCode" type="xs:string"/>
+		<property name="ReasonDescription" type="xs:string"/>
+	</objectType>
+	<objectType name="ReorganizationInfo">
+		<property name="Code" type="xs:decimal"/>
+		<property name="Inn" type="xs:string"/>
+		<property name="Kpp" type="xs:string"/>
+	</objectType>
+	<objectType name="ResultStatusType" ordered="false" sequenced="true">
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Error" type="d3p1:ErrorType" lowerBound="0"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Status" type="d3p1:StatusType" lowerBound="0"/>
+	</objectType>
+	<objectType name="SignatureType">
+		<property name="x509IssuerName" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="x509SerialNumber" type="xs:hexBinary" lowerBound="1" form="Attribute"/>
+		<property name="SignedData" type="xs:base64Binary"/>
+	</objectType>
+	<objectType name="SpecificItem">
+		<property name="ForeignCurrencyAmount" type="xs:decimal" lowerBound="0"/>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="OperationCategory" type="xs:int" lowerBound="0"/>
+		<property name="OperationTaxbaseCode" type="xs:int"/>
+	</objectType>
+	<objectType name="Statement">
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="id" type="d3p1:IDType" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="formatVersion" type="d3p1:FormatVersionType" lowerBound="1" form="Attribute"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="userAgent" type="d3p1:UserAgentType" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Sender" type="d3p1:BankPartyType"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Recipient" type="d3p1:CustomerPartyType"/>
+		<property name="Data">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="StatementType" type="d5p1:StatementKindType"/>
+				<property name="DateFrom" type="xs:dateTime" lowerBound="0"/>
+				<property name="DateTo" type="xs:dateTime"/>
+				<property xmlns:d5p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Account" type="d5p1:AccNumType"/>
+				<property xmlns:d5p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Bank" type="d5p1:BankType"/>
+				<property name="OperationInfo" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property xmlns:d7p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="AusnDetails" type="d7p1:AusnDetails"/>
+						<property name="PayDoc">
+							<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="id" type="d9p1:IDType" lowerBound="1" form="Attribute"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="docKind" type="d9p1:DocKindType" lowerBound="1" form="Attribute"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PayDocRu" type="d9p1:PayDocRuApp" lowerBound="0"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PayRequest" type="d9p1:PayRequestApp" lowerBound="0"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="CollectionOrder" type="d9p1:CollectionOrderApp" lowerBound="0"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="PaymentOrder" type="d9p1:PaymentOrderApp" lowerBound="0"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="BankOrder" type="d9p1:BankOrderApp" lowerBound="0"/>
+								<property name="InnerDoc" lowerBound="0">
+									<typeDef xmlns:d10p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" xsi:type="ObjectType" base="d10p1:OtherPaymentDataType">
+										<property name="InnerDocKind">
+											<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+										</property>
+									</typeDef>
+								</property>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="CashContribution" type="d9p1:CashContributionType" lowerBound="0"/>
+								<property xmlns:d9p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Check" type="d9p1:CheckType" lowerBound="0"/>
+							</typeDef>
+						</property>
+						<property name="DC">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="1">
+								<enumeration>1</enumeration>
+								<enumeration>2</enumeration>
+							</typeDef>
+						</property>
+						<property name="Date" type="xs:date"/>
+						<property xmlns:d7p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="ExtID" type="d7p1:IDType" lowerBound="0"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="ExtIDStatementRequest" type="d3p1:IDType" lowerBound="0"/>
+	</objectType>
+	<objectType name="StatusType">
+		<property name="Code">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="2"/>
+		</property>
+		<property name="Name" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="25"/>
+		</property>
+		<property name="MoreInfo" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="SumsByDate">
+		<property name="Date" type="xs:date"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="KKTSums" type="d3p1:KKTSums" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="BankSums" type="d3p1:BankSums" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="LKSums" type="d3p1:LKSums" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="TaxBaseSums">
+		<property name="OperationTaxbaseCode" type="xs:int"/>
+		<property name="Sum" type="xs:decimal"/>
+	</objectType>
+	<objectType name="TaxCalculationList">
+		<property name="Year" type="xs:short"/>
+		<property name="Month" type="xs:short"/>
+	</objectType>
+	<objectType name="TaxCharge">
+		<property name="TaxChargeId" type="xs:long"/>
+		<property name="GroupTypeCode" type="xs:string"/>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="DueDate" type="xs:date"/>
+		<property name="TaxPeriodYear" type="xs:int"/>
+		<property name="TaxPeriodMonth" type="xs:int"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="Kbk" type="xs:string"/>
+		<property name="PassedAmount" type="xs:decimal"/>
+		<property name="CreationDate" type="xs:dateTime"/>
+	</objectType>
+	<objectType name="TaxChargeWithId">
+		<property name="Amount" type="xs:decimal"/>
+		<property name="DueDate" type="xs:date"/>
+		<property name="TaxPeriodYear" type="xs:int"/>
+		<property name="TaxPeriodMonth" type="xs:int"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="Kbk" type="xs:string"/>
+		<property name="PassedAmount" type="xs:decimal"/>
+		<property name="CreationDate" type="xs:dateTime"/>
+		<property name="TaxChargeId" type="xs:long"/>
+		<property name="GroupTypeCode">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>ACCRUED</enumeration>
+				<enumeration>ACCRUED_CORRECTION</enumeration>
+				<enumeration>REDUCED_CORRECTION</enumeration>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Estimation" type="d3p1:Estimations" lowerBound="0"/>
+	</objectType>
+	<objectType name="TaxChargeWithInn">
+		<property name="Inn" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="TaxCharges" type="d3p1:TaxChargeWithId" upperBound="-1"/>
+	</objectType>
+	<objectType name="TaxRegimeStatus">
+		<property name="Inn" type="xs:string"/>
+		<property name="Status">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>UNKNOWN</enumeration>
+				<enumeration>CSN</enumeration>
+			</typeDef>
+		</property>
+		<property name="DateFrom" type="xs:date" lowerBound="0"/>
+		<property name="DateTo" type="xs:date" lowerBound="0"/>
+	</objectType>
+	<objectType name="TaxReports">
+		<property name="Inn" type="xs:string"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="AusnTaxReport" type="d3p1:AusnTaxReport" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="TaxpayerBindStatus">
+		<property name="Id" type="xs:string"/>
+		<property name="Result">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<enumeration>COMPLETED</enumeration>
+				<enumeration>FAILED</enumeration>
+				<enumeration>DUPLICATED</enumeration>
+				<enumeration>IN_PROGRESS</enumeration>
+			</typeDef>
+		</property>
+		<property name="Inn" type="xs:string"/>
+		<property name="Permissions" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="ProcessingTime" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="TaxpayerStatus">
+		<property name="Inn" type="xs:string"/>
+		<property name="FirstName" type="xs:string" lowerBound="0"/>
+		<property name="LastName" type="xs:string" lowerBound="0"/>
+		<property name="Patronymic" type="xs:string" lowerBound="0"/>
+		<property name="Kpp" type="xs:string" lowerBound="0"/>
+		<property name="Name" type="xs:string"/>
+		<property name="RegistrationTime" type="xs:date"/>
+		<property name="UnregistrationTime" type="xs:date" lowerBound="0"/>
+		<property name="UnregistrationReason" type="xs:string" lowerBound="0"/>
+		<property name="Oktmo" type="xs:string"/>
+		<property name="TaxObject" type="xs:int"/>
+		<property name="Phone" type="xs:string" lowerBound="0"/>
+		<property name="Email" type="xs:string" lowerBound="0"/>
+		<property name="UpdateTime" type="xs:dateTime" lowerBound="0"/>
+		<property name="ContactPersonInfoUpdateTime" type="xs:dateTime" lowerBound="0"/>
+		<property name="Permissions" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="urn://x-artefacts-gnivc-ru/ais3/USN/UsnPartnersIntegrationService/types/1.0" name="Violations" type="d3p1:Violation" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="UlInformation">
+		<property name="OrganizationName" type="xs:string"/>
+		<property name="Kpp" type="xs:string"/>
+	</objectType>
+	<objectType name="UninsuredPaymentInfo">
+		<property name="Code" type="xs:string"/>
+		<property name="Amount" type="xs:decimal"/>
+	</objectType>
+	<objectType name="UsnRequisites">
+		<property name="DateUsn" type="xs:int"/>
+		<property name="TaxObject" type="xs:int"/>
+	</objectType>
+	<objectType name="Violation">
+		<property name="ViolationCode" type="xs:string"/>
+		<property name="ViolationDescription" type="xs:string"/>
+	</objectType>
+</package>

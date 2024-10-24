@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ЭлементыАмортизации" id="40">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЭлементыАмортизацииРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<CheckBoxField name="СрокПолезногоИспользованияМожноОпределить" id="50">
+					<DataPath>СрокПолезногоИспользованияМожноОпределить</DataPath>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Неопределенный; БИ='Можно определить'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="СрокПолезногоИспользованияМожноОпределитьКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СрокПолезногоИспользованияМожноОпределитьРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">СрокПолезногоИспользованияМожноОпределитьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="СпособНачисленияАмортизации" id="10">
+					<DataPath>СпособНачисленияАмортизации</DataPath>
+					<ContextMenu name="СпособНачисленияАмортизацииКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СпособНачисленияАмортизацииРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">СпособНачисленияАмортизацииПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаСрокИспользования" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ГруппаСро</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСрокИспользованияРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<InputField name="СрокПолезногоИспользования" id="19">
+							<DataPath>СрокПолезногоИспользования</DataPath>
+							<ContextMenu name="СрокПолезногоИспользованияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СрокПолезногоИспользованияРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияСрокИспользования" id="27">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мес.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСрокИспользованияКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ДекорацияСрокИспользованияРасширеннаяПодсказка" id="29"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Коэффициент" id="22">
+					<DataPath>Коэффициент</DataPath>
+					<ContextMenu name="КоэффициентКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КоэффициентРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<UsualGroup name="ГруппаОбъемПродукции" id="30">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОбъемПродукцииРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="ОбъемПродукцииРабот" id="16">
+							<DataPath>ОбъемПродукцииРабот</DataPath>
+							<ContextMenu name="ОбъемПродукцииРаботКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ОбъемПродукцииРаботРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияОбъемПродукции" id="32">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ед.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОбъемПродукцииКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДекорацияОбъемПродукцииРасширеннаяПодсказка" id="34"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛиквидационнаяСтоимость" id="35">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛиквидационнаяСтоимостьРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<InputField name="ЛиквидационнаяСтоимость" id="13">
+							<DataPath>ЛиквидационнаяСтоимость</DataPath>
+							<ContextMenu name="ЛиквидационнаяСтоимостьКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ЛиквидационнаяСтоимостьРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияЛиквидационнаяСтоимость" id="37">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>руб.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЛиквидационнаяСтоимостьКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДекорацияЛиквидационнаяСтоимостьРасширеннаяПодсказка" id="39"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПараметрыНачисленияАмортизации" id="42">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПараметрыНачисленияАмортизацииРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="СчетУчетаАмортизации" id="47">
+					<DataPath>СчетАмортизации</DataPath>
+					<ContextMenu name="СчетУчетаАмортизацииКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СчетУчетаАмортизацииРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="СпособОтраженияРасходов" id="44">
+					<DataPath>СпособОтраженияРасходов</DataPath>
+					<ContextMenu name="СпособОтраженияРасходовКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СпособОтраженияРасходовРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НеопределенныйСрокПолезногоИспользования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неопределенный срок полезного использования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособНачисленияАмортизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ начисления амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СпособыНачисленияАмортизацииНМА</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СрокПолезногоИспользования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток срока полезного использования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбъемПродукцииРабот" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток работ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Коэффициент" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэффициент ускорения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛиквидационнаяСтоимость" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ликвидационная стоимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПеренестиВДокумент" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменениеНесколькихСтрок" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменение нескольких строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособОтраженияРасходов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ отражения расходов по амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СпособыОтраженияРасходовПоАмортизации</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СчетАмортизации" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет начисления амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПараметрыАмортизации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СрокПолезногоИспользованияМожноОпределить" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок полезного использования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОК</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИзменениеНесколькихСтрок">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПараметрыАмортизации">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

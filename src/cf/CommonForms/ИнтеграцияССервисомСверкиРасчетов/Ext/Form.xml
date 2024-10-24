@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>1С:Сверка 2.0</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ИнформацияОСервисе" id="33">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнформацияОСервисеРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияСервис" id="132">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация сервис</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.СервисСверкиРасчетовЛогоМалое</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияСервисКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="ДекорацияСервисРасширеннаяПодсказка" id="134"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаИнформацияСервис" id="135">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация сервис</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнформацияСервисРасширеннаяПодсказка" id="136"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияКраткаяИнформацияОСервис" id="142">
+							<Width>65</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ToolTipTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис еженедельно сверяет введенные в программу данные с документами ваших контрагентов и оперативно информирует о найденных расхождениях</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияКраткаяИнформацияОСервисКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ДекорацияКраткаяИнформацияОСервисРасширеннаяПодсказка" id="144"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияКраткаяИнформацияОСервисеOLD" id="40">
+							<Visible>false</Visible>
+							<Width>65</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ToolTipTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис "Онлайн-сверка с контрагентами"
+  - позволяет проверить, корректно ли введены в программу данные первичных документов
+  - находит ошибки в реквизитах счетов-фактур
+  - еженедельно сверяет введенные в программу данные с данными ваших контрагентов
+  - оперативно информирует пользователя о найденных расхождениях</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияКраткаяИнформацияОСервисеOLDКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДекорацияКраткаяИнформацияОСервисеOLDРасширеннаяПодсказка" id="42"/>
+						</LabelDecoration>
+						<Button name="ПодробнееОСервисе" id="140">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПодробнееОСервисе</CommandName>
+							<ExtendedTooltip name="ПодробнееОСервисеРасширеннаяПодсказка" id="141"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ИнтернетПоддержка" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет поддержка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнтернетПоддержкаРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияСостояниеИнтернетПоддержки" id="47">
+					<Width>70</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для продолжения работы требуется подключение к Интернет-поддержке.</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<ContextMenu name="ДекорацияСостояниеИнтернетПоддержкиКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ДекорацияСостояниеИнтернетПоддержкиРасширеннаяПодсказка" id="49"/>
+				</LabelDecoration>
+				<Button name="ПодключитьИнтернетПоддержку" id="50">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПодключитьИнтернетПоддержку</CommandName>
+					<ExtendedTooltip name="ПодключитьИнтернетПоддержкуРасширеннаяПодсказка" id="51"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="ДекорацияОтступ1" id="172">
+			<Visible>false</Visible>
+			<Height>1</Height>
+			<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="173"/>
+			<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="174"/>
+		</PictureDecoration>
+		<UsualGroup name="БизнесСеть" id="72">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="БизнесСетьРасширеннаяПодсказка" id="73"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияШаг1" id="116">
+					<Picture>
+						<xr:Ref>CommonPicture.Этап1</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияШаг1КонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="ДекорацияШаг1РасширеннаяПодсказка" id="118"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаБизнесСеть" id="114">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключите организацию к 1С:Бизнес-сети</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаБизнесСетьРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНеобходимостьРегистрацииОрганизации" id="108">
+							<Width>70</Width>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>1С:Сверка 2.0 базируется на информации о контрагентах, полученной из сервиса 1С:Бизнес-сеть.
+После регистрации мы сможем найти ваших покупателей и продавцов, а они вас.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНеобходимостьРегистрацииОрганизацииКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ДекорацияНеобходимостьРегистрацииОрганизацииРасширеннаяПодсказка" id="110"/>
+						</LabelDecoration>
+						<UsualGroup name="ПодключениеКБизнесСетьПервойОрганизации" id="197">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение к бизнес сеть первой организации</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПодключениеКБизнесСетьПервойОрганизацииРасширеннаяПодсказка" id="198"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОрганизацииНеПодключены" id="67">
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОрганизацииНеПодключеныРасширеннаяПодсказка" id="68"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаОрганизацииНеПодключены" id="189">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организации не подключены (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Picture>
+												<xr:Ref>CommonPicture.СервисСверкиРасчетовВыключен</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаОрганизацииНеПодключеныКонтекстноеМеню" id="190"/>
+											<ExtendedTooltip name="КартинкаОрганизацииНеПодключеныРасширеннаяПодсказка" id="191"/>
+										</PictureDecoration>
+										<LabelDecoration name="ЗаголовокОрганизацииНеПодключены" id="192">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организации не подключены</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокОрганизацииНеПодключеныКонтекстноеМеню" id="193"/>
+											<ExtendedTooltip name="ЗаголовокОрганизацииНеПодключеныРасширеннаяПодсказка" id="194"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПодключенныеОрганизацииБизнесСеть" id="62">
+							<Width>5</Width>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПодключенныеОрганизацииБизнесСетьРасширеннаяПодсказка" id="63"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОтключениеБизнесСети" id="199">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа отключение бизнес сети</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа отключение бизнес сети</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтключениеБизнесСетиРасширеннаяПодсказка" id="200"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЗеленаяГалочка" id="64">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация зеленая галочка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.СервисСверкиРасчетовВключен</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияЗеленаяГалочкаКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="ДекорацияЗеленаяГалочкаРасширеннаяПодсказка" id="66"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияСостояниеБизнесСеть" id="59">
+											<TextColor>style:FormTextColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключено организаций:
+</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<ContextMenu name="ДекорацияСостояниеБизнесСетьКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ДекорацияСостояниеБизнесСетьРасширеннаяПодсказка" id="61"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияКоличествоПодключенных" id="69">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1 из 4</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ДекорацияКоличествоПодключенныхКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="ДекорацияКоличествоПодключенныхРасширеннаяПодсказка" id="71"/>
+											<Events>
+												<Event name="Click">ДекорацияКоличествоПодключенныхНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтключитьБизнесСеть" id="221">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтключитьБизнесСетьРасширеннаяПодсказка" id="222"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияОтступДляКнопкиОтключить" id="223">
+											<Width>2</Width>
+											<Height>1</Height>
+											<ContextMenu name="ДекорацияОтступДляКнопкиОтключитьКонтекстноеМеню" id="224"/>
+											<ExtendedTooltip name="ДекорацияОтступДляКнопкиОтключитьРасширеннаяПодсказка" id="225"/>
+										</PictureDecoration>
+										<Button name="ОтключитьОрганизациюОтБизнесСети" id="195">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтключитьОрганизациюОтБизнесСети</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отключить</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ShapeRepresentation>WhenActive</ShapeRepresentation>
+											<ExtendedTooltip name="ОтключитьОрганизациюОтБизнесСетиРасширеннаяПодсказка" id="196">
+												<Width>70</Width>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Для включения сервиса "1С:Сверка" необходима регистрация организации в сервисе 1С:Бизнес-сеть</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодключитьОрганизациюКБизнесСети" id="201">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодключитьОрганизациюКБизнесСетиРасширеннаяПодсказка" id="202"/>
+							<ChildItems>
+								<InputField name="Организация" id="186">
+									<DataPath>Организация</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организация</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выберите организацию</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="187"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="188"/>
+								</InputField>
+								<Button name="ОткрытьПомощникПодключенияКСервисуБизнесСеть" id="57">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОткрытьПомощникПодключенияКСервисуБизнесСеть</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключить</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПомощникПодключенияКСервисуБизнесСетьРасширеннаяПодсказка" id="58">
+										<Width>70</Width>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Для включения сервиса "1С:Сверка" необходима регистрация организации в сервисе 1С:Бизнес-сеть</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="ДекорацияОтступ2" id="175">
+			<Visible>false</Visible>
+			<Height>1</Height>
+			<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="176"/>
+			<ExtendedTooltip name="ДекорацияОтступ2РасширеннаяПодсказка" id="177"/>
+		</PictureDecoration>
+		<UsualGroup name="ВключениеСервисаСверки" id="74">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ВключениеСервисаСверкиРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияШаг2" id="121">
+					<Picture>
+						<xr:Ref>CommonPicture.Этап2</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияШаг2КонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ДекорацияШаг2РасширеннаяПодсказка" id="123"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаВключениеСервисаСверки" id="119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включите сервис 1С:Сверка 2.0</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаВключениеСервисаСверкиРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияВключениеСервиса" id="145">
+							<Width>70</Width>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>После включения сервиса введенные в программу данные будут сверяться с аналогичными данными, введенными вашими контрагентами.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияВключениеСервисаКонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ДекорацияВключениеСервисаРасширеннаяПодсказка" id="147"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПодключитьСервис" id="160">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодключитьСервисРасширеннаяПодсказка" id="161"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПодключениеСервиса" id="162">
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодключениеСервисаРасширеннаяПодсказка" id="163"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаСервисОтключен" id="164">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сервис отключен (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Picture>
+												<xr:Ref>CommonPicture.СервисСверкиРасчетовВыключен</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаСервисОтключенКонтекстноеМеню" id="165"/>
+											<ExtendedTooltip name="КартинкаСервисОтключенРасширеннаяПодсказка" id="166"/>
+										</PictureDecoration>
+										<LabelDecoration name="ЗаголовокСервисОтключен" id="167">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сервис сверки выключен</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокСервисОтключенКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="ЗаголовокСервисОтключенРасширеннаяПодсказка" id="169"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ВключитьСервис" id="170">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВключитьСервис</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ВключитьСервисРасширеннаяПодсказка" id="171"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтключитьСервис" id="148">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтключитьСервисРасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВыключениеСервиса" id="150">
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВыключениеСервисаРасширеннаяПодсказка" id="151"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаСервисВключен" id="152">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сервис включен (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Picture>
+												<xr:Ref>CommonPicture.СервисСверкиРасчетовВключен</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаСервисВключенКонтекстноеМеню" id="153"/>
+											<ExtendedTooltip name="КартинкаСервисВключенРасширеннаяПодсказка" id="154"/>
+										</PictureDecoration>
+										<LabelDecoration name="ЗаголовокСервисВключен" id="155">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сервис сверки включен</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокСервисВключенКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ЗаголовокСервисВключенРасширеннаяПодсказка" id="157"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтключениеСервиса" id="226">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтключениеСервисаРасширеннаяПодсказка" id="227"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияОтступДляКнопкиОтключитьСервис" id="228">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация отступ для кнопки отключить сервис</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОтступДляКнопкиОтключитьСервисКонтекстноеМеню" id="229"/>
+											<ExtendedTooltip name="ДекорацияОтступДляКнопкиОтключитьСервисРасширеннаяПодсказка" id="230"/>
+										</PictureDecoration>
+										<Button name="ОтключитьСервис" id="158">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтключитьСервис</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отключить</v8:content>
+												</v8:item>
+											</Title>
+											<ShapeRepresentation>WhenActive</ShapeRepresentation>
+											<ExtendedTooltip name="ОтключитьСервисРасширеннаяПодсказка" id="159"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбновление" id="203">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обновление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обновление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбновлениеРасширеннаяПодсказка" id="204"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаОжидание" id="205">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка ожидание</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаОжиданиеКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="КартинкаОжиданиеРасширеннаяПодсказка" id="207"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьОбновление" id="208">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключение к сервису</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОбновлениеКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="НадписьОбновлениеРасширеннаяПодсказка" id="210"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРезультатыСверки" id="213">
+							<Visible>false</Visible>
+							<Group>Vertical</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветБаннераЗеленый</BackColor>
+							<ExtendedTooltip name="ГруппаРезультатыСверкиРасширеннаяПодсказка" id="214"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияРезультатСверки" id="215">
+									<Width>70</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сверено 15 документов. Расхождений не обнаружено</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияРезультатСверкиКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="ДекорацияРезультатСверкиРасширеннаяПодсказка" id="217"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияНавигацияПоРасхождениямПростойИнтерфейс" id="236">
+									<Width>70</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обнаруженные расхождения можно увидеть в отчете &lt;link e1cib/command/ОбщаяКоманда.СверкаДокументовСКонтрагентами&gt;Сверка документов с контрагентами&lt;/&gt;
+(см. "Бухгалтерия - Анализ учета - Сверка документов с контрагентами")</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНавигацияПоРасхождениямПростойИнтерфейсКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="ДекорацияНавигацияПоРасхождениямПростойИнтерфейсРасширеннаяПодсказка" id="238"/>
+									<Events>
+										<Event name="URLProcessing">ДекорацияНавигацияПоРасхождениямОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияНавигацияПоРасхождениямПолныйИнтерфейс" id="129">
+									<Width>70</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обнаруженные расхождения можно увидеть в отчете &lt;link e1cib/command/ОбщаяКоманда.СверкаДокументовСКонтрагентами&gt;Сверка документов с контрагентами&lt;/&gt;
+(см. "Отчеты - Анализ учета - Сверка документов с контрагентами")</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНавигацияПоРасхождениямПолныйИнтерфейсКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ДекорацияНавигацияПоРасхождениямПолныйИнтерфейсРасширеннаяПодсказка" id="131"/>
+									<Events>
+										<Event name="URLProcessing">ДекорацияНавигацияПоРасхождениямОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="ДекорацияОтступ3" id="178">
+			<Visible>false</Visible>
+			<Height>1</Height>
+			<ContextMenu name="ДекорацияОтступ3КонтекстноеМеню" id="179"/>
+			<ExtendedTooltip name="ДекорацияОтступ3РасширеннаяПодсказка" id="180"/>
+		</PictureDecoration>
+		<UsualGroup name="УведомленияОРасхождениях" id="1">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="УведомленияОРасхожденияхРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияШаг3" id="126">
+					<Picture>
+						<xr:Ref>CommonPicture.Этап3</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияШаг3КонтекстноеМеню" id="127"/>
+					<ExtendedTooltip name="ДекорацияШаг3РасширеннаяПодсказка" id="128"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаУведомленияОРасхождениях" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включите оповещения о расхождениях если нужно</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаУведомленияОРасхожденияхРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНеобходимостьУведомлений" id="111">
+							<Width>70</Width>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещения о важных расхождениях отобразятся на закладке "Обсуждения" 
+и в верхней панели приложения (колокольчик).</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНеобходимостьУведомленийКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="ДекорацияНеобходимостьУведомленийРасширеннаяПодсказка" id="113"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОбратитесьКАдминистратору" id="52">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ЦветШрифтаОшибки</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для настройки уведомлений обратитесь к Администратору</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОбратитесьКАдминистраторуКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ОбратитесьКАдминистраторуРасширеннаяПодсказка" id="54"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПодключитьУведомления" id="3">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодключитьУведомленияРасширеннаяПодсказка" id="4"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПодключениеОповещений" id="5">
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодключениеОповещенийРасширеннаяПодсказка" id="6"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаОповещенияОтключены" id="7">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оповещения отключены (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Picture>
+												<xr:Ref>CommonPicture.СервисСверкиРасчетовВыключен</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаОповещенияОтключеныКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="КартинкаОповещенияОтключеныРасширеннаяПодсказка" id="9"/>
+										</PictureDecoration>
+										<LabelDecoration name="ЗаголовокОповещенияОтключены" id="10">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оповещения об обнаруженных расхождениях выключены</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокОповещенияОтключеныКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="ЗаголовокОповещенияОтключеныРасширеннаяПодсказка" id="12"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ПодключитьОбсуждения" id="16">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПодключитьОбсуждениня</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПодключитьОбсужденияРасширеннаяПодсказка" id="17"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтключитьУведомления" id="18">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтключитьУведомленияРасширеннаяПодсказка" id="19"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОтключениеОповещений" id="20">
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтключениеОповещенийРасширеннаяПодсказка" id="21"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаОповещенияПодключены" id="22">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оповещения подключены (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Picture>
+												<xr:Ref>CommonPicture.СервисСверкиРасчетовВключен</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаОповещенияПодключеныКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="КартинкаОповещенияПодключеныРасширеннаяПодсказка" id="24"/>
+										</PictureDecoration>
+										<LabelDecoration name="ЗаголовокОповещенияПодключены" id="25">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оповещения об обнаруженных расхождениях включены</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокОповещенияПодключеныКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="ЗаголовокОповещенияПодключеныРасширеннаяПодсказка" id="27"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтключитьОповещения" id="231">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтключитьОповещенияРасширеннаяПодсказка" id="232"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияОтступДляКнопкиОтключитьОповещения" id="233">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация отступ для кнопки отключить оповещения</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОтступДляКнопкиОтключитьОповещенияКонтекстноеМеню" id="234"/>
+											<ExtendedTooltip name="ДекорацияОтступДляКнопкиОтключитьОповещенияРасширеннаяПодсказка" id="235"/>
+										</PictureDecoration>
+										<Button name="ОтключитьОбсуждения" id="31">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтключитьОбсуждения</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отключить</v8:content>
+												</v8:item>
+											</Title>
+											<ShapeRepresentation>WhenActive</ShapeRepresentation>
+											<ExtendedTooltip name="ОтключитьОбсужденияРасширеннаяПодсказка" id="32"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкаОбсужденийДоступна" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка обсуждений доступна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СервисПодключен" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис подключен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьНесколькоОрганизаций" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать несколько организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеОрганизации" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоЮрЛицо" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это юр лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПолныйИнтерфейс" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это полный интерфейс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияПоУмолчанию" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодключитьИнтернетПоддержку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодключитьИнтернетПоддержку</Action>
+		</Command>
+		<Command name="ПодключитьОбсуждениня" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить обсуждениня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить обсуждениня</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьОбсуждениня</Action>
+		</Command>
+		<Command name="ОтключитьОбсуждения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить обсуждения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить обсуждения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьОбсуждения</Action>
+		</Command>
+		<Command name="ОткрытьПомощникПодключенияКСервисуБизнесСеть" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрироваться в сервисе 1C:Бизнес-сеть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПомощникПодключенияКСервисуБизнесСеть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодробнееОСервисе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробнее о сервисе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробнее о сервисе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодробнееОСервисе</Action>
+		</Command>
+		<Command name="ВключитьСервис" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить сервис</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить сервис</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьСервис</Action>
+		</Command>
+		<Command name="ОтключитьСервис" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить сервис</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить сервис</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьСервис</Action>
+		</Command>
+		<Command name="ОтключитьОрганизациюОтБизнесСети" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить организацию от бизнес сети</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить организацию от бизнес сети</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьОрганизациюОтБизнесСети</Action>
+		</Command>
+	</Commands>
+</Form>

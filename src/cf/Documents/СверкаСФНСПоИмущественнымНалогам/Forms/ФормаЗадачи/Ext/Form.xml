@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="СтраницаПоискРасчета" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск расчета</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПоискРасчетаРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьРезультат" id="1">
+							<Width>60</Width>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчет в программе сошелся с расчетом налогового органа</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьРезультатКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НадписьРезультатРасширеннаяПодсказка" id="3"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьРасчетВПрограмме" id="4">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По данным программы сумма налога – &lt;link СправкаРасчет&gt;46 054&lt;/&gt; руб. (эту сумму организация уже должна была уплатить).</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьРасчетВПрограммеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НадписьРасчетВПрограммеРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылкиНадписи</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьРасчетФНС" id="7">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налоговая также рассчитала сумму к уплате – независимо, по своим данным. &lt;link СообщениеОРасчетеНалога&gt;Сообщение об исчисленной сумме транспортного налога&lt;/&gt; получено через &lt;link 1СОтчетность&gt;1С-Отчетность&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьРасчетФНСКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НадписьРасчетФНСРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылкиНадписи</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьДействия" id="10">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дальнейших действий не требуется.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьДействияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="НадписьДействияРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылкиНадписи</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="СтраницаПоискРасчетаКнопки" id="17">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница поиск расчета кнопки</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаПоискРасчетаКнопкиРасширеннаяПодсказка" id="18"/>
+							<ChildItems>
+								<Button name="ПоискРасчетаЗагрузитьРасчет" id="25">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>18</Width>
+									<CommandName>Form.Command.ЗагрузитьРасчет</CommandName>
+									<ExtendedTooltip name="ПоискРасчетаЗагрузитьРасчетРасширеннаяПодсказка" id="26"/>
+								</Button>
+								<Button name="ПоискРасчетаПродолжитьБезФайла" id="27">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>17</Width>
+									<CommandName>Form.Command.ПродолжитьБезФайла</CommandName>
+									<ExtendedTooltip name="ПоискРасчетаПродолжитьБезФайлаРасширеннаяПодсказка" id="28"/>
+								</Button>
+								<Button name="ПоискРасчетаЗавершитьЗадачу" id="19">
+									<Type>UsualButton</Type>
+									<Width>19</Width>
+									<CommandName>Form.Command.ЗавершитьЗадачу</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Больше не напоминать</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПоискРасчетаЗавершитьЗадачуРасширеннаяПодсказка" id="20"/>
+								</Button>
+								<Button name="ПоискРасчетаПерейтиКСверке" id="23">
+									<Type>UsualButton</Type>
+									<Width>20</Width>
+									<CommandName>Form.Command.ПерейтиКСверке</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перейти к детальной сверке</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПоискРасчетаПерейтиКСверкеРасширеннаяПодсказка" id="24"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРучнаяСверка" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ручная сверка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРучнаяСверкаРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<LabelDecoration name="ЗаголовокКакПолучитьРасчетНалогаБумажный" id="29">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;b&gt;Проверьте, не приходило ли сообщение в бумажном виде&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаголовокКакПолучитьРасчетНалогаБумажныйКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ЗаголовокКакПолучитьРасчетНалогаБумажныйРасширеннаяПодсказка" id="31"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьКакПолучитьРасчетНалогаБумажный" id="32">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вы могли получить расчет заказным письмом или лично в налоговом органе.
+Расчет выглядит &lt;link КартинкаРасчетНалога&gt;так&lt;/&gt;.
+В этом случае сверять придется вручную. Найдите в расчете таблицу "Исчисление транспортного налога", сверьте итоговые цифры. Напоминаем, по данным программы сумма налога – &lt;link СправкаРасчет&gt;46 054&lt;/&gt; руб.
+Если необходимо, программа &lt;link ПерейтиКСверке&gt;поможет сверить&lt;/&gt; и детальные данные.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьКакПолучитьРасчетНалогаБумажныйКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НадписьКакПолучитьРасчетНалогаБумажныйРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылкиНадписи</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ЗаголовокЗапроситьРасчет" id="35">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;b&gt;Если вы не нашли расчет за 2021 год&lt;/&gt;, &lt;link ЗаявлениеОПередачеРасчета&gt;запросите его&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаголовокЗапроситьРасчетКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ЗаголовокЗапроситьРасчетРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылкиНадписи</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОбнаруженыОшибки" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Что делать, если обнаружены ошибки?</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОбнаруженыОшибкиРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьОбнаруженыОшибки" id="40">
+									<Width>60</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если ошибка в вашем учете – &lt;link ПерейтиКНастройкамОбъектов&gt;исправьте&lt;/&gt; ее, &lt;link ДоплатитьНалог&gt;доплатите налог и пени&lt;/&gt;. Отправлять какие-то формы в налоговую в этом случае не нужно.
+
+Если ошибка в расчете ФНС, то в течение 20 дней с момента получения расчета отправьте пояснения и подтверждающие документы.
+В зависимости от того, в чем заключаются расхождения, нужно отправлять разные формы:
+- если в расчете ФНС не учтены льготы, отправьте &lt;link ЗаявлениеОЛьготе&gt;заявление о предоставлении налоговой льготы&lt;/&gt;
+- если ФНС посчитала налог по уничтоженному транспортному средству, отправьте &lt;link ЗаявлениеОГибелиТС&gt;заявление о гибели или уничтожении ТС&lt;/&gt;
+- о других ошибках поясните в &lt;link ПоясненияВСвязиССообщениемОРасчетеНалога&gt;специальной форме&lt;/&gt;.
+
+Если в расчете ФНС нет транспортных средств, по которым вы платите налог, &lt;link СообщениеОНаличииОбъектов&gt;сообщите об этом&lt;/&gt; до 31 декабря.
+
+В ходе &lt;link ПерейтиКСверке&gt;детальной сверки&lt;/&gt; программа поможет составить все эти формы.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОбнаруженыОшибкиКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="НадписьОбнаруженыОшибкиРасширеннаяПодсказка" id="42"/>
+									<Events>
+										<Event name="URLProcessing">ОбработкаНавигационнойСсылкиНадписи</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СтраницаРучнаяСверкаКнопки" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница ручная сверка кнопки</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаРучнаяСверкаКнопкиРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<Button name="Назад" id="45">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВернутьсяНазад</CommandName>
+									<ShapeRepresentation>WhenActive</ShapeRepresentation>
+									<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="46"/>
+								</Button>
+								<Button name="РучнаяСверкаПерейтиКСверке" id="47">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПерейтиКСверке</CommandName>
+									<ExtendedTooltip name="РучнаяСверкаПерейтиКСверкеРасширеннаяПодсказка" id="48"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СуммаНалога" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма налога по данным программы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяОтправкаОтчетовЧерез1СОтчетность" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется отправка отчетов через1 с отчетность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Описание" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Правило" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правило</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаПредставленияОтчетовУплатыНалогов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыНавигационныхСсылок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры навигационных ссылок</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПараметрыСверки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры сверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДокументСверкаСФНС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ сверка СФНС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentObject.СверкаСФНСПоИмущественнымНалогам</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ДокументСверкаСФНС.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ИнициализированаСверка" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициализирована сверка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗавершитьЗадачу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет сошелся, больше не напоминать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗавершитьЗадачу</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПерейтиКСверке" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать детальную сверку</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерейтиКСверке</Action>
+		</Command>
+		<Command name="ЗагрузитьРасчет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить расчет ФНС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить расчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьРасчет</Action>
+		</Command>
+		<Command name="ПродолжитьБезФайла" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить без файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить без файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьБезФайла</Action>
+		</Command>
+		<Command name="ВернутьсяНазад" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВернутьсяНазад</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Налог">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыИмущественныхНалогов</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="НалоговыйПериод">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="РегистрацияВНалоговомОргане">
+			<Type>
+				<v8:Type>cfg:CatalogRef.РегистрацииВНалоговомОргане</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>75</Width>
+	<Height>40</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОсновныеСредстваПродолжить" id="48">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Печать</CommandName>
+				<ExtendedTooltip name="ОсновныеСредстваПродолжитьРасширеннаяПодсказка" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="59">
+			<DataPath>Объект.Организация</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="61"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаОтбор" id="112">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры отбора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка параметров отбора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры отбора</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<Representation>None</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="113"/>
+			<ChildItems>
+				<Table name="ОсновныеСредстваОтбор" id="96">
+					<Representation>Tree</Representation>
+					<Autofill>true</Autofill>
+					<Width>60</Width>
+					<Height>4</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<AutoMaxRowsCount>false</AutoMaxRowsCount>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ОсновныеСредства.Filter</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ViewMode>All</ViewMode>
+					<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+					<ContextMenu name="ОсновныеСредстваОтборКонтекстноеМеню" id="97"/>
+					<AutoCommandBar name="ОсновныеСредстваОтборКоманднаяПанель" id="98"/>
+					<ExtendedTooltip name="ОсновныеСредстваОтборРасширеннаяПодсказка" id="99"/>
+					<SearchStringAddition name="ОсновныеСредстваОтборСтрокаПоиска" id="100">
+						<AdditionSource>
+							<Item>ОсновныеСредстваОтбор</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОсновныеСредстваОтборСтрокаПоискаКонтекстноеМеню" id="101"/>
+						<ExtendedTooltip name="ОсновныеСредстваОтборСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОсновныеСредстваОтборСостояниеПросмотра" id="103">
+						<AdditionSource>
+							<Item>ОсновныеСредстваОтбор</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОсновныеСредстваОтборСостояниеПросмотраКонтекстноеМеню" id="104"/>
+						<ExtendedTooltip name="ОсновныеСредстваОтборСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОсновныеСредстваОтборУправлениеПоиском" id="106">
+						<AdditionSource>
+							<Item>ОсновныеСредстваОтбор</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОсновныеСредстваОтборУправлениеПоискомКонтекстноеМеню" id="107"/>
+						<ExtendedTooltip name="ОсновныеСредстваОтборУправлениеПоискомРасширеннаяПодсказка" id="108"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">ОсновныеСредстваОтборПриИзменении</Event>
+					</Events>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ОсновныеСредства" id="62">
+			<TitleLocation>Auto</TitleLocation>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>ОсновныеСредства</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="ОсновныеСредстваКонтекстноеМеню" id="63"/>
+			<AutoCommandBar name="ОсновныеСредстваКоманднаяПанель" id="64"/>
+			<ExtendedTooltip name="ОсновныеСредстваРасширеннаяПодсказка" id="65"/>
+			<SearchStringAddition name="ОсновныеСредстваСтрокаПоиска" id="66">
+				<AdditionSource>
+					<Item>ОсновныеСредства</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОсновныеСредстваСтрокаПоискаКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="ОсновныеСредстваСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОсновныеСредстваСостояниеПросмотра" id="69">
+				<AdditionSource>
+					<Item>ОсновныеСредства</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОсновныеСредстваСостояниеПросмотраКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="ОсновныеСредстваСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОсновныеСредстваУправлениеПоиском" id="72">
+				<AdditionSource>
+					<Item>ОсновныеСредства</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОсновныеСредстваУправлениеПоискомКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="ОсновныеСредстваУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОсновныеСредстваИнвентарныйНомер" id="75">
+					<DataPath>ОсновныеСредства.ИнвентарныйНомер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инв №</v8:content>
+						</v8:item>
+					</Title>
+					<Width>5</Width>
+					<ContextMenu name="ОсновныеСредстваИнвентарныйНомерКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ОсновныеСредстваИнвентарныйНомерРасширеннаяПодсказка" id="77"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваШтрихкод" id="125">
+					<DataPath>ОсновныеСредства.Штрихкод</DataPath>
+					<ContextMenu name="ОсновныеСредстваШтрихкодКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="ОсновныеСредстваШтрихкодРасширеннаяПодсказка" id="127"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваОсновноеСредство" id="81">
+					<DataPath>ОсновныеСредства.ОсновноеСредство</DataPath>
+					<Width>20</Width>
+					<ContextMenu name="ОсновныеСредстваОсновноеСредствоКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ОсновныеСредстваОсновноеСредствоРасширеннаяПодсказка" id="83"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваЕдиницаУчетаОС" id="109">
+					<DataPath>ОсновныеСредства.ЕдиницаУчетаОС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед учета</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОсновныеСредстваЕдиницаУчетаОСКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ОсновныеСредстваЕдиницаУчетаОСРасширеннаяПодсказка" id="111"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваКоличество" id="78">
+					<DataPath>ОсновныеСредства.КоличествоПоУчету</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во</v8:content>
+						</v8:item>
+					</Title>
+					<Width>5</Width>
+					<ContextMenu name="ОсновныеСредстваКоличествоКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ОсновныеСредстваКоличествоРасширеннаяПодсказка" id="80"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваСуммаОстаток" id="84">
+					<DataPath>ОсновныеСредства.СуммаОстаток</DataPath>
+					<Visible>false</Visible>
+					<Width>10</Width>
+					<ContextMenu name="ОсновныеСредстваСуммаОстатокКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ОсновныеСредстваСуммаОстатокРасширеннаяПодсказка" id="86"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваМестонахождение" id="90">
+					<DataPath>ОсновныеСредства.Местонахождение</DataPath>
+					<ContextMenu name="ОсновныеСредстваМестонахождениеКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ОсновныеСредстваМестонахождениеРасширеннаяПодсказка" id="92"/>
+				</LabelField>
+				<LabelField name="ОсновныеСредстваМОЛ" id="93">
+					<DataPath>ОсновныеСредства.МОЛ</DataPath>
+					<ContextMenu name="ОсновныеСредстваМОЛКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ОсновныеСредстваМОЛРасширеннаяПодсказка" id="95"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПечатьИнвентарныхЭтикеток</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.РазмерБумаги</Field>
+				<Field>Объект.РазмерЭтикетки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОсновныеСредства" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные средства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~ОсновныеСредства.Количество</Field>
+				<Field>ОсновныеСредства.ИнвентарныйНомер</Field>
+				<Field>ОсновныеСредства.КоличествоПоУчету</Field>
+				<Field>ОсновныеСредства.ОсновноеСредство</Field>
+				<Field>ОсновныеСредства.СуммаОстаток</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто1.ЕдиницаУчета = ЗНАЧЕНИЕ(Перечисление.ЕдиницыУчетаОС.ИнвентарныйОбъект)
+			ТОГДА ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.ИнвентарныйНомер
+		ИНАЧЕ ХозрасчетныйОстатки.Субконто1.Код
+	КОНЕЦ КАК ИнвентарныйНомер,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто1 КАК Справочник.ОсновныеСредства) КАК ОсновноеСредство,
+	ХозрасчетныйОстатки.Субконто1.ЕдиницаУчета КАК ЕдиницаУчетаОС,
+	ХозрасчетныйОстатки.СуммаОстаток КАК СуммаОстаток,
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто1.ЕдиницаУчета = ЗНАЧЕНИЕ(Перечисление.ЕдиницыУчетаОС.ИнвентарныйОбъект)
+			ТОГДА 1
+		ИНАЧЕ ХозрасчетныйОстатки.КоличествоОстаток
+	КОНЕЦ КАК КоличествоПоУчету,
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто1.ЕдиницаУчета = ЗНАЧЕНИЕ(Перечисление.ЕдиницыУчетаОС.ИнвентарныйОбъект)
+			ТОГДА МестонахождениеОСБухгалтерскийУчетСрезПоследних.Местонахождение
+		ИНАЧЕ СпособыАмортизацииГрупповыхОбъектовОССрезПоследних.Подразделение
+	КОНЕЦ КАК Местонахождение,
+	МестонахождениеОСБухгалтерскийУчетСрезПоследних.МОЛ КАК МОЛ,
+	ВЫРАЗИТЬ("299000" + ПОДСТРОКА(ВЫБОР
+				КОГДА ХозрасчетныйОстатки.Субконто1.ЕдиницаУчета = ЗНАЧЕНИЕ(Перечисление.ЕдиницыУчетаОС.ИнвентарныйОбъект)
+					ТОГДА ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.ИнвентарныйНомер
+				ИНАЧЕ ХозрасчетныйОстатки.Субконто1.Код
+			КОНЕЦ, 4, 6) КАК СТРОКА(12)) КАК Штрихкод
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(&amp;Дата, Счет В (&amp;Счета), , Организация = &amp;Организация) КАК ХозрасчетныйОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПервоначальныеСведенияОСБухгалтерскийУчет.СрезПоследних(&amp;Дата, ) КАК ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних
+		ПО ХозрасчетныйОстатки.Субконто1 = ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.ОсновноеСредство
+			И ХозрасчетныйОстатки.Организация = ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.Организация
+			И ХозрасчетныйОстатки.Организация = ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.МестонахождениеОСБухгалтерскийУчет.СрезПоследних КАК МестонахождениеОСБухгалтерскийУчетСрезПоследних
+		ПО ХозрасчетныйОстатки.Субконто1 = МестонахождениеОСБухгалтерскийУчетСрезПоследних.ОсновноеСредство
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СпособыАмортизацииГрупповыхОбъектовОС.СрезПоследних КАК СпособыАмортизацииГрупповыхОбъектовОССрезПоследних
+		ПО ХозрасчетныйОстатки.Субконто1 = СпособыАмортизацииГрупповыхОбъектовОССрезПоследних.ОсновноеСредство
+			И ХозрасчетныйОстатки.Организация = СпособыАмортизацииГрупповыхОбъектовОССрезПоследних.Организация</QueryText>
+				<MainTable>AccountingRegister.Хозрасчетный.Balance</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Местонахождение</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>6838556c-bcb7-4eca-92ec-ffcf972e0cc7</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">МОЛ</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>caa47afa-8759-4ec8-89e7-71036cc10520</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Печать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Печать</Action>
+		</Command>
+	</Commands>
+</Form>

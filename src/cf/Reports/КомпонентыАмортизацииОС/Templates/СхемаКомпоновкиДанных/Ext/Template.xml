@@ -1,0 +1,1398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основное средство</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ОсновныеСредства</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстаточнаяСтоимостьНачалоПериода</dataPath>
+			<field>ОстаточнаяСтоимостьНачалоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаточная стоимость на начало</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНачалоПериода</dataPath>
+			<field>СтоимостьНачалоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первоначальная стоимость на начало</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомпонентАмортизации</dataPath>
+			<field>КомпонентАмортизации</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.КомпонентыАмортизацииОС</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ЗавершениеРемонтаОС</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстаточнаяСтоимостьКонецПериода</dataPath>
+			<field>ОстаточнаяСтоимостьКонецПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаточная стоимость на конец</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКонецПериода</dataPath>
+			<field>СтоимостьКонецПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первоначальная стоимость на конец</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект.ИнвентарныйНомер</dataPath>
+			<field>Объект.ИнвентарныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентарный номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаАмортизации</dataPath>
+			<field>СуммаАмортизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма амортизации за период</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсновноеСредство</dataPath>
+			<field>ОсновноеСредство</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>Компоненты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Объект</dataPath>
+				<field>Объект</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основное средство</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ОсновныеСредства</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОстаточнаяСтоимостьНачалоПериода</dataPath>
+				<field>ОстаточнаяСтоимостьНачалоПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Остаточная стоимость</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНачалоПериода</dataPath>
+				<field>СтоимостьНачалоПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Первоначальная стоимость</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КомпонентАмортизации</dataPath>
+				<field>КомпонентАмортизации</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.КомпонентыАмортизацииОС</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОстаточнаяСтоимостьКонецПериода</dataPath>
+				<field>ОстаточнаяСтоимостьКонецПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Остаточная стоимость</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьКонецПериода</dataPath>
+				<field>СтоимостьКонецПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Первоначальная стоимость</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+				</useRestriction>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Объект.ИнвентарныйНомер</dataPath>
+				<field>ИнвентарныйНомер</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаАмортизации</dataPath>
+				<field>СуммаАмортизации</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма амортизации</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто3</dataPath>
+				<field>Субконто3</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто2</dataPath>
+				<field>Субконто2</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Валюта</dataPath>
+				<field>Валюта</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РасчетАмортизации.Объект КАК Объект
+ПОМЕСТИТЬ ОбъектыСКомпонентами
+ИЗ
+	РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.КомпонентыАмортизацииОС КАК КомпонентыАмортизации
+		ПО РасчетАмортизации.КомпонентАмортизации = КомпонентыАмортизации.Ссылка
+{ГДЕ
+	РасчетАмортизации.Организация.*,
+	РасчетАмортизации.Объект.*,
+	(РасчетАмортизации.Период МЕЖДУ НАЧАЛОПЕРИОДА(&amp;НачПериода, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;КонПериода, МЕСЯЦ))}
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РасчетАмортизации.Организация КАК Организация,
+	РасчетАмортизации.Объект КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	МАКСИМУМ(РасчетАмортизации.Период) КАК Период
+ПОМЕСТИТЬ ЗаписьПередНачаломПериода
+ИЗ
+	РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОбъектыСКомпонентами КАК ОбъектыСКомпонентами
+		ПО РасчетАмортизации.Объект = ОбъектыСКомпонентами.Объект
+{ГДЕ
+	РасчетАмортизации.Организация.*,
+	РасчетАмортизации.Объект.*,
+	(РасчетАмортизации.Период МЕЖДУ НАЧАЛОПЕРИОДА(&amp;НачПериода, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;НачПериода, МЕСЯЦ))}
+
+СГРУППИРОВАТЬ ПО
+	РасчетАмортизации.Организация,
+	РасчетАмортизации.Объект,
+	РасчетАмортизации.КомпонентАмортизации
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект,
+	КомпонентАмортизации,
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РасчетАмортизации.Организация КАК Организация,
+	РасчетАмортизации.Объект КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	МАКСИМУМ(РасчетАмортизации.Период) КАК Период
+ПОМЕСТИТЬ ЗаписьПередКонцомПериода
+ИЗ
+	РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОбъектыСКомпонентами КАК ОбъектыСКомпонентами
+		ПО РасчетАмортизации.Объект = ОбъектыСКомпонентами.Объект
+{ГДЕ
+	РасчетАмортизации.Организация.*,
+	РасчетАмортизации.Объект.*,
+	(РасчетАмортизации.Период МЕЖДУ НАЧАЛОПЕРИОДА(&amp;КонПериода, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;КонПериода, МЕСЯЦ))}
+
+СГРУППИРОВАТЬ ПО
+	РасчетАмортизации.Организация,
+	РасчетАмортизации.Объект,
+	РасчетАмортизации.КомпонентАмортизации
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект,
+	КомпонентАмортизации,
+	Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РасчетАмортизации.Организация КАК Организация,
+	РасчетАмортизации.Объект КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	РасчетАмортизации.СтоимостьБУ КАК СтоимостьБУ,
+	РасчетАмортизации.ОстаточнаяСтоимостьБУ КАК ОстаточнаяСтоимостьБУ
+ПОМЕСТИТЬ СтоимостьКомпонентовНачалоПериода
+ИЗ
+	ЗаписьПередНачаломПериода КАК ЗаписьПередНачаломПериода
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+		ПО ЗаписьПередНачаломПериода.Период = РасчетАмортизации.Период
+			И ЗаписьПередНачаломПериода.Объект = РасчетАмортизации.Объект
+			И ЗаписьПередНачаломПериода.КомпонентАмортизации = РасчетАмортизации.КомпонентАмортизации
+			И ЗаписьПередНачаломПериода.Организация = РасчетАмортизации.Организация
+{ГДЕ
+	РасчетАмортизации.Организация.*,
+	РасчетАмортизации.Объект.*}
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект,
+	КомпонентАмортизации
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РасчетАмортизации.Организация КАК Организация,
+	РасчетАмортизации.Объект КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	РасчетАмортизации.СтоимостьБУ КАК СтоимостьБУ,
+	РасчетАмортизации.ОстаточнаяСтоимостьБУ - РасчетАмортизации.СуммаАмортизацииБУ КАК ОстаточнаяСтоимостьБУ
+ПОМЕСТИТЬ СтоимостьКомпонентовКонецПериода
+ИЗ
+	ЗаписьПередКонцомПериода КАК ЗаписьПередКонцомПериода
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+		ПО ЗаписьПередКонцомПериода.Период = РасчетАмортизации.Период
+			И ЗаписьПередКонцомПериода.Объект = РасчетАмортизации.Объект
+			И ЗаписьПередКонцомПериода.КомпонентАмортизации = РасчетАмортизации.КомпонентАмортизации
+			И ЗаписьПередКонцомПериода.Организация = РасчетАмортизации.Организация
+{ГДЕ
+	РасчетАмортизации.Организация.*,
+	РасчетАмортизации.Объект.*}
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект,
+	КомпонентАмортизации
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РасчетАмортизации.Организация КАК Организация,
+	РасчетАмортизации.Объект КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	СУММА(РасчетАмортизации.СуммаАмортизацииБУ) КАК СуммаАмортизацииБУ
+ПОМЕСТИТЬ АмортизацияЗаПериод
+ИЗ
+	РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОбъектыСКомпонентами КАК ОбъектыСКомпонентами
+		ПО РасчетАмортизации.Объект = ОбъектыСКомпонентами.Объект
+{ГДЕ
+	РасчетАмортизации.Организация.*,
+	РасчетАмортизации.Объект.*,
+	(РасчетАмортизации.Период МЕЖДУ &amp;НачПериода И &amp;КонПериода)}
+
+СГРУППИРОВАТЬ ПО
+	РасчетАмортизации.Организация,
+	РасчетАмортизации.Объект,
+	РасчетАмортизации.КомпонентАмортизации
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект,
+	КомпонентАмортизации
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.Организация КАК Организация,
+	ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.ОсновноеСредство КАК ОсновноеСредство,
+	ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних.ИнвентарныйНомер КАК ИнвентарныйНомер
+ПОМЕСТИТЬ ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода
+ИЗ
+	РегистрСведений.ПервоначальныеСведенияОСБухгалтерскийУчет.СрезПоследних({(&amp;КонПериода)}, {(Организация).*, (ОсновноеСредство).* КАК Объект}) КАК ПервоначальныеСведенияОСБухгалтерскийУчетСрезПоследних
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СчетаБухгалтерскогоУчетаОССрезПоследних.Организация КАК Организация,
+	СчетаБухгалтерскогоУчетаОССрезПоследних.ОсновноеСредство КАК ОсновноеСредство,
+	СчетаБухгалтерскогоУчетаОССрезПоследних.СчетУчета КАК СчетУчета
+ПОМЕСТИТЬ СчетаБухгалтерскогоУчетаОСНачПериода
+ИЗ
+	РегистрСведений.СчетаБухгалтерскогоУчетаОС.СрезПоследних({(&amp;НачПериода)}, {(Организация).*, (ОсновноеСредство).* КАК Объект}) КАК СчетаБухгалтерскогоУчетаОССрезПоследних
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СчетаБухгалтерскогоУчетаОССрезПоследних.Организация КАК Организация,
+	СчетаБухгалтерскогоУчетаОССрезПоследних.ОсновноеСредство КАК ОсновноеСредство,
+	СчетаБухгалтерскогоУчетаОССрезПоследних.СчетУчета КАК СчетУчета
+ПОМЕСТИТЬ СчетаБухгалтерскогоУчетаОСКонПериода
+ИЗ
+	РегистрСведений.СчетаБухгалтерскогоУчетаОС.СрезПоследних({(&amp;КонПериода)}, {(Организация).*, (ОсновноеСредство).* КАК Объект}) КАК СчетаБухгалтерскогоУчетаОССрезПоследних
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ХозрасчетныйОстатки.Организация КАК Организация,
+	ХозрасчетныйОстатки.Субконто1 КАК ОсновноеСредство,
+	ХозрасчетныйОстатки.СуммаОстаток КАК СтоимостьОстаток
+ПОМЕСТИТЬ ХозрасчетныйОстаткиНачПериода
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(
+			{(&amp;НачПериода)},
+			Счет В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					СчетаБухгалтерскогоУчетаОСНачПериода.СчетУчета
+				ИЗ
+					СчетаБухгалтерскогоУчетаОСНачПериода),
+			ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ОсновныеСредства),
+			{(Организация).*, (Субконто1).* КАК Объект}) КАК ХозрасчетныйОстатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ХозрасчетныйОстатки.Организация КАК Организация,
+	ХозрасчетныйОстатки.Субконто1 КАК ОсновноеСредство,
+	ХозрасчетныйОстатки.СуммаОстаток КАК СтоимостьОстаток
+ПОМЕСТИТЬ ХозрасчетныйОстаткиКонПериода
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(
+			{(&amp;КонПериодаГраница)},
+			Счет В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					СчетаБухгалтерскогоУчетаОСКонПериода.СчетУчета
+				ИЗ
+					СчетаБухгалтерскогоУчетаОСКонПериода),
+			ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ОсновныеСредства),
+			{(Организация).*, (Субконто1).* КАК Объект}) КАК ХозрасчетныйОстатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	АмортизацияЗаПериод.Организация КАК Организация,
+	АмортизацияЗаПериод.Объект КАК Объект,
+	АмортизацияЗаПериод.КомпонентАмортизации КАК КомпонентАмортизации,
+	АмортизацияЗаПериод.СуммаАмортизацииБУ КАК СуммаАмортизации,
+	0 КАК СтоимостьНачалоПериода,
+	0 КАК ОстаточнаяСтоимостьНачалоПериода,
+	0 КАК СтоимостьКонецПериода,
+	0 КАК ОстаточнаяСтоимостьКонецПериода,
+	ЕСТЬNULL(ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.ИнвентарныйНомер, "") КАК ИнвентарныйНомер
+ПОМЕСТИТЬ АмортизацияПоКомпонентамАмортизации
+ИЗ
+	АмортизацияЗаПериод КАК АмортизацияЗаПериод
+		ЛЕВОЕ СОЕДИНЕНИЕ ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода КАК ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода
+		ПО АмортизацияЗаПериод.Объект = ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.ОсновноеСредство
+			И АмортизацияЗаПериод.Организация = ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.Организация
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СтоимостьКомпонентовНачалоПериода.Организация,
+	СтоимостьКомпонентовНачалоПериода.Объект,
+	СтоимостьКомпонентовНачалоПериода.КомпонентАмортизации,
+	0,
+	СтоимостьКомпонентовНачалоПериода.СтоимостьБУ,
+	СтоимостьКомпонентовНачалоПериода.ОстаточнаяСтоимостьБУ,
+	0,
+	0,
+	ЕСТЬNULL(ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.ИнвентарныйНомер, "")
+ИЗ
+	СтоимостьКомпонентовНачалоПериода КАК СтоимостьКомпонентовНачалоПериода
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ХозрасчетныйОстаткиНачПериода КАК ХозрасчетныйОстаткиНачПериода
+		ПО СтоимостьКомпонентовНачалоПериода.Объект = ХозрасчетныйОстаткиНачПериода.ОсновноеСредство
+			И СтоимостьКомпонентовНачалоПериода.Организация = ХозрасчетныйОстаткиНачПериода.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода КАК ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода
+		ПО СтоимостьКомпонентовНачалоПериода.Объект = ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.ОсновноеСредство
+			И СтоимостьКомпонентовНачалоПериода.Организация = ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.Организация
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СтоимостьКомпонентовКонецПериода.Организация,
+	СтоимостьКомпонентовКонецПериода.Объект,
+	СтоимостьКомпонентовКонецПериода.КомпонентАмортизации,
+	0,
+	0,
+	0,
+	СтоимостьКомпонентовКонецПериода.СтоимостьБУ,
+	СтоимостьКомпонентовКонецПериода.ОстаточнаяСтоимостьБУ,
+	ЕСТЬNULL(ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.ИнвентарныйНомер, "")
+ИЗ
+	СтоимостьКомпонентовКонецПериода КАК СтоимостьКомпонентовКонецПериода
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ХозрасчетныйОстаткиКонПериода КАК ХозрасчетныйОстаткиКонПериода
+		ПО СтоимостьКомпонентовКонецПериода.Объект = ХозрасчетныйОстаткиКонПериода.ОсновноеСредство
+			И СтоимостьКомпонентовКонецПериода.Организация = ХозрасчетныйОстаткиКонПериода.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода КАК ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода
+		ПО СтоимостьКомпонентовКонецПериода.Объект = ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.ОсновноеСредство
+			И СтоимостьКомпонентовКонецПериода.Организация = ПервоначальныеСведенияОСБухгалтерскийУчетКонПериода.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АмортизацияПоКомпонентамАмортизации.Организация КАК Организация,
+	АмортизацияПоКомпонентамАмортизации.Объект КАК Объект,
+	АмортизацияПоКомпонентамАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	СУММА(АмортизацияПоКомпонентамАмортизации.СуммаАмортизации) КАК СуммаАмортизации,
+	СУММА(АмортизацияПоКомпонентамАмортизации.СтоимостьНачалоПериода) КАК СтоимостьНачалоПериода,
+	СУММА(АмортизацияПоКомпонентамАмортизации.ОстаточнаяСтоимостьНачалоПериода) КАК ОстаточнаяСтоимостьНачалоПериода,
+	СУММА(АмортизацияПоКомпонентамАмортизации.СтоимостьКонецПериода) КАК СтоимостьКонецПериода,
+	СУММА(АмортизацияПоКомпонентамАмортизации.ОстаточнаяСтоимостьКонецПериода) КАК ОстаточнаяСтоимостьКонецПериода,
+	МАКСИМУМ(АмортизацияПоКомпонентамАмортизации.ИнвентарныйНомер) КАК ИнвентарныйНомер
+ИЗ
+	АмортизацияПоКомпонентамАмортизации КАК АмортизацияПоКомпонентамАмортизации
+{ГДЕ
+	АмортизацияПоКомпонентамАмортизации.Организация.*,
+	АмортизацияПоКомпонентамАмортизации.Объект.*,
+	АмортизацияПоКомпонентамАмортизации.КомпонентАмортизации.*,
+	АмортизацияПоКомпонентамАмортизации.СуммаАмортизации,
+	АмортизацияПоКомпонентамАмортизации.СтоимостьНачалоПериода,
+	АмортизацияПоКомпонентамАмортизации.ОстаточнаяСтоимостьНачалоПериода,
+	АмортизацияПоКомпонентамАмортизации.СтоимостьКонецПериода,
+	АмортизацияПоКомпонентамАмортизации.ОстаточнаяСтоимостьКонецПериода,
+	АмортизацияПоКомпонентамАмортизации.ИнвентарныйНомер}
+
+СГРУППИРОВАТЬ ПО
+	АмортизацияПоКомпонентамАмортизации.Организация,
+	АмортизацияПоКомпонентамАмортизации.Объект,
+	АмортизацияПоКомпонентамАмортизации.КомпонентАмортизации</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ЗатратыНаРемонт</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто3</dataPath>
+				<field>Субконто3</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Объект</dataPath>
+				<field>Объект</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Объект</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ОсновныеСредства</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Валюта</dataPath>
+				<field>Валюта</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КомпонентАмортизации</dataPath>
+				<field>КомпонентАмортизации</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Компонент амортизации</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:DocumentRef.ЗавершениеРемонтаОС</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОсновноеСредство</dataPath>
+				<field>ОсновноеСредство</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ОсновныеСредства</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Объект.ИнвентарныйНомер</dataPath>
+				<field>ИнвентарныйНомер</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Объект.Инвентарный номер</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНачалоПериода</dataPath>
+				<field>СтоимостьНачалоПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость начало периода</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>0</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОстаточнаяСтоимостьНачалоПериода</dataPath>
+				<field>ОстаточнаяСтоимостьНачалоПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Остаточная стоимость начало периода</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>0</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаАмортизации</dataPath>
+				<field>СуммаАмортизации</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма амортизации</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>0</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьКонецПериода</dataPath>
+				<field>СтоимостьКонецПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость конец периода</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОстаточнаяСтоимостьКонецПериода</dataPath>
+				<field>ОстаточнаяСтоимостьКонецПериода</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Остаточная стоимость конец периода</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	РасчетАмортизации.Организация КАК Организация,
+	РасчетАмортизации.Объект КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации КАК КомпонентАмортизации,
+	СУММА(РасчетАмортизации.СуммаАмортизацииБУ) КАК СуммаАмортизации
+ПОМЕСТИТЬ АмортизацияЗаПериод
+ИЗ
+	РегистрСведений.РасчетАмортизации КАК РасчетАмортизации
+ГДЕ
+	РасчетАмортизации.Период МЕЖДУ &amp;НачПериода И &amp;КонПериода
+	И РасчетАмортизации.КомпонентАмортизации ССЫЛКА Документ.ЗавершениеРемонтаОС
+	И НЕ РасчетАмортизации.КомпонентАмортизации = ЗНАЧЕНИЕ(Документ.ЗавершениеРемонтаОС.ПустаяСсылка)
+	И РасчетАмортизации.Активность
+{ГДЕ
+	РасчетАмортизации.Организация.* КАК Организация,
+	РасчетАмортизации.Объект.* КАК Объект,
+	РасчетАмортизации.КомпонентАмортизации.* КАК КомпонентАмортизации}
+
+СГРУППИРОВАТЬ ПО
+	РасчетАмортизации.Организация,
+	РасчетАмортизации.Объект,
+	РасчетАмортизации.КомпонентАмортизации
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Остатки.Организация КАК Организация,
+	Остатки.Субконто1 КАК Объект,
+	Остатки.Субконто2 КАК КомпонентАмортизации,
+	Остатки.СуммаОстаток КАК СтоимостьНачалоПериода,
+	0 КАК СтоимостьКонецПериода,
+	0 КАК АмортизацияНачалоПериода,
+	0 КАК АмортизацияКонецПериода,
+	0 КАК АмортизацияЗаПериод
+ПОМЕСТИТЬ ОстаткиДетальные
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки({(&amp;НачПериода)}, Счет = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ЗатратыНаРемонтОС), &amp;ВидыСубконтоОСРемонты, {(Организация).* КАК Организация, (Субконто1).* КАК Объект, (Субконто2).* КАК КомпонентАмортизации}) КАК Остатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Остатки.Организация,
+	Остатки.Субконто1,
+	Остатки.Субконто2,
+	0,
+	Остатки.СуммаОстаток,
+	0,
+	0,
+	0
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки({(&amp;КонПериодаГраница)}, Счет = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ЗатратыНаРемонтОС), &amp;ВидыСубконтоОСРемонты, {(Организация).* КАК Организация, (Субконто1).* КАК Объект, (Субконто2).* КАК КомпонентАмортизации}) КАК Остатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Остатки.Организация,
+	Остатки.Субконто1,
+	Остатки.Субконто2,
+	0,
+	0,
+	-Остатки.СуммаОстаток,
+	0,
+	0
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки({(&amp;НачПериода)}, Счет = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.АмортизацияЗатратНаРемонтОС), &amp;ВидыСубконтоОСРемонты, {(Организация).* КАК Организация, (Субконто1).* КАК Объект, (Субконто2).* КАК КомпонентАмортизации}) КАК Остатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Остатки.Организация,
+	Остатки.Субконто1,
+	Остатки.Субконто2,
+	0,
+	0,
+	0,
+	-Остатки.СуммаОстаток,
+	0
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки({(&amp;КонПериодаГраница)}, Счет = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.АмортизацияЗатратНаРемонтОС), &amp;ВидыСубконтоОСРемонты, {(Организация).* КАК Организация, (Субконто1).* КАК Объект, (Субконто2).* КАК КомпонентАмортизации}) КАК Остатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	АмортизацияЗаПериод.Организация,
+	АмортизацияЗаПериод.Объект,
+	АмортизацияЗаПериод.КомпонентАмортизации,
+	0,
+	0,
+	0,
+	0,
+	АмортизацияЗаПериод.СуммаАмортизации
+ИЗ
+	АмортизацияЗаПериод КАК АмортизацияЗаПериод
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Остатки.Организация КАК Организация,
+	Остатки.Объект КАК Объект,
+	Остатки.КомпонентАмортизации КАК КомпонентАмортизации,
+	СУММА(Остатки.СтоимостьНачалоПериода) КАК СтоимостьНачалоПериода,
+	СУММА(Остатки.СтоимостьКонецПериода) КАК СтоимостьКонецПериода,
+	СУММА(Остатки.СтоимостьНачалоПериода) - СУММА(Остатки.АмортизацияНачалоПериода) КАК ОстаточнаяСтоимостьНачалоПериода,
+	СУММА(Остатки.СтоимостьКонецПериода) - СУММА(Остатки.АмортизацияКонецПериода) КАК ОстаточнаяСтоимостьКонецПериода,
+	СУММА(Остатки.АмортизацияЗаПериод) КАК АмортизацияЗаПериод
+ПОМЕСТИТЬ Остатки
+ИЗ
+	ОстаткиДетальные КАК Остатки
+
+СГРУППИРОВАТЬ ПО
+	Остатки.Организация,
+	Остатки.Объект,
+	Остатки.КомпонентАмортизации
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Остатки.Организация КАК Организация,
+	Остатки.Объект КАК Объект
+ПОМЕСТИТЬ Объекты
+ИЗ
+	Остатки КАК Остатки
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПервоначальныеСведенияОС.Организация КАК Организация,
+	ПервоначальныеСведенияОС.ОсновноеСредство КАК Объект,
+	ПервоначальныеСведенияОС.ИнвентарныйНомер КАК ИнвентарныйНомер
+ПОМЕСТИТЬ ИнвентарныеНомера
+ИЗ
+	РегистрСведений.ПервоначальныеСведенияОСБухгалтерскийУчет.СрезПоследних(
+			{(&amp;КонПериода)},
+			(Организация, ОсновноеСредство) В
+				(ВЫБРАТЬ
+					Объекты.Организация,
+					Объекты.Объект
+				ИЗ
+					Объекты КАК Объекты)) КАК ПервоначальныеСведенияОС
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Остатки.Организация КАК Организация,
+	Остатки.Объект КАК Объект,
+	ЕСТЬNULL(ИнвентарныеНомера.ИнвентарныйНомер, Остатки.Объект.Код) КАК ИнвентарныйНомер,
+	Остатки.КомпонентАмортизации КАК КомпонентАмортизации,
+	Остатки.СтоимостьНачалоПериода КАК СтоимостьНачалоПериода,
+	Остатки.СтоимостьКонецПериода КАК СтоимостьКонецПериода,
+	Остатки.ОстаточнаяСтоимостьНачалоПериода КАК ОстаточнаяСтоимостьНачалоПериода,
+	Остатки.ОстаточнаяСтоимостьКонецПериода КАК ОстаточнаяСтоимостьКонецПериода,
+	Остатки.АмортизацияЗаПериод КАК СуммаАмортизации
+ИЗ
+	Остатки КАК Остатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ИнвентарныеНомера КАК ИнвентарныеНомера
+		ПО Остатки.Организация = ИнвентарныеНомера.Организация
+			И Остатки.Объект = ИнвентарныеНомера.Объект</query>
+		</item>
+	</dataSet>
+	<totalField>
+		<dataPath>ОстаточнаяСтоимостьКонецПериода</dataPath>
+		<expression>Сумма(ОстаточнаяСтоимостьКонецПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстаточнаяСтоимостьНачалоПериода</dataPath>
+		<expression>Сумма(ОстаточнаяСтоимостьНачалоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьКонецПериода</dataPath>
+		<expression>Сумма(СтоимостьКонецПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНачалоПериода</dataPath>
+		<expression>Сумма(СтоимостьНачалоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаАмортизации</dataPath>
+		<expression>Сумма(СуммаАмортизации)</expression>
+	</totalField>
+	<parameter>
+		<name>КонПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кон периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нач периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидыСубконтоОСРемонты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Виды субконто ОС и Ремонты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ОсновныеСредства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.РемонтыОС</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонПериодаГраница</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кон периода граница</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>КомпонентыАмортизацииОС</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Компоненты амортизации ОС</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Объект</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Объект.ИнвентарныйНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Together</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КомпонентАмортизации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:title>На начало периода</dcsset:title>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьНачалоПериода</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Первоначальная стоимость</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОстаточнаяСтоимостьНачалоПериода</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаточная стоимость</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:placement>Horizontally</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:title>На конец периода</dcsset:title>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьКонецПериода</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Первоначальная стоимость</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОстаточнаяСтоимостьКонецПериода</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаточная стоимость</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:placement>Horizontally</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаАмортизации</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Объект</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ОсновныеСредства.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Выделять отрицательные</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">МакетОформленияОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>ГруппировкаОбъект</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Объект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КомпонентАмортизации</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+								<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+							</dcscor:item>
+						</dcsset:outputParameters>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

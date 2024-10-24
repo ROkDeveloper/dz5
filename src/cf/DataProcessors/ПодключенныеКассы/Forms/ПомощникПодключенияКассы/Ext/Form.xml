@@ -1,0 +1,2075 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Добавить кассу</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаНазад" id="351">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Назад</CommandName>
+				<ExtendedTooltip name="ФормаНазадРасширеннаяПодсказка" id="352"/>
+			</Button>
+			<Button name="ФормаДалее" id="50">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<Width>40</Width>
+				<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+				<CommandName>Form.Command.Далее</CommandName>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+				<ExtendedTooltip name="ФормаДалееРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Pages name="ГруппаСтраницы" id="112">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="113"/>
+					<ChildItems>
+						<Page name="ГруппаСпособПодключения" id="308">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа способ подключения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа способ подключения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСпособПодключенияРасширеннаяПодсказка" id="309"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаККТ" id="310">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ККТ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ККТ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаККТРасширеннаяПодсказка" id="311"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияККТ" id="312">
+											<Width>7</Width>
+											<Height>3</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация ККТ</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияККТКонтекстноеМеню" id="313"/>
+											<ExtendedTooltip name="ДекорацияККТРасширеннаяПодсказка" id="314"/>
+										</PictureDecoration>
+										<RadioButtonField name="ТипПодключенияККТ" id="315">
+											<DataPath>ТипПодключения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Касса подключена к этому компьютеру</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ТипПодключенияККТКонтекстноеМеню" id="316"/>
+											<ExtendedTooltip name="ТипПодключенияККТРасширеннаяПодсказка" id="317">
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Чеки вводится в программе и пробиваются на подключенной кассе.
+&lt;link https://v8.1c.ru/tekhnologii/standartnye-biblioteki/1s-biblioteka-podklyuchaemogo-oborudovaniya/kkt-s-peredachey-dannykh/sertifitsirovannye-i-podderzhivaemye-modeli-oborudovaniya-kkt/&gt;Список сертифицированного оборудования&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипПодключенияПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОФД" id="326">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ОФД</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ОФД</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОФДРасширеннаяПодсказка" id="327"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияОФД" id="328">
+											<Width>7</Width>
+											<Height>3</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация ОФД</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияОФДКонтекстноеМеню" id="329"/>
+											<ExtendedTooltip name="ДекорацияОФДРасширеннаяПодсказка" id="330"/>
+										</PictureDecoration>
+										<RadioButtonField name="ТипПодключенияОФД" id="331">
+											<DataPath>ТипПодключения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Любая касса, подключеная к Астрал.ОФД </v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">9</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ТипПодключенияОФДКонтекстноеМеню" id="332"/>
+											<ExtendedTooltip name="ТипПодключенияОФДРасширеннаяПодсказка" id="333">
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Загрузка продаж от оператора фискальных данных
+&lt;link https://portal.1c.ru/applications/1C-OFD-receipt&gt;Подробнее&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипПодключенияПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаМК" id="334">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа МК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа МК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаМКРасширеннаяПодсказка" id="335"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияМК" id="336">
+											<Width>7</Width>
+											<Height>3</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация МК</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияМККонтекстноеМеню" id="337"/>
+											<ExtendedTooltip name="ДекорацияМКРасширеннаяПодсказка" id="338"/>
+										</PictureDecoration>
+										<RadioButtonField name="ТипПодключенияМК" id="339">
+											<DataPath>ТипПодключения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Касса подключена к смартфону курьера</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">4</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ТипПодключенияМККонтекстноеМеню" id="340"/>
+											<ExtendedTooltip name="ТипПодключенияМКРасширеннаяПодсказка" id="341">
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Чеки вводятся в мобильном приложении 1C:Мобильная касса и после закрытия смены продажи автоматически загружаются в программу.
+&lt;link https://1c-prosto.ru/mobile-kassa&gt;Подробнее&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипПодключенияПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОффлайн" id="318">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа оффлайн</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа оффлайн</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОффлайнРасширеннаяПодсказка" id="319"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияОффлайн" id="320">
+											<Width>7</Width>
+											<Height>3</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация оффлайн</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияОффлайнКонтекстноеМеню" id="321"/>
+											<ExtendedTooltip name="ДекорацияОффлайнРасширеннаяПодсказка" id="322"/>
+										</PictureDecoration>
+										<RadioButtonField name="ТипПодключенияОффлайн" id="323">
+											<DataPath>ТипПодключения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Касса работает без подключения к компьютеру</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">5</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ТипПодключенияОффлайнКонтекстноеМеню" id="324"/>
+											<ExtendedTooltip name="ТипПодключенияОффлайнРасширеннаяПодсказка" id="325">
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В торговой точке установлена умная касса, терминал или POS-система, в которой вводятся чеки. После закрытия смены продажи автоматически загружаются в программу.
+&lt;link https://v8.1c.ru/tekhnologii/standartnye-biblioteki/1s-biblioteka-podklyuchaemogo-oborudovaniya/kkm-podklyuchaemye-v-rezhime-oflayn/sertifitsirovannye-i-podderzhivaemye-modeli-kkm-podklyuchaemykh-v-rezhime-oflayn/&gt;Сертифицированные протоколы обмена&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ТипПодключенияПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПредупреждение" id="381">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа предупреждение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа предупреждение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ExtendedTooltip name="ГруппаПредупреждениеРасширеннаяПодсказка" id="382"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПредупреждение" id="395">
+											<Width>7</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация предупреждение</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВниманиеКрасноБелое</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="396"/>
+											<ExtendedTooltip name="ДекорацияПредупреждениеРасширеннаяПодсказка" id="397"/>
+										</PictureDecoration>
+										<Pages name="ГруппаСтраницыПредупреждение" id="383">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы предупреждение</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы предупреждение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="ГруппаСтраницыПредупреждениеРасширеннаяПодсказка" id="384"/>
+											<ChildItems>
+												<Page name="ГруппаВебКлиент" id="385">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа веб клиент</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа веб клиент</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаВебКлиентРасширеннаяПодсказка" id="386"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОписаниеВебКлиент" id="398">
+															<TextColor>style:ПоясняющийТекст</TextColor>
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;colorstyle -3&gt;Кассовым оборудованием нельзя управлять из браузера. Для пробития чеков на кассе, подключенной к компьютеру, нужно установить тонкий клиент "1С:Предприятия".&lt;/&gt;
+&lt;link https://1cfresh.com/articles/thin&gt;Где взять и как установить тонкий клиент&lt;/&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияОписаниеВебКлиентКонтекстноеМеню" id="399"/>
+															<ExtendedTooltip name="ДекорацияОписаниеВебКлиентРасширеннаяПодсказка" id="400"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаТипЦен" id="390">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа тип цен</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа тип цен</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаТипЦенРасширеннаяПодсказка" id="391"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОписаниеТипЦен" id="392">
+															<Height>4</Height>
+															<TextColor>style:ПоясняющийТекст</TextColor>
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;colorstyle -3&gt;Для работы с умной кассой, не подключенной компьютеру, нужно создать &lt;/&gt;&lt;link e1cib/list/Справочник.ТипыЦенНоменклатуры&gt;Тип цен&lt;/&gt;&lt;colorstyle -3&gt; и указать его в свойствах склада&lt;/&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Center</VerticalAlign>
+															<ContextMenu name="ДекорацияОписаниеТипЦенКонтекстноеМеню" id="393"/>
+															<ExtendedTooltip name="ДекорацияОписаниеТипЦенРасширеннаяПодсказка" id="394"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаТипОборудования" id="114">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа тип оборудования</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа тип оборудования</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТипОборудованияРасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВыборТипаОборудования" id="258">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выбор типа оборудования</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выбор типа оборудования</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВыборТипаОборудованияРасширеннаяПодсказка" id="259"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаMSPOS" id="284">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа MSPOS</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа MSPOS</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаMSPOSРасширеннаяПодсказка" id="285"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияMSPOS" id="286">
+													<Width>7</Width>
+													<Height>3</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация MSPOS</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Abs>Picture.png</xr:Abs>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияMSPOSКонтекстноеМеню" id="287"/>
+													<ExtendedTooltip name="ДекорацияMSPOSРасширеннаяПодсказка" id="288"/>
+												</PictureDecoration>
+												<RadioButtonField name="ТипПодключенияMSPOS" id="289">
+													<DataPath>ТипПодключения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>MSPOS с 1С:Мобильная касса</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">2</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ТипПодключенияMSPOSКонтекстноеМеню" id="290"/>
+													<ExtendedTooltip name="ТипПодключенияMSPOSРасширеннаяПодсказка" id="291">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обмен с терминалами, под управлением 1С:Мобильная касса
+&lt;link https://1c-prosto.ru/mspos&gt;Подробнее&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаSIGMA" id="276">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа SIGMA</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа SIGMA</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаSIGMAРасширеннаяПодсказка" id="277"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияSIGMA" id="278">
+													<Width>7</Width>
+													<Height>3</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация SIGMA</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Abs>Picture.png</xr:Abs>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияSIGMAКонтекстноеМеню" id="279"/>
+													<ExtendedTooltip name="ДекорацияSIGMAРасширеннаяПодсказка" id="280"/>
+												</PictureDecoration>
+												<RadioButtonField name="ТипПодключенияSIGMA" id="281">
+													<DataPath>ТипПодключения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>SIGMA с 1С:Мобильная касса</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">3</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ТипПодключенияSIGMAКонтекстноеМеню" id="282"/>
+													<ExtendedTooltip name="ТипПодключенияSIGMAРасширеннаяПодсказка" id="283">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обмен с терминалами, под управлением 1С:Мобильная касса
+&lt;link https://1c-prosto.ru/sigma&gt;Подробнее&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЭвотор" id="292">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа эвотор</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа эвотор</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЭвоторРасширеннаяПодсказка" id="293"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияЭвотор" id="294">
+													<Width>7</Width>
+													<Height>3</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация эвотор</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Abs>Picture.png</xr:Abs>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияЭвоторКонтекстноеМеню" id="295"/>
+													<ExtendedTooltip name="ДекорацияЭвоторРасширеннаяПодсказка" id="296"/>
+												</PictureDecoration>
+												<RadioButtonField name="ТипПодключенияЭвотор" id="297">
+													<DataPath>ТипПодключения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Обмен с сервисом Эвотор</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">5</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ТипПодключенияЭвоторКонтекстноеМеню" id="298"/>
+													<ExtendedTooltip name="ТипПодключенияЭвоторРасширеннаяПодсказка" id="299">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Для интеграции с кассовыми терминалами Эвотор требуется указать токен, полученный в приложении &lt;link https://market.evotor.ru/store/apps/bd84ea6e-c4b8-438a-b2be-efe62b9da912&gt;1С-Эвотор&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАтол" id="263">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа атол</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа атол</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАтолРасширеннаяПодсказка" id="264"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияАтол" id="265">
+													<Width>7</Width>
+													<Height>3</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация атол</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Abs>Picture.png</xr:Abs>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияАтолКонтекстноеМеню" id="266"/>
+													<ExtendedTooltip name="ДекорацияАтолРасширеннаяПодсказка" id="267"/>
+												</PictureDecoration>
+												<RadioButtonField name="ТипПодключенияАтол" id="260">
+													<DataPath>ТипПодключения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>POS-система Frontol</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">7</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ТипПодключенияАтолКонтекстноеМеню" id="261"/>
+													<ExtendedTooltip name="ТипПодключенияАтолРасширеннаяПодсказка" id="262">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Подключение POS-систем под управлением Frontol
+&lt;link https://v8.1c.ru/tekhnologii/standartnye-biblioteki/1s-biblioteka-podklyuchaemogo-oborudovaniya/kkm-podklyuchaemye-v-rezhime-oflayn/sertifitsirovannye-i-podderzhivaemye-modeli-kkm-podklyuchaemykh-v-rezhime-oflayn/&gt;Сертифицированные протоколы обмена&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаШтрих" id="268">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа штрих</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа штрих</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаШтрихРасширеннаяПодсказка" id="269"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияШтрих" id="270">
+													<Width>7</Width>
+													<Height>3</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация штрих</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Abs>Picture.png</xr:Abs>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияШтрихКонтекстноеМеню" id="271"/>
+													<ExtendedTooltip name="ДекорацияШтрихРасширеннаяПодсказка" id="272"/>
+												</PictureDecoration>
+												<RadioButtonField name="ТипПодключенияШтрих" id="273">
+													<DataPath>ТипПодключения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>POS-система Штрих-М:Кассир</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">8</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ТипПодключенияШтрихКонтекстноеМеню" id="274"/>
+													<ExtendedTooltip name="ТипПодключенияШтрихРасширеннаяПодсказка" id="275">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Подключение POS-систем под управлением Штрих-М:Кассир
+&lt;link https://v8.1c.ru/tekhnologii/standartnye-biblioteki/1s-biblioteka-podklyuchaemogo-oborudovaniya/kkm-podklyuchaemye-v-rezhime-oflayn/sertifitsirovannye-i-podderzhivaemye-modeli-kkm-podklyuchaemykh-v-rezhime-oflayn/&gt;Сертифицированные протоколы обмена&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаНастройкаОборудования" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка оборудования</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка оборудования</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастройкаОборудованияРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<Pages name="ГруппаСтраницыНастройкаОборудования" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа страницы настройка оборудования</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа страницы настройка оборудования</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ГруппаСтраницыНастройкаОборудованияРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<Page name="ГруппаНастройкаПодключаемоеОборудование" id="120">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройка подключаемое оборудование</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройка подключаемое оборудование</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаНастройкаПодключаемоеОборудованиеРасширеннаяПодсказка" id="121"/>
+											<ChildItems>
+												<InputField name="Организация" id="126">
+													<DataPath>Организация</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Касса пробивает чеки от имени этой организации</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ОрганизацияКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="128"/>
+												</InputField>
+												<RadioButtonField name="КассаБухгалтерии" id="195">
+													<DataPath>КассаБухгалтерии</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Торговая точка - касса установлена в конкретном магазине (складе) для регистрации продаж.
+Бухгалтерия - касса установлена в бухгалтерии для чеков по кассовым ордерам, безналичным оплатам и оптовым отгрузочным документам
+</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>RadioButtons</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Касса бухгалтерии</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="КассаБухгалтерииКонтекстноеМеню" id="196"/>
+													<ExtendedTooltip name="КассаБухгалтерииРасширеннаяПодсказка" id="197">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Касса установлена в бухгалтерии для оформления чеков по кассовым ордерам, безналичным оплатам и оптовым отгрузочным документам.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">КассаБухгалтерииПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<RadioButtonField name="КассаМагазина" id="162">
+													<DataPath>КассаБухгалтерии</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Место установки</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Торговая точка - касса установлена в конкретном магазине (складе) для регистрации продаж.
+Бухгалтерия - касса установлена в бухгалтерии для чеков по кассовым ордерам, безналичным оплатам и оптовым отгрузочным документам
+</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<RadioButtonType>RadioButtons</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Касса магазина</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="КассаМагазинаКонтекстноеМеню" id="163"/>
+													<ExtendedTooltip name="КассаМагазинаРасширеннаяПодсказка" id="164">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Касса установлена в магазине (на складе) для регистрации розничных продаж.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">КассаБухгалтерииПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<InputField name="Склад" id="129">
+													<DataPath>Склад</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Магазин или торговая точка в которой установлена касса</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="СкладКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="131"/>
+												</InputField>
+												<InputField name="ПроизводительКассовогоАппарата" id="132">
+													<DataPath>ПроизводительКассовогоАппарата</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Марка кассы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<Width>30</Width>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ПроизводительКассовогоАппаратаКонтекстноеМеню" id="133"/>
+													<ExtendedTooltip name="ПроизводительКассовогоАппаратаРасширеннаяПодсказка" id="134"/>
+													<Events>
+														<Event name="OnChange">ПроизводительКассовогоАппаратаПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаНастройкаМобильнаяКасса" id="122">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройка мобильная касса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройка мобильная касса</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаНастройкаМобильнаяКассаРасширеннаяПодсказка" id="123"/>
+											<ChildItems>
+												<InputField name="ОрганизацияМК" id="206">
+													<DataPath>Организация</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Касса пробивает чеки от имени этой организации</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ОрганизацияМККонтекстноеМеню" id="207"/>
+													<ExtendedTooltip name="ОрганизацияМКРасширеннаяПодсказка" id="208"/>
+												</InputField>
+												<InputField name="СкладМК" id="209">
+													<DataPath>Склад</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Магазин или торговая точка в которой установлена касса</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="СкладМККонтекстноеМеню" id="210"/>
+													<ExtendedTooltip name="СкладМКРасширеннаяПодсказка" id="211"/>
+												</InputField>
+												<InputField name="КаталогФайловогоОбмена" id="183">
+													<DataPath>КаталогФайловогоОбмена</DataPath>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<ChoiceButton>true</ChoiceButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Локальный или каталог Яндекс.Диск</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="КаталогФайловогоОбменаКонтекстноеМеню" id="184"/>
+													<ExtendedTooltip name="КаталогФайловогоОбменаРасширеннаяПодсказка" id="185">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Для обмена через Яндекс.Диск нужно установить &lt;link https://360.yandex.ru/disk/download/&gt;приложение&lt;/&gt; и для выбранной папки Яндекс.Диска установить "Сохранить на компьютере".</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="StartChoice">КаталогФайловогоОбменаНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ИдентификаторМК" id="186">
+													<DataPath>ИдентификаторМК</DataPath>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Уникальный набор цифр, например, номер ККТ</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ИдентификаторМККонтекстноеМеню" id="187"/>
+													<ExtendedTooltip name="ИдентификаторМКРасширеннаяПодсказка" id="188">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Идентификатор приложения указываемый при настройке синхронизации в программе 1С:Мобильная касса на устройстве.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаНастройкаОффлайнОборудование" id="124">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройка мобильная касса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройка мобильная касса</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаНастройкаОффлайнОборудованиеРасширеннаяПодсказка" id="125"/>
+											<ChildItems>
+												<InputField name="ОрганизацияОффлайн" id="226">
+													<DataPath>Организация</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Касса пробивает чеки от имени этой организации</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ОрганизацияОффлайнКонтекстноеМеню" id="227"/>
+													<ExtendedTooltip name="ОрганизацияОффлайнРасширеннаяПодсказка" id="228"/>
+												</InputField>
+												<InputField name="СкладОффлайн" id="229">
+													<DataPath>Склад</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Магазин или торговая точка в которой установлена касса</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="СкладОффлайнКонтекстноеМеню" id="230"/>
+													<ExtendedTooltip name="СкладОффлайнРасширеннаяПодсказка" id="231"/>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаРезультат" id="189">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа результат</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа результат</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="190"/>
+							<ChildItems>
+								<Pages name="ГруппаРезультатСтраницы" id="191">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа результат страницы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа результат страницы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ГруппаРезультатСтраницыРасширеннаяПодсказка" id="192"/>
+									<ChildItems>
+										<Page name="ГруппаРезультатПодключаемоеОборудование" id="198">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат подключаемое оборудование</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат подключаемое оборудование</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаРезультатПодключаемоеОборудованиеРасширеннаяПодсказка" id="199"/>
+											<ChildItems>
+												<LabelField name="ПредставлениеПодключаемогоОборудования" id="203">
+													<DataPath>ПредставлениеПодключаемогоОборудования</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создан экземпляр оборудования</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Hiperlink>true</Hiperlink>
+													<ContextMenu name="ПредставлениеПодключаемогоОборудованияКонтекстноеМеню" id="204"/>
+													<ExtendedTooltip name="ПредставлениеПодключаемогоОборудованияРасширеннаяПодсказка" id="205"/>
+													<Events>
+														<Event name="Click">ПредставлениеПодключаемогоОборудованияНажатие</Event>
+													</Events>
+												</LabelField>
+												<UsualGroup name="Группа3" id="222">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создан экземпляр оборудования</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="223"/>
+													<ChildItems>
+														<Button name="НастроитьПодключаемоеОборудование" id="154">
+															<Type>UsualButton</Type>
+															<Width>30</Width>
+															<CommandName>Form.Command.НастроитьПодключаемоеОборудование</CommandName>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Настроить параметры подключения</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="НастроитьПодключаемоеОборудованиеРасширеннаяПодсказка" id="155"/>
+														</Button>
+														<LabelDecoration name="ДекорацияОшибкаНастройки1" id="418">
+															<Height>1</Height>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Описание ошибки</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="ДекорацияОшибкаНастройки1КонтекстноеМеню" id="419"/>
+															<ExtendedTooltip name="ДекорацияОшибкаНастройки1РасширеннаяПодсказка" id="420"/>
+															<Events>
+																<Event name="Click">ДекорацияОшибкаНастройкиНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="Декорация6" id="421">
+													<ContextMenu name="Декорация6КонтекстноеМеню" id="422"/>
+													<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="423"/>
+												</LabelDecoration>
+												<LabelDecoration name="Декорация4" id="156">
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Если у вас есть сканер штрих-кода или экваринговый терминал, их нужно добавить в &lt;link e1cib/list/Справочник.ПодключаемоеОборудование&gt;Подключаемое оборудование&lt;/&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация4КонтекстноеМеню" id="157"/>
+													<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="158"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаРезультатМобильнаяКасса" id="193">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат мобильная касса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат мобильная касса</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРезультатМобильнаяКассаРасширеннаяПодсказка" id="194"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияФинишМК1" id="430">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Теперь надо завершить настройку подключения в приложении 1С:Мобильная касса.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияФинишМК1КонтекстноеМеню" id="431"/>
+													<ExtendedTooltip name="ДекорацияФинишМК1РасширеннаяПодсказка" id="432"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаQRКодНастроекМК" id="173">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа QRКод настроек МК</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа QRКод настроек МК</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаQRКодНастроекМКРасширеннаяПодсказка" id="174"/>
+													<ChildItems>
+														<UsualGroup name="Группа7" id="171">
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="172"/>
+															<ChildItems>
+																<UsualGroup name="Группа8" id="175">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="176"/>
+																	<ChildItems>
+																		<LabelDecoration name="НадписьПодсказкаМК" id="177">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>&lt;Подсказка 1С:Мобильная касса&gt;</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="НадписьПодсказкаМККонтекстноеМеню" id="178"/>
+																			<ExtendedTooltip name="НадписьПодсказкаМКРасширеннаяПодсказка" id="179"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+																<PictureField name="QRКодНастроекМК" id="180">
+																	<DataPath>АдресКартинкиQRКодНастроек</DataPath>
+																	<TitleLocation>None</TitleLocation>
+																	<GroupVerticalAlign>Top</GroupVerticalAlign>
+																	<Width>17</Width>
+																	<Height>7</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<VerticalStretch>false</VerticalStretch>
+																	<PictureSize>AutoSizeIgnoreScale</PictureSize>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Здесь должен быть QR-код настроек подключения</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Border width="1">
+																		<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+																	</Border>
+																	<ContextMenu name="QRКодНастроекМККонтекстноеМеню" id="181"/>
+																	<ExtendedTooltip name="QRКодНастроекМКРасширеннаяПодсказка" id="182"/>
+																</PictureField>
+															</ChildItems>
+														</UsualGroup>
+														<LabelDecoration name="Декорация7" id="435">
+															<Height>2</Height>
+															<ContextMenu name="Декорация7КонтекстноеМеню" id="436"/>
+															<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="437"/>
+														</LabelDecoration>
+														<Button name="ПечатьНастроекМК" id="433">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ПечатьНастроекМК</CommandName>
+															<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+															<ExtendedTooltip name="ПечатьНастроекМКРасширеннаяПодсказка" id="434">
+																<Width>32</Width>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Распечатайте настройки и передайте тому, кто будет настраивать 1С:Мобильную кассу</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаРезультатОффлайнОборудование" id="237">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат подключаемое оборудование</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат подключаемое оборудование</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаРезультатОффлайнОборудованиеРасширеннаяПодсказка" id="238"/>
+											<ChildItems>
+												<UsualGroup name="Группа6" id="239">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создан экземпляр оборудования</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="240"/>
+													<ChildItems>
+														<LabelField name="ПредставлениеПодключаемогоОборудования1" id="241">
+															<DataPath>ПредставлениеПодключаемогоОборудования</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Создан экземпляр оборудования</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<Hiperlink>true</Hiperlink>
+															<ContextMenu name="ПредставлениеПодключаемогоОборудования1КонтекстноеМеню" id="242"/>
+															<ExtendedTooltip name="ПредставлениеПодключаемогоОборудования1РасширеннаяПодсказка" id="243"/>
+															<Events>
+																<Event name="Click">ПредставлениеПодключаемогоОборудования1Нажатие</Event>
+															</Events>
+														</LabelField>
+														<UsualGroup name="Группа33" id="401">
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа33РасширеннаяПодсказка" id="402"/>
+															<ChildItems>
+																<Button name="НастроитьОффлайнОборудование" id="244">
+																	<Type>UsualButton</Type>
+																	<Representation>PictureAndText</Representation>
+																	<Width>30</Width>
+																	<CommandName>Form.Command.НастроитьОффлайнОборудование</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Настроить параметры подключения</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="НастроитьОффлайнОборудованиеРасширеннаяПодсказка" id="245"/>
+																</Button>
+																<LabelDecoration name="ДекорацияОшибкаНастройки" id="403">
+																	<Height>1</Height>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Описание ошибки</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Hyperlink>true</Hyperlink>
+																	<ContextMenu name="ДекорацияОшибкаНастройкиКонтекстноеМеню" id="404"/>
+																	<ExtendedTooltip name="ДекорацияОшибкаНастройкиРасширеннаяПодсказка" id="405"/>
+																	<Events>
+																		<Event name="Click">ДекорацияОшибкаНастройкиНажатие</Event>
+																	</Events>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<LabelDecoration name="Декорация5" id="424">
+															<ContextMenu name="Декорация5КонтекстноеМеню" id="425"/>
+															<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="426"/>
+														</LabelDecoration>
+														<Button name="НастроитьВидыОплатыОффланОборудования" id="246">
+															<Type>UsualButton</Type>
+															<Width>30</Width>
+															<CommandName>Form.Command.НастроитьВидыОплатыОффланОборудования</CommandName>
+															<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+															<ExtendedTooltip name="НастроитьВидыОплатыОффланОборудованияРасширеннаяПодсказка" id="247">
+																<Width>32</Width>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если касса поддерживает несколько видов оплаты, например наличными и картой, нужно указать какие виды оплаты им соответствуют в программе</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</Button>
+														<Button name="КодыТоваровОффлайнОборудования" id="253">
+															<Type>Hyperlink</Type>
+															<Visible>false</Visible>
+															<Width>30</Width>
+															<CommandName>Form.Command.КодыТоваровОффлайнОборудования</CommandName>
+															<ExtendedTooltip name="КодыТоваровОффлайнОборудованияРасширеннаяПодсказка" id="254"/>
+														</Button>
+														<LabelDecoration name="Декорация12" id="427">
+															<ContextMenu name="Декорация12КонтекстноеМеню" id="428"/>
+															<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="429"/>
+														</LabelDecoration>
+														<Pages name="ГруппаОффлайнВыгрузка" id="406">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа оффлайн выгрузка</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа оффлайн выгрузка</v8:content>
+																</v8:item>
+															</ToolTip>
+															<PagesRepresentation>None</PagesRepresentation>
+															<ExtendedTooltip name="ГруппаОффлайнВыгрузкаРасширеннаяПодсказка" id="407"/>
+															<ChildItems>
+																<Page name="ГруппаОффлайнВыгрузкаКоманда" id="408">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа оффлайн выгрузка команда</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа оффлайн выгрузка команда</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>AlwaysHorizontal</Group>
+																	<ExtendedTooltip name="ГруппаОффлайнВыгрузкаКомандаРасширеннаяПодсказка" id="409"/>
+																	<ChildItems>
+																		<Button name="ПервоначальнаяВыгрузкаОффлайнОборудование" id="251">
+																			<Type>UsualButton</Type>
+																			<Representation>PictureAndText</Representation>
+																			<Width>30</Width>
+																			<CommandName>Form.Command.ПервоначальнаяВыгрузкаОффлайнОборудование</CommandName>
+																			<Font ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+																			<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+																			<ExtendedTooltip name="ПервоначальнаяВыгрузкаОффлайнОборудованиеРасширеннаяПодсказка" id="252">
+																				<Width>30</Width>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если товары уже настроены и цены установлены можно выгрузить товары в кассу или сделать это позже из списка подключенных касс</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</Button>
+																		<LabelDecoration name="ДекорацияОшибкаВыгрузкиПрайса" id="360">
+																			<Height>1</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Описание ошибки</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="ДекорацияОшибкаВыгрузкиПрайсаКонтекстноеМеню" id="361"/>
+																			<ExtendedTooltip name="ДекорацияОшибкаВыгрузкиПрайсаРасширеннаяПодсказка" id="362"/>
+																			<Events>
+																				<Event name="Click">ДекорацияОшибкаВыгрузкиПрайсаНажатие</Event>
+																			</Events>
+																		</LabelDecoration>
+																	</ChildItems>
+																</Page>
+																<Page name="ГруппаОффлайнВыгрузкаГотово" id="410">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа оффлайн выгрузка готово</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа оффлайн выгрузка готово</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ExtendedTooltip name="ГруппаОффлайнВыгрузкаГотовоРасширеннаяПодсказка" id="411"/>
+																	<ChildItems>
+																		<LabelDecoration name="Декорация3" id="415">
+																			<ContextMenu name="Декорация3КонтекстноеМеню" id="416"/>
+																			<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="417"/>
+																		</LabelDecoration>
+																		<LabelDecoration name="Декорация2" id="412">
+																			<Title formatted="true">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>&lt;img 0:f6aa5a90-d472-412b-8615-40998cecc96a/&gt; Настройки, товары и цены успешно выгружены</v8:content>
+																				</v8:item>
+																			</Title>
+																			<GroupVerticalAlign>Center</GroupVerticalAlign>
+																			<ContextMenu name="Декорация2КонтекстноеМеню" id="413"/>
+																			<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="414"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</Page>
+															</ChildItems>
+														</Pages>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаРезультатЗагрузкаИзОФД" id="353">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат загрузка из ОФД</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат загрузка из ОФД</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаРезультатЗагрузкаИзОФДРасширеннаяПодсказка" id="354"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация1" id="355">
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;img :f6aa5a90-d472-412b-8615-40998cecc96a:00000000-0000-0000-0000-000000000000/&gt; Настройка выполнена</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация1КонтекстноеМеню" id="356"/>
+													<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="357"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТипПодключения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Склад" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПодключаемоеОборудование" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключаемое оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExchangePlanRef.СинхронизацияДанныхЧерезУниверсальныйФормат</v8:Type>
+				<v8:Type>cfg:CatalogRef.ОфлайнОборудование</v8:Type>
+				<v8:Type>cfg:CatalogRef.ПодключаемоеОборудование</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроизводительКассовогоАппарата" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель кассового аппарата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КассаБухгалтерии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Касса бухгалтерии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресИнтернетСервис" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес интернет сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресКартинкиQRКодНастроек" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес картинки QRКод настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбменЧерезФайл" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен через файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогФайловогоОбмена" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИдентификаторМК" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>16</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПредставлениеПодключаемогоОборудования" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление подключаемого оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаНастроекДляПриемника" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла настроек для приемника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбработчикОфлайнОборудования" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработчик офлайн оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ОбработчикиОфлайнОборудования</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьДанныеИзОФД" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные из ОФД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачалаЗагрузкиИзОФД" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала загрузки из ОФД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоВебКлиент" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это веб клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтключенТипЦен" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключен тип цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеОшибкиВыгрузкиПрайса" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание ошибки выгрузки прайса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеОшибкиНастройкиОборудования" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание ошибки настройки оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьПодключаемоеОборудование" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать подключаемое оборудование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьПодключаемоеОборудование</Action>
+		</Command>
+		<Command name="НастроитьОффлайнОборудование" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать подключаемое оборудование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьОффлайнОборудование</Action>
+		</Command>
+		<Command name="НастроитьВидыОплатыОффланОборудования" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виды оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виды оплаты оффлан оборудования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВидыОплатыОффланОборудования</Action>
+		</Command>
+		<Command name="ПервоначальнаяВыгрузкаОффлайнОборудование" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить прайс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить товары и цены в кассу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПервоначальнаяВыгрузкаОффлайнОборудование</Action>
+		</Command>
+		<Command name="КодыТоваровОффлайнОборудования" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды товаров оффлайн оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды товаров оффлайн оборудования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КодыТоваровОффлайнОборудования</Action>
+		</Command>
+		<Command name="Далее" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Далее</Action>
+		</Command>
+		<Command name="Назад" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+		<Command name="ПечатьНастроекМК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать настройки 1С:Мобильная касса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать настроек МК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьНастроекМК</Action>
+		</Command>
+	</Commands>
+</Form>

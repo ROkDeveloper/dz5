@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Статус подписи</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаПроверкиШапка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа проверки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupVerticalAlign>Top</GroupVerticalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Top</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ExtendedTooltip name="ГруппаПроверкиШапкаРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<PictureDecoration name="Логотип1С" id="8">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логотип1 С</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Лого1С</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Логотип1СКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="Логотип1СРасширеннаяПодсказка" id="10"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаЗаголовкиОбщие" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа заголовки общие</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗаголовкиОбщиеРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<LabelDecoration name="ЗаголовокПредставлениеПроверки" id="13">
+							<TextColor>style:ЦветРазделаПанелиФункций</TextColor>
+							<Font ref="style:УвеличенныйШрифтБЭД" height="12" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подпись верна</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаголовокПредставлениеПроверкиКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ЗаголовокПредставлениеПроверкиРасширеннаяПодсказка" id="15"/>
+						</LabelDecoration>
+						<LabelDecoration name="ЗаголовокПредставлениеДоверенности" id="16">
+							<Visible>false</Visible>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:ЦветТекстаНеУдачнаяПроверкаМЧД</TextColor>
+							<Font ref="style:УвеличенныйШрифтБЭД" height="12" kind="StyleItem"/>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ЗаголовокПредставлениеДоверенностиКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЗаголовокПредставлениеДоверенностиРасширеннаяПодсказка" id="18"/>
+						</LabelDecoration>
+						<LabelDecoration name="ЗаголовокДатаПроверки" id="19">
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверено 08.12.2012 14:39</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаголовокДатаПроверкиКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ЗаголовокДатаПроверкиРасширеннаяПодсказка" id="21"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

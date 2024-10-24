@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Банк</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Button name="ПлатежныеПоручения" id="13">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПлатежныеПоручения</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПлатежныеПорученияРасширеннаяПодсказка" id="14"/>
+		</Button>
+		<Button name="БанковскиеВыписки" id="15">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.БанковскиеВыписки</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="БанковскиеВыпискиРасширеннаяПодсказка" id="16"/>
+		</Button>
+		<Button name="ОбщаяКомандаПерепискаЧерезДиректБанк" id="21">
+			<Type>UsualButton</Type>
+			<CommandName>CommonCommand.ПерепискаЧерезДиректБанк</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ОбщаяКомандаПерепискаЧерезДиректБанкРасширеннаяПодсказка" id="22"/>
+		</Button>
+		<Button name="ОперацииПоПлатежнымКартам" id="17">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОперацииПоПлатежнымКартам</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ОперацииПоПлатежнымКартамРасширеннаяПодсказка" id="18"/>
+		</Button>
+		<Button name="ПлатежиПоРеестрам" id="19">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПлатежиПоРеестрам</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПлатежиПоРеестрамРасширеннаяПодсказка" id="20"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПлатежныеПоручения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежные поручения</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПлатежныеПоручения</Action>
+		</Command>
+		<Command name="БанковскиеВыписки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковские выписки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>БанковскиеВыписки</Action>
+		</Command>
+		<Command name="ОперацииПоПлатежнымКартам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операции по платежным картам</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОперацииПоПлатежнымКартам</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьОплатуПоПлатежнымКартам</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПлатежиПоРеестрам" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежи по реестрам</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПлатежиПоРеестрам</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьПлатежиПоРеестрам</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

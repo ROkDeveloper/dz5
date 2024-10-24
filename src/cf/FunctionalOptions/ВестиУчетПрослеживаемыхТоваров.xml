@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<FunctionalOption uuid="8e1bf798-f5f1-4050-8bc4-c8ec91e469cd">
+		<Properties>
+			<Name>ВестиУчетПрослеживаемыхТоваров</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести учет прослеживаемых товаров</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ВестиУчетПрослеживаемыхТоваров</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Catalog.КодыОперацийПрослеживаемости</xr:Object>
+				<xr:Object>InformationRegister.СвойстваРНПТ</xr:Object>
+				<xr:Object>InformationRegister.ОперацииСПрослеживаемымиТоварами</xr:Object>
+				<xr:Object>Enum.ПорядокОтраженияВОтчетностиПоПрослеживаемости</xr:Object>
+				<xr:Object>Document.УведомлениеОбОстаткахПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>InformationRegister.РегистрацияПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>Enum.ВидыОперацийРегистрацииПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>DataProcessor.ПомощникПолученияРНПТ</xr:Object>
+				<xr:Object>CommonCommand.УведомлениеОбОстаткахПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>DocumentJournal.ПрослеживаемостьУведомления</xr:Object>
+				<xr:Object>Document.УведомлениеОВвозеПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>Document.УведомлениеОПеремещенииПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>Document.ПоступлениеТоваровУслуг.Command.УведомлениеОВвозеПрослеживаемыхТоваров</xr:Object>
+				<xr:Object>Document.ПоступлениеТоваровУслуг.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ПоступлениеТоваровУслуг.TabularSection.Оборудование.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ЗаявлениеОВвозеТоваров.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ОприходованиеТоваров.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.КорректировкаРеализации.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.КорректировкаПоступления.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Catalog.Номенклатура.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ОтчетОРозничныхПродажах.TabularSection.Возвраты.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ОтчетОРозничныхПродажах.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ОтчетПроизводстваЗаСмену.TabularSection.Материалы.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ОтчетПроизводстваЗаСмену.TabularSection.ВозвратныеОтходы.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ПередачаТоваров.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ПоступлениеИзПереработки.TabularSection.ИспользованныеМатериалы.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.РеализацияТоваровУслуг.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.СписаниеТоваров.TabularSection.Товары.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ТребованиеНакладная.TabularSection.Материалы.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ОтчетПроизводстваЗаСмену.TabularSection.Материалы.Attribute.СтранаПроисхождения</xr:Object>
+				<xr:Object>Document.ПоступлениеИзПереработки.TabularSection.ИспользованныеМатериалы.Attribute.СтранаПроисхождения</xr:Object>
+				<xr:Object>Document.ПринятиеКУчетуОС.TabularSection.ОС.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ПоступлениеТоваровУслуг.TabularSection.ОсновныеСредства.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.СписаниеМатериаловИзЭксплуатации.TabularSection.ИнвентарьИХозяйственныеПринадлежности.Attribute.СтранаПроисхождения</xr:Object>
+				<xr:Object>Document.СписаниеМатериаловИзЭксплуатации.TabularSection.ИнвентарьИХозяйственныеПринадлежности.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.СписаниеОС.TabularSection.ОС.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ПередачаОС.TabularSection.ОС.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.ПередачаОборудованияВМонтаж.TabularSection.Оборудование.Attribute.СтранаПроисхождения</xr:Object>
+				<xr:Object>Document.ПередачаОборудованияВМонтаж.TabularSection.Оборудование.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>Document.МодернизацияОС.TabularSection.ОС.Attribute.ПрослеживаемыйТовар</xr:Object>
+				<xr:Object>CommonForm.ВключениеПроверкиРНПТ</xr:Object>
+				<xr:Object>Enum.СтатусыПроверкиРНПТ</xr:Object>
+				<xr:Object>Constant.ИспользоватьПроверкуРНПТ</xr:Object>
+				<xr:Object>Report.АнализРНПТДокументов</xr:Object>
+				<xr:Object>InformationRegister.СведенияОРНПТИзФНС</xr:Object>
+				<xr:Object>InformationRegister.СтатусыПроверокРНПТДокументов</xr:Object>
+				<xr:Object>CommonCommand.НастройкиПроверкиРНПТ</xr:Object>
+				<xr:Object>DataProcessor.ПомощникИсключенияНоменклатурыИзПрослеживаемости</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>
